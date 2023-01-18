@@ -1,0 +1,10 @@
+{
+  "name": "@memo/types",
+  "version": "1.0.0",
+  "description": "type helper",
+  "types": "./src/index.ts",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

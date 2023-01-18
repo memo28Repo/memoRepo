@@ -1,0 +1,31 @@
+{
+  "name": "@memo/service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index",
+  "module": "./dist/index",
+  "types": "./dts/index.d.ts",
+  "scripts": {
+    "build": "pnpm build:cjs && pnpm build:es",
+    "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
+    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true",
+    "test": "vitest"
+  },
+  "files": [
+    "./dist",
+    "./lib",
+    "./dts"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.2.2"
+  },
+  "peerDependencies": {
+    "axios": "^1.2.2"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}
