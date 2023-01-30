@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-14 13:52:08
- * @LastEditTime: 2023-01-15 14:17:14
+ * @LastEditTime: 2023-01-27 12:57:10
  * @Description:
  * @FilePath: /memo/packages/service/src/core/triggerDispatch.ts
  */

@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:34:02
- * @LastEditTime: 2023-01-09 17:47:30
+ * @LastEditTime: 2023-01-27 13:03:00
  * @Description:
  * @FilePath: /memo/packages/service/src/types/engine.ts
  */
@@ -15,14 +15,14 @@ export interface serviceImpl<T = unknown> {
 
 export interface modulesImpl {
   /**
-  * @description 拦截器列表
-  *
-  */
+   * @description 拦截器列表
+   *
+   */
   interceptorModule?: (new (...args: unknown[]) => interceptorImpl)[]
 
   /**
-  * @description 触发拦截器列表, 它定义了 请求触发前后的特定逻辑
-  */
+   * @description 触发拦截器列表, 它定义了 请求触发前后的特定逻辑
+   */
   triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl)[]
 }
 

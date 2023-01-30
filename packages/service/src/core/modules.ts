@@ -1,12 +1,12 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 17:00:20
- * @LastEditTime: 2023-01-15 10:42:18
+ * @LastEditTime: 2023-01-27 12:51:24
  * @Description:
  * @FilePath: /memo/packages/service/src/core/modules.ts
  */
 import { getObjValues, modulesImpl } from '../types/engine'
-import { Injection } from './injection'
+import { Injection } from '@memo28/utils'
 import { PocketValue } from '../plugin/pocketBottom'
 
 const modulesKeys = {

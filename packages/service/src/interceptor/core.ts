@@ -1,13 +1,13 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 15:09:36
- * @LastEditTime: 2023-01-08 12:23:46
+ * @LastEditTime: 2023-01-29 09:37:10
  * @Description:
  * @FilePath: /memo/packages/service/src/interceptor/core.ts
  */
 
 import { getInitializeConfigurationValues } from '../core/config'
-import { Injection } from '../core/injection'
+import { Injection } from '@memo28/utils'
 import { getModulesValues } from '../core/modules'
 import { modulesImpl } from '../types/engine'
 import { interceptorImpl } from '../types/interceptor'

@@ -1,11 +1,3 @@
-<!--
- * @Author: 邱狮杰
- * @Date: 2023-01-13 15:00:38
- * @LastEditTime: 2023-01-16 10:10:12
- * @Description: 
- * @FilePath: /memo/packages/service/README.md
--->
-
 # `@memo/service`
 
 ## 取消请求

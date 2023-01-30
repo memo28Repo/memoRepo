@@ -1,14 +1,16 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-08 12:12:45
- * @LastEditTime: 2023-01-09 17:08:35
+ * @LastEditTime: 2023-01-18 17:27:54
  * @Description:
  * @FilePath: /memo/packages/serverTest/server.ts
  */
-
+import cors from 'cors'
 import express from 'express'
 
 const app = express()
+
+app.use(cors())
 
 app.get('/hello', (req, res) => {
   console.log('/hello log')
@@ -21,12 +23,10 @@ app.get('/v1/hello', (_, res) => {
 })
 
 app.get('/timeout', (req, res) => {
-  setTimeout(()=>{
-  return res.json('timeout')
+  setTimeout(() => {
+    return res.json('timeout')
   }, Number(req.query.timeout || '1000'))
 })
-
-
 
 app.listen(3011, () => {
   console.log('run...')

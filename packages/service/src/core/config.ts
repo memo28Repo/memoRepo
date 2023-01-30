@@ -1,11 +1,11 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 18:11:53
- * @LastEditTime: 2023-01-09 17:00:56
+ * @LastEditTime: 2023-01-27 12:50:45
  * @Description:
  * @FilePath: /memo/packages/service/src/core/config.ts
  */
-import { Injection } from '../core/injection'
+import { Injection } from '@memo28/utils'
 import { getObjValues, initializeConfigurationTypes } from '../types/engine'
 
 export const initializeConfigurationKeys = {

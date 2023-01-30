@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-07 12:40:29
- * @LastEditTime: 2023-01-15 14:13:00
+ * @LastEditTime: 2023-01-27 12:51:15
  * @Description:
  * @FilePath: /memo/packages/service/src/core/instantiation.ts
  */
@@ -10,7 +10,7 @@ import { Interceptor } from '../interceptor/core'
 import { initializeConfigurationTypes } from '../types/engine'
 import { getInitializeConfigurationValues } from './config'
 import { ServiceCore } from './engine'
-import { Injection } from './injection'
+import { Injection } from '@memo28/utils'
 import { getModulesValues } from './modules'
 import { TriggerDispatch } from './triggerDispatch'
 

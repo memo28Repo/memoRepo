@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-14 11:55:43
- * @LastEditTime: 2023-01-16 09:39:38
+ * @LastEditTime: 2023-01-18 17:29:40
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/cache/utils.ts
  */
@@ -81,13 +81,11 @@ export class CacheData {
   cachedAndAvailable(rule: string): boolean {
     const cur = expirationMap.get(rule)
 
-    console.log(ExpirationTime.isItExpired(cur?.cacheExpirationTime || 0), 'ExpirationTime.isItExpired(cur.cacheExpirationTime)')
     if (this.hasCache(rule) && cur && cur.preAdded && cur.cacheExpirationTime && !ExpirationTime.isItExpired(cur.cacheExpirationTime)) {
       return true
     }
 
     if (this.hasCache(rule) && cur && cur.preAdded && cur.cacheExpirationTime && ExpirationTime.isItExpired(cur.cacheExpirationTime)) {
-      console.log('1h12')
       this.removeCache(rule)
       // expirationMap.delete(rule)
     }
