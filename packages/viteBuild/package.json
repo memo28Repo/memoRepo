@@ -1,0 +1,52 @@
+{
+  "name": "@memo28/vitebuild",
+  "version": "1.1.0",
+  "description": "",
+  "main": "./lib/index",
+  "module": "./dist/index",
+  "types": "./dts/index.d.ts",
+  "scripts": {
+    "build": "pnpm build:cjs && pnpm build:es",
+    "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
+    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true"
+  },
+  "keywords": [
+    "vite",
+    "typescript",
+    "build"
+  ],
+  "author": "hooks_28",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^3.0.2",
+    "@vitejs/plugin-react-swc": "^3.0.1",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "terser": "^5.16.1",
+    "unplugin-vue-macros": "^1.6.4",
+    "vite": "^4.0.4",
+    "vue": "^3.2.45"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "./src",
+    "./dts",
+    "./dist",
+    "./lib"
+  ],
+  "dependencies": {
+    "@memo28/types": "^1.1.0",
+    "@memo28/utils": "^1.1.0",
+    "@vue-macros/short-vmodel": "^1.0.6",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.3",
+    "sass": "^1.57.1",
+    "vite-plugin-browser-sync": "^1.0.2",
+    "vite-plugin-print-urls": "^0.1.2",
+    "vite-plugin-pwa": "^0.14.1",
+    "vite-plugin-sass-dts": "^1.2.13"
+  }
+}

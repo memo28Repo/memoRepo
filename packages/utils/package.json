@@ -1,0 +1,35 @@
+{
+  "name": "@memo28/utils",
+  "version": "1.0.2",
+  "private": false,
+  "description": "",
+  "main": "./lib/index",
+  "module": "./dist/index",
+  "types": "./dts/index.d.ts",
+  "scripts": {
+    "build": "pnpm build:cjs && pnpm build:es",
+    "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
+    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true",
+    "publish": "npm publish"
+  },
+  "keywords": [
+    "injection",
+    "typescript",
+    "javascript",
+    ""
+  ],
+  "author": "hooks_28",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "./src",
+    "./dist",
+    "./lib"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}

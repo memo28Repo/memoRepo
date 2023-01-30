@@ -1,0 +1,20 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    // "**/packages": true,
+    // "**/script": true,
+    // "**/template": true,
+    "**/docs": false,
+    "**/dist": true,
+    "**/dts": true,
+    "**/lib": true,
+    "**/.turbo": true,
+    // "**/.cz-config.js": true,
+    // "**/.gitignore": true,
+    // "**/lerna.json": true,
+    "**/yarn.lock": true,
+    "**/project": true
+  },
+  "liveServer.settings.port": 5501
+}
