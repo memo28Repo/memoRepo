@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-13 14:35:14
- * @LastEditTime: 2023-01-15 10:48:53
+ * @LastEditTime: 2023-01-30 13:40:54
  * @Description:
  * @FilePath: /memo/packages/service/__test__/cancel.test.ts
  */
@@ -18,7 +18,7 @@ import { RetData } from '../src/plugin'
   baseURL: 'http://localhost:3011',
   debugger: true,
 })
-class Service extends ServiceCore {}
+class Service extends ServiceCore { }
 
 const server = new Service().getAxios()
 

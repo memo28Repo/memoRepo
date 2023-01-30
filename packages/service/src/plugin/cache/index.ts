@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-14 12:05:06
- * @LastEditTime: 2023-01-15 15:31:23
+ * @LastEditTime: 2023-01-30 13:47:21
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/cache/index.ts
  */
@@ -35,6 +35,9 @@ export class CachePrerequisites {
   }
 }
 
+/**
+ *  @description 缓存拦截器
+ */
 export class Cache implements interceptorImpl {
   displayName = 'cache'
 

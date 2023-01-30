@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:49:34
- * @LastEditTime: 2023-01-29 15:12:57
+ * @LastEditTime: 2023-01-30 17:26:47
  * @Description:
  * @FilePath: /memo/packages/viteBuild/src/core/engine.ts
  */
@@ -10,6 +10,9 @@ import { UserConfigExport, PluginOption, defineConfig } from 'vite'
 import { PlugInContainer } from './plugInContainer'
 import injection from './injection'
 
+/**
+ * @description vite build enter
+ */
 @injectDefaultTechnologyStackConfiguration({
   defaultModule: [new ConfigureVueTechnologyStack(), new ConfigureReactTechnologyStack()],
 })

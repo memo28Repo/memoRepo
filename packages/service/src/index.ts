@@ -1,13 +1,15 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:32:00
- * @LastEditTime: 2023-01-15 11:12:48
+ * @LastEditTime: 2023-01-30 13:45:43
  * @Description:
  * @FilePath: /memo/packages/service/src/index.ts
  */
 
 import 'reflect-metadata'
-
+export { RetData } from './plugin/RetData'
+export { MultiVersionSwitching, multiVersionSwitchingRequest } from './plugin/multiVersionSwitching'
+export { Cache, CacheTrigger, CachePrerequisites } from './plugin/cache'
 export * from './core/config'
 export * from './core/engine'
 export * from './core/instantiation'

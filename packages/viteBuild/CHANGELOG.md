@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 2.0.0
+
+### Major Changes
+
+- update package.json dep content
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-09 17:55:11
- * @LastEditTime: 2023-01-13 14:23:58
+ * @LastEditTime: 2023-01-30 10:45:37
  * @Description: pocketValue 兜底值
- * @FilePath: /service/__test__/pocketValue.test.ts
+ * @FilePath: /memo/packages/service/__test__/pocketValue.test.ts
  */
 import { describe, expect, it } from 'vitest'
 import { ServiceCore, initializeConfiguration, instantiation, modules } from '../src/index'
@@ -18,7 +18,7 @@ import { RetData, MultiVersionSwitching } from '../src/plugin'
   versionPlaceholder: 'base',
   version: 'v1',
 })
-class Service extends ServiceCore {}
+class Service extends ServiceCore { }
 
 const axi = new Service().getAxios()
 

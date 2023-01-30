@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-08 13:31:07
- * @LastEditTime: 2023-01-15 11:14:14
+ * @LastEditTime: 2023-01-30 13:47:38
  * @Description: 切换版本号
  * @FilePath: /memo/packages/service/src/plugin/multiVersionSwitching.ts
  */
@@ -13,6 +13,9 @@ export interface multiVersionSwitchingRequest {
   versionPlaceholder: string
 }
 
+/**
+ * @description 多版本拦截器
+ */
 export class MultiVersionSwitching implements interceptorImpl {
   displayName?: string | undefined = 'multiVersionSwitching'
 

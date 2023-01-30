@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-28 11:45:50
- * @LastEditTime: 2023-01-28 15:44:27
+ * @LastEditTime: 2023-01-30 13:54:05
  * @Description: 插件容器
  * @FilePath: /memo/packages/viteBuild/src/core/plugInContainer.ts
  */
@@ -20,21 +20,37 @@ export interface PluginTypes<T = object> {
 export class PlugInContainer {
     private plugInContainerList: PluginOption[] = []
 
+    /**
+     * @description add alias
+     * @returns 
+     */
     addAlias(opt?: AliasOpt): this {
         this.injectPlugin(new Alias(), opt)
         return this
     }
-
+    /**
+     * @description add BrowserSync in your Vite project.
+     * @see https://browsersync.io/
+     */
     addBrowserSync(opt?: BrowserSyncOpt) {
         this.injectPlugin(new BrowserSync(), opt)
         return this
     }
-
+    /**
+     * @description zero-config PWA Framework-agnostic Plugin for Vite
+     * @see https://www.npmjs.com/package/vite-plugin-pwa
+     * @returns 
+     */
     addPwa(opt?: PwaOpt): Omit<PlugInContainer, 'getPlugInContainerList'> {
         this.injectPlugin(new Pwa(), opt)
         return this
     }
 
+    /**
+     * @description a plugin that automatically creates a type file when using the CSS module type-safely.  
+     * @see https://www.npmjs.com/package/vite-plugin-sass-dts
+     * @returns 
+     */
     addSassDts(opt?: sassDtsOpt): Omit<PlugInContainer, 'getPlugInContainerList'> {
         this.injectPlugin(new SassDts(), opt)
         return this
