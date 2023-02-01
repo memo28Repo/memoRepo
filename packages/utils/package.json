@@ -9,8 +9,7 @@
   "scripts": {
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
-    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true",
-    "publish": "npm publish"
+    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true"
   },
   "keywords": [
     "injection",

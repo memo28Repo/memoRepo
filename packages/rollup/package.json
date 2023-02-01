@@ -1,7 +1,8 @@
 {
-  "name": "@memo28/service",
-  "version": "2.0.0",
-  "description": "axios configuration based on decorator pluggable",
+  "name": "@memo28/rollup",
+  "version": "1.0.0",
+  "private": true,
+  "description": "rollup build helper",
   "main": "./lib/index",
   "module": "./dist/index",
   "types": "./dts/index.d.ts",
@@ -23,23 +24,11 @@
     "access": "public"
   },
   "keywords": [
-    "http",
-    "axios",
-    "vue",
-    "react",
-    "javascript",
-    "typescript"
+    "rollup",
+    "build",
+    "typescript",
+    "javascript"
   ],
   "author": "hooks_28",
-  "license": "MIT",
-  "devDependencies": {
-    "axios": "^1.2.2"
-  },
-  "peerDependencies": {
-    "axios": "^1.2.2"
-  },
-  "dependencies": {
-    "@memo28/utils": "^1.0.2",
-    "reflect-metadata": "^0.1.13"
-  }
+  "license": "MIT"
 }

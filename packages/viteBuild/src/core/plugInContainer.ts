@@ -1,13 +1,14 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-28 11:45:50
- * @LastEditTime: 2023-01-30 13:54:05
+ * @LastEditTime: 2023-01-31 13:52:12
  * @Description: 插件容器
  * @FilePath: /memo/packages/viteBuild/src/core/plugInContainer.ts
  */
 import { PluginOption } from 'vite'
 import { SassDts, sassDtsOpt } from "../plugin/sassDts"
 import { Pwa, PwaOpt } from '../plugin/pwa'
+import { AutoHooks, AutoHooksOpt } from '../plugin/autoHooks'
 import { BrowserSync, BrowserSyncOpt } from "../plugin/browserSync"
 import { AliasOpt, Alias } from "../plugin/alias"
 
@@ -19,6 +20,14 @@ export interface PluginTypes<T = object> {
 
 export class PlugInContainer {
     private plugInContainerList: PluginOption[] = []
+    /**
+     * @description auto import APIs on-demand for Vite, Webpack, Rollup and esbuild. With TypeScript support. Powered by unplugin.
+     * @see https://www.npmjs.com/package/unplugin-auto-import
+     */
+    addAutoHooks(opt?: AutoHooksOpt) {
+        this.injectPlugin(new AutoHooks(), opt)
+        return this
+    }
 
     /**
      * @description add alias

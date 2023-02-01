@@ -1,5 +1,11 @@
 # @memo28/service
 
+## 2.0.0
+
+### Major Changes
+
+- 重构项目索引目录导出结构
+
 ## 1.1.0
 
 ### Minor Changes
