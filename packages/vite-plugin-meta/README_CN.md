@@ -4,6 +4,28 @@
 
 ## usage
 
+```html
+<!-- 需要添加一行相同的注释，插件会将生成的tag标签替换到这行注释 -->
+<!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8" />
+   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+   <meta name="viewport" content="width=device-width, initial-scale=9.0" />
+   <meta name="renderer" content="ie-comp">
+   <!-- @memo28/vite-plugin-mete -->
+   <title>Vite + Vue + TS</title>
+ </head>
+
+ <body>
+   <div id="app"></div>
+   <script type="module" src="/src/main.ts"></script>
+ </body>
+
+</html>
+```
+
 ```ts
 // vite.config.ts
 import { defineConfig } from 'vite'
