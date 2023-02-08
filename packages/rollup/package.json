@@ -30,5 +30,8 @@
     "javascript"
   ],
   "author": "hooks_28",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "rollup": "^3.12.0"
+  }
 }

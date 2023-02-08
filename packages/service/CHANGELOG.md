@@ -1,5 +1,11 @@
 # @memo28/service
 
+## 2.1.0
+
+### Minor Changes
+
+- @memo28/vitebuild add unplugins-auto-hooks,调整 @memo28/service 导出结构
+
 ## 2.0.0
 
 ### Major Changes

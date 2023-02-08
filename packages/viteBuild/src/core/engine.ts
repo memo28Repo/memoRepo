@@ -1,12 +1,12 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:49:34
- * @LastEditTime: 2023-02-01 09:34:17
+ * @LastEditTime: 2023-02-06 16:03:31
  * @Description:
  * @FilePath: /memo/packages/viteBuild/src/core/engine.ts
  */
 import { ConfigureTechnologyStack, technologyStackTypes, ConfigureReactTechnologyStack, ConfigureVueTechnologyStack, injectDefaultTechnologyStackConfiguration } from './configureTechnologyStack'
-import { UserConfigExport, PluginOption, defineConfig } from 'vite'
+import { UserConfigExport, PluginOption } from 'vite'
 import { PlugInContainer } from './plugInContainer'
 import injection from './injection'
 

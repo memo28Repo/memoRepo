@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-30 17:25:04
- * @LastEditTime: 2023-01-30 17:33:36
+ * @LastEditTime: 2023-02-08 15:29:27
  * @Description: 
  * @FilePath: /memo/packages/viteBuild/README.md
 -->
@@ -12,11 +12,11 @@
 ```ts
 // in vue.js
 export default defineConfig(
-new Engine().setTechnologyStack('vue').addPlugins().getBuildConfig()
+     new Engine().setTechnologyStack('vue').addPlugins().getBuildConfig()
 )
 // in react.js
 export default defineConfig(
-new Engine().setTechnologyStack('react').addPlugins().getBuildConfig()
+     new Engine().setTechnologyStack('react').addPlugins().getBuildConfig()
 )
 ```
 

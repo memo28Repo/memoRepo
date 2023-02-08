@@ -1,0 +1,26 @@
+{
+  "name": "@memo28/vite-plugin-mete",
+  "version": "1.0.0",
+  "description": "generate html meta tag",
+  "main": "./lib/index",
+  "module": "./dist/index",
+  "types": "./dts/index.d.ts",
+  "scripts": {
+    "build": "pnpm build:cjs && pnpm build:es",
+    "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
+    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "mete"
+  ],
+  "author": "hooks28",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "parse5": "^7.1.2"
+  }
+}
