@@ -2,7 +2,7 @@
 
 Generate and formulate `meta` tags through configuration and add them to the page
 
-[中文文档](packages/vite-plugin-meta/README_CN.md)
+[中文文档](/README_CN.md)
 
 ## usage
 
