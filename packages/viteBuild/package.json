@@ -1,7 +1,8 @@
 {
   "name": "@memo28/vitebuild",
-  "version": "2.1.0",
-  "description": "",
+  "version": "2.2.0",
+  "private": false,
+  "description": "vite config helper",
   "main": "./lib/index",
   "module": "./dist/index",
   "types": "./dts/index.d.ts",
@@ -33,8 +34,8 @@
   ],
   "dependencies": {
     "@memo28/types": "^1.1.0",
-    "@memo28/utils": "workspace:^1.0.2",
-    "@memo28/vite-plugin-mete": "^1.0.0",
+    "@memo28/utils": "^1.0.2",
+    "@memo28/vite-plugin-meta": "^2.0.0",
     "@vitejs/plugin-legacy": "^3.0.2",
     "@vitejs/plugin-react-swc": "^3.0.1",
     "@vitejs/plugin-vue": "^4.0.0",

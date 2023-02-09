@@ -1,5 +1,16 @@
 # @memo28/vitebuild
 
+## 2.2.0
+
+### Minor Changes
+
+- add @memo28/vite-plugin-meta plugin and @memo28/vitebuild add @memo28/vite-plugin-meta plugin opt
+
+### Patch Changes
+
+- Updated dependencies
+  - @memo28/vite-plugin-meta@2.0.0
+
 ## 2.1.0
 
 ### Minor Changes

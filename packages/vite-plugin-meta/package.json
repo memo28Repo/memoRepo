@@ -1,6 +1,7 @@
 {
-  "name": "@memo28/vite-plugin-mete",
-  "version": "1.0.0",
+  "name": "@memo28/vite-plugin-meta",
+  "version": "2.0.0",
+  "private": false,
   "description": "generate html meta tag",
   "main": "./lib/index",
   "module": "./dist/index",
@@ -10,11 +11,21 @@
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
     "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true"
   },
+  "files": [
+    "./dts",
+    "./dist",
+    "./lib",
+    "./src"
+  ],
   "keywords": [
     "vite",
     "plugin",
     "mete"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "author": "hooks28",
   "license": "MIT",
   "devDependencies": {

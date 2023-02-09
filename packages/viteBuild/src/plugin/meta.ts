@@ -1,14 +1,15 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-04 12:26:22
- * @LastEditTime: 2023-02-06 16:22:27
+ * @LastEditTime: 2023-02-08 16:52:52
  * @Description: vite-plugin-meta
  * @FilePath: /memo/packages/viteBuild/src/plugin/meta.ts
  */
 
 import { PluginTypes } from '../core/plugInContainer'
 import { PluginOption } from 'vite'
-import vitePluginMetes, { vitePluginMetaOpt } from '@memo28/vite-plugin-mete'
+// @ts-ignore
+import vitePluginMetes, { vitePluginMetaOpt } from '@memo28/vite-plugin-meta'
 
 export type { vitePluginMetaOpt }
 
