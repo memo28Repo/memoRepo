@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 2.3.0
+
+### Minor Changes
+
+- update @memo28/utils version
+
 ## 2.2.0
 
 ### Minor Changes
