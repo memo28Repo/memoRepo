@@ -12,7 +12,8 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "cz": "git add . && pnpm cz-customizable"
+    "cz": "git add . && pnpm cz-customizable",
+    "ci:publish": "pnpm publish -r"
   },
   "devDependencies": {
     "@vitest/ui": "^0.27.2",
