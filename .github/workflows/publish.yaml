@@ -2,7 +2,7 @@ name: publish npm packages
 on:
   push:
     branches:
-      - 'release'
+      - 'features_test'
 jobs:
   ConfigureEnvironment:
     name: ConfigureEnvironment
