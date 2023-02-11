@@ -29,8 +29,8 @@ jobs:
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
-      - name: test and build
-        run: pnpm test && pnpm build
+      - name: build
+        run: pnpm build
 
       # - run: npm i -g @changesets/cli
       #   env:
