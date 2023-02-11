@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-06 13:48:02
- * @LastEditTime: 2023-02-10 14:32:42
+ * @LastEditTime: 2023-02-10 15:13:29
  * @Description: 
  * @FilePath: /memo/README.md
 -->
@@ -23,3 +23,7 @@
 - `@memo28/vitebuild` [vite常用插件封装](packages/viteBuild/README.md)
  
 - `@memo28/vite-plugin-meta` [通过配置生成meta标签](packages/vite-plugin-meta/README.md)
+
+# [分支管理](/packages/docs/branchManagement.md)
+
+# [包管理规范](/packages/docs/packagingSpecification.md)

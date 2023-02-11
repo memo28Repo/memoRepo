@@ -16,4 +16,4 @@ jobs:
       - run: npm i -g @changesets/cli
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: changeset publish
+      - run: changeset --version
