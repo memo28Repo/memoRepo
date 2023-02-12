@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-31 10:29:53
- * @LastEditTime: 2023-02-01 14:05:23
+ * @LastEditTime: 2023-02-12 09:26:54
  * @Description: 
  * @FilePath: /memo/packages/rollup/src/index.ts
  */
@@ -19,5 +19,15 @@ export class RollupHelper {
         return this
     }
     getBuild(opt?: RollupOptions) {
+        return {
+            ...opt
+        }
     }
 }
+
+
+const config = new RollupHelper().addPlugins((pluginHepler) => {
+    pluginHepler
+}).getBuild()
+
+console.log(config)
