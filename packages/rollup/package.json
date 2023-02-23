@@ -31,6 +31,13 @@
   "author": "hooks_28",
   "license": "MIT",
   "dependencies": {
-    "rollup": "^3.12.0"
+    "@memo28/types": "^1.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-url": "^8.0.1",
+    "plugin-url": "link:@types/@rollup/plugin-url",
+    "rollup": "^3.12.0",
+    "rollup-plugin-notify": "^1.1.0",
+    "rollup-plugin-sizes": "^1.0.5"
   }
 }

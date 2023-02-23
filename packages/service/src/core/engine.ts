@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:32:28
- * @LastEditTime: 2023-01-15 14:32:41
+ * @LastEditTime: 2023-02-13 15:57:29
  * @Description:
  * @FilePath: /memo/packages/service/src/core/engine.ts
  */
@@ -15,5 +15,5 @@ type Req<R> = Partial<R> & initializeConfigurationTypes
 
 export class ServiceCore<R = unknown> {
   // @ts-ignore
-  getAxios(): <T = Res>(req?: Req<R>) => T | Promise<T>
+  getAxios(): <T = Res>(req?: Req<R>) => T | Promise<T> { }
 }

@@ -1,18 +1,16 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-30 10:39:22
- * @LastEditTime: 2023-01-30 10:39:23
- * @Description: 
+ * @LastEditTime: 2023-02-15 10:10:44
+ * @Description:
  * @FilePath: /memo/packages/utils/src/Injection.ts
  */
 import 'reflect-metadata'
 
 export class Injection<K = string> {
-  private isExtensible: boolean = false
   private target: null | object = null
 
   constructor(target: object) {
-    this.isExtensible = Reflect.isExtensible(target)
     this.setTarget(target)
   }
 

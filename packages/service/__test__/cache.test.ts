@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-15 11:32:44
- * @LastEditTime: 2023-02-11 11:16:47
+ * @LastEditTime: 2023-02-17 03:39:01
  * @Description:
  * @FilePath: /memo/packages/service/__test__/cache.test.ts
  */
@@ -19,7 +19,7 @@ import { Cache, CacheTrigger, ExpirationTime, RetData, requestConfig } from '../
   baseURL: 'http://localhost:3011',
   debugger: true,
 })
-class Service extends ServiceCore<requestConfig> { }
+class Service extends ServiceCore<requestConfig> {}
 
 const axi = new Service().getAxios()
 
@@ -32,6 +32,7 @@ describe('cache collection', async () => {
       },
       cacheExpirationTime: new ExpirationTime('min', 1).generateExpirationTime(),
     })
+
     expect(result).toBe('hello')
   })
 

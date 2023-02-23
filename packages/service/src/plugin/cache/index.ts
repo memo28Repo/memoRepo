@@ -5,6 +5,7 @@
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/cache/index.ts
  */
+
 import { beforeTriggerResultTypes, initializeConfigurationTypes, interceptorImpl, triggerInterceptorImpl } from '../../index'
 import { AxiosResponse } from 'axios'
 import { defaultCacheRule, hasCacheConfig, requestConfig } from './config'

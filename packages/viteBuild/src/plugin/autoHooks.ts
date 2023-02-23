@@ -1,14 +1,14 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-31 10:53:07
- * @LastEditTime: 2023-01-31 11:58:49
+ * @LastEditTime: 2023-02-12 10:58:55
  * @Description: 
  * @FilePath: /memo/packages/viteBuild/src/plugin/autoHooks.ts
  */
-import vitePlugins from 'unplugin-auto-import/vite';
-import { PluginTypes } from '../core/plugInContainer'
 import { Options } from 'unplugin-auto-import/types';
+import vitePlugins from 'unplugin-auto-import/vite';
 import { PluginOption } from 'vite';
+import { PluginTypes } from '../core/plugInContainer';
 
 export type AutoHooksOpt = Parameters<typeof vitePlugins>[0]
 
