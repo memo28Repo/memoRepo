@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-10 15:46:52
- * @LastEditTime: 2023-01-10 15:50:55
+ * @LastEditTime: 2023-03-05 11:01:48
  * @Description:
- * @FilePath: /packages/types/src/func.ts
+ * @FilePath: /memo/packages/types/src/func.ts
  */
 /**
  * @description define normal function type

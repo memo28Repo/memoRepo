@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-10 15:04:28
- * @LastEditTime: 2023-03-04 22:09:03
+ * @LastEditTime: 2023-03-05 11:01:44
  * @Description: 
  * @FilePath: /memo/packages/types/src/baseType.ts
  */

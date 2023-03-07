@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-10 15:46:52
- * @LastEditTime: 2023-01-10 15:51:21
+ * @LastEditTime: 2023-03-05 11:02:02
  * @Description:
- * @FilePath: /packages/types/src/verify.ts
+ * @FilePath: /memo/packages/types/src/verify.ts
  */
 export declare type Expect<T extends true> = T
 

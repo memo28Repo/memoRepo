@@ -7,7 +7,7 @@
     // "**/template": true,
     "**/docs": false,
     "**/dist": true,
-    "**/dts": true,
+    // "**/dts": true,
     "**/lib": true,
     "**/.turbo": true,
     // "**/.cz-config.js": true,

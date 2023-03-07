@@ -1,5 +1,11 @@
 # @memo28/types
 
+## 1.1.1
+
+### Patch Changes
+
+- update baseType impl
+
 ## 1.1.0
 
 ### Minor Changes

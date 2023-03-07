@@ -1,9 +1,11 @@
 {
   "name": "@memo28/types",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "type helper",
-  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
