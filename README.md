@@ -1,8 +1,8 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-06 13:48:02
- * @LastEditTime: 2023-02-10 15:13:29
- * @Description: 
+ * @LastEditTime: 2023-03-09 11:49:22
+ * @Description:
  * @FilePath: /memo/README.md
 -->
 
@@ -17,12 +17,22 @@
 ![rollup](https://img.shields.io/badge/rollup%20js-EC4A3F?style=for-the-badge&logo=rollup.js&logoColor=white)
 
 - `@memo28/service` [请求最佳实践](packages/service/README.md)
- 
+
 - `@memo28/utils` [常用函数助手](packages/utils/README.md)
 
-- `@memo28/vitebuild` [vite常用插件封装](packages/viteBuild/README.md)
- 
-- `@memo28/vite-plugin-meta` [通过配置生成meta标签](packages/vite-plugin-meta/README.md)
+- `@memo28/vitebuild` [vite 常用插件封装](packages/viteBuild/README.md)
+
+- `@memo28/vite-plugin-meta` [通过配置生成 meta 标签](packages/vite-plugin-meta/README.md)
+
+# publish 流程
+
+- 打包测试
+
+- 更新包版本 `changset add` 和 `changset version`
+
+- 将代码切换到 `main` 分支上
+
+- `push` 支 `git` 仓库让 `action` 帮你完整最后的发包流程
 
 # [分支管理](/packages/docs/branchManagement.md)
 
