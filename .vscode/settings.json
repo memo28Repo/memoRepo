@@ -1,14 +1,14 @@
 {
   "files.exclude": {
     "**/.git": true,
-    "**/node_modules": true,
+    // "**/node_modules": true,
     // "**/packages": true,
     // "**/script": true,
     // "**/template": true,
     "**/docs": false,
-    "**/dist": true,
+    // "**/dist": true,
     // "**/dts": true,
-    "**/lib": true,
+    // "**/lib": true,
     "**/.turbo": true,
     // "**/.cz-config.js": true,
     // "**/.gitignore": true,

@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-10 15:46:52
- * @LastEditTime: 2023-03-05 11:01:48
+ * @LastEditTime: 2023-03-09 10:40:32
  * @Description:
  * @FilePath: /memo/packages/types/src/func.ts
  */

@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.1.4
+
+### Patch Changes
+
+- 修复 panicProcessing 上下文丢失问题
+
 ## 1.1.3
 
 ### Patch Changes

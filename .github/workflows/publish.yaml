@@ -2,7 +2,7 @@ name: publish npm packages
 on:
   push:
     branches:
-      - 'features_test'
+      - 'main'
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -31,3 +31,6 @@ jobs:
 
       - name: build
         run: pnpm build
+
+      - name: publish
+        run: pnpm changeset publish

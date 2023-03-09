@@ -1,8 +1,8 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-12 09:55:54
- * @LastEditTime: 2023-02-12 10:02:58
- * @Description: 
+ * @LastEditTime: 2023-03-09 10:39:12
+ * @Description:
  * @FilePath: /memo/packages/rollup/src/plugin/notify.ts
  */
 
@@ -12,15 +12,13 @@ import { PluginTypes } from '../core/helper'
 import { Plugin } from 'rollup'
 
 export class ErrorNotify implements PluginTypes<unknown> {
-    config: unknown;
+  config: unknown
 
-    readConfiguration(res?: unknown): this {
-        return this
-    }
+  readConfiguration(res?: unknown): this {
+    return this
+  }
 
-    getAssemblyCompleted(): Plugin {
-        return notify()
-    }
-
+  getAssemblyCompleted(): Plugin {
+    return notify()
+  }
 }
-

@@ -3,15 +3,18 @@
   "version": "1.1.1",
   "private": false,
   "description": "type helper",
+  "types": "./dts/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "links": "yarn link"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "files": [
-    "./src"
+    "./src",
+    "./dts"
   ],
   "keywords": [
     "typescript",

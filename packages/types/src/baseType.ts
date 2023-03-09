@@ -1,8 +1,8 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-10 15:04:28
- * @LastEditTime: 2023-03-05 11:01:44
- * @Description: 
+ * @LastEditTime: 2023-03-09 10:40:28
+ * @Description:
  * @FilePath: /memo/packages/types/src/baseType.ts
  */
 export type int = number
