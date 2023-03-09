@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-30 14:06:45
- * @LastEditTime: 2023-03-07 17:05:16
+ * @LastEditTime: 2023-03-07 17:37:38
  * @Description:
  * @FilePath: /memo/packages/utils/README.md
 -->
@@ -18,7 +18,9 @@ new Injection<'key'>().setTarget({}).setValue('key', 'value').getValue('key')
 
 ## `Errors`
 
-收到 `golang` 将错误定义为值来处理的启发
+[抛弃 trycatch，用 go 的思想去处理 js 异常](https://juejin.cn/post/7207707775774031930)
+
+受到 `golang` 将错误定义为值来处理的启发
 
 ```ts
 export declare class Errors {

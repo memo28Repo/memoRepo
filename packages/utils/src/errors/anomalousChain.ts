@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-06 22:35:05
- * @LastEditTime: 2023-03-07 17:05:22
+ * @LastEditTime: 2023-03-09 10:24:36
  * @Description: 异常链
  * @FilePath: /memo/packages/utils/src/errors/anomalousChain.ts
  */
@@ -46,7 +46,7 @@ export function panicProcessing(opt?: Partial<panicProcessingOpt>) {
         res = target.skip(target.errors)
         return res
       }
-      res = fn.call(target, ...args)
+      res = fn.call(this, ...args)
       return res
     }
   }

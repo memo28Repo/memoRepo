@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-23 09:18:30
- * @LastEditTime: 2023-03-06 22:34:02
+ * @LastEditTime: 2023-03-07 17:23:23
  * @Description: 该包封装了操作错误的函数
  * @FilePath: /memo/packages/utils/src/errors/core.ts
  */
