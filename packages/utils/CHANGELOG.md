@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.1.5
+
+### Patch Changes
+
+- add Number,String,Object log fn
+
 ## 1.1.4
 
 ### Patch Changes
