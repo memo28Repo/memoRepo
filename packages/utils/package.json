@@ -29,6 +29,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@memo28/types": "^1.1.1",
     "reflect-metadata": "^0.1.13"
   }
 }
