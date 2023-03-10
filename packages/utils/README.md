@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-30 14:06:45
- * @LastEditTime: 2023-03-07 17:37:38
+ * @LastEditTime: 2023-03-10 17:50:57
  * @Description:
  * @FilePath: /memo/packages/utils/README.md
 -->
@@ -110,4 +110,37 @@ new A().addOne().addTwo()
 run one
 run one errors # in onError
 run one errors # in skip fn
+```
+
+## log
+
+```ts
+// string
+const a = '1'
+a.log() // output: '1'
+a.log('mark') // output: 'mark ===> 1'
+
+// number
+const a = 1
+a.log() // output: 1
+a.log('mark') // output: 'mark ===> 1'
+
+// object
+const a = { a: 1 }
+a.log() // output: { a: 1 }
+a.log('mark') // output: 'mark ===> ' { a: 1}
+
+// index.d.ts
+
+interface String {
+  log(mark?: string): void
+}
+
+interface Number {
+  log(mark?: string): void
+}
+
+interface Object {
+  log(mark?: string): void
+}
 ```

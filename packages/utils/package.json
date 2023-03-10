@@ -3,9 +3,9 @@
   "version": "1.1.5",
   "private": false,
   "description": "",
-  "main": "./lib/index",
-  "module": "./dist/index",
-  "types": "./dts/index.d.ts",
+  "main": "./lib/entry",
+  "module": "./dist/entry",
+  "types": "./dts/entry.d.ts",
   "scripts": {
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true",
