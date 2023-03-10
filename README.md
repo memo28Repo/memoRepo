@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-06 13:48:02
- * @LastEditTime: 2023-03-09 11:49:22
+ * @LastEditTime: 2023-03-09 16:40:56
  * @Description:
  * @FilePath: /memo/README.md
 -->
@@ -24,7 +24,15 @@
 
 - `@memo28/vite-plugin-meta` [通过配置生成 meta 标签](packages/vite-plugin-meta/README.md)
 
+# link 流程
+
+- 在需要 `link` 的包的`package.json` -> `script` 字段内添加 `links : yarn link`
+
+- 在`/`目录下 执行 `pnpm links`
+
 # publish 流程
+
+- [给自己的 github 仓库配置 npm token](https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages)
 
 - 打包测试
 

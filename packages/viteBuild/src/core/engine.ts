@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:49:34
- * @LastEditTime: 2023-02-06 16:03:31
+ * @LastEditTime: 2023-03-10 10:46:04
  * @Description:
  * @FilePath: /memo/packages/viteBuild/src/core/engine.ts
  */
@@ -25,9 +25,7 @@ export class Engine {
   setTechnologyStack<T extends ConfigureTechnologyStack = ConfigureTechnologyStack>(technology: T): this {
     this.technology = technology
     const defaultModule = injection.getValue<technologyStackTypes>(Engine, 'defaultModule').get(this.technology)
-    this.pluginList.push(
-      defaultModule
-    )
+    this.pluginList.push(defaultModule)
     return this
   }
 
@@ -37,9 +35,7 @@ export class Engine {
   addPlugins(cb?: (container: Omit<PlugInContainer, 'getPlugInContainerList'>) => void) {
     const plugInContainer = new PlugInContainer()
     cb?.(plugInContainer)
-    this.pluginList.push(
-      plugInContainer.getPlugInContainerList()
-    )
+    this.pluginList.push(plugInContainer.getPlugInContainerList())
     return this
   }
 
@@ -47,8 +43,7 @@ export class Engine {
    * @description 获取配置
    */
   getBuildConfig(config?: UserConfigExport): UserConfigExport {
-    const userConfigPlugin =
-      Reflect.get(config || {}, 'plugins') || []
+    const userConfigPlugin = Reflect.get(config || {}, 'plugins') || []
 
     return {
       ...config,
