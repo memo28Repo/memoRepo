@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.1.6
+
+### Patch Changes
+
+- add SNI,valuePolyfill fn
+
 ## 1.1.5
 
 ### Patch Changes
