@@ -157,8 +157,29 @@ describe('cache collection', async () => {
   })
 })
 
-
 ```
+
+## 不兼容装饰器？ 试试 `ServiceUtils`
+
+```ts
+import { ServiceUtils } from '@memo28/utils'
+const serviceUtils = new ServiceUtils()
+      .modules({
+        interceptorModule: [RetData, MultiVersionSwitching],
+      })
+      .initializeConfiguration({
+        baseURL: 'http://localhost:100/base',
+        versionPlaceholder: 'base',
+        version: 'v1',
+      })
+      .instantiation()
+      .getAxios()
+
+serviceUtils<string>({
+  url: ''
+})
+```
+
 
 - ~~取消请求~~
 
