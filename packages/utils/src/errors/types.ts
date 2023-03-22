@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-23 09:27:39
- * @LastEditTime: 2023-03-06 22:30:03
+ * @LastEditTime: 2023-03-17 12:25:36
  * @Description:
  * @FilePath: /memo/packages/utils/src/errors/types.ts
  */
@@ -38,4 +38,4 @@ export interface ErrorsNewResult {
 /**
  * @description 错误处理返回类型
  */
-export type Panic<T = unknown> = [ErrorsNewResult | undefined | false | null, T]
+export type Panic<T = unknown> = [ErrorsNewResult | undefined | false | null | true, T]

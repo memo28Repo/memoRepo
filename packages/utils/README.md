@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-30 14:06:45
- * @LastEditTime: 2023-03-07 17:37:38
+ * @LastEditTime: 2023-03-17 23:16:17
  * @Description:
  * @FilePath: /memo/packages/utils/README.md
 -->
@@ -110,4 +110,118 @@ new A().addOne().addTwo()
 run one
 run one errors # in onError
 run one errors # in skip fn
+```
+
+## log
+
+```ts
+// string
+const a = '1'
+a.log() // output: '1'
+a.log('mark') // output: 'mark ===> 1'
+
+// number
+const a = 1
+a.log() // output: 1
+a.log('mark') // output: 'mark ===> 1'
+
+// object
+const a = { a: 1 }
+a.log() // output: { a: 1 }
+a.log('mark') // output: 'mark ===> ' { a: 1}
+
+// index.d.ts
+
+interface String {
+  log(mark?: string): void
+}
+
+interface Number {
+  log(mark?: string): void
+}
+
+interface Object {
+  log(mark?: string): void
+}
+```
+
+### `valuePolyfill`
+
+在项目中 当判断不严谨时 难免会出现在 `undefined` 的情况下 继续操作
+
+就好似
+
+```ts
+// 当 b 是 undefined 时 c 也必然是 我们就会在 undefined的情况下继续操作 undefined.toFn 方法 导致报错
+a?.b?.c.toFn()
+
+// 你可能会说给c也添加一个可选链呢？
+// 这样就导致需要获取toFn函数返回值的逻辑 将会的一个undefined 传递下去 循环往复 直到页面崩溃报错吗？
+a?.b?.c?.toFn()
+```
+
+即使是再复杂的计算 追根结底也是基本数据类型的计算 当我们处理好 并且保证这些基本类型 在最开始的计算前为预期类型的值 问题也就解决了一大半
+
+#### `valuePolyfill` 应运而生
+
+```ts
+import { ValuePolyfill } from '@memo28/utils'
+
+const a = new ValuePolyfill(1)
+a.get() // 1
+a.set('1').get() // 1(number)
+
+a.set('12aasdf').get() // 12(number)
+```
+
+- `objToValuePolyFill` 对象 `ValuePolyfill` 互转
+
+```ts
+import { objToValuePolyFill } from '@memo28/utils'
+const got = objToValuePolyFill({
+  a: 1,
+})
+got.a.get() // 1
+got.a.set('1321231').get() // 1321231
+valuePolyFillToObj(got) // { a : 1321231 }
+```
+
+- `arrayToValuePolyFill` 数组 `ValuePolyfill` 互转
+
+```ts
+import { arrayToValuePolyFill, valuePolyFillToArray } from '@memo28/utils'
+const got = arrayToValuePolyFill([1, 2, 3, 1, 12, 12])
+got[0].get() // 1
+got[0].set('123213').get() // 123213
+valuePolyFillToArray(got) // [123213, 2, 3, 1, 12, 12]
+```
+
+- `isEmpty` 判空
+
+```ts
+import { arrayToValuePolyFill } from '@memo28/utils'
+
+const as = arrayToValuePolyFill([1, '', 3, 1, 12])
+
+as[0].isEmpty() // false
+as[0].set(0).isEmpty() // true
+
+as[1].isEmpty() // true
+as[1].set('asdfasdfa').isEmpty() // false
+```
+
+## `SNI`
+
+```ts
+/**
+ * @description String Number includes的简称
+ * @use
+ *  const a = 1;
+ *
+ *  SNI(2, a) => [2,'2'].includes(a)
+ */
+export function SNI(n: number | string, value: any) {
+  const reverseType = typeof n === 'string' ? parseFloat(n) : `${n}`
+  return [n, reverseType].includes(value)
+}
 ```

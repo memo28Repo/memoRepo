@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-23 09:18:30
- * @LastEditTime: 2023-03-07 17:23:23
+ * @LastEditTime: 2023-03-17 12:32:33
  * @Description: 该包封装了操作错误的函数
  * @FilePath: /memo/packages/utils/src/errors/core.ts
  */
@@ -46,5 +46,13 @@ export class Errors {
     // @ts-ignore
     if ([null, undefined].includes(classify)) return false
     return errors.every(errorItem => errorItem.info().classify === classify)
+  }
+  /**
+   * @description 是否是一个 由Errors.New生成的错误对象
+   * @param value
+   * @returns
+   */
+  static Is(value: any) {
+    return Reflect.has(value, 'trace') && Reflect.has(value, 'unWrap') && Reflect.has(value, 'info')
   }
 }
