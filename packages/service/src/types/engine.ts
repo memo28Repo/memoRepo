@@ -1,13 +1,13 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:34:02
- * @LastEditTime: 2023-01-27 13:03:00
+ * @LastEditTime: 2023-03-22 09:18:02
  * @Description:
  * @FilePath: /memo/packages/service/src/types/engine.ts
  */
 import { AxiosRequestConfig } from 'axios'
-import { interceptorImpl, triggerInterceptorImpl } from './interceptor'
 import { multiVersionSwitchingRequest } from '../plugin/multiVersionSwitching'
+import { interceptorImpl, triggerInterceptorImpl } from './interceptor'
 
 export interface serviceImpl<T = unknown> {
   getAxios?(): T

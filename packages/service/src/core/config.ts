@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 18:11:53
- * @LastEditTime: 2023-01-27 12:50:45
+ * @LastEditTime: 2023-03-22 09:26:54
  * @Description:
  * @FilePath: /memo/packages/service/src/core/config.ts
  */
