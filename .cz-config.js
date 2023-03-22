@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-19 20:08:07
- * @LastEditTime: 2023-01-19 20:08:09
+ * @LastEditTime: 2023-03-22 10:56:35
  * @Description: 
  * @FilePath: /memo/.cz-config.js
  */
@@ -28,6 +28,7 @@ module.exports = {
             name: 'chore:对构建过程或辅助工具的更改\n 以及文档生成等库',
         },
         { value: 'revert', name: 'revert:恢复到提交' },
+        { value: 'publish', name: 'publish:发布' },
     ],
 
     // scopes: [{ name: '帐户' }, { name: '行政' }, { name: '示例范围' }, { name: 'changeMe' }],

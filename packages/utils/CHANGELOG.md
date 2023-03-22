@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.1.7
+
+### Patch Changes
+
+- 调整 utils 文件结构,更新 service 文档,update utils lib version, add ServiceUtils class
+
 ## 1.1.6
 
 ### Patch Changes
