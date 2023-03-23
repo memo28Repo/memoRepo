@@ -1,5 +1,11 @@
 # @memo28/service
 
+## 2.1.3
+
+### Patch Changes
+
+- update logs position
+
 ## 2.1.2
 
 ### Patch Changes
