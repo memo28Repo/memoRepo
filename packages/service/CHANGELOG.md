@@ -1,5 +1,11 @@
 # @memo28/service
 
+## 2.1.4
+
+### Patch Changes
+
+- fix: logs plugins
+
 ## 2.1.3
 
 ### Patch Changes

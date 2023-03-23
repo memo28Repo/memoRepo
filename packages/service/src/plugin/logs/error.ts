@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-23 09:39:21
- * @LastEditTime: 2023-03-23 10:08:21
+ * @LastEditTime: 2023-03-23 13:47:18
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/logs/error.ts
  */
@@ -27,7 +27,7 @@ export class ErrorWithAxios extends AnomalousChain {
 
   @panicProcessing()
   AxiosError() {
-    if (!(this.obj instanceof AxiosError)) return this
+    if (typeof this.obj === 'object' && !(this.obj instanceof AxiosError)) return this
     const err = this.obj as AxiosError
     console.groupCollapsed(
       `%c RESPONSE ERROR %c code:${err.code} %c message:${err.message} %c ${err.config?.baseURL ? err.config.baseURL + err.config?.url : err.config?.url} %c 展开查看接口兜底值:👇`,

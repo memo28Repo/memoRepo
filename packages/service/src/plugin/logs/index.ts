@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-23 06:23:19
- * @LastEditTime: 2023-03-23 10:40:06
+ * @LastEditTime: 2023-03-23 13:50:08
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/logs/index.ts
  */
@@ -68,6 +68,12 @@ export class Logs implements interceptorImpl {
     console.groupEnd()
     Reflect.set(config, requestTimestamp, new Date().getTime())
     return config
+  }
+
+  requestFail(error: any) {
+    console.groupCollapsed(`%c Request Error!`, 'color:red;')
+    console.log(error)
+    console.groupEnd()
   }
 
   responseSuc(response: AxiosResponse<unknown, any>): unknown {
