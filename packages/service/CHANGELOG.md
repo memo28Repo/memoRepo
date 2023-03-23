@@ -1,5 +1,13 @@
 # @memo28/service
 
+## 2.1.2
+
+### Patch Changes
+
+- @memo28/service add logs,@memo28/utils update build config
+- Updated dependencies
+  - @memo28/utils@1.1.8
+
 ## 2.1.1
 
 ### Patch Changes

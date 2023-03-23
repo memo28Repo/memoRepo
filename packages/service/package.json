@@ -1,6 +1,6 @@
 {
   "name": "@memo28/service",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "axios configuration based on decorator pluggable",
   "main": "./lib/index",
   "module": "./dist/index",
@@ -39,7 +39,7 @@
     "axios": "^1.2.2"
   },
   "dependencies": {
-    "@memo28/utils": "^1.1.7",
+    "@memo28/utils": "^1.1.8",
     "reflect-metadata": "^0.1.13"
   }
 }
