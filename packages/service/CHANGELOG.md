@@ -1,5 +1,11 @@
 # @memo28/service
 
+## 2.1.6
+
+### Patch Changes
+
+- add version log
+
 ## 2.1.5
 
 ### Patch Changes
