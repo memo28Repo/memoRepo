@@ -1,5 +1,11 @@
 # @memo28/service
 
+## 2.1.5
+
+### Patch Changes
+
+- feat(@memo28/service): add loading plugins,fix logs
+
 ## 2.1.4
 
 ### Patch Changes
