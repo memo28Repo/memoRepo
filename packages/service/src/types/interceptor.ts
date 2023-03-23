@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 15:09:42
- * @LastEditTime: 2023-01-15 11:27:39
+ * @LastEditTime: 2023-03-23 06:25:31
  * @Description:
  * @FilePath: /memo/packages/service/src/types/interceptor.ts
  */
@@ -18,11 +18,11 @@ export interface interceptorImpl<R = unknown, RS = unknown> {
    */
   displayName?: string
 
-  requestSuc?(value: AxiosRequestConfig & R): Promise<AxiosRequestConfig & R> | (R & AxiosRequestConfig)
+  requestSuc?(config: initializeConfigurationTypes & R): Promise<initializeConfigurationTypes & R> | (R & initializeConfigurationTypes)
 
   requestFail?(error: any): any
 
-  responseSuc?(value: AxiosResponse<RS>): Promise<AxiosResponse<RS>> | AxiosResponse<RS> | unknown
+  responseSuc?(response: AxiosResponse<RS>): Promise<AxiosResponse<RS>> | AxiosResponse<RS> | unknown
 
   responseFail?(error: any): any
 }

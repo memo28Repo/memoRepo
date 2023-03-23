@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-06 22:35:05
- * @LastEditTime: 2023-03-09 10:24:36
+ * @LastEditTime: 2023-03-23 09:52:14
  * @Description: 异常链
  * @FilePath: /memo/packages/utils/src/errors/anomalousChain.ts
  */
@@ -14,7 +14,7 @@ export interface AnomalousChainImpl {
 }
 
 export class AnomalousChain {
-  protected errors: ErrorsNewResult | null = null
+  private errors: ErrorsNewResult | null = null
 
   protected skip(errors: ErrorsNewResult | null): this {
     return this
@@ -23,8 +23,12 @@ export class AnomalousChain {
   protected setErrors(err: ErrorsNewResult) {
     this.errors = err
   }
+
   protected recover() {
     this.errors = null
+  }
+  protected getErrors() {
+    return this.errors
   }
 }
 
@@ -38,12 +42,14 @@ export function panicProcessing(opt?: Partial<panicProcessingOpt>) {
     const fn = desc.value
     let res = null
     desc.value = function (...args: any[]) {
-      if (target.errors && opt?.onRecover?.(target.errors)) {
+      // @ts-ignore
+      const err = target.errors || this.errors
+      if (err && opt?.onRecover?.(err)) {
         target.recover()
       }
-      if (target.errors) {
-        opt?.onError?.(target.errors)
-        res = target.skip(target.errors)
+      if (err) {
+        opt?.onError?.(err)
+        res = target.skip(err)
         return res
       }
       res = fn.call(this, ...args)

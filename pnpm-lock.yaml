@@ -45,10 +45,11 @@ importers:
 
   packages/service:
     specifiers:
-      '@memo28/utils': ^1.1.6
+      '@memo28/utils': ^1.1.7
       axios: ^1.2.2
       reflect-metadata: ^0.1.13
     dependencies:
+      '@memo28/utils': link:../utils
       reflect-metadata: 0.1.13
     devDependencies:
       axios: 1.2.2

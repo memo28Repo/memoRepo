@@ -159,6 +159,27 @@ describe('cache collection', async () => {
 
 ```
 
+## logs 
+
+![logsImage](https://cnn.hd-r.cn/b6b0aa2b4ab16d8bba102e5949c95c8d.jpg)
+
+```ts
+import { ServiceCore, initializeConfiguration, instantiation, modules } from '@memo/service'
+
+@instantiation()
+@modules({
+  interceptorModule: [],
+  triggerInterceptor: [],
+})
+@initializeConfiguration<requestConfig>({
+  baseURL: 'http://localhost:3011',
+  debugger: true, // 开启logs日志 , 响应错误log不收其控制
+})
+class Service extends ServiceCore<requestConfig> {}
+
+const http = new Service().getAxios()
+```
+
 ## 不兼容装饰器？ 试试 `ServiceUtils`
 
 ```ts
@@ -181,6 +202,9 @@ serviceUtils<string>({
 ```
 
 
+
+- ~~logs~~
+ 
 - ~~取消请求~~
 
 - ~~用插件的形式使用拦截器~~

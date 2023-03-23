@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-22 09:13:31
- * @LastEditTime: 2023-03-22 10:51:49
+ * @LastEditTime: 2023-03-23 10:31:59
  * @Description:
  * @FilePath: /memo/packages/service/src/core/serviceUtils.ts
  */
@@ -13,13 +13,14 @@ import axios, { AxiosInstance } from 'axios'
 import { GenerateSchedulingAxios } from './instantiation'
 import { Interceptor } from '../interceptor/core'
 import { PocketValue } from '../plugin/pocketBottom'
+import { Logs } from '../plugin/logs'
 
 export class ServiceUtils {
   private injection = new Injection<getModulesValues | getInitializeConfigurationValues>(this)
   private axios: null | AxiosInstance = null
 
   modules(opt: Partial<modulesImpl>) {
-    this.injection.setValue('interceptorModule', opt.interceptorModule)
+    this.injection.setValue('interceptorModule', [...(opt.interceptorModule || []), Logs])
     this.injection.setValue('triggerInterceptor', [...(opt.triggerInterceptor || []), PocketValue])
     return this
   }
