@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-22 09:13:31
- * @LastEditTime: 2023-03-23 10:31:59
+ * @LastEditTime: 2023-03-23 11:31:25
  * @Description:
  * @FilePath: /memo/packages/service/src/core/serviceUtils.ts
  */
@@ -20,7 +20,7 @@ export class ServiceUtils {
   private axios: null | AxiosInstance = null
 
   modules(opt: Partial<modulesImpl>) {
-    this.injection.setValue('interceptorModule', [...(opt.interceptorModule || []), Logs])
+    this.injection.setValue('interceptorModule', [Logs, ...(opt.interceptorModule || [])])
     this.injection.setValue('triggerInterceptor', [...(opt.triggerInterceptor || []), PocketValue])
     return this
   }
