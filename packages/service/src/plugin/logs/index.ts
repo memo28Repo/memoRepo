@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-23 06:23:19
- * @LastEditTime: 2023-03-23 13:50:08
+ * @LastEditTime: 2023-03-23 17:31:30
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/logs/index.ts
  */
@@ -63,8 +63,8 @@ export class Logs implements interceptorImpl {
       getMethod.color,
       generateLogInformation.getParams()
     )
-    console.log(generateLogInformation.getParams())
-    console.log(config.headers)
+    console.log('params:', generateLogInformation.getParams())
+    console.log('header:', config.headers)
     console.groupEnd()
     Reflect.set(config, requestTimestamp, new Date().getTime())
     return config

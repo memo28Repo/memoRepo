@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-22 09:13:31
- * @LastEditTime: 2023-03-23 11:31:25
+ * @LastEditTime: 2023-03-23 17:44:14
  * @Description:
  * @FilePath: /memo/packages/service/src/core/serviceUtils.ts
  */
@@ -25,7 +25,7 @@ export class ServiceUtils {
     return this
   }
 
-  initializeConfiguration(opt: initializeConfigurationTypes) {
+  initializeConfiguration<T extends object>(opt: initializeConfigurationTypes & T) {
     this.injection.setValue('initializeConfiguration', opt)
     return this
   }
