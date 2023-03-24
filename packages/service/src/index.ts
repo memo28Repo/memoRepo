@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:32:00
- * @LastEditTime: 2023-03-23 18:02:15
+ * @LastEditTime: 2023-03-24 09:36:12
  * @Description:
  * @FilePath: /memo/packages/service/src/index.ts
  */
@@ -10,6 +10,7 @@ import 'reflect-metadata'
 import { versionLog } from './core/version'
 
 versionLog()
+
 export { RetData } from './plugin/RetData'
 
 export { MultiVersionSwitching, multiVersionSwitchingRequest } from './plugin/multiVersionSwitching'
