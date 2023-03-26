@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-23 06:23:19
- * @LastEditTime: 2023-03-23 10:40:06
+ * @LastEditTime: 2023-03-26 08:36:33
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/logs/index.ts
  */
@@ -85,7 +85,7 @@ export class Logs implements interceptorImpl {
       generateLogInformation.getParams(),
       'color: #58a6ff'
     )
-    console.log(response)
+    console.log(`%c response ${response}`, 'color:green')
     console.groupEnd()
     return response
   }
