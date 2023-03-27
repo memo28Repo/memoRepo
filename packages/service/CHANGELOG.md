@@ -1,5 +1,11 @@
 # @memo28/service
 
+## 2.1.7
+
+### Patch Changes
+
+- feat(@memo28/service): 新增取消 logs，前后置拦截器 log
+
 ## 2.1.6
 
 ### Patch Changes
