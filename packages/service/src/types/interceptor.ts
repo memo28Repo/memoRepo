@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 15:09:42
- * @LastEditTime: 2023-03-23 06:25:31
+ * @LastEditTime: 2023-03-26 10:23:03
  * @Description:
  * @FilePath: /memo/packages/service/src/types/interceptor.ts
  */
@@ -36,9 +36,10 @@ export interface beforeTriggerResultTypes<T> {
  * @description 触发拦截器需要实现的字段
  */
 export interface triggerInterceptorImpl<Req extends initializeConfigurationTypes = initializeConfigurationTypes, Res = unknown> {
+  displayName?: string
   beforeTrigger?<T = unknown>(config: Req): Promise<beforeTriggerResultTypes<T> | void>
-
   afterTrigger?<T = unknown>(res: Res, req: Req): Promise<T | void>
+  logsCallback?(type: 'afterTrigger' | 'beforeTrigger', data: void | beforeTriggerResultTypes<unknown> | initializeConfigurationTypes, res?: unknown): void
 }
 
 export abstract class interceptorToolboxImpl {

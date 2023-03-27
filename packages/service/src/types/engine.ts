@@ -1,13 +1,14 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:34:02
- * @LastEditTime: 2023-03-23 09:08:36
+ * @LastEditTime: 2023-03-26 08:56:48
  * @Description:
  * @FilePath: /memo/packages/service/src/types/engine.ts
  */
 import { AxiosRequestConfig } from 'axios'
 import { multiVersionSwitchingRequest } from '../plugin/multiVersionSwitching'
 import { interceptorImpl, triggerInterceptorImpl } from './interceptor'
+import { requestConfig } from '../plugin/cache'
 
 export interface serviceImpl<T = unknown> {
   getAxios?(): T
@@ -26,7 +27,7 @@ export interface modulesImpl {
   triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl)[]
 }
 
-export interface initializeConfigurationTypes extends AxiosRequestConfig, Partial<multiVersionSwitchingRequest> {
+export interface initializeConfigurationTypes extends AxiosRequestConfig, Partial<multiVersionSwitchingRequest>, Partial<requestConfig> {
   debugger?: boolean
   pocketValue?: unknown // 兜底值
 }

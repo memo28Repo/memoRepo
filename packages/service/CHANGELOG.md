@@ -1,5 +1,37 @@
 # @memo28/service
 
+## 2.1.6
+
+### Patch Changes
+
+- add version log
+
+## 2.1.5
+
+### Patch Changes
+
+- feat(@memo28/service): add loading plugins,fix logs
+
+## 2.1.4
+
+### Patch Changes
+
+- fix: logs plugins
+
+## 2.1.3
+
+### Patch Changes
+
+- update logs position
+
+## 2.1.2
+
+### Patch Changes
+
+- @memo28/service add logs,@memo28/utils update build config
+- Updated dependencies
+  - @memo28/utils@1.1.8
+
 ## 2.1.1
 
 ### Patch Changes

@@ -1,10 +1,11 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-07 12:40:29
- * @LastEditTime: 2023-03-22 10:09:24
+ * @LastEditTime: 2023-03-27 08:56:05
  * @Description:
  * @FilePath: /memo/packages/service/src/core/instantiation.ts
  */
+
 import { Injection } from '@memo28/utils'
 import axios, { AxiosInstance } from 'axios'
 import { Interceptor } from '../interceptor/core'
@@ -57,7 +58,14 @@ export function instantiation() {
     // @ts-ignore
     proto.getAxios = function () {
       return async <T>(req: initializeConfigurationTypes): Promise<T> => {
-        const generateSchedulingAxios = new GenerateSchedulingAxios(injection, req, axi)
+        const generateSchedulingAxios = new GenerateSchedulingAxios(
+          injection,
+          {
+            ...req,
+            ...injection.getValue('initializeConfiguration'),
+          },
+          axi
+        )
         const beforeTriggeringInterceptionResponse = await generateSchedulingAxios.beforeTriggeringInterception()
         // 如果 value 不是 GenerateSchedulingAxios的实例 表示存在中途推出的情况, 直接返回
         if (!(beforeTriggeringInterceptionResponse instanceof GenerateSchedulingAxios)) {

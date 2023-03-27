@@ -1,15 +1,13 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-14 12:06:48
- * @LastEditTime: 2023-01-15 14:23:26
+ * @LastEditTime: 2023-03-26 08:57:54
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/cache/config.ts
  */
 import { AxiosRequestConfig } from 'axios'
 
-import { initializeConfigurationTypes } from '../../index'
-
-export type requestConfig = Partial<CacheConfig> & initializeConfigurationTypes
+export type requestConfig = Partial<CacheConfig>
 
 export interface CacheConfig {
   useCache?: boolean

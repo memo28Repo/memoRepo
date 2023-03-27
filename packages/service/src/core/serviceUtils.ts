@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-22 09:13:31
- * @LastEditTime: 2023-03-23 10:31:59
+ * @LastEditTime: 2023-03-27 08:56:16
  * @Description:
  * @FilePath: /memo/packages/service/src/core/serviceUtils.ts
  */
@@ -15,18 +15,21 @@ import { Interceptor } from '../interceptor/core'
 import { PocketValue } from '../plugin/pocketBottom'
 import { Logs } from '../plugin/logs'
 
-export class ServiceUtils {
+export let debug = false
+
+export class ServiceUtils<T extends object> {
   private injection = new Injection<getModulesValues | getInitializeConfigurationValues>(this)
   private axios: null | AxiosInstance = null
 
   modules(opt: Partial<modulesImpl>) {
-    this.injection.setValue('interceptorModule', [...(opt.interceptorModule || []), Logs])
+    this.injection.setValue('interceptorModule', [Logs, ...(opt.interceptorModule || [])])
     this.injection.setValue('triggerInterceptor', [...(opt.triggerInterceptor || []), PocketValue])
     return this
   }
 
-  initializeConfiguration(opt: initializeConfigurationTypes) {
+  initializeConfiguration(opt: initializeConfigurationTypes & T) {
     this.injection.setValue('initializeConfiguration', opt)
+    debug = opt.debugger || false
     return this
   }
 
@@ -37,8 +40,15 @@ export class ServiceUtils {
   }
 
   getAxios() {
-    return async <T>(req: initializeConfigurationTypes): Promise<T> => {
-      const generateSchedulingAxios = new GenerateSchedulingAxios(this.injection, req, this.axios as AxiosInstance)
+    return async <R>(req: initializeConfigurationTypes & T): Promise<R> => {
+      const generateSchedulingAxios = new GenerateSchedulingAxios(
+        this.injection,
+        {
+          ...req,
+          ...this.injection.getValue('initializeConfiguration'),
+        },
+        this.axios as AxiosInstance
+      )
       const beforeTriggeringInterceptionResponse = await generateSchedulingAxios.beforeTriggeringInterception()
       // 如果 value 不是 GenerateSchedulingAxios的实例 表示存在中途推出的情况, 直接返回
       if (!(beforeTriggeringInterceptionResponse instanceof GenerateSchedulingAxios)) {
