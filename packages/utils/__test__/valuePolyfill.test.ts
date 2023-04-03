@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 16:16:43
- * @LastEditTime: 2023-03-22 10:50:02
+ * @LastEditTime: 2023-04-03 17:53:14
  * @Description:
  * @FilePath: /memo/packages/utils/__test__/valuePolyfill.test.ts
  */
@@ -65,6 +65,9 @@ describe('valuePolyfill', () => {
     expect(got.a.set('12').get()).toBe(12)
     expect(got.a.set('1231123sasfd').get()).toBe(1231123)
     expect(got.a.set(123).get()).toBe(123)
+
+    expect(got.a.reset()).toBe(1)
+
     expect(got.as).toStrictEqual([])
   })
 
