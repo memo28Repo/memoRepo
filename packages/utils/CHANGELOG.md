@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.1.9
+
+### Patch Changes
+
+- @memo28/utils valuePolyfill add reset fn
+
 ## 1.1.8
 
 ### Patch Changes
