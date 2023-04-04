@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-06 13:48:02
- * @LastEditTime: 2023-03-09 16:40:56
+ * @LastEditTime: 2023-04-04 10:54:36
  * @Description:
  * @FilePath: /memo/README.md
 -->
@@ -42,6 +42,6 @@
 
 - `push` 支 `git` 仓库让 `action` 帮你完整最后的发包流程
 
-# [分支管理](/packages/docs/branchManagement.md)
+# [分支管理](/docs/branchManagement.md)
 
-# [包管理规范](/packages/docs/packagingSpecification.md)
+# [包管理规范](/docs/packagingSpecification.md)

@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 2.3.1
+
+### Patch Changes
+
+- add rollup-plugin-visualizer
+
 ## 2.3.0
 
 ### Minor Changes
