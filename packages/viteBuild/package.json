@@ -1,6 +1,6 @@
 {
   "name": "@memo28/vitebuild",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "private": false,
   "description": "vite config helper",
   "main": "./lib/index",
@@ -50,6 +50,7 @@
     "unplugin-vue-components": "^0.23.0",
     "unplugin-vue-macros": "^1.6.4",
     "vite-plugin-browser-sync": "^1.0.2",
+    "vite-plugin-inspect": "^0.7.18",
     "vite-plugin-print-urls": "^0.1.2",
     "vite-plugin-pwa": "^0.14.1",
     "vite-plugin-sass-dts": "^1.2.13"

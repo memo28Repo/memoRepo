@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 2.3.2
+
+### Patch Changes
+
+- add vite-plugin-inspect fn
+
 ## 2.3.1
 
 ### Patch Changes
