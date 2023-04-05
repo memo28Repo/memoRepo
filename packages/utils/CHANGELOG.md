@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.1.10
+
+### Patch Changes
+
+- 修改 SNI 函数参数验证范围
+
 ## 1.1.9
 
 ### Patch Changes
