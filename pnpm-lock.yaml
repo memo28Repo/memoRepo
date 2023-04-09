@@ -80,6 +80,9 @@ importers:
       '@memo28/types':
         specifier: ^1.1.1
         version: link:../types
+      mitt:
+        specifier: ^3.0.0
+        version: 3.0.0
       reflect-metadata:
         specifier: ^0.1.13
         version: 0.1.13
@@ -4982,6 +4985,10 @@ packages:
 
   /mitt@1.2.0:
     resolution: {integrity: sha512-r6lj77KlwqLhIUku9UWYes7KJtsczvolZkzp8hbaDPPaE24OmWl5s539Mytlj22siEQKosZ26qCBgda2PKwoJw==}
+    dev: false
+
+  /mitt@3.0.0:
+    resolution: {integrity: sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ==}
     dev: false
 
   /mixme@0.5.4:

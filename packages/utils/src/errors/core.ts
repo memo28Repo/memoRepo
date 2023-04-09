@@ -1,11 +1,12 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-23 09:18:30
- * @LastEditTime: 2023-03-17 12:32:33
+ * @LastEditTime: 2023-04-05 12:40:28
  * @Description: 该包封装了操作错误的函数
  * @FilePath: /memo/packages/utils/src/errors/core.ts
  */
 
+import { SNI } from '../verify/verify'
 import { ErrorsNewResult, NewOpt } from './types'
 
 export class Errors {
@@ -53,6 +54,8 @@ export class Errors {
    * @returns
    */
   static Is(value: any) {
+    if (typeof value !== 'object') return false
+    if (SNI([null, undefined], value)) return false
     return Reflect.has(value, 'trace') && Reflect.has(value, 'unWrap') && Reflect.has(value, 'info')
   }
 }

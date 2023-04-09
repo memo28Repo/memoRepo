@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-06 22:35:05
- * @LastEditTime: 2023-03-23 09:52:14
+ * @LastEditTime: 2023-04-05 12:31:30
  * @Description: 异常链
  * @FilePath: /memo/packages/utils/src/errors/anomalousChain.ts
  */
