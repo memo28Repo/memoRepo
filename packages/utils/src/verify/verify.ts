@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 23:08:13
- * @LastEditTime: 2023-04-09 08:10:46
+ * @LastEditTime: 2023-04-09 09:09:34
  * @Description: verify
  * @FilePath: /memo/packages/utils/src/verify/verify.ts
  */
@@ -11,12 +11,14 @@ import { Panic } from '../errors/types'
 import { Errors } from '../errors/core'
 
 /**
- * @description String Number includes的简称
+ * String Number includes的简称
  * @example
  *  const a = 1;
  *
  *  SNI(2, a) => [2,'2'].includes(a)
  *  SNI([1,2,3], a) => [1,2,3].includes(a)
+ *
+ * @public
  */
 export function SNI(n: number | string | unknown[], value: any) {
   const reverseType = typeof n === 'string' ? parseFloat(n) : `${n}`
@@ -25,8 +27,10 @@ export function SNI(n: number | string | unknown[], value: any) {
 }
 
 /**
- * @description 验证手机号 验证不通过时 get 不会返回错误值
+ * 验证手机号 验证不通过时 get 不会返回错误值
  * @example new Phone('asdfa').set('asdfa').get()
+ *
+ * @public
  */
 export class Phone extends VerificationFlow<str> {
   constructor(phone?: str, private msg?: string) {
@@ -48,8 +52,11 @@ export class Phone extends VerificationFlow<str> {
 }
 
 /**
- * @description 验证邮箱, 不通过时 get 不会返回错值
+ * 验证邮箱, 不通过时 get 不会返回错值
+ *
  * @example new Mail('asasd').set('asdfaf').get()
+ *
+ * @public
  */
 export class Mail extends VerificationFlow<str> {
   constructor(phone?: str, private msg?: string) {

@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-23 09:18:30
- * @LastEditTime: 2023-04-05 12:40:28
+ * @LastEditTime: 2023-04-09 09:08:41
  * @Description: 该包封装了操作错误的函数
  * @FilePath: /memo/packages/utils/src/errors/core.ts
  */
@@ -9,6 +9,14 @@
 import { SNI } from '../verify/verify'
 import { ErrorsNewResult, NewOpt } from './types'
 
+/**
+ * 错误对象
+ *
+ * @remarks
+ * 提供一系列错误对象方法
+ *
+ * @public
+ */
 export class Errors {
   /**
    * @description 生成一个错误
@@ -40,7 +48,9 @@ export class Errors {
     }
   }
   /**
-   * @description 对比多个错误是否为同一种类型
+   * 对比多个错误是否为同一种类型
+   *
+   * @public
    */
   static As(...errors: ErrorsNewResult[]) {
     const classify = errors[0].info().classify
@@ -52,6 +62,8 @@ export class Errors {
    * @description 是否是一个 由Errors.New生成的错误对象
    * @param value
    * @returns
+   *
+   * @public
    */
   static Is(value: any) {
     if (typeof value !== 'object') return false

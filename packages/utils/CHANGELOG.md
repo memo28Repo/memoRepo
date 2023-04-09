@@ -1,5 +1,13 @@
 # @memo28/utils
 
+## 1.1.11
+
+### Patch Changes
+
+- types(add SuperObject) utils(mail,phone)
+- Updated dependencies
+  - @memo28/types@1.1.2
+
 ## 1.1.10
 
 ### Patch Changes

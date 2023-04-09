@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-04-05 12:18:06
- * @LastEditTime: 2023-04-09 08:11:13
+ * @LastEditTime: 2023-04-09 09:10:12
  * @Description: 验证接口
  * @FilePath: /memo/packages/utils/src/verify/errorCollection.ts
  */
@@ -19,25 +19,25 @@ import { ErrorsNewResult, Panic } from '../errors/types'
 abstract class Verify<T = unknown> {
   abstract value: T
   /**
-   * @description 获取值  获取前验证
+   * 获取值  获取前验证
    * @param args
    */
   abstract get(): T
   /**
-   * @description 设置值  设置前验证
+   * 设置值  设置前验证
    * @param args
    */
   abstract set(args: T): this
 
   /**
-   * @description 上报验证错误
+   * 上报验证错误
    * @param type 错误类型
    * @param value 错误信息
    */
   abstract continuousReporting(type: keyof storeEmit, value: storeEmit[keysForStoreEmit]): this
 
   /**
-   * @description 验证值函数
+   * 验证值函数
    * @param args
    */
   abstract verification(args?: T): Panic<T>
@@ -55,7 +55,11 @@ export interface reportType<T = unknown> {
 }
 
 /**
- * @description 验证核心
+ * 验证核心
+ *
+ * @remarks
+ *
+ * @public
  */
 export class VerificationFlow<T = unknown> extends AnomalousChain implements Verify<T> {
   value: T
@@ -104,7 +108,9 @@ export class VerificationFlow<T = unknown> extends AnomalousChain implements Ver
 }
 
 /**
- * @description 错误集合
+ * 错误集合
+ *
+ * @public
  */
 export class ValidationErrorCollection<T extends object> {
   // @ts-ignore
