@@ -12,7 +12,7 @@ export { AnomalousChain, panicProcessing } from './errors/anomalousChain'
 export { ValuePolyFill } from './valuePolyfill/core'
 export { valuePolyFillToArray, valuePolyFillToObj, arrayToValuePolyFill, objToValuePolyFill } from './valuePolyfill/utils'
 export { SNI, Phone, Mail } from './verify/verify'
-export { ValidationErrorCollection } from './verify/errorCollection'
+export { ValidationErrorCollection, VerificationFlow } from './verify/errorCollection'
 
 export type { DeepObjectToValuePolyFillTypes } from './valuePolyfill/core'
 
