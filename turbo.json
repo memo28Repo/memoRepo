@@ -1,10 +1,19 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["tsconfig.json"],
+  "globalDependencies": [
+    "tsconfig.json"
+  ],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "dts", "lib"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "dts",
+        "lib"
+      ]
     },
     "lint": {
       "outputs": []
@@ -16,6 +25,9 @@
       "cache": false
     },
     "links": {
+      "cache": false
+    },
+    "build:md": {
       "cache": false
     }
   }

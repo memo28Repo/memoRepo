@@ -1,9 +1,16 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:32:00
- * @LastEditTime: 2023-03-26 08:50:51
+ * @LastEditTime: 2023-04-14 23:11:36
  * @Description:
  * @FilePath: /memo/packages/service/src/index.ts
+ */
+
+/**
+ *
+ * 请求最佳实践
+ *
+ * @packageDocumentation
  */
 
 import 'reflect-metadata'

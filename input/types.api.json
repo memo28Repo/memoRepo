@@ -1,0 +1,1178 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.34.4",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@memo28/types!",
+  "docComment": "/**\n * 常用工具类型，判断类型, 测试类型\n *\n * @packageDocumentation\n */\n",
+  "name": "@memo28/types",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@memo28/types!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Interface",
+          "canonicalReference": "@memo28/types!AutomaticAssembly:interface",
+          "docComment": "/**\n * 自动装配,通常使用在读写配置场景中 在写插件时总结出来的配置类型\n *\n * @typeParam T - 配置类型\n *\n * @typeParam R - 返回的配置类型\n *\n * @example\n * ```ts\n * class A implements AutomaticAssembly {}\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface AutomaticAssembly<T = "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ", R = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "dts/plugin.d.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "R",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            }
+          ],
+          "name": "AutomaticAssembly",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/types!AutomaticAssembly#config:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "config: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "T | undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "config",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/types!AutomaticAssembly#getAssemblyCompleted:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getAssemblyCompleted(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "R"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "getAssemblyCompleted"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/types!AutomaticAssembly#readConfiguration:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readConfiguration(res?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "T"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "res",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "readConfiguration"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!bool:type",
+          "docComment": "/**\n * `boolean` 别名\n *\n * @example\n * ```ts\n * type S = bool // boolean\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type bool = "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/baseType.d.ts",
+          "releaseTag": "Public",
+          "name": "bool",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!Equal:type",
+          "docComment": "/**\n * 这是一个创造性的使用条件类型的可分配行规则的解决方案. 它依赖于在未知时被延迟推导的条件类型`T` ，延迟类型条件的可分配依赖于内部 `isTypeIdenticalTo` 检查,这仅是用于 1. 两种条件类型具有相同的约束 2. 两个条件的真假分支是同一类型\n *\n * @see\n *\n * https://github.com/Microsoft/TypeScript/issues/27024\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type Equal<X, Y> = "
+            },
+            {
+              "kind": "Content",
+              "text": "(<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2 ? true : false"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/verify.d.ts",
+          "releaseTag": "Public",
+          "name": "Equal",
+          "typeParameters": [
+            {
+              "typeParameterName": "X",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "Y",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!Expect:type",
+          "docComment": "/**\n * 验证`true`类型 如果泛型参数不为 `true` 将编译不通过\n *\n * @typeParam T - `extends true` 需要一个推导类型为 `true` 的类型\n *\n * @example\n * ```ts\n * type S = Expect<true> // 通过\n * type S = Expect<false> // 编译器报错\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type Expect<T extends "
+            },
+            {
+              "kind": "Content",
+              "text": "true"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "T"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/verify.d.ts",
+          "releaseTag": "Public",
+          "name": "Expect",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!Extends:type",
+          "docComment": "/**\n * 用于检查类型 `E` 是否继承于 类型 `V`\n *\n * @typeParam E - 被比较类型\n *\n * @typeParam V - 比较类型\n *\n * @example\n * ```ts\n * type S = Extends<{ name: string }, object>\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type Extends<E, V> = "
+            },
+            {
+              "kind": "Content",
+              "text": "E extends V ? true : false"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/verify.d.ts",
+          "releaseTag": "Public",
+          "name": "Extends",
+          "typeParameters": [
+            {
+              "typeParameterName": "E",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "V",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!fn:type",
+          "docComment": "/**\n * 定义一个普通函数\n *\n * @typeParam P - 参数类型 示例`[number, string]`\n *\n * @typeParam R - 返回值类型\n *\n * @example\n * ```ts\n * type f = fn<[number,string],void> // (number,string) => void\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type fn<P extends "
+            },
+            {
+              "kind": "Content",
+              "text": "any[]"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", R = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "(...args: P) => R"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/func.d.ts",
+          "releaseTag": "Public",
+          "name": "fn",
+          "typeParameters": [
+            {
+              "typeParameterName": "P",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            },
+            {
+              "typeParameterName": "R",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 8
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!getKeys:type",
+          "docComment": "/**\n * 获取 对象 的 所有 key type\n *\n * @example\n * ```ts\n * type f = getKeys<{ name: string; age: number }> // name | age\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type getKeys<T extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "obj",
+              "canonicalReference": "@memo28/types!obj:type"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Equal",
+              "canonicalReference": "@memo28/types!Equal:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<T, any[]> extends true ? never : keyof T"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/object/key.value.d.ts",
+          "releaseTag": "Public",
+          "name": "getKeys",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!getValues:type",
+          "docComment": "/**\n * 获取 对象 的 所有 `value` type\n *\n * @typeParam T - 默认需要一个`object`\n *\n * @example\n * ```ts\n * type f = getObjValues<{ name: string; age: number }> // string | number\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type getValues<T extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "obj",
+              "canonicalReference": "@memo28/types!obj:type"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Equal",
+              "canonicalReference": "@memo28/types!Equal:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<T, any[]> extends true ? never : T[keyof T]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/object/key.value.d.ts",
+          "releaseTag": "Public",
+          "name": "getValues",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!int:type",
+          "docComment": "/**\n * `number` 别名\n *\n * @example\n * ```ts\n * type S = int // number\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type int = "
+            },
+            {
+              "kind": "Content",
+              "text": "number"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/baseType.d.ts",
+          "releaseTag": "Public",
+          "name": "int",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!IsAny:type",
+          "docComment": "/**\n * `0 extends 1` 永远返回`false`, (`0` 不可分配给 `1`), 因此`0 extends (1 & T)` 也不会满足,因为 `( 1 & T)` 比 `1` 的类型范围 更窄 . 但是当`T` 是 `any` 时 , 由于 `any` 是故意不健全的类型(顶级类型), 并且充当了几乎所有其他类型的超类型和子类型, 因此比较`any`时其他类型会被忽略 就变成了 `0 extends any`, 自然返回 `true`. 需要注意的时这仅仅适用 `strictNullChecks` 启用 (默认启用)\n *\n * @see\n *\n * https://stackoverflow.com/questions/49927523/disallow-call-with-any/49928360#49928360\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type IsAny<T> = "
+            },
+            {
+              "kind": "Content",
+              "text": "0 extends 1 & T ? true : false"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/verify.d.ts",
+          "releaseTag": "Public",
+          "name": "IsAny",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!IsFalse:type",
+          "docComment": "/**\n * 同 {@link Expect} 用法相同 不过取了个反\n *\n * @typeParam T - `extends false` 需要一个推导类型为 `false` 的类型\n *\n * @example\n * ```ts\n * type S = IsFalse<false> // 通过\n * type S = IsFalse<true> // 编译器报错\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type IsFalse<T extends "
+            },
+            {
+              "kind": "Content",
+              "text": "false"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "T"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/verify.d.ts",
+          "releaseTag": "Public",
+          "name": "IsFalse",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!mergeFnWithPromiseFn:type",
+          "docComment": "/**\n * 兼容普通函数和`promise`函数类型\n *\n * @typeParam T - 函数返回值\n *\n * @typeParam P - 函数参数 `[number,number]` = `(number,number) => void`\n *\n * @typeParam isP - 是否是一个`promise`\n *\n * @example\n * ```ts\n * type f = mergeFnWithPromiseFn<void, [string, number]> // fn<[string, number], void> | promiseFn<[string, number], void>\n *\n * type f = mergeFnWithPromiseFn<void, [string, number],false> // fn<[string, number], void>\n *\n * type f = mergeFnWithPromiseFn<void, [string, number],true> // promiseFn<[string, number], void>\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type mergeFnWithPromiseFn<T = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": ", P extends "
+            },
+            {
+              "kind": "Content",
+              "text": "any[]"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", isP extends "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean | undefined"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "undefined"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "isP extends undefined ? "
+            },
+            {
+              "kind": "Reference",
+              "text": "fn",
+              "canonicalReference": "@memo28/types!fn:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<P, T> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "promiseFn",
+              "canonicalReference": "@memo28/types!promiseFn:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<P, T> : isP extends true ? "
+            },
+            {
+              "kind": "Reference",
+              "text": "promiseFn",
+              "canonicalReference": "@memo28/types!promiseFn:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<P, T> : "
+            },
+            {
+              "kind": "Reference",
+              "text": "fn",
+              "canonicalReference": "@memo28/types!fn:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<P, T>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/func.d.ts",
+          "releaseTag": "Public",
+          "name": "mergeFnWithPromiseFn",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "P",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            },
+            {
+              "typeParameterName": "isP",
+              "constraintTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 9,
+                "endIndex": 10
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 11,
+            "endIndex": 20
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!obj:type",
+          "docComment": "/**\n * `object` 别名\n *\n * @example\n * ```ts\n * type S = obj //  object\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type obj = "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/baseType.d.ts",
+          "releaseTag": "Public",
+          "name": "obj",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!objWithValue:type",
+          "docComment": "/**\n * 指定 `obj` 的 `value`类型\n *\n * @typeParam T - `value` 类型\n *\n * @example\n * ```ts\n * type S = objWithValue<string | number> // string | number\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type objWithValue<T> = "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    [key: string]: T;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/object/key.value.d.ts",
+          "releaseTag": "Public",
+          "name": "objWithValue",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!promiseFn:type",
+          "docComment": "/**\n * 定义一个`promise`函数\n *\n * @typeParam P - 参数类型 示例`[number, string]`\n *\n * @typeParam R - 返回值类型\n *\n * @example\n * ```ts\n * type f = fn<[number,string],void> // (number,string) => Promise<void>\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type promiseFn<P extends "
+            },
+            {
+              "kind": "Content",
+              "text": "any[]"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", R = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "(...args: P) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<R>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/func.d.ts",
+          "releaseTag": "Public",
+          "name": "promiseFn",
+          "typeParameters": [
+            {
+              "typeParameterName": "P",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            },
+            {
+              "typeParameterName": "R",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 10
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!str:type",
+          "docComment": "/**\n * `string` 别名\n *\n * @example\n * ```ts\n * type S = string // string\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type str = "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/baseType.d.ts",
+          "releaseTag": "Public",
+          "name": "str",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/types!SuperObject:type",
+          "docComment": "/**\n * 对象类型的集合方法 可直接获取到`keys and values` 未来将会有更多方法被安装到 `SuperObject` 类型上\n *\n * @typeParam T - 默认需要一个 `object`\n *\n * @example\n * ```ts\n * type S = SuperObject<{ name: string; age: number }> // 等价于下方类型\n * type S = {\n *     allKeys: \"name\" | \"age\";\n *     allValues: string | number;\n * }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type SuperObject<T extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "obj",
+              "canonicalReference": "@memo28/types!obj:type"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "T extends any[] ? never : T extends object ? {\n    allKeys: "
+            },
+            {
+              "kind": "Reference",
+              "text": "getKeys",
+              "canonicalReference": "@memo28/types!getKeys:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<T>;\n    allValues: "
+            },
+            {
+              "kind": "Reference",
+              "text": "getValues",
+              "canonicalReference": "@memo28/types!getValues:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<T>;\n} : never"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dts/object/key.value.d.ts",
+          "releaseTag": "Public",
+          "name": "SuperObject",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 8
+          }
+        }
+      ]
+    }
+  ]
+}

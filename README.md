@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-06 13:48:02
- * @LastEditTime: 2023-04-04 10:54:36
+ * @LastEditTime: 2023-04-14 23:08:57
  * @Description:
  * @FilePath: /memo/README.md
 -->
@@ -15,14 +15,6 @@
 ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
 ![rollup](https://img.shields.io/badge/rollup%20js-EC4A3F?style=for-the-badge&logo=rollup.js&logoColor=white)
-
-- `@memo28/service` [请求最佳实践](packages/service/README.md)
-
-- `@memo28/utils` [常用函数助手](packages/utils/README.md)
-
-- `@memo28/vitebuild` [vite 常用插件封装](packages/viteBuild/README.md)
-
-- `@memo28/vite-plugin-meta` [通过配置生成 meta 标签](packages/vite-plugin-meta/README.md)
 
 # link 流程
 
@@ -45,3 +37,5 @@
 # [分支管理](/docs/branchManagement.md)
 
 # [包管理规范](/docs/packagingSpecification.md)
+
+# [文档](/markdown/index.md)

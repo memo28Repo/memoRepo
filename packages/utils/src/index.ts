@@ -1,10 +1,17 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-30 10:39:18
- * @LastEditTime: 2023-04-09 09:03:54
+ * @LastEditTime: 2023-04-14 23:10:27
  * @Description:
  * @FilePath: /memo/packages/utils/src/index.ts
  */
+
+/**
+ * 常用工具函数，提高开发者体验函数
+ *
+ * @packageDocumentation
+ */
+
 export { enableLogAttribute } from './log'
 export { Injection } from './Injection'
 export { Errors } from './errors/core'

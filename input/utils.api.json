@@ -162,7 +162,7 @@
   },
   "kind": "Package",
   "canonicalReference": "@memo28/utils!",
-  "docComment": "",
+  "docComment": "/**\n * 常用工具函数，提高开发者体验函数\n *\n * @packageDocumentation\n */\n",
   "name": "@memo28/utils",
   "preserveMemberOrder": false,
   "members": [
