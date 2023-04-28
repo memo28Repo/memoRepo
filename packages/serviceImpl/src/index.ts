@@ -7,4 +7,4 @@
  */
 
 export { interceptorImpl, DispatchInterceptor } from './core/interceptor'
-export { triggerInterceptorImpl } from './core/triggerInterceptor'
+export { triggerInterceptorImpl, TriggerInterceptor } from './core/triggerInterceptor'

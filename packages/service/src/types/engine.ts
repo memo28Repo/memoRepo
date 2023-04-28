@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:34:02
- * @LastEditTime: 2023-03-26 08:56:48
+ * @LastEditTime: 2023-04-28 22:31:24
  * @Description:
  * @FilePath: /memo/packages/service/src/types/engine.ts
  */
@@ -24,7 +24,7 @@ export interface modulesImpl {
   /**
    * @description 触发拦截器列表, 它定义了 请求触发前后的特定逻辑
    */
-  triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl)[]
+  triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl<initializeConfigurationTypes, any>)[]
 }
 
 export interface initializeConfigurationTypes extends AxiosRequestConfig, Partial<multiVersionSwitchingRequest>, Partial<requestConfig> {
