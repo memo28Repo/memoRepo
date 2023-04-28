@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-09 17:04:41
- * @LastEditTime: 2023-03-22 10:37:11
+ * @LastEditTime: 2023-04-28 21:32:43
  * @Description:
  * @FilePath: /memo/packages/service/__test__/versionSwitching.test.ts
  */
@@ -16,7 +16,7 @@ import { MultiVersionSwitching, RetData } from '../src/plugin'
 })
 @initializeConfiguration({
   baseURL: 'http://localhost:3011/baseVersion',
-  debugger: true,
+  debugger: false,
   versionPlaceholder: 'baseVersion', // used to replace the version placeholder on the baseURL
   version: 'v1', // replace the version placeholder with v1
 })

@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-14 13:52:08
- * @LastEditTime: 2023-03-27 08:44:14
+ * @LastEditTime: 2023-04-28 21:06:51
  * @Description:
  * @FilePath: /memo/packages/service/src/core/triggerDispatch.ts
  */
@@ -47,7 +47,7 @@ export class TriggerDispatch {
       const name = this.triggerInterceptorList[i].displayName
       const item = this.triggerInterceptorList[i]
 
-      let result = await item?.beforeTrigger?.(c || {})
+      let result = (await item?.beforeTrigger?.(c || {})) as { directReturnValue?: unknown }
       // 返回的值(directReturnValue)如果直接跳过就不再往下执行
       if (result?.directReturnValue) {
         c = result as unknown

@@ -16,7 +16,7 @@ import { RetData } from '../src/plugin'
 })
 @initializeConfiguration({
   baseURL: 'http://localhost:3011',
-  debugger: true,
+  debugger: false,
 })
 class Service extends ServiceCore {}
 

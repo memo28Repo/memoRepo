@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-08 12:18:55
- * @LastEditTime: 2023-03-22 10:30:20
+ * @LastEditTime: 2023-04-28 21:32:30
  * @Description:
  * @FilePath: /memo/packages/service/__test__/init.test.ts
  */
@@ -16,7 +16,7 @@ import { RetData } from '../src/plugin'
 })
 @initializeConfiguration({
   baseURL: 'http://localhost:3011',
-  debugger: true,
+  debugger: false,
 })
 class Service extends ServiceCore {}
 
@@ -30,6 +30,8 @@ it('init service', async () => {
     },
     pocketValue: 'hello! @memo/service',
   })
+
+  console.log(result, 'result')
 
   expect(result).toBe('hello! @memo/service')
 })
