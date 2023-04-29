@@ -1,5 +1,13 @@
 # @memo28/service
 
+## 2.1.8
+
+### Patch Changes
+
+- 将 service 重构，核心逻辑抽离道 serviceImpl packages 中
+- Updated dependencies
+  - @memo28/serviceimpl@1.0.1
+
 ## 2.1.7
 
 ### Patch Changes

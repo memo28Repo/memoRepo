@@ -44,6 +44,7 @@ export class TriggerDispatch extends TriggerInterceptor<initializeConfigurationT
         },
       })
     })
+
     // let c: initializeConfigurationTypes | unknown = config
 
     // for (let i = 0; i < this.triggerInterceptorList.length; i++) {
