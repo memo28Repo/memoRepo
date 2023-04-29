@@ -12,6 +12,10 @@
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true  --declaration true",
     "links": ""
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
