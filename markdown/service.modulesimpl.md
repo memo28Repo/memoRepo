@@ -15,5 +15,5 @@ export interface modulesImpl
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
 |  [interceptorModule?](./service.modulesimpl.interceptormodule.md) |  | (new (...args: unknown\[\]) =&gt; [interceptorImpl](./service.interceptorimpl.md)<!-- -->)\[\] | _(Optional)_  拦截器列表 |
-|  [triggerInterceptor?](./service.modulesimpl.triggerinterceptor.md) |  | (new (...args: unknown\[\]) =&gt; [triggerInterceptorImpl](./service.triggerinterceptorimpl.md)<!-- -->)\[\] | _(Optional)_  触发拦截器列表, 它定义了 请求触发前后的特定逻辑 |
+|  [triggerInterceptor?](./service.modulesimpl.triggerinterceptor.md) |  | (new (...args: unknown\[\]) =&gt; [triggerInterceptorImpl](./service.triggerinterceptorimpl.md)<!-- -->&lt;[initializeConfigurationTypes](./service.initializeconfigurationtypes.md)<!-- -->, any&gt;)\[\] | _(Optional)_  触发拦截器列表, 它定义了 请求触发前后的特定逻辑 |
 

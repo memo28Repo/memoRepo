@@ -2,27 +2,14 @@
 
 [Home](./index.md) &gt; [@memo28/service](./service.md) &gt; [triggerInterceptorImpl](./service.triggerinterceptorimpl.md)
 
-## triggerInterceptorImpl interface
+## triggerInterceptorImpl type
 
- 触发拦截器需要实现的字段
+触发拦截器需要实现的字段
 
 **Signature:**
 
 ```typescript
-export interface triggerInterceptorImpl<Req extends initializeConfigurationTypes = initializeConfigurationTypes, Res = unknown> 
+export type triggerInterceptorImpl<Req extends initializeConfigurationTypes = initializeConfigurationTypes, Res = unknown> = serviceimplWithTriggerInterceptorImpl<Req, Res>;
 ```
-
-## Properties
-
-|  Property | Modifiers | Type | Description |
-|  --- | --- | --- | --- |
-|  [displayName?](./service.triggerinterceptorimpl.displayname.md) |  | string | _(Optional)_ |
-
-## Methods
-
-|  Method | Description |
-|  --- | --- |
-|  [afterTrigger(res, req)?](./service.triggerinterceptorimpl.aftertrigger.md) | _(Optional)_ |
-|  [beforeTrigger(config)?](./service.triggerinterceptorimpl.beforetrigger.md) | _(Optional)_ |
-|  [logsCallback(type, data, res)?](./service.triggerinterceptorimpl.logscallback.md) | _(Optional)_ |
+**References:** [initializeConfigurationTypes](./service.initializeconfigurationtypes.md)
 

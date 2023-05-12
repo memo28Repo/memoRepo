@@ -269,7 +269,7 @@
             {
               "kind": "Reference",
               "text": "interceptorImpl",
-              "canonicalReference": "@memo28/service!interceptorImpl:interface"
+              "canonicalReference": "@memo28/service!interceptorImpl:type"
             },
             {
               "kind": "Content",
@@ -550,7 +550,7 @@
             {
               "kind": "Reference",
               "text": "triggerInterceptorImpl",
-              "canonicalReference": "@memo28/service!triggerInterceptorImpl:interface"
+              "canonicalReference": "@memo28/service!triggerInterceptorImpl:type"
             },
             {
               "kind": "Content",
@@ -1605,13 +1605,13 @@
           "name": "instantiation"
         },
         {
-          "kind": "Interface",
-          "canonicalReference": "@memo28/service!interceptorImpl:interface",
-          "docComment": "/**\n * @description 拦截器需要实现的字段\n */\n",
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/service!interceptorImpl:type",
+          "docComment": "/**\n * 拦截器需要实现的字段\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export interface interceptorImpl<R = "
+              "text": "export type interceptorImpl<R = "
             },
             {
               "kind": "Content",
@@ -1627,11 +1627,43 @@
             },
             {
               "kind": "Content",
-              "text": "> "
+              "text": "> = "
+            },
+            {
+              "kind": "Reference",
+              "text": "serviceimplWithInterceptorImpl",
+              "canonicalReference": "@memo28/serviceimpl!interceptorImpl:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "initializeConfigurationTypes",
+              "canonicalReference": "@memo28/service!initializeConfigurationTypes:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & R, "
+            },
+            {
+              "kind": "Reference",
+              "text": "AxiosResponse",
+              "canonicalReference": "axios!AxiosResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & RS>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
             }
           ],
           "fileUrlPath": "src/types/interceptor.ts",
           "releaseTag": "Public",
+          "name": "interceptorImpl",
           "typeParameters": [
             {
               "typeParameterName": "R",
@@ -1656,274 +1688,10 @@
               }
             }
           ],
-          "name": "interceptorImpl",
-          "preserveMemberOrder": false,
-          "members": [
-            {
-              "kind": "PropertySignature",
-              "canonicalReference": "@memo28/service!interceptorImpl#displayName:member",
-              "docComment": "/**\n * @description 调试使用 插件名\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "displayName?: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "string"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": false,
-              "isOptional": true,
-              "releaseTag": "Public",
-              "name": "displayName",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              }
-            },
-            {
-              "kind": "MethodSignature",
-              "canonicalReference": "@memo28/service!interceptorImpl#requestFail:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "requestFail?(error: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "any"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "any"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": true,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "error",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "name": "requestFail"
-            },
-            {
-              "kind": "MethodSignature",
-              "canonicalReference": "@memo28/service!interceptorImpl#requestSuc:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "requestSuc?(config: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "initializeConfigurationTypes",
-                  "canonicalReference": "@memo28/service!initializeConfigurationTypes:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": " & R"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Promise",
-                  "canonicalReference": "!Promise:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<"
-                },
-                {
-                  "kind": "Reference",
-                  "text": "initializeConfigurationTypes",
-                  "canonicalReference": "@memo28/service!initializeConfigurationTypes:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": " & R> | (R & "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "initializeConfigurationTypes",
-                  "canonicalReference": "@memo28/service!initializeConfigurationTypes:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": ")"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": true,
-              "returnTypeTokenRange": {
-                "startIndex": 4,
-                "endIndex": 10
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "config",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 3
-                  },
-                  "isOptional": false
-                }
-              ],
-              "name": "requestSuc"
-            },
-            {
-              "kind": "MethodSignature",
-              "canonicalReference": "@memo28/service!interceptorImpl#responseFail:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "responseFail?(error: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "any"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "any"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": true,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "error",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "name": "responseFail"
-            },
-            {
-              "kind": "MethodSignature",
-              "canonicalReference": "@memo28/service!interceptorImpl#responseSuc:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "responseSuc?(response: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "AxiosResponse",
-                  "canonicalReference": "axios!AxiosResponse:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<RS>"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Promise",
-                  "canonicalReference": "!Promise:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<"
-                },
-                {
-                  "kind": "Reference",
-                  "text": "AxiosResponse",
-                  "canonicalReference": "axios!AxiosResponse:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<RS>> | "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "AxiosResponse",
-                  "canonicalReference": "axios!AxiosResponse:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<RS> | unknown"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": true,
-              "returnTypeTokenRange": {
-                "startIndex": 4,
-                "endIndex": 10
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "response",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 3
-                  },
-                  "isOptional": false
-                }
-              ],
-              "name": "responseSuc"
-            }
-          ],
-          "extendsTokenRanges": []
+          "typeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 11
+          }
         },
         {
           "kind": "Class",
@@ -1966,7 +1734,7 @@
                 {
                   "kind": "Reference",
                   "text": "interceptorImpl",
-                  "canonicalReference": "@memo28/service!interceptorImpl:interface"
+                  "canonicalReference": "@memo28/service!interceptorImpl:type"
                 },
                 {
                   "kind": "Content",
@@ -2014,7 +1782,7 @@
             {
               "kind": "Reference",
               "text": "interceptorImpl",
-              "canonicalReference": "@memo28/service!interceptorImpl:interface"
+              "canonicalReference": "@memo28/service!interceptorImpl:type"
             },
             {
               "kind": "Content",
@@ -2391,7 +2159,7 @@
             {
               "kind": "Reference",
               "text": "interceptorImpl",
-              "canonicalReference": "@memo28/service!interceptorImpl:interface"
+              "canonicalReference": "@memo28/service!interceptorImpl:type"
             },
             {
               "kind": "Content",
@@ -2710,7 +2478,7 @@
                 {
                   "kind": "Reference",
                   "text": "interceptorImpl",
-                  "canonicalReference": "@memo28/service!interceptorImpl:interface"
+                  "canonicalReference": "@memo28/service!interceptorImpl:type"
                 },
                 {
                   "kind": "Content",
@@ -2746,11 +2514,20 @@
                 {
                   "kind": "Reference",
                   "text": "triggerInterceptorImpl",
-                  "canonicalReference": "@memo28/service!triggerInterceptorImpl:interface"
+                  "canonicalReference": "@memo28/service!triggerInterceptorImpl:type"
                 },
                 {
                   "kind": "Content",
-                  "text": ")[]"
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "initializeConfigurationTypes",
+                  "canonicalReference": "@memo28/service!initializeConfigurationTypes:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", any>)[]"
                 },
                 {
                   "kind": "Content",
@@ -2763,7 +2540,7 @@
               "name": "triggerInterceptor",
               "propertyTypeTokenRange": {
                 "startIndex": 1,
-                "endIndex": 4
+                "endIndex": 6
               }
             }
           ],
@@ -2781,7 +2558,7 @@
             {
               "kind": "Reference",
               "text": "interceptorImpl",
-              "canonicalReference": "@memo28/service!interceptorImpl:interface"
+              "canonicalReference": "@memo28/service!interceptorImpl:type"
             },
             {
               "kind": "Content",
@@ -3037,7 +2814,7 @@
             {
               "kind": "Reference",
               "text": "interceptorImpl",
-              "canonicalReference": "@memo28/service!interceptorImpl:interface"
+              "canonicalReference": "@memo28/service!interceptorImpl:type"
             },
             {
               "kind": "Content",
@@ -3659,13 +3436,13 @@
           "implementsTokenRanges": []
         },
         {
-          "kind": "Interface",
-          "canonicalReference": "@memo28/service!triggerInterceptorImpl:interface",
-          "docComment": "/**\n * @description 触发拦截器需要实现的字段\n */\n",
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/service!triggerInterceptorImpl:type",
+          "docComment": "/**\n * 触发拦截器需要实现的字段\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export interface triggerInterceptorImpl<Req extends "
+              "text": "export type triggerInterceptorImpl<Req extends "
             },
             {
               "kind": "Reference",
@@ -3691,11 +3468,25 @@
             },
             {
               "kind": "Content",
-              "text": "> "
+              "text": "> = "
+            },
+            {
+              "kind": "Reference",
+              "text": "serviceimplWithTriggerInterceptorImpl",
+              "canonicalReference": "@memo28/serviceimpl!triggerInterceptorImpl:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<Req, Res>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
             }
           ],
           "fileUrlPath": "src/types/interceptor.ts",
           "releaseTag": "Public",
+          "name": "triggerInterceptorImpl",
           "typeParameters": [
             {
               "typeParameterName": "Req",
@@ -3720,296 +3511,10 @@
               }
             }
           ],
-          "name": "triggerInterceptorImpl",
-          "preserveMemberOrder": false,
-          "members": [
-            {
-              "kind": "MethodSignature",
-              "canonicalReference": "@memo28/service!triggerInterceptorImpl#afterTrigger:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "afterTrigger?<T = "
-                },
-                {
-                  "kind": "Content",
-                  "text": "unknown"
-                },
-                {
-                  "kind": "Content",
-                  "text": ">(res: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "Res"
-                },
-                {
-                  "kind": "Content",
-                  "text": ", req: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "Req"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Promise",
-                  "canonicalReference": "!Promise:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<T | void>"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": true,
-              "returnTypeTokenRange": {
-                "startIndex": 7,
-                "endIndex": 9
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "res",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 3,
-                    "endIndex": 4
-                  },
-                  "isOptional": false
-                },
-                {
-                  "parameterName": "req",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 5,
-                    "endIndex": 6
-                  },
-                  "isOptional": false
-                }
-              ],
-              "typeParameters": [
-                {
-                  "typeParameterName": "T",
-                  "constraintTokenRange": {
-                    "startIndex": 0,
-                    "endIndex": 0
-                  },
-                  "defaultTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  }
-                }
-              ],
-              "name": "afterTrigger"
-            },
-            {
-              "kind": "MethodSignature",
-              "canonicalReference": "@memo28/service!triggerInterceptorImpl#beforeTrigger:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "beforeTrigger?<T = "
-                },
-                {
-                  "kind": "Content",
-                  "text": "unknown"
-                },
-                {
-                  "kind": "Content",
-                  "text": ">(config: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "Req"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Promise",
-                  "canonicalReference": "!Promise:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<"
-                },
-                {
-                  "kind": "Reference",
-                  "text": "beforeTriggerResultTypes",
-                  "canonicalReference": "@memo28/service!beforeTriggerResultTypes:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<T> | void>"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": true,
-              "returnTypeTokenRange": {
-                "startIndex": 5,
-                "endIndex": 9
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "config",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 3,
-                    "endIndex": 4
-                  },
-                  "isOptional": false
-                }
-              ],
-              "typeParameters": [
-                {
-                  "typeParameterName": "T",
-                  "constraintTokenRange": {
-                    "startIndex": 0,
-                    "endIndex": 0
-                  },
-                  "defaultTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  }
-                }
-              ],
-              "name": "beforeTrigger"
-            },
-            {
-              "kind": "PropertySignature",
-              "canonicalReference": "@memo28/service!triggerInterceptorImpl#displayName:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "displayName?: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "string"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": false,
-              "isOptional": true,
-              "releaseTag": "Public",
-              "name": "displayName",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              }
-            },
-            {
-              "kind": "MethodSignature",
-              "canonicalReference": "@memo28/service!triggerInterceptorImpl#logsCallback:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "logsCallback?(type: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "'afterTrigger' | 'beforeTrigger'"
-                },
-                {
-                  "kind": "Content",
-                  "text": ", data: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void | "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "beforeTriggerResultTypes",
-                  "canonicalReference": "@memo28/service!beforeTriggerResultTypes:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<unknown> | "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "initializeConfigurationTypes",
-                  "canonicalReference": "@memo28/service!initializeConfigurationTypes:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": ", res?: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "unknown"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": true,
-              "returnTypeTokenRange": {
-                "startIndex": 10,
-                "endIndex": 11
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "type",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                },
-                {
-                  "parameterName": "data",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 3,
-                    "endIndex": 7
-                  },
-                  "isOptional": false
-                },
-                {
-                  "parameterName": "res",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 8,
-                    "endIndex": 9
-                  },
-                  "isOptional": true
-                }
-              ],
-              "name": "logsCallback"
-            }
-          ],
-          "extendsTokenRanges": []
+          "typeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 9
+          }
         }
       ]
     }

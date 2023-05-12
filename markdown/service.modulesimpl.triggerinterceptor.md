@@ -9,5 +9,5 @@
 **Signature:**
 
 ```typescript
-triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl)[];
+triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl<initializeConfigurationTypes, any>)[];
 ```

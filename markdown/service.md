@@ -43,12 +43,10 @@
 |  --- | --- |
 |  [beforeTriggerResultTypes](./service.beforetriggerresulttypes.md) |  |
 |  [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) |  |
-|  [interceptorImpl](./service.interceptorimpl.md) |  拦截器需要实现的字段 |
 |  [LoadingOpt](./service.loadingopt.md) |  |
 |  [modulesImpl](./service.modulesimpl.md) |  |
 |  [multiVersionSwitchingRequest](./service.multiversionswitchingrequest.md) |  |
 |  [serviceImpl](./service.serviceimpl.md) |  |
-|  [triggerInterceptorImpl](./service.triggerinterceptorimpl.md) |  触发拦截器需要实现的字段 |
 
 ## Variables
 
@@ -64,5 +62,7 @@
 |  [getInitializeConfigurationValues](./service.getinitializeconfigurationvalues.md) |  |
 |  [getModulesValues](./service.getmodulesvalues.md) |  |
 |  [getObjValues](./service.getobjvalues.md) |  |
+|  [interceptorImpl](./service.interceptorimpl.md) | 拦截器需要实现的字段 |
 |  [requestConfig](./service.requestconfig.md) |  |
+|  [triggerInterceptorImpl](./service.triggerinterceptorimpl.md) | 触发拦截器需要实现的字段 |
 

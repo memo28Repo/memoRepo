@@ -2,28 +2,14 @@
 
 [Home](./index.md) &gt; [@memo28/service](./service.md) &gt; [interceptorImpl](./service.interceptorimpl.md)
 
-## interceptorImpl interface
+## interceptorImpl type
 
- 拦截器需要实现的字段
+拦截器需要实现的字段
 
 **Signature:**
 
 ```typescript
-export interface interceptorImpl<R = unknown, RS = unknown> 
+export type interceptorImpl<R = unknown, RS = unknown> = serviceimplWithInterceptorImpl<initializeConfigurationTypes & R, AxiosResponse & RS>;
 ```
-
-## Properties
-
-|  Property | Modifiers | Type | Description |
-|  --- | --- | --- | --- |
-|  [displayName?](./service.interceptorimpl.displayname.md) |  | string | _(Optional)_  调试使用 插件名 |
-
-## Methods
-
-|  Method | Description |
-|  --- | --- |
-|  [requestFail(error)?](./service.interceptorimpl.requestfail.md) | _(Optional)_ |
-|  [requestSuc(config)?](./service.interceptorimpl.requestsuc.md) | _(Optional)_ |
-|  [responseFail(error)?](./service.interceptorimpl.responsefail.md) | _(Optional)_ |
-|  [responseSuc(response)?](./service.interceptorimpl.responsesuc.md) | _(Optional)_ |
+**References:** [initializeConfigurationTypes](./service.initializeconfigurationtypes.md)
 

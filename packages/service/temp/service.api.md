@@ -8,6 +8,8 @@ import { AxiosInstance } from 'axios';
 import { AxiosRequestConfig } from 'axios';
 import { AxiosResponse } from 'axios';
 import { Injection } from '@memo28/utils';
+import { interceptorImpl as interceptorImpl_2 } from '@memo28/serviceimpl';
+import { triggerInterceptorImpl as triggerInterceptorImpl_2 } from '@memo28/serviceimpl';
 
 // @public (undocumented)
 export interface beforeTriggerResultTypes<T> {
@@ -100,17 +102,7 @@ export interface initializeConfigurationTypes extends AxiosRequestConfig, Partia
 export function instantiation(): (target: any) => void;
 
 // @public
-export interface interceptorImpl<R = unknown, RS = unknown> {
-    displayName?: string;
-    // (undocumented)
-    requestFail?(error: any): any;
-    // (undocumented)
-    requestSuc?(config: initializeConfigurationTypes & R): Promise<initializeConfigurationTypes & R> | (R & initializeConfigurationTypes);
-    // (undocumented)
-    responseFail?(error: any): any;
-    // (undocumented)
-    responseSuc?(response: AxiosResponse<RS>): Promise<AxiosResponse<RS>> | AxiosResponse<RS> | unknown;
-}
+export type interceptorImpl<R = unknown, RS = unknown> = interceptorImpl_2<initializeConfigurationTypes & R, AxiosResponse & RS>;
 
 // @public (undocumented)
 export abstract class interceptorToolboxImpl {
@@ -158,7 +150,7 @@ export function modules(conf?: modulesImpl): (target: any) => void;
 // @public (undocumented)
 export interface modulesImpl {
     interceptorModule?: (new (...args: unknown[]) => interceptorImpl)[];
-    triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl)[];
+    triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl<initializeConfigurationTypes, any>)[];
 }
 
 // @public
@@ -227,15 +219,6 @@ export class TerminationResult<T> {
 }
 
 // @public
-export interface triggerInterceptorImpl<Req extends initializeConfigurationTypes = initializeConfigurationTypes, Res = unknown> {
-    // (undocumented)
-    afterTrigger?<T = unknown>(res: Res, req: Req): Promise<T | void>;
-    // (undocumented)
-    beforeTrigger?<T = unknown>(config: Req): Promise<beforeTriggerResultTypes<T> | void>;
-    // (undocumented)
-    displayName?: string;
-    // (undocumented)
-    logsCallback?(type: 'afterTrigger' | 'beforeTrigger', data: void | beforeTriggerResultTypes<unknown> | initializeConfigurationTypes, res?: unknown): void;
-}
+export type triggerInterceptorImpl<Req extends initializeConfigurationTypes = initializeConfigurationTypes, Res = unknown> = triggerInterceptorImpl_2<Req, Res>;
 
 ```

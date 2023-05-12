@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-08 12:18:55
- * @LastEditTime: 2023-04-28 21:32:30
+ * @LastEditTime: 2023-05-12 22:59:11
  * @Description:
  * @FilePath: /memo/packages/service/__test__/init.test.ts
  */
@@ -10,15 +10,18 @@ import { expect, it } from 'vitest'
 import { ServiceUtils, ServiceCore, initializeConfiguration, instantiation, modules } from '../src/index'
 import { RetData } from '../src/plugin'
 
+// @ts-ignore
 @instantiation()
+// @ts-ignore
 @modules({
   interceptorModule: [RetData],
 })
+// @ts-ignore
 @initializeConfiguration({
   baseURL: 'http://localhost:3011',
   debugger: false,
 })
-class Service extends ServiceCore {}
+class Service extends ServiceCore { }
 
 const server = new Service().getAxios()
 
