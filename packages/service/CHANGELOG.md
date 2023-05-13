@@ -1,5 +1,13 @@
 # @memo28/service
 
+## 2.1.9
+
+### Patch Changes
+
+- 5862e23: 新增 vue package，请求重试机制
+- Updated dependencies [5862e23]
+  - @memo28/serviceimpl@1.0.2
+
 ## 2.1.8
 
 ### Patch Changes
