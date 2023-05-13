@@ -19,6 +19,7 @@
 |  [Logs](./service.logs.md) |  |
 |  [MultiVersionSwitching](./service.multiversionswitching.md) |  多版本拦截器 |
 |  [RetData](./service.retdata.md) |  |
+|  [Retry](./service.retry.md) |  |
 |  [ServiceCore](./service.servicecore.md) |  |
 |  [ServiceUtils](./service.serviceutils.md) |  |
 |  [TerminationResult](./service.terminationresult.md) |  |
@@ -64,5 +65,6 @@
 |  [getObjValues](./service.getobjvalues.md) |  |
 |  [interceptorImpl](./service.interceptorimpl.md) | 拦截器需要实现的字段 |
 |  [requestConfig](./service.requestconfig.md) |  |
+|  [retryOpt](./service.retryopt.md) |  |
 |  [triggerInterceptorImpl](./service.triggerinterceptorimpl.md) | 触发拦截器需要实现的字段 |
 

@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 14:32:00
- * @LastEditTime: 2023-04-14 23:11:36
+ * @LastEditTime: 2023-05-13 09:44:47
  * @Description:
  * @FilePath: /memo/packages/service/src/index.ts
  */
@@ -27,6 +27,8 @@ export { Cache, CachePrerequisites, CacheTrigger, ExpirationTime, requestConfig 
 export { Logs } from './plugin/logs/index'
 
 export { Loading, LoadingOpt } from './plugin/loading/index'
+
+export { Retry, retryOpt } from './plugin/retry'
 
 export * from './core/config'
 export * from './core/engine'

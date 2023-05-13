@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-05-12 23:08:08
- * @LastEditTime: 2023-05-12 23:32:30
+ * @LastEditTime: 2023-05-13 11:11:02
  * @Description: 增强ref
  * @FilePath: /memo/packages/vue/src/hooks/useEnhancedRef.ts
  */
@@ -32,7 +32,11 @@ import { mergeFnWithPromiseFn } from "@memo28/types";
  * @public
  *
  */
-export function useEnhancedRef<T extends object>(val: Partial<T>): [Ref<UnwrapRef<Partial<T>>>, (val?: Partial<UnwrapRef<T>>) => void, mergeFnWithPromiseFn<void, []>] {
+export function useEnhancedRef<T extends object>(val: Partial<T>): {
+    state: Ref<UnwrapRef<Partial<T>>> & UnwrapRef<Partial<T>>;
+    updateState: mergeFnWithPromiseFn<void, [Partial<UnwrapRef<T>>]>;
+    resetState: mergeFnWithPromiseFn<void, []>;
+} {
     const backVal = backupState()
     const state = ref<Partial<T>>(val)
 
@@ -58,8 +62,13 @@ export function useEnhancedRef<T extends object>(val: Partial<T>): [Ref<UnwrapRe
         return h as UnwrapRef<Partial<T>>
     }
 
-    return [state, updateState, resetState]
+    return {
+        // @ts-ignore
+        state,
+        updateState,
+        resetState
+    }
 }
 
-const [state, updateState, resetState] = useEnhancedRef({ age: 1, name: 1 })
+
 

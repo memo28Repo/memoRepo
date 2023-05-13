@@ -204,7 +204,7 @@
             },
             {
               "kind": "Content",
-              "text": "["
+              "text": "{\n    state: "
             },
             {
               "kind": "Reference",
@@ -231,7 +231,34 @@
             },
             {
               "kind": "Content",
-              "text": "<T>>>, (val?: "
+              "text": "<T>>> & "
+            },
+            {
+              "kind": "Reference",
+              "text": "UnwrapRef",
+              "canonicalReference": "@vue/reactivity!UnwrapRef:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Partial",
+              "canonicalReference": "!Partial:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<T>>;\n    updateState: "
+            },
+            {
+              "kind": "Reference",
+              "text": "mergeFnWithPromiseFn",
+              "canonicalReference": "@memo28/types!mergeFnWithPromiseFn:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<void, ["
             },
             {
               "kind": "Reference",
@@ -249,7 +276,7 @@
             },
             {
               "kind": "Content",
-              "text": "<T>>) => void, "
+              "text": "<T>>]>;\n    resetState: "
             },
             {
               "kind": "Reference",
@@ -258,7 +285,7 @@
             },
             {
               "kind": "Content",
-              "text": "<void, []>]"
+              "text": "<void, []>;\n}"
             },
             {
               "kind": "Content",
@@ -268,7 +295,7 @@
           "fileUrlPath": "src/hooks/useEnhancedRef.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
-            "endIndex": 19
+            "endIndex": 25
           },
           "releaseTag": "Public",
           "overloadIndex": 1,

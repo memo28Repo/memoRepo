@@ -7,10 +7,10 @@
   "module": "./dist/index.js",
   "types": "./dts/index.d.ts",
   "scripts": {
+    "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true",
-    "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true  --declaration true",
-    "links": ""
+    "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true  --declaration true"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -18,5 +18,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "is-retry-allowed": "^3.0.0"
+  }
 }

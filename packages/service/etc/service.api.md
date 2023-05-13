@@ -9,6 +9,9 @@ import { AxiosRequestConfig } from 'axios';
 import { AxiosResponse } from 'axios';
 import { Injection } from '@memo28/utils';
 import { interceptorImpl as interceptorImpl_2 } from '@memo28/serviceimpl';
+import { onRetrySuc } from '@memo28/serviceimpl';
+import { RetryImpl } from '@memo28/serviceimpl';
+import { retryOpt as retryOpt_2 } from '@memo28/serviceimpl';
 import { triggerInterceptorImpl as triggerInterceptorImpl_2 } from '@memo28/serviceimpl';
 
 // @public (undocumented)
@@ -91,7 +94,7 @@ export const initializeConfigurationKeys: {
 };
 
 // @public (undocumented)
-export interface initializeConfigurationTypes extends AxiosRequestConfig, Partial<multiVersionSwitchingRequest>, Partial<requestConfig> {
+export interface initializeConfigurationTypes extends AxiosRequestConfig, Partial<multiVersionSwitchingRequest>, Partial<requestConfig>, Partial<retryOpt> {
     // (undocumented)
     debugger?: boolean;
     // (undocumented)
@@ -102,7 +105,7 @@ export interface initializeConfigurationTypes extends AxiosRequestConfig, Partia
 export function instantiation(): (target: any) => void;
 
 // @public
-export type interceptorImpl<R = unknown, RS = unknown> = interceptorImpl_2<initializeConfigurationTypes & R, AxiosResponse & RS>;
+export type interceptorImpl<R = unknown, RS = unknown> = interceptorImpl_2<initializeConfigurationTypes & R, AxiosResponse & RS, AxiosInstance>;
 
 // @public (undocumented)
 export abstract class interceptorToolboxImpl {
@@ -181,6 +184,20 @@ export class RetData implements interceptorImpl {
     // (undocumented)
     responseSuc(value: AxiosResponse<unknown, any>): AxiosResponse<unknown, any> | Promise<AxiosResponse<unknown, any>> | unknown;
 }
+
+// @public (undocumented)
+export class Retry extends RetryImpl {
+    // (undocumented)
+    requestSuc(config: initializeConfigurationTypes): initializeConfigurationTypes | Promise<initializeConfigurationTypes>;
+    // (undocumented)
+    responseFail(error: any, instance: AxiosInstance): Promise<void>;
+}
+
+// @public (undocumented)
+export type retryOpt = {
+    retry: Partial<retryOpt_2>;
+    onRetrySuc: onRetrySuc;
+};
 
 // @public (undocumented)
 export class ServiceCore<R = unknown> {

@@ -7,9 +7,9 @@
 **Signature:**
 
 ```typescript
-export interface initializeConfigurationTypes extends AxiosRequestConfig, Partial<multiVersionSwitchingRequest>, Partial<requestConfig> 
+export interface initializeConfigurationTypes extends AxiosRequestConfig, Partial<multiVersionSwitchingRequest>, Partial<requestConfig>, Partial<retryOpt> 
 ```
-**Extends:** AxiosRequestConfig, Partial&lt;[multiVersionSwitchingRequest](./service.multiversionswitchingrequest.md)<!-- -->&gt;, Partial&lt;[requestConfig](./service.requestconfig.md)<!-- -->&gt;
+**Extends:** AxiosRequestConfig, Partial&lt;[multiVersionSwitchingRequest](./service.multiversionswitchingrequest.md)<!-- -->&gt;, Partial&lt;[requestConfig](./service.requestconfig.md)<!-- -->&gt;, Partial&lt;[retryOpt](./service.retryopt.md)<!-- -->&gt;
 
 ## Properties
 

@@ -5,8 +5,8 @@
   "description": "type helper",
   "types": "./dts/index.d.ts",
   "scripts": {
+    "links": "pnpm link --global",
     "build": "tsc",
-    "links": "yarn link",
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh"
   },
   "publishConfig": {

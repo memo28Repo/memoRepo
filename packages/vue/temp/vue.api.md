@@ -9,6 +9,10 @@ import { Ref } from 'vue';
 import { UnwrapRef } from 'vue';
 
 // @public
-export function useEnhancedRef<T extends object>(val: Partial<T>): [Ref<UnwrapRef<Partial<T>>>, (val?: Partial<UnwrapRef<T>>) => void, mergeFnWithPromiseFn<void, []>];
+export function useEnhancedRef<T extends object>(val: Partial<T>): {
+    state: Ref<UnwrapRef<Partial<T>>> & UnwrapRef<Partial<T>>;
+    updateState: mergeFnWithPromiseFn<void, [Partial<UnwrapRef<T>>]>;
+    resetState: mergeFnWithPromiseFn<void, []>;
+};
 
 ```

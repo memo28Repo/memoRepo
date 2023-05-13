@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-export type interceptorImpl<R = unknown, RS = unknown> = serviceimplWithInterceptorImpl<initializeConfigurationTypes & R, AxiosResponse & RS>;
+export type interceptorImpl<R = unknown, RS = unknown> = serviceimplWithInterceptorImpl<initializeConfigurationTypes & R, AxiosResponse & RS, AxiosInstance>;
 ```
 **References:** [initializeConfigurationTypes](./service.initializeconfigurationtypes.md)
 

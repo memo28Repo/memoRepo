@@ -1,12 +1,12 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 15:09:42
- * @LastEditTime: 2023-04-22 13:37:09
+ * @LastEditTime: 2023-05-13 09:02:07
  * @Description:
  * @FilePath: /memo/packages/service/src/types/interceptor.ts
  */
 
-import { AxiosResponse } from 'axios'
+import { AxiosInstance, AxiosResponse } from 'axios'
 import { modulesImpl, initializeConfigurationTypes } from './engine'
 import { interceptorImpl as serviceimplWithInterceptorImpl, triggerInterceptorImpl as serviceimplWithTriggerInterceptorImpl } from '@memo28/serviceimpl'
 
@@ -15,7 +15,7 @@ import { interceptorImpl as serviceimplWithInterceptorImpl, triggerInterceptorIm
  *
  * @public
  */
-export type interceptorImpl<R = unknown, RS = unknown> = serviceimplWithInterceptorImpl<initializeConfigurationTypes & R, AxiosResponse & RS>
+export type interceptorImpl<R = unknown, RS = unknown> = serviceimplWithInterceptorImpl<initializeConfigurationTypes & R, AxiosResponse & RS, AxiosInstance>
 
 export interface beforeTriggerResultTypes<T> {
   data: T

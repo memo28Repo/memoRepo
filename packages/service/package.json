@@ -6,6 +6,7 @@
   "module": "./dist/index",
   "types": "./dts/index.d.ts",
   "scripts": {
+    "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true ",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true ",
@@ -43,6 +44,7 @@
     "@memo28/serviceimpl": "^1.0.1",
     "@memo28/utils": "^1.1.8",
     "@types/node": "^18.15.6",
+    "is-retry-allowed": "^3.0.0",
     "reflect-metadata": "^0.1.13"
   }
 }

@@ -9,7 +9,11 @@
 **Signature:**
 
 ```typescript
-export declare function useEnhancedRef<T extends object>(val: Partial<T>): [Ref<UnwrapRef<Partial<T>>>, (val?: Partial<UnwrapRef<T>>) => void, mergeFnWithPromiseFn<void, []>];
+export declare function useEnhancedRef<T extends object>(val: Partial<T>): {
+    state: Ref<UnwrapRef<Partial<T>>> & UnwrapRef<Partial<T>>;
+    updateState: mergeFnWithPromiseFn<void, [Partial<UnwrapRef<T>>]>;
+    resetState: mergeFnWithPromiseFn<void, []>;
+};
 ```
 
 ## Parameters
@@ -20,7 +24,7 @@ export declare function useEnhancedRef<T extends object>(val: Partial<T>): [Ref<
 
 **Returns:**
 
-\[Ref&lt;UnwrapRef&lt;Partial&lt;T&gt;&gt;&gt;, (val?: Partial&lt;UnwrapRef&lt;T&gt;&gt;) =&gt; void, [mergeFnWithPromiseFn](./types.mergefnwithpromisefn.md)<!-- -->&lt;void, \[\]&gt;\]
+{ state: Ref&lt;UnwrapRef&lt;Partial&lt;T&gt;&gt;&gt; &amp; UnwrapRef&lt;Partial&lt;T&gt;&gt;; updateState: [mergeFnWithPromiseFn](./types.mergefnwithpromisefn.md)<!-- -->&lt;void, \[Partial&lt;UnwrapRef&lt;T&gt;&gt;\]&gt;; resetState: [mergeFnWithPromiseFn](./types.mergefnwithpromisefn.md)<!-- -->&lt;void, \[\]&gt;; }
 
 ## Example
 

@@ -68,6 +68,9 @@ importers:
       '@types/node':
         specifier: ^18.15.6
         version: 18.15.6
+      is-retry-allowed:
+        specifier: ^3.0.0
+        version: 3.0.0
       reflect-metadata:
         specifier: ^0.1.13
         version: 0.1.13
@@ -76,7 +79,11 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2
 
-  packages/serviceImpl: {}
+  packages/serviceImpl:
+    dependencies:
+      is-retry-allowed:
+        specifier: ^3.0.0
+        version: 3.0.0
 
   packages/types: {}
 
@@ -4568,6 +4575,11 @@ packages:
   /is-regexp@1.0.0:
     resolution: {integrity: sha512-7zjFAPO4/gwyQAAgRRmqeEeyIICSdmCqa3tsVHMdBzaXXRiqopZL4Cyghg/XulGWrtABTpbnYYzzIRffLkP4oA==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /is-retry-allowed@3.0.0:
+    resolution: {integrity: sha512-9xH0xvoggby+u0uGF7cZXdrutWiBiaFG8ZT4YFPXL8NzkyAwX3AKGLeFQLvzDpM430+nDFBZ1LHkie/8ocL06A==}
+    engines: {node: '>=12'}
     dev: false
 
   /is-shared-array-buffer@1.0.2:

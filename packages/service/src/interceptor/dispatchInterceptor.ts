@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-07 12:49:45
- * @LastEditTime: 2023-04-28 21:56:10
+ * @LastEditTime: 2023-05-13 09:13:55
  * @Description:
  * @FilePath: /memo/packages/service/src/interceptor/dispatchInterceptor.ts
  */
@@ -23,6 +23,7 @@ export class DispatchInterceptor {
   getAllInterceptorPlugIns(instace: AxiosInstance, list?: modulesImpl['interceptorModule']): this {
     this.serviceimplDispatchInterceptor.getAllInterceptorPlugIns(list)
     this.instance = instace
+    this.serviceimplDispatchInterceptor.setInstance(instace)
     return this
   }
 
