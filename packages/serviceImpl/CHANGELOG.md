@@ -1,5 +1,11 @@
 # @memo28/serviceimpl
 
+## 1.0.3
+
+### Patch Changes
+
+- 修复一些类型导出问题
+
 ## 1.0.2
 
 ### Patch Changes

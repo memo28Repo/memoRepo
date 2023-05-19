@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-05-13 09:29:04
- * @LastEditTime: 2023-05-13 11:06:00
+ * @LastEditTime: 2023-05-13 21:12:25
  * @Description: 重试实现
  * @FilePath: /memo/packages/serviceImpl/src/plugin/retry/index.ts
  */
@@ -44,7 +44,6 @@ export class RetryImpl<R extends object = object, RS = unknown, Ins extends obje
         } = this.checkRetry.getRequestOptions(config, {})
 
         const currentState = this.checkRetry.getCurrentState(config);
-
 
         if (await this.checkRetry.shouldRetry(retries, retryCondition, currentState, error)) {
             currentState.retryCount += 1

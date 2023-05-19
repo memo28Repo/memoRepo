@@ -79,11 +79,7 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2
 
-  packages/serviceImpl:
-    dependencies:
-      is-retry-allowed:
-        specifier: ^3.0.0
-        version: 3.0.0
+  packages/serviceImpl: {}
 
   packages/types: {}
 

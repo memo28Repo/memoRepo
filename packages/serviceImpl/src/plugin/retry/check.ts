@@ -1,12 +1,12 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-05-13 09:15:44
- * @LastEditTime: 2023-05-13 11:03:48
+ * @LastEditTime: 2023-05-13 21:12:09
  * @Description: 
  * @FilePath: /memo/packages/serviceImpl/src/plugin/retry/check.ts
  */
 
-import isRetryAllowed from 'is-retry-allowed'
+import isRetryAllowed from './isRetryAllowed'
 
 // 请求方法
 const SAFE_HTTP_METHODS = ['get', 'head', 'options'];
@@ -33,12 +33,9 @@ export interface getRequestOptionsResponse<Err = ErrInstance, Config = object> {
     retryDelay: number,
     shouldResetTimeout: false
     onRetry: (count: number, error: Err, config: Config) => void
-
-
 }
 
 export type onRetrySuc = (response: any) => void
-
 
 export class CheckRetry<Err extends ErrInstance = ErrInstance, Instance extends object = object, Config extends object = object> {
     /**
@@ -55,7 +52,7 @@ export class CheckRetry<Err extends ErrInstance = ErrInstance, Instance extends 
             !Reflect.has(error, 'response') &&
             Reflect.has(error, 'code') && // Prevents retrying cancelled requests
             Reflect.get(error, 'code') !== 'ECONNABORTED' && // Prevents retrying timed out requests
-            isRetryAllowed(error as unknown as Error)
+            isRetryAllowed(error as any)
         ); // Prevents retrying unsafe errors
     }
 
@@ -180,7 +177,7 @@ export class CheckRetry<Err extends ErrInstance = ErrInstance, Instance extends 
         const currentState = config?.[namespace as keyof Config] as getCurrentStateResponse || { retryCount: 0, lastRequestTime: 0, startRetry: false } as getCurrentStateResponse;
         currentState.retryCount = currentState.retryCount || 0;
         // @ts-ignore
-        config?.[namespace] = currentState;
+        Reflect.set(config, namespace, currentState)
         return currentState;
     }
 
