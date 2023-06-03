@@ -1,5 +1,27 @@
 # @memo28/service
 
+## 2.1.9
+
+### Patch Changes
+
+- 5862e23: 新增 vue package，请求重试机制
+- Updated dependencies [5862e23]
+  - @memo28/serviceimpl@1.0.2
+
+## 2.1.8
+
+### Patch Changes
+
+- 将 service 重构，核心逻辑抽离道 serviceImpl packages 中
+- Updated dependencies
+  - @memo28/serviceimpl@1.0.1
+
+## 2.1.7
+
+### Patch Changes
+
+- feat(@memo28/service): 新增取消 logs，前后置拦截器 log
+
 ## 2.1.6
 
 ### Patch Changes

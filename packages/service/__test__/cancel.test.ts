@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-13 14:35:14
- * @LastEditTime: 2023-03-22 10:32:00
+ * @LastEditTime: 2023-05-12 22:59:04
  * @Description:
  * @FilePath: /memo/packages/service/__test__/cancel.test.ts
  */
@@ -10,15 +10,18 @@ import { describe, expect, it } from 'vitest'
 import { ServiceUtils, ServiceCore, TerminationResult, initializeConfiguration, instantiation, modules } from '../src/index'
 import { RetData } from '../src/plugin'
 
+// @ts-ignore
 @instantiation()
+// @ts-ignore
 @modules({
   interceptorModule: [RetData],
 })
+// @ts-ignore
 @initializeConfiguration({
   baseURL: 'http://localhost:3011',
-  debugger: true,
+  debugger: false,
 })
-class Service extends ServiceCore {}
+class Service extends ServiceCore { }
 
 const server = new Service().getAxios()
 

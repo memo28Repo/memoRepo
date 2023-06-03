@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-09 17:04:41
- * @LastEditTime: 2023-03-22 10:37:11
+ * @LastEditTime: 2023-05-12 22:59:26
  * @Description:
  * @FilePath: /memo/packages/service/__test__/versionSwitching.test.ts
  */
@@ -10,17 +10,20 @@ import { describe, expect, it } from 'vitest'
 import { ServiceCore, initializeConfiguration, instantiation, modules, ServiceUtils } from '../src/index'
 import { MultiVersionSwitching, RetData } from '../src/plugin'
 
+// @ts-ignore
 @instantiation()
+// @ts-ignore
 @modules({
   interceptorModule: [RetData, MultiVersionSwitching], // MultiVersionSwitching Plug-in is used to quickly switch version number
 })
+// @ts-ignore
 @initializeConfiguration({
   baseURL: 'http://localhost:3011/baseVersion',
-  debugger: true,
+  debugger: false,
   versionPlaceholder: 'baseVersion', // used to replace the version placeholder on the baseURL
   version: 'v1', // replace the version placeholder with v1
 })
-class Service extends ServiceCore {}
+class Service extends ServiceCore { }
 
 const axi = new Service().getAxios()
 

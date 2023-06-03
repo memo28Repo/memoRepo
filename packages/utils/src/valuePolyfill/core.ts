@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 09:43:03
- * @LastEditTime: 2023-03-17 17:29:56
+ * @LastEditTime: 2023-04-03 17:51:33
  * @Description:
  * @FilePath: /memo/packages/utils/src/valuePolyfill/core.ts
  */
@@ -13,8 +13,10 @@ export class ValuePolyFill<T extends unknown> {
   private value: T
   private typePolyfill: TypePolyfill<T> = new TypePolyfill()
   private conversionType: ConversionType<T> = new ConversionType()
+  private resetValue: T
   constructor(value: T) {
     this.value = value
+    this.resetValue = value
     this.typePolyfill.setType(this.value).inspectionType()
   }
 
@@ -22,10 +24,15 @@ export class ValuePolyFill<T extends unknown> {
     return this.value
   }
 
+  reset() {
+    this.value = this.resetValue
+    return this.resetValue
+  }
   set(value: T | any): this {
     // 当一个值默认为null或者undefined时 将该值的类型 锁定为第一个传入的不为null和undefined的值类型
     if ([null, undefined].includes(this.value as null) && ![null, undefined].includes(value as null)) {
       this.typePolyfill.setType(value)
+      this.resetValue = value
     }
     // 不是已有兼容类型，缺少对应的类型兼容,提示联系管理员添加
     if (!this.typePolyfill.inspectionType()) {

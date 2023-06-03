@@ -1,15 +1,17 @@
 {
   "name": "@memo28/vitebuild",
-  "version": "2.3.0",
+  "version": "2.3.2",
   "private": false,
   "description": "vite config helper",
   "main": "./lib/index",
   "module": "./dist/index",
   "types": "./dts/index.d.ts",
   "scripts": {
+    "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
-    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true"
+    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true",
+    "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh"
   },
   "keywords": [
     "vite",
@@ -43,12 +45,14 @@
     "@vue-macros/short-vmodel": "^1.0.6",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
+    "rollup-plugin-visualizer": "^5.9.0",
     "sass": "^1.57.1",
     "terser": "^5.16.1",
     "unplugin-auto-import": "^0.13.0",
     "unplugin-vue-components": "^0.23.0",
     "unplugin-vue-macros": "^1.6.4",
     "vite-plugin-browser-sync": "^1.0.2",
+    "vite-plugin-inspect": "^0.7.18",
     "vite-plugin-print-urls": "^0.1.2",
     "vite-plugin-pwa": "^0.14.1",
     "vite-plugin-sass-dts": "^1.2.13"

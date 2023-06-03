@@ -15,5 +15,5 @@ type Req<R> = Partial<R> & initializeConfigurationTypes
 
 export class ServiceCore<R = unknown> {
   // @ts-ignore
-  getAxios(): <T = Res>(req?: Req<R>) => T | Promise<T> {}
+  getAxios(): <T = Res>(req?: Req<R>) => T | Promise<T> { }
 }

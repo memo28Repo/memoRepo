@@ -1,5 +1,25 @@
 # @memo28/utils
 
+## 1.1.11
+
+### Patch Changes
+
+- types(add SuperObject) utils(mail,phone)
+- Updated dependencies
+  - @memo28/types@1.1.2
+
+## 1.1.10
+
+### Patch Changes
+
+- 修改 SNI 函数参数验证范围
+
+## 1.1.9
+
+### Patch Changes
+
+- @memo28/utils valuePolyfill add reset fn
+
 ## 1.1.8
 
 ### Patch Changes

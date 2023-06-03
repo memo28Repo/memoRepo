@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-08 12:18:55
- * @LastEditTime: 2023-03-22 10:30:20
+ * @LastEditTime: 2023-05-12 22:59:11
  * @Description:
  * @FilePath: /memo/packages/service/__test__/init.test.ts
  */
@@ -10,15 +10,18 @@ import { expect, it } from 'vitest'
 import { ServiceUtils, ServiceCore, initializeConfiguration, instantiation, modules } from '../src/index'
 import { RetData } from '../src/plugin'
 
+// @ts-ignore
 @instantiation()
+// @ts-ignore
 @modules({
   interceptorModule: [RetData],
 })
+// @ts-ignore
 @initializeConfiguration({
   baseURL: 'http://localhost:3011',
-  debugger: true,
+  debugger: false,
 })
-class Service extends ServiceCore {}
+class Service extends ServiceCore { }
 
 const server = new Service().getAxios()
 
@@ -30,6 +33,8 @@ it('init service', async () => {
     },
     pocketValue: 'hello! @memo/service',
   })
+
+  console.log(result, 'result')
 
   expect(result).toBe('hello! @memo/service')
 })

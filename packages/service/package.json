@@ -1,17 +1,19 @@
 {
   "name": "@memo28/service",
-  "version": "2.1.6",
+  "version": "2.1.9",
   "description": "axios configuration based on decorator pluggable",
   "main": "./lib/index",
   "module": "./dist/index",
   "types": "./dts/index.d.ts",
   "scripts": {
+    "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true ",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true ",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh"
   },
   "files": [
     "./dist",
@@ -39,8 +41,10 @@
     "axios": "^1.2.2"
   },
   "dependencies": {
+    "@memo28/serviceimpl": "^1.0.2",
     "@memo28/utils": "^1.1.8",
     "@types/node": "^18.15.6",
+    "is-retry-allowed": "^3.0.0",
     "reflect-metadata": "^0.1.13"
   }
 }

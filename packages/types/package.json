@@ -1,12 +1,13 @@
 {
   "name": "@memo28/types",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "private": false,
   "description": "type helper",
   "types": "./dts/index.d.ts",
   "scripts": {
+    "links": "pnpm link --global",
     "build": "tsc",
-    "links": "yarn link"
+    "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

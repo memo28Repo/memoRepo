@@ -8,3 +8,4 @@
 export * from './cache'
 export * from './RetData'
 export * from './multiVersionSwitching'
+export * from './retry/index'

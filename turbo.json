@@ -17,6 +17,9 @@
     },
     "links": {
       "cache": false
+    },
+    "build:md": {
+      "cache": false
     }
   }
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:49:34
- * @LastEditTime: 2023-03-10 10:46:04
+ * @LastEditTime: 2023-04-14 23:09:44
  * @Description:
  * @FilePath: /memo/packages/viteBuild/src/core/engine.ts
  */
@@ -11,7 +11,37 @@ import { PlugInContainer } from './plugInContainer'
 import injection from './injection'
 
 /**
- * @description vite build enter
+ *
+ * 自带了 `vue` 和 `react` 的默认配置 和一些公共的通用插件
+ *
+ * @example
+ * `vue` 默认配置
+ *   - `jsx`
+ *   - `legacy`
+ *   - `printURL`
+ *   - `vueMarcos`
+ *
+ * `react` 默认配置
+ *   - `legacy`
+ *   - `reactSwc`
+ *   - `printURL`
+ *
+ *
+ *
+ * ```ts
+ * new Engine()
+ *  启动`vue`默认配置
+ * .setTechnologyStack('vue')
+ *  //  添加常用插件
+ * .addPlugins(plugin => {    plugin.addAutoHooks()  })
+ * .getBuildConfig({
+ *  //   `vite` 配置
+ *    root:''
+ * })
+ * ```
+ *
+ * @public
+ *
  */
 @injectDefaultTechnologyStackConfiguration({
   defaultModule: [new ConfigureVueTechnologyStack(), new ConfigureReactTechnologyStack()],
@@ -51,3 +81,10 @@ export class Engine {
     }
   }
 }
+
+new Engine()
+  .setTechnologyStack('vue')
+  .addPlugins(plugin => {
+    plugin.addAutoHooks()
+  })
+  .getBuildConfig()

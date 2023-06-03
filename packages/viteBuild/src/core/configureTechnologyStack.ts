@@ -1,12 +1,12 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:17:08
- * @LastEditTime: 2023-01-29 09:16:36
+ * @LastEditTime: 2023-04-14 23:04:10
  * @Description: 配置场景
  * @FilePath: /memo/packages/viteBuild/src/core/configureTechnologyStack.ts
  */
 
-import { getObjValues } from '@memo28/types'
+import { getValues } from '@memo28/types'
 import legacy from '@vitejs/plugin-legacy'
 import reactSwcPlugin from '@vitejs/plugin-react-swc'
 import vuePlugin from '@vitejs/plugin-vue'
@@ -53,7 +53,7 @@ export class ConfigureVueTechnologyStack implements configureTechnologyStackType
 }
 
 /**
- * @description 配置react场景
+ * 配置react场景
  */
 export class ConfigureReactTechnologyStack implements configureTechnologyStackTypes<'react'> {
   configureTechnologyStack = 'react'
@@ -69,14 +69,14 @@ const injectDefaultTechnologyStackConfigurationMapper = {
 } as const
 
 /**
- * @description defaultModule 注入类型
+ *  defaultModule 注入类型
  */
 export type technologyStackTypes = Map<string, PluginOption>
 
-export type injectDefaultTechnologyStackConfigurationMapperTypes = getObjValues<typeof injectDefaultTechnologyStackConfigurationMapper>
+export type injectDefaultTechnologyStackConfigurationMapperTypes = getValues<typeof injectDefaultTechnologyStackConfigurationMapper>
 
 /**
- * @description 注入默认技术栈配置
+ *  注入默认技术栈配置
  */
 export function injectDefaultTechnologyStackConfiguration(ops: injectDefaultTechnologyStackConfigurationOpt) {
   return (target: object) => {

@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-14 21:17:31
- * @LastEditTime: 2023-03-27 08:51:29
+ * @LastEditTime: 2023-04-28 21:08:34
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/pocketBottom.ts
  */
@@ -29,6 +29,7 @@ export class PocketValue implements triggerInterceptorImpl<pocketValueTypes, Axi
     }
   }
 
+  // @ts-ignore
   logsCallback(type: 'afterTrigger' | 'beforeTrigger', data: void | beforeTriggerResultTypes<unknown>, res: AxiosResponse): void {
     if (type !== 'afterTrigger') return
     if (this.usePocketValue) {

@@ -9,16 +9,19 @@ import { describe, expect, it } from 'vitest'
 import { ServiceUtils, ServiceCore, initializeConfiguration, instantiation, modules } from '../src/index'
 import { RetData, MultiVersionSwitching } from '../src/plugin'
 
+// @ts-ignore
 @instantiation()
+// @ts-ignore
 @modules({
   interceptorModule: [RetData, MultiVersionSwitching],
 })
+// @ts-ignore
 @initializeConfiguration({
   baseURL: 'http://localhost:100/base',
   versionPlaceholder: 'base',
   version: 'v1',
 })
-class Service extends ServiceCore {}
+class Service extends ServiceCore { }
 
 const axi = new Service().getAxios()
 

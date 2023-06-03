@@ -1,31 +1,21 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 15:09:42
- * @LastEditTime: 2023-03-26 10:23:03
+ * @LastEditTime: 2023-05-13 09:02:07
  * @Description:
  * @FilePath: /memo/packages/service/src/types/interceptor.ts
  */
 
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosInstance, AxiosResponse } from 'axios'
 import { modulesImpl, initializeConfigurationTypes } from './engine'
+import { interceptorImpl as serviceimplWithInterceptorImpl, triggerInterceptorImpl as serviceimplWithTriggerInterceptorImpl } from '@memo28/serviceimpl'
 
 /**
- * @description 拦截器需要实现的字段
+ * 拦截器需要实现的字段
+ *
+ * @public
  */
-export interface interceptorImpl<R = unknown, RS = unknown> {
-  /**
-   * @description 调试使用 插件名
-   */
-  displayName?: string
-
-  requestSuc?(config: initializeConfigurationTypes & R): Promise<initializeConfigurationTypes & R> | (R & initializeConfigurationTypes)
-
-  requestFail?(error: any): any
-
-  responseSuc?(response: AxiosResponse<RS>): Promise<AxiosResponse<RS>> | AxiosResponse<RS> | unknown
-
-  responseFail?(error: any): any
-}
+export type interceptorImpl<R = unknown, RS = unknown> = serviceimplWithInterceptorImpl<initializeConfigurationTypes & R, AxiosResponse & RS, AxiosInstance>
 
 export interface beforeTriggerResultTypes<T> {
   data: T
@@ -33,14 +23,11 @@ export interface beforeTriggerResultTypes<T> {
 }
 
 /**
- * @description 触发拦截器需要实现的字段
+ * 触发拦截器需要实现的字段
+ *
+ * @public
  */
-export interface triggerInterceptorImpl<Req extends initializeConfigurationTypes = initializeConfigurationTypes, Res = unknown> {
-  displayName?: string
-  beforeTrigger?<T = unknown>(config: Req): Promise<beforeTriggerResultTypes<T> | void>
-  afterTrigger?<T = unknown>(res: Res, req: Req): Promise<T | void>
-  logsCallback?(type: 'afterTrigger' | 'beforeTrigger', data: void | beforeTriggerResultTypes<unknown> | initializeConfigurationTypes, res?: unknown): void
-}
+export type triggerInterceptorImpl<Req extends initializeConfigurationTypes = initializeConfigurationTypes, Res = unknown> = serviceimplWithTriggerInterceptorImpl<Req, Res>
 
 export abstract class interceptorToolboxImpl {
   abstract loopInstancedInterceptor(list?: modulesImpl['interceptorModule']): interceptorImpl[]

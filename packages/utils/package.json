@@ -1,16 +1,18 @@
 {
   "name": "@memo28/utils",
-  "version": "1.1.8",
+  "version": "1.1.11",
   "private": false,
   "description": "",
   "main": "./lib/index.js",
   "module": "./dist/index.js",
   "types": "./dts/index.d.ts",
   "scripts": {
+    "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true",
-    "test": "vitest"
+    "test": "vitest",
+    "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh"
   },
   "keywords": [
     "injection",
@@ -30,7 +32,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@memo28/types": "^1.1.1",
+    "@memo28/types": "^1.1.2",
+    "mitt": "^3.0.0",
     "reflect-metadata": "^0.1.13"
   }
 }
