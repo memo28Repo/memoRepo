@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 09:45:41
- * @LastEditTime: 2023-03-17 22:52:13
+ * @LastEditTime: 2023-06-04 08:47:40
  * @Description: 基本类型检查 兼容
- * @FilePath: /memo/packages/utils/src/valuePolyfill/typePolyfill.ts
+ * @FilePath: /memo/packages/valuePolyfill/src/typePolyfill.ts
  */
 import { bool } from '@memo28/types'
 import { str } from '@memo28/types'
@@ -17,7 +17,7 @@ export class TypePolyfill<T extends unknown> extends PolyFillBase<T> {
     '[object Number]': 0,
     '[object Array]': [],
     '[object Object]': {},
-    '[object Function]': () => {},
+    '[object Function]': () => { },
     '[object Null]': null,
     '[object Undefined]': undefined,
     '[object Boolean]': true,

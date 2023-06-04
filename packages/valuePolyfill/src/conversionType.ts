@@ -1,14 +1,13 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 11:40:54
- * @LastEditTime: 2023-03-17 22:54:30
+ * @LastEditTime: 2023-06-04 08:47:28
  * @Description: 转换类型 and 类型判断
- * @FilePath: /memo/packages/utils/src/valuePolyfill/conversionType.ts
+ * @FilePath: /memo/packages/valuePolyfill/src/conversionType.ts
  */
 
 import { compatibleTypeMappingValuesType } from './type'
-import { Panic } from '../errors/types'
-import { Errors } from '..'
+import { Panic, Errors } from '@memo28/utils'
 import { bool, obj } from '@memo28/types'
 
 type conversionListType<T> = {

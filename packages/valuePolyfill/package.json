@@ -1,11 +1,8 @@
 {
-  "name": "@memo28/utils",
-  "version": "1.1.12",
-  "private": false,
+  "name": "@memo28/valuepolyfill",
+  "version": "1.0.1",
   "description": "",
-  "main": "./lib/index.js",
-  "module": "./dist/index.js",
-  "types": "./dts/index.d.ts",
+  "main": "index.js",
   "scripts": {
     "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
@@ -14,26 +11,10 @@
     "test": "vitest",
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh"
   },
-  "keywords": [
-    "injection",
-    "typescript",
-    "javascript"
-  ],
-  "author": "hooks_28",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "files": [
-    "./src",
-    "./dist",
-    "./lib",
-    "./dts"
-  ],
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@memo28/types": "^1.1.2",
-    "mitt": "^3.0.0",
     "reflect-metadata": "^0.1.13"
   }
 }
