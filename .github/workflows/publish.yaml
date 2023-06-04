@@ -30,7 +30,7 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
       - name: build
-        run: pnpm build
+        run: pnpm links && pnpm build
 
       - name: publish
         run: pnpm changeset publish
