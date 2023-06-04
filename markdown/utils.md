@@ -16,20 +16,15 @@
 |  [Mail](./utils.mail.md) | 验证邮箱, 不通过时 get 不会返回错值 |
 |  [Phone](./utils.phone.md) | 验证手机号 验证不通过时 get 不会返回错误值 |
 |  [ValidationErrorCollection](./utils.validationerrorcollection.md) | 错误集合 |
-|  [ValuePolyFill](./utils.valuepolyfill.md) |  |
 |  [VerificationFlow](./utils.verificationflow.md) | 验证核心 |
 
 ## Functions
 
 |  Function | Description |
 |  --- | --- |
-|  [arrayToValuePolyFill(array)](./utils.arraytovaluepolyfill.md) |  数组元素 转 ValuePolyFill |
 |  [enableLogAttribute()](./utils.enablelogattribute.md) |  |
-|  [objToValuePolyFill(obj)](./utils.objtovaluepolyfill.md) |  对象属性 转 ValuePolyFill |
 |  [panicProcessing(opt)](./utils.panicprocessing.md) | 方法装饰器, 该装饰器会检查 AnomalousChain 中的错误对象是否为空， 如果不为空 则停止执行被装饰的函数 |
 |  [SNI(n, value)](./utils.sni.md) | String Number includes的简称 |
-|  [valuePolyFillToArray(arry)](./utils.valuepolyfilltoarray.md) |  valuePolyFill 转 array |
-|  [valuePolyFillToObj(obj)](./utils.valuepolyfilltoobj.md) |  valuePolyFill 转 obj |
 
 ## Interfaces
 
@@ -44,6 +39,5 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [DeepObjectToValuePolyFillTypes](./utils.deepobjecttovaluepolyfilltypes.md) |  |
 |  [Panic](./utils.panic.md) |  错误处理返回类型 |
 

@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 23:08:13
- * @LastEditTime: 2023-04-09 09:09:34
+ * @LastEditTime: 2023-06-04 09:53:27
  * @Description: verify
  * @FilePath: /memo/packages/utils/src/verify/verify.ts
  */
@@ -16,14 +16,21 @@ import { Errors } from '../errors/core'
  *  const a = 1;
  *
  *  SNI(2, a) => [2,'2'].includes(a)
- *  SNI([1,2,3], a) => [1,2,3].includes(a)
+ *  SNI([1,2,3], a) => [1,2,3,'1','2','3'].includes(a)
  *
  * @public
  */
-export function SNI(n: number | string | unknown[], value: any) {
-  const reverseType = typeof n === 'string' ? parseFloat(n) : `${n}`
-  if (Array.isArray(n)) return n.includes(value)
-  return [n, reverseType].includes(value)
+export function SNI(n: number | string | (number | string)[], value: any) {
+  function reverseTypeFn(s: string | number) {
+    return typeof s === 'string' ? parseFloat(s) : `${s}`
+  }
+  if (Array.isArray(n)) {
+    const catchList = n.map(i => {
+      return [i, reverseTypeFn(i)]
+    }).flat(1)
+    return catchList.includes(value)
+  }
+  return [n, reverseTypeFn(n)].includes(value)
 }
 
 /**

@@ -81,6 +81,7 @@ export class ValuePolyFill<T extends unknown> {
   }
 }
 
+
 export type DeepObjectToValuePolyFillTypes<T extends object> = T extends object
   ? T extends any[]
     ? ValuePolyFill<T[number]>[]
@@ -91,3 +92,4 @@ export type DeepObjectToValuePolyFillTypes<T extends object> = T extends object
         [key in keyof T]: T[key] extends object ? DeepObjectToValuePolyFillTypes<T[key]> : ValuePolyFill<T[key]>
       }
   : never
+

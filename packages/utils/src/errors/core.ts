@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-23 09:18:30
- * @LastEditTime: 2023-04-09 09:08:41
+ * @LastEditTime: 2023-06-04 09:53:40
  * @Description: 该包封装了操作错误的函数
  * @FilePath: /memo/packages/utils/src/errors/core.ts
  */
@@ -67,7 +67,7 @@ export class Errors {
    */
   static Is(value: any) {
     if (typeof value !== 'object') return false
-    if (SNI([null, undefined], value)) return false
+    if (([null, undefined].includes(value))) return false
     return Reflect.has(value, 'trace') && Reflect.has(value, 'unWrap') && Reflect.has(value, 'info')
   }
 }

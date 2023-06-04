@@ -16,14 +16,6 @@ export class AnomalousChain {
     protected skip(errors: ErrorsNewResult | null): this;
 }
 
-// @public
-export function arrayToValuePolyFill<T extends any>(array: T[]): DeepObjectToValuePolyFillTypes<T[]>;
-
-// @public (undocumented)
-export type DeepObjectToValuePolyFillTypes<T extends object> = T extends object ? T extends any[] ? ValuePolyFill<T[number]>[] : T extends (...args: any[]) => any ? ValuePolyFill<T> : {
-    [key in keyof T]: T[key] extends object ? DeepObjectToValuePolyFillTypes<T[key]> : ValuePolyFill<T[key]>;
-} : never;
-
 // @public (undocumented)
 export function enableLogAttribute(): void;
 
@@ -70,11 +62,6 @@ export interface NewOpt {
 }
 
 // @public
-export function objToValuePolyFill<T extends {
-    [key: string]: any;
-}>(obj: T): DeepObjectToValuePolyFillTypes<T>;
-
-// @public
 export type Panic<T = unknown> = [ErrorsNewResult | undefined | false | null | true, T];
 
 // @public
@@ -96,7 +83,7 @@ export class Phone extends VerificationFlow<str> {
 }
 
 // @public
-export function SNI(n: number | string | unknown[], value: any): boolean;
+export function SNI(n: number | string | (number | string)[], value: any): boolean;
 
 // @public
 export class ValidationErrorCollection<T extends object> {
@@ -107,31 +94,6 @@ export class ValidationErrorCollection<T extends object> {
     // (undocumented)
     registrationListeningError<K extends keysForStoreEmit | keyof T>(type: K, cb: Handler<Equal<T[K], unknown> extends true ? storeEmit[K] : reportType<T[K]>>): this;
 }
-
-// @public (undocumented)
-export class ValuePolyFill<T extends unknown> {
-    constructor(value: T);
-    // (undocumented)
-    protected errorReportingInformation(type: str, errorType: str, polyfillValue: T): void;
-    // (undocumented)
-    get(): T;
-    // (undocumented)
-    getType(): str;
-    // (undocumented)
-    isEmpty(): boolean;
-    // (undocumented)
-    protected promptForMissingTypeCompatibility(): void;
-    // (undocumented)
-    reset(): T;
-    // (undocumented)
-    set(value: T | any): this;
-}
-
-// @public
-export function valuePolyFillToArray<T>(arry: ValuePolyFill<T>[]): T[];
-
-// @public
-export function valuePolyFillToObj<T extends object>(obj: DeepObjectToValuePolyFillTypes<T>): {};
 
 // Warning: (ae-forgotten-export) The symbol "Verify" needs to be exported by the entry point index.d.ts
 //
