@@ -1,5 +1,12 @@
 # @memo28/utils
 
+## 1.1.13
+
+### Patch Changes
+
+- 9e3a714: utils 完善 SNI 函数的判断范围
+- 9e3a714: 完善 SNI 函数判断范围
+
 ## 1.1.12
 
 ### Patch Changes

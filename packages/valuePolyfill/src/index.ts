@@ -10,4 +10,3 @@ export { ValuePolyFill } from './core'
 export { valuePolyFillToArray, valuePolyFillToObj, arrayToValuePolyFill, objToValuePolyFill } from './utils'
 
 export type { DeepObjectToValuePolyFillTypes } from './core'
-
