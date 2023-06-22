@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c649f0c5-fdfa-4e84-93ad-23c0416d8e4e" name="Changes" comment="" />
+    <list default="true" id="c649f0c5-fdfa-4e84-93ad-23c0416d8e4e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/index.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,22 +24,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/devops/Desktop/monorepo/memo/packages/vue",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/devops/Desktop/monorepo/memo/node_modules/prettier",
-    "ts.external.directory.path": "/Users/devops/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/231.9011.35/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/devops/Desktop/monorepo/memo/packages/vue&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/devops/Desktop/monorepo/memo/node_modules/prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/devops/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/231.9011.35/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/vue" />
@@ -69,6 +72,11 @@
       <updated>1683905584419</updated>
       <workItem from="1683905585665" duration="838000" />
       <workItem from="1685843123925" duration="616000" />
+      <workItem from="1685936592498" duration="1036000" />
+      <workItem from="1686016978170" duration="3000" />
+      <workItem from="1686020320961" duration="652000" />
+      <workItem from="1686185919043" duration="1193000" />
+      <workItem from="1686273342056" duration="1000" />
     </task>
     <servers />
   </component>
