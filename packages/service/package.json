@@ -1,6 +1,6 @@
 {
   "name": "@memo28/service",
-  "version": "2.1.9",
+  "version": "4.0.0",
   "description": "axios configuration based on decorator pluggable",
   "main": "./lib/index",
   "module": "./dist/index",
@@ -35,7 +35,7 @@
   "author": "hooks_28",
   "license": "MIT",
   "devDependencies": {
-    "axios": "^1.2.2"
+    "axios": "^1.4.0"
   },
   "peerDependencies": {
     "axios": "^1.2.2"

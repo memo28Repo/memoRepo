@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:17:08
- * @LastEditTime: 2023-04-14 23:04:10
+ * @LastEditTime: 2023-07-02 10:26:04
  * @Description: 配置场景
- * @FilePath: /memo/packages/viteBuild/src/core/configureTechnologyStack.ts
+ * @FilePath: /memo/packages/vitebuild/src/core/configureTechnologyStack.ts
  */
 
 import { getValues } from '@memo28/types'
@@ -12,6 +12,7 @@ import reactSwcPlugin from '@vitejs/plugin-react-swc'
 import vuePlugin from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { transformShortVmodel } from '@vue-macros/short-vmodel'
+// @ts-ignore
 import vueMacros from 'unplugin-vue-macros/vite'
 import { PluginOption } from 'vite'
 import printURL from 'vite-plugin-print-urls'
@@ -57,6 +58,7 @@ export class ConfigureVueTechnologyStack implements configureTechnologyStackType
  */
 export class ConfigureReactTechnologyStack implements configureTechnologyStackTypes<'react'> {
   configureTechnologyStack = 'react'
+  // @ts-ignore
   defaultPlugIn: PluginOption = [legacy(), reactSwcPlugin(), printURL()]
 }
 

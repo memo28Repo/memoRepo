@@ -1,5 +1,17 @@
 # @memo28/service
 
+## 4.0.0
+
+### Major Changes
+
+- update dep version
+
+## 3.0.0
+
+### Major Changes
+
+- update dev version
+
 ## 2.1.9
 
 ### Patch Changes
