@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c649f0c5-fdfa-4e84-93ad-23c0416d8e4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/impl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/impl.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +78,7 @@
       <workItem from="1686020320961" duration="652000" />
       <workItem from="1686185919043" duration="1193000" />
       <workItem from="1686273342056" duration="1000" />
+      <workItem from="1688836374895" duration="825000" />
     </task>
     <servers />
   </component>

@@ -15,6 +15,9 @@
     "test": {
       "cache": false
     },
+    "updateDep": {
+      "cache": false
+    },
     "links": {
       "cache": false
     },

@@ -10,7 +10,8 @@
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true",
-    "test": "vitest"
+    "test": "vitest",
+    "updateDep": "pnpm update @memo28/types@latest && pnpm update @memo28/utils@latest &&  pnpm update reflect-metadata@latest"
   },
   "keywords": [
     "typescript",

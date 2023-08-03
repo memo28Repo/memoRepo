@@ -11,7 +11,8 @@
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true",
     "test": "vitest",
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
-    "links": "pnpm link --global"
+    "links": "pnpm link --global",
+    "updateDep": "pnpm update vue@latest"
   },
   "keywords": [],
   "author": "",

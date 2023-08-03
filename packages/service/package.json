@@ -13,7 +13,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
-    "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh"
+    "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
+    "updateDep": "pnpm update axios@latest &&  pnpm update is-retry-allowed@latest && pnpm update reflect-metadata@latest"
   },
   "files": [
     "./dist",

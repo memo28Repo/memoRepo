@@ -11,7 +11,8 @@
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
     "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true",
     "test:watch": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "updateDep": "pnpm update rollup-plugin-sizes && pnpm update rollup-plugin-notify@laetst && pnpm update rollup@latest && pnpm update plugin-url@latest && pnpm update @rollup/plugin-url@latest && pnpm update @rollup/plugin-typescript@latest && pnpm update @rollup/plugin-node-resolve@latest"
   },
   "files": [
     "./dist",
