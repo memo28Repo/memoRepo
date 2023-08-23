@@ -9,3 +9,5 @@
 ```typescript
 export type requestConfig = Partial<CacheConfig>;
 ```
+**References:** [CacheConfig](./service.cacheconfig.md)
+

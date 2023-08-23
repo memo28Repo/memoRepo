@@ -10,8 +10,8 @@ import 'reflect-metadata'
 export class Injection<K = string> {
   private target: null | object = null
 
-  constructor(target: object) {
-    this.setTarget(target)
+  constructor(target?: object) {
+    target && this.setTarget(target)
   }
 
   setTarget(target: object) {

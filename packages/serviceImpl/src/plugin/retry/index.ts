@@ -8,15 +8,60 @@
 import { interceptorImpl } from '../../core/interceptor'
 import { CheckRetry, getCurrentStateResponse, getRequestOptionsResponse, onRetrySuc } from './check'
 
+
+/**
+ *
+ *
+ * 请求重试拦截器核心类
+ *
+ * @remarks
+ * - 实现接口 {@link interceptorImpl}
+ *
+ * @public
+ *
+ */
 export class RetryImpl<R extends object = object, RS = unknown, Ins extends object = object> implements interceptorImpl<R, RS, Ins> {
+
+
+    /**
+     *
+     * 重试核心类
+     *
+     *
+     * @defaultValue
+     * 请求重试封装核心逻辑
+     * {@link CheckRetry}
+     *
+     * @private
+     *
+     * @public
+     */
     private checkRetry = new CheckRetry<any, Ins, R>()
 
+
+    /**
+     *
+     * 请求拦截器
+     *
+     * @param { R } config - 请求参数类型
+     *
+     * @public
+     */
     requestSuc(config: R): R | Promise<R> {
         const cur = this.checkRetry.getCurrentState(config)
         cur.lastRequestTime = Date.now()
         return config
     }
 
+
+    /**
+     *
+     * 响应成功拦截器
+     *
+     * @param { RS } response - 响应类型
+     *
+     * @public
+     */
     responseSuc(response: RS): unknown {
         const state = this.checkRetry.getCurrentState(Reflect.get(response as object, 'config')) as getCurrentStateResponse & getRequestOptionsResponse
         const config = Reflect.get(response as {}, 'config') as {
@@ -31,6 +76,15 @@ export class RetryImpl<R extends object = object, RS = unknown, Ins extends obje
         return response
     }
 
+    /**
+     * 响应错误拦截器
+     *
+     *
+     * @param { any } error - 错误信息
+     * @param { Ins }  instance - 请求实例
+     *
+     * @public
+     */
     async responseFail(error: any, instance: Ins) {
         const { config } = error
         if (!config) return

@@ -5,59 +5,159 @@
  * @Description: 切换版本号
  * @FilePath: /memo/packages/service/src/plugin/multiVersionSwitching.ts
  */
-import { AxiosRequestConfig } from 'axios'
-import { interceptorImpl } from '../types/interceptor'
+import { AxiosRequestConfig } from "axios";
+import { interceptorImpl } from "../types/interceptor";
 
+
+/**
+ * 多版本切换拦截器 参数类型 {@link MultiVersionSwitching}
+ *
+ * @public
+ */
 export interface multiVersionSwitchingRequest {
-  version: string
-  versionPlaceholder: string
+  /**
+   *
+   * 版本号
+   *
+   * @public
+   */
+  version: string;
+
+  /**
+   *
+   * `baseURL` 字段上 定义需要替换的字符串
+   *
+   * @remarks
+   * ```ts
+   * @instantiation()
+   * @modules({
+   *   interceptorModule: [RetData, MultiVersionSwitching], // MultiVersionSwitching Plug-in is used to quickly switch version number
+   * })
+   * @initializeConfiguration({
+   *   baseURL: 'http://localhost:3011/baseVersion',
+   *   debugger: false,
+   *   versionPlaceholder: 'baseVersion', // used to replace the version placeholder on the baseURL
+   *   version: 'v1', // replace the version placeholder with v1
+   * })
+   * class Service extends ServiceCore { }
+   *
+   * const http = new Service().getAxios()
+   *
+   * @public
+   *
+   */
+  versionPlaceholder: string;
 }
 
 /**
- * @description 多版本拦截器
+ * 多版本拦截器
+ *
+ *
+ * @remarks
+ * ```ts
+ * @instantiation()
+ * @modules({
+ *   interceptorModule: [RetData, MultiVersionSwitching], // MultiVersionSwitching Plug-in is used to quickly switch version number
+ * })
+ * @initializeConfiguration({
+ *   baseURL: 'http://localhost:3011/baseVersion',
+ *   debugger: false,
+ *   versionPlaceholder: 'baseVersion', // used to replace the version placeholder on the baseURL
+ *   version: 'v1', // replace the version placeholder with v1
+ * })
+ * class Service extends ServiceCore { }
+ *
+ * const http = new Service().getAxios()
+ *
+ *
+ * http({
+ *  version: 'v2' // used v1 version http
+ * })
+ * ```
+ *
+ *
+ * @public
  */
 export class MultiVersionSwitching implements interceptorImpl {
-  displayName?: string | undefined = 'multiVersionSwitching'
+  displayName?: string | undefined = "multiVersionSwitching";
 
-  private versionPlaceholder: string = ''
+  private versionPlaceholder: string = "";
 
   //  private baseURL: string = ''
   //
-  private originalBaseURL: string = ''
+  private originalBaseURL: string = "";
 
-  // 修改版本号占位符
-  private setVersionPlaceholder(pl: string) {
-    this.versionPlaceholder = pl
-    return this
-  }
-
-  private setBaseURL(URL: string) {
-    // this.baseURL = URL
-    this.originalBaseURL = URL
-  }
   /**
-   * @description 根据占位符 替换为 版本号
+   * 修改版本号占位符
+   *
+   * @param { string } pl -  占位符
+   *
+   * @private
+   *
+   * @public
+   */
+  private setVersionPlaceholder(pl: string) {
+    this.versionPlaceholder = pl;
+    return this;
+  }
+
+
+  /**
+   *
+   *
+   * 设置基础路由
+   *
+   * @param { string } URL -  基础路由
+   *
+   * @private
+   *
+   * @public
+   */
+  private setBaseURL(URL: string) {
+    this.originalBaseURL = URL;
+  }
+
+  /**
+   * 根据占位符 替换为 版本号
+   *
+   *
+   * @param { string }  baseURL - 路哟
+   *
+   * @param { string } repl - 根据占位符替换
+   *
+   *
+   * @private
+   *
+   * @public
    */
   private replaceVersionPlaceholder(baseURL: string, repl: string) {
-    return baseURL.replace(new RegExp(this.versionPlaceholder, 'g'), repl)
+    return baseURL.replace(new RegExp(this.versionPlaceholder, "g"), repl);
   }
 
+
+  /**
+   *
+   *
+   * 获取原基础路由
+   *
+   * @private
+   *
+   * @public
+   */
   private getOriginalBaseURL() {
-    return this.originalBaseURL
+    return this.originalBaseURL;
   }
 
-  // /**
-  //  * @description 切换版本号
-  //  */
-  // private switchVersion(item: string): string {
-  //   this.baseURL = this.replaceVersionPlaceholder(this.baseURL, item)
-  //   return this.baseURL
-  // }
-
+  /**
+   * 请求成功
+   *
+   * @public
+   *
+   */
   requestSuc(value: AxiosRequestConfig<any> & multiVersionSwitchingRequest): AxiosRequestConfig<any> | Promise<AxiosRequestConfig<any>> {
-    this.setVersionPlaceholder(value.versionPlaceholder)
-    this.setBaseURL(value.baseURL as string)
-    const baseURL = value.version ? this.replaceVersionPlaceholder(this.getOriginalBaseURL(), value.version) : value.baseURL
-    return { ...value, baseURL }
+    this.setVersionPlaceholder(value.versionPlaceholder);
+    this.setBaseURL(value.baseURL as string);
+    const baseURL = value.version ? this.replaceVersionPlaceholder(this.getOriginalBaseURL(), value.version) : value.baseURL;
+    return { ...value, baseURL };
   }
 }

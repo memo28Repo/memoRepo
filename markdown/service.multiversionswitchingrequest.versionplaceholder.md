@@ -4,8 +4,17 @@
 
 ## multiVersionSwitchingRequest.versionPlaceholder property
 
+`baseURL` 字段上 定义需要替换的字符串
+
 **Signature:**
 
 ```typescript
 versionPlaceholder: string;
 ```
+
+## Remarks
+
+\`\`\`<!-- -->ts @<!-- -->instantiation() @<!-- -->modules(<!-- -->{ interceptorModule: \[RetData, MultiVersionSwitching\], // MultiVersionSwitching Plug-in is used to quickly switch version number }<!-- -->) @<!-- -->initializeConfiguration(<!-- -->{ baseURL: 'http://localhost:3011/baseVersion', debugger: false, versionPlaceholder: 'baseVersion', // used to replace the version placeholder on the baseURL version: 'v1', // replace the version placeholder with v1 }<!-- -->) class Service extends ServiceCore { }
+
+const http = new Service().getAxios()
+

@@ -4,6 +4,8 @@
 
 ## MultiVersionSwitching.requestSuc() method
 
+请求成功
+
 **Signature:**
 
 ```typescript

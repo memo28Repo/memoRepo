@@ -1,0 +1,38 @@
+{
+  "name": "@memo28/logs",
+  "version": "0.0.1",
+  "description": "彩色的 console",
+  "main": "./lib/index",
+  "module": "./dist/index",
+  "types": "./dts/index.d.ts",
+  "scripts": {
+    "links": "pnpm link --global",
+    "build": "pnpm build:cjs && pnpm build:es",
+    "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true ",
+    "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true ",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "files": [
+    "./dist",
+    "./lib",
+    "./dts"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "keywords": [
+    "javascript",
+    "log"
+  ],
+  "author": "hooks_28",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "peerDependencies": {
+  },
+  "dependencies": {
+  }
+}

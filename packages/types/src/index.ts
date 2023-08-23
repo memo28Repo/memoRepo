@@ -5,6 +5,14 @@
  * @Description:
  * @FilePath: /memo/packages/types/src/index.ts
  */
+import {versionLog} from '@memo28/logs'
+// @ts-ignore
+import pack from '../package.json'
+
+versionLog({
+  name: '@memo28/types',
+  version: pack.version
+})
 
 /**
  * 常用工具类型，判断类型, 测试类型

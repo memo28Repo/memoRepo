@@ -12,7 +12,7 @@
     "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
-    "updateDep": "pnpm update rollup-plugin-sizes && pnpm update rollup-plugin-notify@laetst && pnpm update rollup@latest && pnpm update plugin-url@latest && pnpm update @rollup/plugin-url@latest && pnpm update @rollup/plugin-typescript@latest && pnpm update @rollup/plugin-node-resolve@latest"
+    "updateDep": "pnpm update rollup-plugin-sizes && pnpm update rollup-plugin-notify@latest && pnpm update rollup@latest  && pnpm update @rollup/plugin-url@latest && pnpm update @rollup/plugin-typescript@latest && pnpm update @rollup/plugin-node-resolve@latest"
   },
   "files": [
     "./dist",
@@ -33,11 +33,11 @@
   "license": "MIT",
   "dependencies": {
     "@memo28/types": "^1.1.0",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.2",
     "@rollup/plugin-url": "^8.0.1",
     "plugin-url": "link:@types/@rollup/plugin-url",
-    "rollup": "^3.12.0",
+    "rollup": "^3.27.0",
     "rollup-plugin-notify": "^1.1.0",
     "rollup-plugin-sizes": "^1.0.5"
   }

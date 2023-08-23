@@ -9,12 +9,12 @@ Constructs a new instance of the `Injection` class
 **Signature:**
 
 ```typescript
-constructor(target: object);
+constructor(target?: object);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  target | object |  |
+|  target | object | _(Optional)_ |
 

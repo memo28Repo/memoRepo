@@ -20,10 +20,10 @@
   },
   "devDependencies": {
     "@vitest/ui": "^0.27.2",
+    "jsdom": "^21.0.0",
     "prettier": "latest",
-    "turbo": "latest",
-    "vitest": "^0.26.3",
-    "jsdom": "^21.0.0"
+    "turbo": "^1.10.12",
+    "vitest": "^0.26.3"
   },
   "engines": {
     "node": ">=14.0.0"

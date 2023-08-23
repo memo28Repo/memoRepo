@@ -217,7 +217,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ", 'getPlugInContainerList'>) => void"
+                  "text": ", \"getPlugInContainerList\">) => void"
                 },
                 {
                   "kind": "Content",

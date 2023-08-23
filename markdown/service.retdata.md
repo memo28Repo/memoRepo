@@ -4,6 +4,8 @@
 
 ## RetData class
 
+响应直接返回 `response.data`
+
 **Signature:**
 
 ```typescript

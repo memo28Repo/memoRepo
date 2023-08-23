@@ -1,0 +1,2566 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.34.4",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@memo28/servicehelper!",
+  "docComment": "",
+  "name": "@memo28/servicehelper",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@memo28/servicehelper!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Variable",
+          "canonicalReference": "@memo28/servicehelper!cacheDecor:var",
+          "docComment": "/**\n * 缓存装饰器\n *\n * @param conf - 配置 缓存\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cacheDecor: "
+            },
+            {
+              "kind": "Content",
+              "text": "(conf: "
+            },
+            {
+              "kind": "Reference",
+              "text": "CacheConfig",
+              "canonicalReference": "@memo28/service!CacheConfig:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => (target: object, key: string, descriptor: any) => void"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/parameter.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "cacheDecor",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!config:function(1)",
+          "docComment": "/**\n * 配置参数 配置在请求同级参数\n *\n * @param config - \n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function config(config?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "configTypes",
+              "canonicalReference": "@memo28/servicehelper!~configTypes:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: any) => void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/parameter.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "config",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "config"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@memo28/servicehelper!ConfigurationThrownToUser:interface",
+          "docComment": "/**\n * 向用户抛出的配置\n *\n * @typeParams R - response 响应值\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ConfigurationThrownToUser<R extends "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/type.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "R",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "ConfigurationThrownToUser",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!ConfigurationThrownToUser#response:member",
+              "docComment": "/**\n * 响应\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "response: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "R"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "response",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!ConfigurationThrownToUser#setHeaders:member",
+              "docComment": "/**\n * 设置请求头\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setHeaders?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(headers: any) => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "setHeaders",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@memo28/servicehelper!ConfigureSuffix:interface",
+          "docComment": "/**\n * 配置路由后缀\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ConfigureSuffix "
+            }
+          ],
+          "fileUrlPath": "src/quickCompletionCRUDAssistant/impl.ts",
+          "releaseTag": "Public",
+          "name": "ConfigureSuffix",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!ConfigureSuffix#create:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "create: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "create",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!ConfigureSuffix#delete:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "delete: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "delete",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!ConfigureSuffix#excel:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "excel: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "excel",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!ConfigureSuffix#get:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "get",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!ConfigureSuffix#update:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "update: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "update",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!controller:function(1)",
+          "docComment": "/**\n * 控制器 配置路由\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function controller(url: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: any) => void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/controller.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "url",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "controller"
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@memo28/servicehelper!customTrigger:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type customTrigger<Req extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ", Res extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "(fn: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", url: string, TriggerResult: "
+            },
+            {
+              "kind": "Reference",
+              "text": "TriggerResult",
+              "canonicalReference": "@memo28/servicehelper!TriggerResult:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<Req, Res>) => object"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/quickCompletionCRUDAssistant/impl.ts",
+          "releaseTag": "Public",
+          "name": "customTrigger",
+          "typeParameters": [
+            {
+              "typeParameterName": "Req",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "Res",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 12
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@memo28/servicehelper!Del:var",
+          "docComment": "/**\n * `Delete` 方法装饰器\n *\n * @param url - 路由 将凭借在 `control` 装饰器 后\n *\n * @param opt - 配置\n * ```\n * `opt.params` 参数将配置 请求的 `params` 或 `data` 参数\n *\n * `opt.inQuery` 参数将配置 请求的 `params` 或 `data` 参数 全部添加到 ·params· 上\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "Del: "
+            },
+            {
+              "kind": "Content",
+              "text": "(url?: string, opt?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "methodsDescriptorOpt",
+              "canonicalReference": "@memo28/servicehelper!~methodsDescriptorOpt:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => (target: object, key: string, descriptor: "
+            },
+            {
+              "kind": "Reference",
+              "text": "PropertyDescriptor",
+              "canonicalReference": "!PropertyDescriptor:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/method.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "Del",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!extractRequestInstance:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function extractRequestInstance(): "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: any) => void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/extractRequestInstance.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [],
+          "name": "extractRequestInstance"
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@memo28/servicehelper!Get:var",
+          "docComment": "/**\n * `Get` 方法装饰器\n *\n * @param url - 路由 将凭借在 `control` 装饰器 后\n *\n * @param opt - 配置\n * ```\n * `opt.params` 参数将配置 请求的 `params` 或 `data` 参数(自动匹配根据方法类型)\n *\n * `opt.inQuery` 参数将配置 请求的 `params` 或 `data` 参数 全部添加到 ·params· 上\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "Get: "
+            },
+            {
+              "kind": "Content",
+              "text": "(url?: string, opt?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "methodsDescriptorOpt",
+              "canonicalReference": "@memo28/servicehelper!~methodsDescriptorOpt:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => (target: object, key: string, descriptor: "
+            },
+            {
+              "kind": "Reference",
+              "text": "PropertyDescriptor",
+              "canonicalReference": "!PropertyDescriptor:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/method.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "Get",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!Header:function(1)",
+          "docComment": "/**\n * 请求头装饰器\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function Header(obj?: "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: "
+            },
+            {
+              "kind": "Reference",
+              "text": "PropertyDescriptor",
+              "canonicalReference": "!PropertyDescriptor:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/header.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "obj",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "Header"
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@memo28/servicehelper!multiVersionSwitchingRequestDecor:var",
+          "docComment": "/**\n * 多版本切换装饰器\n *\n * @param conf - `version` 配置切换至版本\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "multiVersionSwitchingRequestDecor: "
+            },
+            {
+              "kind": "Content",
+              "text": "(conf: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Omit",
+              "canonicalReference": "!Omit:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "multiVersionSwitchingRequest",
+              "canonicalReference": "@memo28/service!multiVersionSwitchingRequest:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", \"versionPlaceholder\">) => (target: object, key: string, descriptor: any) => void"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/parameter.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "multiVersionSwitchingRequestDecor",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!parameter:function(1)",
+          "docComment": "/**\n * 参数装饰器\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function parameter(opt?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "parameterDecoratorParams",
+              "canonicalReference": "@memo28/servicehelper!~parameterDecoratorParams:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: any) => void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/parameter.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "opt",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "parameter"
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@memo28/servicehelper!pocketValueDecor:var",
+          "docComment": "/**\n * 响应兜底值\n *\n * @param pocketValue - 兜底值,可以是任意类型\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "pocketValueDecor: "
+            },
+            {
+              "kind": "Content",
+              "text": "(pocketValue: unknown) => (target: object, key: string, descriptor: any) => void"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/parameter.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "pocketValueDecor",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@memo28/servicehelper!Post:var",
+          "docComment": "/**\n * `Post` 方法装饰器\n *\n * @param url - 路由 将凭借在 `control` 装饰器 后\n *\n * @param opt - 配置\n * ```\n * `opt.params`  参数将配置 请求的 `params` 或 `data` 参数(自动匹配根据方法类型)\n *\n * `opt.inQuery` 参数将配置 请求的 `params` 或 `data` 参数 全部添加到 ·params· 上\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "Post: "
+            },
+            {
+              "kind": "Content",
+              "text": "(url?: string, opt?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "methodsDescriptorOpt",
+              "canonicalReference": "@memo28/servicehelper!~methodsDescriptorOpt:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => (target: object, key: string, descriptor: "
+            },
+            {
+              "kind": "Reference",
+              "text": "PropertyDescriptor",
+              "canonicalReference": "!PropertyDescriptor:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/method.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "Post",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@memo28/servicehelper!Put:var",
+          "docComment": "/**\n * `Put` 方法装饰器\n *\n * @param url - 路由 将凭借在 `control` 装饰器 后\n *\n * @param opt - 配置\n * ```\n * `opt.params` 参数将配置 请求的 `params` 或 `data` 参数(自动匹配根据方法类型)\n *\n * `opt.inQuery` 参数将配置 请求的 `params` 或 `data` 参数 全部添加到 ·params· 上\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "Put: "
+            },
+            {
+              "kind": "Content",
+              "text": "(url?: string, opt?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "methodsDescriptorOpt",
+              "canonicalReference": "@memo28/servicehelper!~methodsDescriptorOpt:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => (target: object, key: string, descriptor: "
+            },
+            {
+              "kind": "Reference",
+              "text": "PropertyDescriptor",
+              "canonicalReference": "!PropertyDescriptor:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/method.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "Put",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistant:class",
+          "docComment": "/**\n * 请求帮助函数 自动生成CURD函数，可扩展\n *\n * @example\n * ```ts\n *\n * const CRUD = new QuickCompletionCRUDAssistant().setURL(\"url\").setTriggeredRequestFunction(httpHandler).trigger((fn, url) => {\n *     return {\n *         page() {\n *             return fn({\n *                 url: url + '/page'\n *             })\n *         }\n *     }\n * })\n *\n * // { url: 'url/get' }\n * CRUD.get({ params: { id: 1 } })\n *\n * // { url: 'url/create' }\n * CRUD.create({ params: { id: 1 } })\n *\n * // { url: 'url/delete' }\n * CRUD.del({ params: { id: 1 } })\n *\n * // { url: 'url/put' }\n * CRUD.update({ params: { id: 1 } })\n *\n * // 轻松拓展\n * CRUD.page()\n *\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class QuickCompletionCRUDAssistant<Req extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ", T extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "> implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantImpl",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<Req, T>"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/quickCompletionCRUDAssistant/index.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "Req",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            }
+          ],
+          "isAbstract": false,
+          "name": "QuickCompletionCRUDAssistant",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistant:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `QuickCompletionCRUDAssistant` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(url?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", configureSuffix?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Partial",
+                  "canonicalReference": "!Partial:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ConfigureSuffix",
+                  "canonicalReference": "@memo28/servicehelper!ConfigureSuffix:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "url",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                },
+                {
+                  "parameterName": "configureSuffix",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 7
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistant#setConfigureSuffix:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setConfigureSuffix(config: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Partial",
+                  "canonicalReference": "!Partial:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ConfigureSuffix",
+                  "canonicalReference": "@memo28/servicehelper!ConfigureSuffix:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "setConfigureSuffix"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistant#setTriggeredRequestFunction:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setTriggeredRequestFunction(fn: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Function",
+                  "canonicalReference": "!Function:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "fn",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "setTriggeredRequestFunction"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistant#setURL:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setURL(url: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "url",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "setURL"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistant#trigger:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "trigger<Tr extends "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "customTrigger",
+                  "canonicalReference": "@memo28/servicehelper!customTrigger:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Req, T>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(config?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Tr"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TriggerResult",
+                  "canonicalReference": "@memo28/servicehelper!TriggerResult:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Req, T> & "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReturnType",
+                  "canonicalReference": "!ReturnType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Tr>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "Tr",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 10
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 4,
+                    "endIndex": 5
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "trigger"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 7,
+              "endIndex": 9
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantConfig:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface QuickCompletionCRUDAssistantConfig "
+            }
+          ],
+          "fileUrlPath": "src/quickCompletionCRUDAssistant/impl.ts",
+          "releaseTag": "Public",
+          "name": "QuickCompletionCRUDAssistantConfig",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantConfig#configureSuffix:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "configureSuffix: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ConfigureSuffix",
+                  "canonicalReference": "@memo28/servicehelper!ConfigureSuffix:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "configureSuffix",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantConfig#triggerFn:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "triggerFn: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Function",
+                  "canonicalReference": "!Function:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "triggerFn",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantConfig#url:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "url: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "url",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl:class",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare abstract class QuickCompletionCRUDAssistantImpl<Req extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ", Res extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/quickCompletionCRUDAssistant/impl.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "Req",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "Res",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            }
+          ],
+          "isAbstract": true,
+          "name": "QuickCompletionCRUDAssistantImpl",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl#setConfigureSuffix:member(1)",
+              "docComment": "/**\n * 配置 路由的后缀\n *\n * @example\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract setConfigureSuffix(config: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Partial",
+                  "canonicalReference": "!Partial:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ConfigureSuffix",
+                  "canonicalReference": "@memo28/servicehelper!ConfigureSuffix:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "setConfigureSuffix"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl#setTriggeredRequestFunction:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract setTriggeredRequestFunction(fn: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Function",
+                  "canonicalReference": "!Function:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "fn",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "setTriggeredRequestFunction"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl#setURL:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract setURL(url: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "url",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "setURL"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl#trigger:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract trigger(config?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Partial",
+                  "canonicalReference": "!Partial:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "customTrigger",
+                  "canonicalReference": "@memo28/servicehelper!customTrigger:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Req, Res>>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TriggerResult",
+                  "canonicalReference": "@memo28/servicehelper!TriggerResult:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Req, Res>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "trigger"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface QuickCompletionCRUDAssistantResponse<Get = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": ", Delete = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": ", Create = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": ", Update = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": ", Excel = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/quickCompletionCRUDAssistant/impl.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "Get",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "Delete",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            },
+            {
+              "typeParameterName": "Create",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            },
+            {
+              "typeParameterName": "Update",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              }
+            },
+            {
+              "typeParameterName": "Excel",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 9,
+                "endIndex": 10
+              }
+            }
+          ],
+          "name": "QuickCompletionCRUDAssistantResponse",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse#create:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "create: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Create>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "create",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse#delete:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "delete: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Delete>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "delete",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse#excel:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "excel: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Excel>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "excel",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse#get:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Get>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "get",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse#update:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "update: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Update>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "update",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@memo28/servicehelper!retryOptDecor:var",
+          "docComment": "/**\n * 请求重试装饰器\n *\n * @param conf - 重试参数\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "retryOptDecor: "
+            },
+            {
+              "kind": "Content",
+              "text": "(conf: "
+            },
+            {
+              "kind": "Reference",
+              "text": "retryOpt",
+              "canonicalReference": "@memo28/service!retryOpt:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => (target: object, key: string, descriptor: any) => void"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/parameter.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "retryOptDecor",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@memo28/servicehelper!TriggerResult:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface TriggerResult<Req extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ", Res extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/quickCompletionCRUDAssistant/impl.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "Req",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "Res",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            }
+          ],
+          "name": "TriggerResult",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/servicehelper!TriggerResult#create:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "create(req: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Req"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Res[\"create\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "req",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "create"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/servicehelper!TriggerResult#del:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "del(req: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Req"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Res[\"delete\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "req",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "del"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/servicehelper!TriggerResult#excel:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "excel(req: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Req"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Res[\"excel\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "req",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "excel"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/servicehelper!TriggerResult#get:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get(req: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Req"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Res[\"get\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "req",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "get"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/servicehelper!TriggerResult#update:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "update(req: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Req"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Res[\"update\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "req",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "update"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!unifyQuickCompletionCRUDAssistant:function(1)",
+          "docComment": "/**\n * 统一请求帮助函数 请求发起函数参数, 配置路由后缀\n *\n * @param configureSuffix - 配置路由后缀，不配置则使用默认，配置则覆盖默认\n *\n * @param triggerFn - 请求发起函数, 用于识别出请求函数参数\n *\n * @example\n * ```ts\n * const common = unifyQuickCompletionCRUDAssistant({},()=>{})\n *\n * common().setURL(\"order\").trigger().get({})\n *\n * common().setURL(\"menu\").trigger().get({})\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function unifyQuickCompletionCRUDAssistant<Req extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ">(configureSuffix: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Partial",
+              "canonicalReference": "!Partial:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "ConfigureSuffix",
+              "canonicalReference": "@memo28/servicehelper!ConfigureSuffix:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": ", triggerFn: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "<Res extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<unknown, unknown, unknown, unknown, unknown> = "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistantResponse",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<unknown, unknown, unknown, unknown, unknown>>() => "
+            },
+            {
+              "kind": "Reference",
+              "text": "QuickCompletionCRUDAssistant",
+              "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistant:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<Req, Res>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/quickCompletionCRUDAssistant/index.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 10,
+            "endIndex": 17
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "configureSuffix",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "triggerFn",
+              "parameterTypeTokenRange": {
+                "startIndex": 8,
+                "endIndex": 9
+              },
+              "isOptional": false
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "Req",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "unifyQuickCompletionCRUDAssistant"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!validation:function(1)",
+          "docComment": "/**\n * 验证参数请求\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function validation(): "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, desc: any) => void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/sliceRequest/validation.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [],
+          "name": "validation"
+        }
+      ]
+    }
+  ]
+}

@@ -28,7 +28,8 @@
   ],
   "license": "ISC",
   "dependencies": {
+    "@memo28/logs": "^0.0.1",
     "@memo28/types": "workspace:^",
-    "vue": "^3.3.2"
+    "vue": "^3.3.4"
   }
 }

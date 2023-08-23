@@ -17,7 +17,7 @@ import vitePlugins from 'unplugin-auto-import/vite';
 // @public
 export class Engine {
     // Warning: (ae-forgotten-export) The symbol "PlugInContainer" needs to be exported by the entry point index.d.ts
-    addPlugins(cb?: (container: Omit<PlugInContainer, 'getPlugInContainerList'>) => void): this;
+    addPlugins(cb?: (container: Omit<PlugInContainer, "getPlugInContainerList">) => void): this;
     getBuildConfig(config?: UserConfigExport): UserConfigExport;
     // Warning: (ae-forgotten-export) The symbol "ConfigureTechnologyStack" needs to be exported by the entry point index.d.ts
     setTechnologyStack<T extends ConfigureTechnologyStack = ConfigureTechnologyStack>(technology: T): this;

@@ -33,8 +33,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@memo28/types": "^1.1.2",
-    "mitt": "^3.0.0",
+    "@memo28/logs": "^0.0.1",
+    "@memo28/types": "workspace:^",
+    "mitt": "^3.0.1",
     "reflect-metadata": "^0.1.13"
   }
 }

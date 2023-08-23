@@ -24,5 +24,8 @@
     "helper"
   ],
   "author": "hooks_28",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@memo28/logs": "^0.0.1"
+  }
 }

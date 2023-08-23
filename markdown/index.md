@@ -9,6 +9,7 @@
 |  Package | Description |
 |  --- | --- |
 |  [@memo28/service](./service.md) | 请求最佳实践 |
+|  [@memo28/servicehelper](./servicehelper.md) |  |
 |  [@memo28/types](./types.md) | 常用工具类型，判断类型, 测试类型 |
 |  [@memo28/utils](./utils.md) | 常用工具函数，提高开发者体验函数 |
 |  [@memo28/vite-plugin-meta](./vite-plugin-meta.md) | 通过配置的方式生成 <code>meta</code> 标签 |

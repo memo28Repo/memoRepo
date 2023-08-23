@@ -4,6 +4,8 @@
 
 ## Retry.responseFail() method
 
+响应错误回调
+
 **Signature:**
 
 ```typescript
@@ -14,8 +16,8 @@ responseFail(error: any, instance: AxiosInstance): Promise<void>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  error | any |  |
-|  instance | AxiosInstance |  |
+|  error | any | 错误 |
+|  instance | AxiosInstance | 请求实例 |
 
 **Returns:**
 

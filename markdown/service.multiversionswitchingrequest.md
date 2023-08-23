@@ -4,6 +4,8 @@
 
 ## multiVersionSwitchingRequest interface
 
+多版本切换拦截器 参数类型 [MultiVersionSwitching](./service.multiversionswitching.md)
+
 **Signature:**
 
 ```typescript
@@ -14,6 +16,6 @@ export interface multiVersionSwitchingRequest
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [version](./service.multiversionswitchingrequest.version.md) |  | string |  |
-|  [versionPlaceholder](./service.multiversionswitchingrequest.versionplaceholder.md) |  | string |  |
+|  [version](./service.multiversionswitchingrequest.version.md) |  | string | 版本号 |
+|  [versionPlaceholder](./service.multiversionswitchingrequest.versionplaceholder.md) |  | string | <code>baseURL</code> 字段上 定义需要替换的字符串 |
 

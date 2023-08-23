@@ -1,0 +1,1 @@
+export { versionLog } from "./version";

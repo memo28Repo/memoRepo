@@ -6,6 +6,19 @@
  * @FilePath: /memo/packages/serviceImpl/src/index.ts
  */
 
+import {versionLog} from '@memo28/logs'
+// @ts-ignore
+import pack from '../package.json'
+
+
+versionLog({
+  name: '@memo28/serviceImpl',
+  version: pack.version
+})
+
+
+
+
 export { DispatchInterceptor } from './core/interceptor'
 export type { interceptorImpl } from './core/interceptor'
 export type { triggerInterceptorImpl } from './core/triggerInterceptor'

@@ -6,30 +6,30 @@
  * @FilePath: /memo/packages/vitebuild/src/core/configureTechnologyStack.ts
  */
 
-import { getValues } from '@memo28/types'
-import legacy from '@vitejs/plugin-legacy'
-import reactSwcPlugin from '@vitejs/plugin-react-swc'
-import vuePlugin from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import { transformShortVmodel } from '@vue-macros/short-vmodel'
+import { getValues } from "@memo28/types";
+import legacy from "@vitejs/plugin-legacy";
+import reactSwcPlugin from "@vitejs/plugin-react-swc";
+import vuePlugin from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import { transformShortVmodel } from "@vue-macros/short-vmodel";
 // @ts-ignore
-import vueMacros from 'unplugin-vue-macros/vite'
-import { PluginOption } from 'vite'
-import printURL from 'vite-plugin-print-urls'
-import injection from './injection'
+import vueMacros from "unplugin-vue-macros/vite";
+import { PluginOption } from "vite";
+import printURL from "vite-plugin-print-urls";
+import injection from "./injection";
 
 export interface configureTechnologyStackTypes<T extends string = string> {
-  configureTechnologyStack: string | T //  配置技术栈
-  defaultPlugIn: PluginOption // 默认插件
+  configureTechnologyStack: string | T; //  配置技术栈
+  defaultPlugIn: PluginOption; // 默认插件
 }
 
-export type ConfigureTechnologyStack = 'vue' | 'react' | ''
+export type ConfigureTechnologyStack = "vue" | "react" | ""
 
 /**
  * @description 配置vue
  */
-export class ConfigureVueTechnologyStack implements configureTechnologyStackTypes<'vue'> {
-  configureTechnologyStack = 'vue'
+export class ConfigureVueTechnologyStack implements configureTechnologyStackTypes<"vue"> {
+  configureTechnologyStack = "vue";
   defaultPlugIn: PluginOption = [
     legacy(),
     vueMacros({
@@ -40,35 +40,38 @@ export class ConfigureVueTechnologyStack implements configureTechnologyStackType
             compilerOptions: {
               nodeTransforms: [
                 transformShortVmodel({
-                  prefix: '$',
-                }),
-              ],
-            },
-          },
+                  prefix: "$"
+                })
+              ]
+            }
+          }
         }),
-        vueJsx: vueJsx(),
-      },
-    }),
-    printURL(),
-  ]
+        vueJsx: vueJsx()
+      }
+    }) as PluginOption,
+    printURL() as PluginOption
+  ];
 }
 
 /**
  * 配置react场景
  */
-export class ConfigureReactTechnologyStack implements configureTechnologyStackTypes<'react'> {
-  configureTechnologyStack = 'react'
-  // @ts-ignore
-  defaultPlugIn: PluginOption = [legacy(), reactSwcPlugin(), printURL()]
+export class ConfigureReactTechnologyStack implements configureTechnologyStackTypes<"react"> {
+  configureTechnologyStack = "react";
+  defaultPlugIn: PluginOption = [
+    legacy(),
+    reactSwcPlugin({tsDecorators: true}),
+    printURL() as PluginOption
+  ];
 }
 
 export interface injectDefaultTechnologyStackConfigurationOpt {
-  defaultModule: configureTechnologyStackTypes[]
+  defaultModule: configureTechnologyStackTypes[];
 }
 
 const injectDefaultTechnologyStackConfigurationMapper = {
-  defaultModule: 'defaultModule',
-} as const
+  defaultModule: "defaultModule"
+} as const;
 
 /**
  *  defaultModule 注入类型
@@ -82,10 +85,11 @@ export type injectDefaultTechnologyStackConfigurationMapperTypes = getValues<typ
  */
 export function injectDefaultTechnologyStackConfiguration(ops: injectDefaultTechnologyStackConfigurationOpt) {
   return (target: object) => {
-    const technologyStack: technologyStackTypes = new Map<string, PluginOption>()
+    const technologyStack: technologyStackTypes = new Map<string, PluginOption>();
     ops.defaultModule.forEach(modules => {
-      technologyStack.set(modules.configureTechnologyStack, modules.defaultPlugIn)
-    })
-    injection.setValue(target, 'defaultModule', technologyStack)
-  }
+      technologyStack.set(modules.configureTechnologyStack, modules.defaultPlugIn);
+    });
+    // @ts-ignore
+    injection.setValue(target, "defaultModule", technologyStack);
+  };
 }

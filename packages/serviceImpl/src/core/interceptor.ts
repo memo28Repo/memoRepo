@@ -13,10 +13,11 @@
  *
  * @typeParam {unknown} RS - 响应参数类型
  *
+ * @typeParam {unknown} Ins - 请求实例类型
  *
  * @example
  * ```ts
- * type impl = interceptorImpl<{ url: string }, { data: unknown }>
+ * type impl = interceptorImpl<{ url: string }, { data: unknown }, Instance>
  * ```
  *
  * @public
@@ -103,11 +104,11 @@ export class DispatchInterceptor<T extends object = object> {
   private instance: T | null = null
 
   /**
-   * 
+   *
    * 保存实例
-   * 
+   *
    * @public
-   * 
+   *
    */
   setInstance(instance: T) {
     this.instance = instance
@@ -115,7 +116,7 @@ export class DispatchInterceptor<T extends object = object> {
 
   /**
    * 获取拦截器列表
-   * 
+   *
    * @public
    */
   getAllInterceptorPlugIns(list?: (new (...args: unknown[]) => interceptorImpl)[]): this {
@@ -156,9 +157,9 @@ export class DispatchInterceptor<T extends object = object> {
   }
 
   /**
-   * 
+   *
    * 设置响应必须返回的参数 后续可在最后一个拦截器中清楚掉这个参数
-   * 
+   *
    */
   setRequestParametersWithResponse(type: requestType, response: any) {
     if (type === 'requestSuc') {

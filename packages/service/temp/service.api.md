@@ -32,6 +32,16 @@ class Cache_2 implements interceptorImpl {
 export { Cache_2 as Cache }
 
 // @public (undocumented)
+export interface CacheConfig {
+    // (undocumented)
+    cacheExpirationTime?: number;
+    // (undocumented)
+    cacheRules?: (config?: AxiosRequestConfig) => string;
+    // (undocumented)
+    useCache?: boolean;
+}
+
+// @public (undocumented)
 export class CachePrerequisites {
     constructor(config: requestConfig);
     // (undocumented)
@@ -47,7 +57,7 @@ export class CacheTrigger implements triggerInterceptorImpl {
     // (undocumented)
     displayName: string;
     // (undocumented)
-    logsCallback(type: 'afterTrigger' | 'beforeTrigger', data: void | initializeConfigurationTypes | beforeTriggerResultTypes<unknown>): void;
+    logsCallback(type: "afterTrigger" | "beforeTrigger", data: void | initializeConfigurationTypes | beforeTriggerResultTypes<unknown>): void;
 }
 
 // @public (undocumented)
@@ -160,24 +170,19 @@ export interface modulesImpl {
 export class MultiVersionSwitching implements interceptorImpl {
     // (undocumented)
     displayName?: string | undefined;
-    // (undocumented)
     requestSuc(value: AxiosRequestConfig<any> & multiVersionSwitchingRequest): AxiosRequestConfig<any> | Promise<AxiosRequestConfig<any>>;
 }
 
-// @public (undocumented)
+// @public
 export interface multiVersionSwitchingRequest {
-    // (undocumented)
     version: string;
-    // (undocumented)
     versionPlaceholder: string;
 }
 
-// Warning: (ae-forgotten-export) The symbol "CacheConfig" needs to be exported by the entry point index.d.ts
-//
 // @public (undocumented)
 export type requestConfig = Partial<CacheConfig>;
 
-// @public (undocumented)
+// @public
 export class RetData implements interceptorImpl {
     // (undocumented)
     displayName?: string | undefined;
@@ -185,11 +190,9 @@ export class RetData implements interceptorImpl {
     responseSuc(value: AxiosResponse<unknown, any>): AxiosResponse<unknown, any> | Promise<AxiosResponse<unknown, any>> | unknown;
 }
 
-// @public (undocumented)
+// @public
 export class Retry extends RetryImpl {
-    // (undocumented)
     requestSuc(config: initializeConfigurationTypes): initializeConfigurationTypes | Promise<initializeConfigurationTypes>;
-    // (undocumented)
     responseFail(error: any, instance: AxiosInstance): Promise<void>;
 }
 

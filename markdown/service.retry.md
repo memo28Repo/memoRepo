@@ -4,6 +4,7 @@
 
 ## Retry class
 
+请求重试 拦截器
 
 **Signature:**
 
@@ -12,10 +13,14 @@ export declare class Retry extends RetryImpl
 ```
 **Extends:** RetryImpl
 
+## Remarks
+
+- 核心逻辑依赖 `@memo28/serviceimpl.RetryImpl` 类
+
 ## Methods
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [requestSuc(config)](./service.retry.requestsuc.md) |  |  |
-|  [responseFail(error, instance)](./service.retry.responsefail.md) |  |  |
+|  [requestSuc(config)](./service.retry.requestsuc.md) |  | 请求成功 拦截器 |
+|  [responseFail(error, instance)](./service.retry.responsefail.md) |  | 响应错误回调 |
 

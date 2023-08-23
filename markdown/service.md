@@ -6,6 +6,10 @@
 
 请求最佳实践
 
+## Remarks
+
+该库
+
 ## Classes
 
 |  Class | Description |
@@ -17,9 +21,9 @@
 |  [GenerateSchedulingAxios](./service.generateschedulingaxios.md) |  |
 |  [Loading](./service.loading.md) |  |
 |  [Logs](./service.logs.md) |  |
-|  [MultiVersionSwitching](./service.multiversionswitching.md) |  多版本拦截器 |
-|  [RetData](./service.retdata.md) |  |
-|  [Retry](./service.retry.md) |  |
+|  [MultiVersionSwitching](./service.multiversionswitching.md) | 多版本拦截器 |
+|  [RetData](./service.retdata.md) | 响应直接返回 <code>response.data</code> |
+|  [Retry](./service.retry.md) | 请求重试 拦截器 |
 |  [ServiceCore](./service.servicecore.md) |  |
 |  [ServiceUtils](./service.serviceutils.md) |  |
 |  [TerminationResult](./service.terminationresult.md) |  |
@@ -43,10 +47,11 @@
 |  Interface | Description |
 |  --- | --- |
 |  [beforeTriggerResultTypes](./service.beforetriggerresulttypes.md) |  |
+|  [CacheConfig](./service.cacheconfig.md) |  |
 |  [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) |  |
 |  [LoadingOpt](./service.loadingopt.md) |  |
 |  [modulesImpl](./service.modulesimpl.md) |  |
-|  [multiVersionSwitchingRequest](./service.multiversionswitchingrequest.md) |  |
+|  [multiVersionSwitchingRequest](./service.multiversionswitchingrequest.md) | 多版本切换拦截器 参数类型 [MultiVersionSwitching](./service.multiversionswitching.md) |
 |  [serviceImpl](./service.serviceimpl.md) |  |
 
 ## Variables

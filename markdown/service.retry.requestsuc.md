@@ -4,6 +4,8 @@
 
 ## Retry.requestSuc() method
 
+请求成功 拦截器
+
 **Signature:**
 
 ```typescript
@@ -14,7 +16,7 @@ requestSuc(config: initializeConfigurationTypes): initializeConfigurationTypes |
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) |  |
+|  config | [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) | 请求配置 |
 
 **Returns:**
 

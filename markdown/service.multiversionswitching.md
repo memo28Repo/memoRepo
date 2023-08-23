@@ -4,7 +4,7 @@
 
 ## MultiVersionSwitching class
 
- 多版本拦截器
+多版本拦截器
 
 **Signature:**
 
@@ -12,6 +12,30 @@
 export declare class MultiVersionSwitching implements interceptorImpl 
 ```
 **Implements:** [interceptorImpl](./service.interceptorimpl.md)
+
+## Remarks
+
+
+```ts
+@instantiation()
+@modules({
+  interceptorModule: [RetData, MultiVersionSwitching], // MultiVersionSwitching Plug-in is used to quickly switch version number
+})
+@initializeConfiguration({
+  baseURL: 'http://localhost:3011/baseVersion',
+  debugger: false,
+  versionPlaceholder: 'baseVersion', // used to replace the version placeholder on the baseURL
+  version: 'v1', // replace the version placeholder with v1
+})
+class Service extends ServiceCore { }
+
+const http = new Service().getAxios()
+
+
+http({
+ version: 'v2' // used v1 version http
+})
+```
 
 ## Properties
 
@@ -23,5 +47,5 @@ export declare class MultiVersionSwitching implements interceptorImpl
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [requestSuc(value)](./service.multiversionswitching.requestsuc.md) |  |  |
+|  [requestSuc(value)](./service.multiversionswitching.requestsuc.md) |  | 请求成功 |
 

@@ -9,14 +9,14 @@
 **Signature:**
 
 ```typescript
-addPlugins(cb?: (container: Omit<PlugInContainer, 'getPlugInContainerList'>) => void): this;
+addPlugins(cb?: (container: Omit<PlugInContainer, "getPlugInContainerList">) => void): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  cb | (container: Omit&lt;PlugInContainer, 'getPlugInContainerList'&gt;) =&gt; void | _(Optional)_ |
+|  cb | (container: Omit&lt;PlugInContainer, "getPlugInContainerList"&gt;) =&gt; void | _(Optional)_ |
 
 **Returns:**
 

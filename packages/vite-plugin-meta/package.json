@@ -32,9 +32,10 @@
   "author": "hooks28",
   "license": "MIT",
   "devDependencies": {
-    "vite": "^4.0.4"
+    "vite": "^4.4.8"
   },
   "dependencies": {
+    "@memo28/logs": "^0.0.1",
     "parse5": "^7.1.2"
   }
 }

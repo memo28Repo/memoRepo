@@ -18,5 +18,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@memo28/logs": "^0.0.1"
+  }
 }

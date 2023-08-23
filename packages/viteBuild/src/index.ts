@@ -6,6 +6,15 @@
  * @FilePath: /memo/packages/viteBuild/src/index.ts
  */
 
+import {versionLog} from '@memo28/logs'
+// @ts-ignore
+import pack from '../package.json'
+
+versionLog({
+  name: '@memo28/viteBuild',
+  version: pack.version
+})
+
 /**
  * 常用`vite`插件
  *

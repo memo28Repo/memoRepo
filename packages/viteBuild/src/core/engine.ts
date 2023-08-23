@@ -5,10 +5,16 @@
  * @Description:
  * @FilePath: /memo/packages/viteBuild/src/core/engine.ts
  */
-import { ConfigureTechnologyStack, technologyStackTypes, ConfigureReactTechnologyStack, ConfigureVueTechnologyStack, injectDefaultTechnologyStackConfiguration } from './configureTechnologyStack'
-import { UserConfigExport, PluginOption } from 'vite'
-import { PlugInContainer } from './plugInContainer'
-import injection from './injection'
+import {
+  ConfigureTechnologyStack,
+  technologyStackTypes,
+  ConfigureReactTechnologyStack,
+  ConfigureVueTechnologyStack,
+  injectDefaultTechnologyStackConfiguration
+} from "./configureTechnologyStack";
+import { UserConfigExport, PluginOption } from "vite";
+import { PlugInContainer } from "./plugInContainer";
+import injection from "./injection";
 
 /**
  *
@@ -44,47 +50,42 @@ import injection from './injection'
  *
  */
 @injectDefaultTechnologyStackConfiguration({
-  defaultModule: [new ConfigureVueTechnologyStack(), new ConfigureReactTechnologyStack()],
+  defaultModule: [new ConfigureVueTechnologyStack(), new ConfigureReactTechnologyStack()]
 })
 export class Engine {
-  private technology: ConfigureTechnologyStack = ''
-  private pluginList: PluginOption[] = []
+  private technology: ConfigureTechnologyStack = "";
+  private pluginList: PluginOption[] = [];
+
   /**
    *  @description 选择技术栈 注入默认插件
    */
   setTechnologyStack<T extends ConfigureTechnologyStack = ConfigureTechnologyStack>(technology: T): this {
-    this.technology = technology
-    const defaultModule = injection.getValue<technologyStackTypes>(Engine, 'defaultModule').get(this.technology)
-    this.pluginList.push(defaultModule)
-    return this
+    this.technology = technology as ConfigureTechnologyStack;
+    // @ts-ignore
+    const defaultModule = injection.getValue<technologyStackTypes>(Engine, "defaultModule").get(this.technology);
+    this.pluginList.push(defaultModule);
+    return this;
   }
 
   /**
    * @description 添加插件
    */
-  addPlugins(cb?: (container: Omit<PlugInContainer, 'getPlugInContainerList'>) => void) {
-    const plugInContainer = new PlugInContainer()
-    cb?.(plugInContainer)
-    this.pluginList.push(plugInContainer.getPlugInContainerList())
-    return this
+  addPlugins(cb?: (container: Omit<PlugInContainer, "getPlugInContainerList">) => void) {
+    const plugInContainer = new PlugInContainer();
+    cb?.(plugInContainer);
+    this.pluginList.push(plugInContainer.getPlugInContainerList());
+    return this;
   }
 
   /**
    * @description 获取配置
    */
   getBuildConfig(config?: UserConfigExport): UserConfigExport {
-    const userConfigPlugin = Reflect.get(config || {}, 'plugins') || []
+    const userConfigPlugin = Reflect.get(config || {}, "plugins") || [];
 
     return {
       ...config,
-      plugins: [this.pluginList, ...userConfigPlugin],
-    }
+      plugins: [this.pluginList, ...userConfigPlugin]
+    };
   }
 }
-
-new Engine()
-  .setTechnologyStack('vue')
-  .addPlugins(plugin => {
-    plugin.addAutoHooks()
-  })
-  .getBuildConfig()

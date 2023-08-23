@@ -40,7 +40,7 @@ export interface ErrorsNewResultInfo extends Pick<NewOpt, 'classify'> {
 
 // @public (undocumented)
 export class Injection<K = string> {
-    constructor(target: object);
+    constructor(target?: object);
     // (undocumented)
     getValue<V = unknown>(key: K): V;
     // (undocumented)

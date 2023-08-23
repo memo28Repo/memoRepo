@@ -5,6 +5,14 @@
  * @Description:
  * @FilePath: /memo/packages/vue/src/index.ts
  */
+import {versionLog} from '@memo28/logs'
+// @ts-ignore
+import pack from '../package.json'
+
+versionLog({
+  name: '@memo28/vue',
+  version: pack.version
+})
 
 /**
  * 基于 vue3 的常用 hooks

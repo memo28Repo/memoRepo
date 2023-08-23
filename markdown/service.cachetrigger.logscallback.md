@@ -7,14 +7,14 @@
 **Signature:**
 
 ```typescript
-logsCallback(type: 'afterTrigger' | 'beforeTrigger', data: void | initializeConfigurationTypes | beforeTriggerResultTypes<unknown>): void;
+logsCallback(type: "afterTrigger" | "beforeTrigger", data: void | initializeConfigurationTypes | beforeTriggerResultTypes<unknown>): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | 'afterTrigger' \| 'beforeTrigger' |  |
+|  type | "afterTrigger" \| "beforeTrigger" |  |
 |  data | void \| [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) \| [beforeTriggerResultTypes](./service.beforetriggerresulttypes.md)<!-- -->&lt;unknown&gt; |  |
 
 **Returns:**
