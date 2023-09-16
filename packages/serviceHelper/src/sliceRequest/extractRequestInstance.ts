@@ -29,6 +29,11 @@ class HttpInstance {
 
 export const httpInstance = new HttpInstance();
 
+/**
+ * 请求拦截器写法的启动拦截器 - 核心
+ *
+ * @public
+ */
 export function extractRequestInstance() {
   return (target: any) => {
     httpInstance.setInstance(target.prototype.getAxios);

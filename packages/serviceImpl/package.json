@@ -1,6 +1,6 @@
 {
   "name": "@memo28/serviceimpl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "",
   "main": "./lib/index.js",
@@ -20,6 +20,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@memo28/logs": "^0.0.1"
+    "@memo28/logs": "^0.1.0"
   }
 }

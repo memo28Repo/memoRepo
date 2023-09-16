@@ -65,7 +65,9 @@ export function valuePolyFillToObj<T extends object>(obj: DeepObjectToValuePolyF
 }
 
 /**
- * @description valuePolyFill 转 array
+ * `valuePolyFill` 转 `array`
+*
+*  @public
  */
 export function valuePolyFillToArray<T>(arry: ValuePolyFill<T>[]) {
   return arry.map(i => i.get())

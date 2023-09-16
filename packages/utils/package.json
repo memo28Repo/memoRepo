@@ -1,6 +1,6 @@
 {
   "name": "@memo28/utils",
-  "version": "1.1.13",
+  "version": "1.2.0",
   "private": false,
   "description": "",
   "main": "./lib/index.js",
@@ -33,7 +33,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@memo28/logs": "^0.0.1",
+    "@memo28/logs": "^0.1.0",
     "@memo28/types": "workspace:^",
     "mitt": "^3.0.1",
     "reflect-metadata": "^0.1.13"

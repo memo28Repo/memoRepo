@@ -83,6 +83,16 @@ export class Phone extends VerificationFlow<str> {
 }
 
 // @public
+export function readingWritingSeparationDecor(target: object, key: string): void;
+
+// @public
+export type readingWritingSeparationUtilsType<T extends object> = {
+    [K in keyof Required<T> as `get${Capitalize<string & K>}`]: () => Required<T>[K];
+} & {
+    [K in keyof Required<T> as `set${Capitalize<string & K>}`]: (value: Required<T>[K]) => void;
+};
+
+// @public
 export function SNI(n: number | string | (number | string)[], value: any): boolean;
 
 // @public

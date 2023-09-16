@@ -1,5 +1,15 @@
 # @memo28/vitebuild
 
+## 3.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @memo28/utils@1.2.0
+  - @memo28/logs@0.1.0
+  - @memo28/types@1.1.4
+  - @memo28/vite-plugin-meta@2.0.1
+
 ## 3.0.0
 
 ### Major Changes

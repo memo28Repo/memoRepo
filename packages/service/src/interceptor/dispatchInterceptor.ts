@@ -10,7 +10,11 @@ import { AxiosInstance } from 'axios'
 import { modulesImpl } from '../types/engine'
 
 /**
- * @description 调度拦截器
+*
+ * 调度拦截器
+*
+*  @public
+*
  */
 export class DispatchInterceptor {
   private instance: AxiosInstance | null = null

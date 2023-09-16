@@ -29,5 +29,7 @@ export { Errors } from "./errors/core";
 export { AnomalousChain, panicProcessing, panicProcessingOpt } from "./errors/anomalousChain";
 export { SNI, Phone, Mail } from "./verify/verify";
 export { ValidationErrorCollection, VerificationFlow } from "./verify/errorCollection";
+export { readingWritingSeparationDecor } from "./readingWritingSeparation/index";
+export type { readingWritingSeparationUtilsType } from "./readingWritingSeparation/index";
 
 export type { ErrorsNewResult, ErrorsNewResultInfo, Panic, NewOpt } from "./errors/types";

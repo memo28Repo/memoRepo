@@ -1,6 +1,6 @@
 {
   "name": "@memo28/vite-plugin-meta",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": false,
   "description": "generate html meta tag",
   "main": "./lib/index",
@@ -35,7 +35,7 @@
     "vite": "^4.4.8"
   },
   "dependencies": {
-    "@memo28/logs": "^0.0.1",
+    "@memo28/logs": "^0.1.0",
     "parse5": "^7.1.2"
   }
 }

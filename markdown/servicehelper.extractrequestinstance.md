@@ -4,6 +4,8 @@
 
 ## extractRequestInstance() function
 
+请求拦截器写法的启动拦截器 - 核心
+
 **Signature:**
 
 ```typescript

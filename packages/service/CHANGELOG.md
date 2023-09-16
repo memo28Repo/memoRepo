@@ -1,5 +1,18 @@
 # @memo28/service
 
+## 4.1.0
+
+### Minor Changes
+
+- 更新现有功能
+
+### Patch Changes
+
+- Updated dependencies
+  - @memo28/utils@1.2.0
+  - @memo28/logs@0.1.0
+  - @memo28/serviceimpl@1.0.4
+
 ## 4.0.0
 
 ### Major Changes

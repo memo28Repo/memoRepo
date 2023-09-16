@@ -22,7 +22,7 @@
 |  --- | --- |
 |  [config(config)](./servicehelper.config.md) | 配置参数 配置在请求同级参数 |
 |  [controller(url)](./servicehelper.controller.md) | 控制器 配置路由 |
-|  [extractRequestInstance()](./servicehelper.extractrequestinstance.md) |  |
+|  [extractRequestInstance()](./servicehelper.extractrequestinstance.md) | 请求拦截器写法的启动拦截器 - 核心 |
 |  [Header(obj)](./servicehelper.header.md) | 请求头装饰器 |
 |  [parameter(opt)](./servicehelper.parameter.md) | 参数装饰器 |
 |  [unifyQuickCompletionCRUDAssistant(configureSuffix, triggerFn)](./servicehelper.unifyquickcompletioncrudassistant.md) | 统一请求帮助函数 请求发起函数参数, 配置路由后缀 |

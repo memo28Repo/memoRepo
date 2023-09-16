@@ -1,6 +1,6 @@
 {
   "name": "@memo28/logs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "彩色的 console",
   "main": "./lib/index",
   "module": "./dist/index",
@@ -9,10 +9,7 @@
     "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true ",
-    "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true ",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:ui": "vitest --ui"
+    "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true "
   },
   "files": [
     "./dist",
@@ -29,10 +26,7 @@
   ],
   "author": "hooks_28",
   "license": "MIT",
-  "devDependencies": {
-  },
-  "peerDependencies": {
-  },
   "dependencies": {
+    "vitest": "^0.26.3"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@memo28/servicehelper",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
   "main": "./lib/index.js",
   "module": "./dist/index.js",
@@ -30,7 +30,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@memo28/logs": "^0.0.1",
-    "@memo28/types": "workspace:^"
+    "@memo28/logs": "^0.1.0",
+    "@memo28/types": "workspace:^",
+    "vitest": "^0.26.3"
   }
 }

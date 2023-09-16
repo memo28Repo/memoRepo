@@ -5,67 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c649f0c5-fdfa-4e84-93ad-23c0416d8e4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/logs/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/logs/src/version.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/api-extractor.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/mv.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/constant.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/extractRequestInstance.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/header.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/method.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/validation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/vitest.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/__test__/readingWritingSeparation.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/__test__/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/src/readingWritingSeparation/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/service.api.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/service.api.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/utils.api.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/utils.api.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/vitebuild.api.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/vitebuild.api.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/service.cachetrigger.logscallback.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/service.cachetrigger.logscallback.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/service.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/service.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/service.requestconfig.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/service.requestconfig.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/utils.injection._constructor_.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/utils.injection._constructor_.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/vitebuild.engine.addplugins.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/vitebuild.engine.addplugins.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/rollup/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/rollup/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/rollup/src/core/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/rollup/src/core/helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/rollup/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/rollup/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/etc/service.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/etc/service.api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/src/core/version.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/core/version.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/src/plugin/RetData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/plugin/RetData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/src/plugin/cache/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/plugin/cache/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/src/plugin/multiVersionSwitching.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/plugin/multiVersionSwitching.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/src/plugin/pocketBottom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/plugin/pocketBottom.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/src/plugin/retry/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/plugin/retry/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/temp/service.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/temp/service.api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/tsconfig.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/serviceHelper.api.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/serviceHelper.api.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/servicehelper.extractrequestinstance.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/servicehelper.extractrequestinstance.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markdown/servicehelper.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/servicehelper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/logs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/logs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/service/src/interceptor/dispatchInterceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/interceptor/dispatchInterceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/__test__/sliceRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/__test__/sliceRequest.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/etc/servicehelper.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/etc/servicehelper.api.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/serviceHelper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceImpl/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceImpl/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceImpl/src/core/interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceImpl/src/core/interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceImpl/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceImpl/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceImpl/src/plugin/retry/check.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceImpl/src/plugin/retry/check.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceImpl/src/plugin/retry/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceImpl/src/plugin/retry/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/types/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/types/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/types/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/etc/utils.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/etc/utils.api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/src/Injection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/Injection.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/impl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/impl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/extractRequestInstance.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/extractRequestInstance.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/temp/servicehelper.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/temp/servicehelper.api.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/temp/utils.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/temp/utils.api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/valuePolyfill/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/valuePolyfill/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/valuePolyfill/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/valuePolyfill/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vite-plugin-meta/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vite-plugin-meta/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vite-plugin-meta/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vite-plugin-meta/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/viteBuild/etc/vitebuild.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/viteBuild/etc/vitebuild.api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/viteBuild/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/viteBuild/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/viteBuild/src/core/configureTechnologyStack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/viteBuild/src/core/configureTechnologyStack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/viteBuild/src/core/engine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/viteBuild/src/core/engine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/viteBuild/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/viteBuild/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/viteBuild/temp/vitebuild.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/viteBuild/temp/vitebuild.api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/valuePolyfill/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/valuePolyfill/src/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vue/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,30 +49,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/devops/Desktop/monorepo/memo/packages/serviceHelper&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/devops/Desktop/monorepo/memo/node_modules/prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/devops/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/232.8660.143/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/devops/Desktop/monorepo/memo/packages/serviceHelper",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/devops/Desktop/monorepo/memo/node_modules/prettier",
+    "ts.external.directory.path": "/Users/devops/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/232.9559.58/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/serviceHelper" />
+      <recent name="$PROJECT_DIR$/packages/utils/__test__" />
       <recent name="$PROJECT_DIR$/packages/vue" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/utils/src/readingWritingSeparation" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.test">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/packages/vue/package.json" />
       <command value="run" />
@@ -125,8 +87,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -159,7 +132,12 @@
       <workItem from="1692003547281" duration="3966000" />
       <workItem from="1692340751813" duration="6019000" />
       <workItem from="1692409280532" duration="5208000" />
-      <workItem from="1692497377140" duration="8356000" />
+      <workItem from="1692497377140" duration="10502000" />
+      <workItem from="1692855200693" duration="211000" />
+      <workItem from="1693211386763" duration="3000" />
+      <workItem from="1693211398081" duration="1989000" />
+      <workItem from="1693546497738" duration="3452000" />
+      <workItem from="1693617493551" duration="4348000" />
     </task>
     <servers />
   </component>

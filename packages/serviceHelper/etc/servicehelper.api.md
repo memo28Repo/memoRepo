@@ -48,7 +48,7 @@ export type customTrigger<Req extends object, Res extends QuickCompletionCRUDAss
 // @public
 export const Del: (url?: string, opt?: methodsDescriptorOpt) => (target: object, key: string, descriptor: PropertyDescriptor) => void;
 
-// @public (undocumented)
+// @public
 export function extractRequestInstance(): (target: any) => void;
 
 // @public

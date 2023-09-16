@@ -28,6 +28,7 @@ export interface ConfigureSuffix {
   excel: string;
 }
 
+
 export interface QuickCompletionCRUDAssistantConfig {
   triggerFn: Function
   url: string,
