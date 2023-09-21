@@ -4,6 +4,8 @@
 
 ## QuickCompletionCRUDAssistantImpl class
 
+快速完成CRUD请求实现 抽象类
+
 **Signature:**
 
 ```typescript
@@ -16,6 +18,6 @@ export declare abstract class QuickCompletionCRUDAssistantImpl<Req extends objec
 |  --- | --- | --- |
 |  [setConfigureSuffix(config)](./servicehelper.quickcompletioncrudassistantimpl.setconfiguresuffix.md) | <code>abstract</code> | 配置 路由的后缀 |
 |  [setTriggeredRequestFunction(fn)](./servicehelper.quickcompletioncrudassistantimpl.settriggeredrequestfunction.md) | <code>abstract</code> |  |
-|  [setURL(url)](./servicehelper.quickcompletioncrudassistantimpl.seturl.md) | <code>abstract</code> |  |
-|  [trigger(config)](./servicehelper.quickcompletioncrudassistantimpl.trigger.md) | <code>abstract</code> |  |
+|  [setURL(url)](./servicehelper.quickcompletioncrudassistantimpl.seturl.md) | <code>abstract</code> | 配置路由前缀 |
+|  [trigger(config)](./servicehelper.quickcompletioncrudassistantimpl.trigger.md) | <code>abstract</code> | 返回响应路由前缀的 <code>get</code> <code>update</code> <code>del</code> <code>put</code> 请求方法 |
 

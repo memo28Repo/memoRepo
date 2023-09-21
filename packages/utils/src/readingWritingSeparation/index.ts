@@ -1,8 +1,9 @@
+
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-08-23 18:49:30
- * @LastEditTime: 2023-08-27 01:18:04
- * @Description:
+ * @LastEditTime: 2023-09-21 14:46:33
+ * @Description: 
  * @FilePath: /memo/packages/utils/src/readingWritingSeparation/index.ts
  */
 
@@ -20,21 +21,20 @@
  *
  * type S = readingWritingSeparationUtilsType<{ name: string }>
  *
- * // 最佳实践
- *
  * ```
+ *
  *
  * @public
  */
 export type readingWritingSeparationUtilsType<T extends object> = {
   [K in keyof Required<T> as `get${Capitalize<string & K>}`]: () => Required<T>[K];
 } & {
-  [K in keyof Required<T> as `set${Capitalize<string & K>}`]: (value: Required<T>[K]) => void;
-};
+    [K in keyof Required<T> as `set${Capitalize<string & K>}`]: (value: Required<T>[K]) => void;
+  };
 
 /**
  * 首字母大写
- *
+ * 
  * @public
  */
 function capitalizeFirstLetter(name: string) {
@@ -42,52 +42,26 @@ function capitalizeFirstLetter(name: string) {
 }
 
 /**
- *
- *
- * 读写分离 属性装饰器 装饰在属性上
- *
- * @remarks
- * ```ts
- * class N {
- *   @readingWritingSeparationDecor
- *   age?: number;
- * }
- * // 编译后
- *  class N {
- *   age?: number;
- *
- *   getAge() {
- *     return this.age
- *   }
- *
- *   setAge(age: number) {
- *     this.age = age
- *   }
- * }
- * ```
- *
- *
+ * 
+ * 读写分离属性装饰器
+ * 
  * @public
- *
+ * 
  */
-export function readingWritingSeparationDecor(target: object, key: string) {
-  const fmtName = capitalizeFirstLetter(key);
+export function readingWritingSeparationDetor(target: object, key: string) {
+  const fmtName = capitalizeFirstLetter(key)
 
 
   Reflect.defineProperty(target, `get${fmtName}`, {
     value() {
-      return Reflect.get(this, key);
+      return Reflect.get(this, key)
     }
-  });
+  })
 
   Reflect.defineProperty(target, `set${fmtName}`, {
     value(val: unknown) {
-      Reflect.set(this, key, val);
+      Reflect.set(this, key, val)
     }
-  });
+  })
 
 }
-
-
-
-

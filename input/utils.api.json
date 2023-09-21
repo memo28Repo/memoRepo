@@ -1578,12 +1578,12 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@memo28/utils!readingWritingSeparationDecor:function(1)",
-          "docComment": "/**\n * 读写分离 属性装饰器 装饰在属性上\n *\n * @remarks\n * ```ts\n * class N {\n *   @readingWritingSeparationDecor\n *   age?: number;\n * }\n * // 编译后\n *  class N {\n *   age?: number;\n *\n *   getAge() {\n *     return this.age\n *   }\n *\n *   setAge(age: number) {\n *     this.age = age\n *   }\n * }\n * ```\n *\n * @public\n */\n",
+          "canonicalReference": "@memo28/utils!readingWritingSeparationDetor:function(1)",
+          "docComment": "/**\n * 读写分离属性装饰器\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare function readingWritingSeparationDecor(target: "
+              "text": "export declare function readingWritingSeparationDetor(target: "
             },
             {
               "kind": "Content",
@@ -1635,12 +1635,12 @@
               "isOptional": false
             }
           ],
-          "name": "readingWritingSeparationDecor"
+          "name": "readingWritingSeparationDetor"
         },
         {
           "kind": "TypeAlias",
           "canonicalReference": "@memo28/utils!readingWritingSeparationUtilsType:type",
-          "docComment": "/**\n * 读写分离工具类型 将传入的对象类型转为 `get set` 类型\n *\n * @remarks\n * ```\n * {\n *   getName:() => string\n *   setName:(name: string) => void\n * }\n *\n * type S = readingWritingSeparationUtilsType<{ name: string }>\n *\n * // 最佳实践\n *\n * ```\n *\n * @public\n */\n",
+          "docComment": "/**\n * 读写分离工具类型 将传入的对象类型转为 `get set` 类型\n *\n * @remarks\n * ```\n * {\n *   getName:() => string\n *   setName:(name: string) => void\n * }\n *\n * type S = readingWritingSeparationUtilsType<{ name: string }>\n *\n * ```\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",

@@ -4,6 +4,8 @@
 
 ## QuickCompletionCRUDAssistantImpl.trigger() method
 
+返回响应路由前缀的 `get` `update` `del` `put` 请求方法
+
 **Signature:**
 
 ```typescript
@@ -14,9 +16,13 @@ abstract trigger(config?: Partial<customTrigger<Req, Res>>): TriggerResult<Req, 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | Partial&lt;[customTrigger](./servicehelper.customtrigger.md)<!-- -->&lt;Req, Res&gt;&gt; | _(Optional)_ |
+|  config | Partial&lt;[customTrigger](./servicehelper.customtrigger.md)<!-- -->&lt;Req, Res&gt;&gt; | _(Optional)_ 扩展请求配置 |
 
 **Returns:**
 
 [TriggerResult](./servicehelper.triggerresult.md)<!-- -->&lt;Req, Res&gt;
+
+## Remarks
+
+可传入`config` 来扩展更多请求
 

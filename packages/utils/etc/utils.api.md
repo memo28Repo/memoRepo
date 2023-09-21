@@ -83,7 +83,7 @@ export class Phone extends VerificationFlow<str> {
 }
 
 // @public
-export function readingWritingSeparationDecor(target: object, key: string): void;
+export function readingWritingSeparationDetor(target: object, key: string): void;
 
 // @public
 export type readingWritingSeparationUtilsType<T extends object> = {

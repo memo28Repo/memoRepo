@@ -4,6 +4,8 @@
 
 ## QuickCompletionCRUDAssistantConfig interface
 
+快速生成 `curd` 请求助手的配置
+
 **Signature:**
 
 ```typescript

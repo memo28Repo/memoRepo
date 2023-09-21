@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-30 10:39:18
- * @LastEditTime: 2023-06-04 08:50:30
+ * @LastEditTime: 2023-09-21 14:47:25
  * @Description:
  * @FilePath: /memo/packages/utils/src/index.ts
  */
@@ -23,13 +23,14 @@ versionLog({
  * @packageDocumentation
  */
 
-export { enableLogAttribute } from "./log";
 export { Injection } from "./Injection";
-export { Errors } from "./errors/core";
 export { AnomalousChain, panicProcessing, panicProcessingOpt } from "./errors/anomalousChain";
-export { SNI, Phone, Mail } from "./verify/verify";
-export { ValidationErrorCollection, VerificationFlow } from "./verify/errorCollection";
-export { readingWritingSeparationDecor } from "./readingWritingSeparation/index";
+export { Errors } from "./errors/core";
+export { enableLogAttribute } from "./log";
+export { readingWritingSeparationDetor } from "./readingWritingSeparation/index";
 export type { readingWritingSeparationUtilsType } from "./readingWritingSeparation/index";
+export { ValidationErrorCollection, VerificationFlow } from "./verify/errorCollection";
+export { Mail, Phone, SNI } from "./verify/verify";
 
-export type { ErrorsNewResult, ErrorsNewResultInfo, Panic, NewOpt } from "./errors/types";
+export type { ErrorsNewResult, ErrorsNewResultInfo, NewOpt, Panic } from "./errors/types";
+

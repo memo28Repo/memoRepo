@@ -4,6 +4,8 @@
 
 ## TriggerResult interface
 
+传入 `curd` 请求类型 和 响应类型
+
 **Signature:**
 
 ```typescript

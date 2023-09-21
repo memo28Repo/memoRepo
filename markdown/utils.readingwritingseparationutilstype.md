@@ -27,7 +27,5 @@ export type readingWritingSeparationUtilsType<T extends object> = {
 
 type S = readingWritingSeparationUtilsType<{ name: string }>
 
-// 最佳实践
-
 ```
 

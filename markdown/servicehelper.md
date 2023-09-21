@@ -14,7 +14,7 @@
 
 |  Abstract Class | Description |
 |  --- | --- |
-|  [QuickCompletionCRUDAssistantImpl](./servicehelper.quickcompletioncrudassistantimpl.md) |  |
+|  [QuickCompletionCRUDAssistantImpl](./servicehelper.quickcompletioncrudassistantimpl.md) | 快速完成CRUD请求实现 抽象类 |
 
 ## Functions
 
@@ -34,9 +34,9 @@
 |  --- | --- |
 |  [ConfigurationThrownToUser](./servicehelper.configurationthrowntouser.md) | <p>向用户抛出的配置</p><p> R - response 响应值</p> |
 |  [ConfigureSuffix](./servicehelper.configuresuffix.md) | 配置路由后缀 |
-|  [QuickCompletionCRUDAssistantConfig](./servicehelper.quickcompletioncrudassistantconfig.md) |  |
-|  [QuickCompletionCRUDAssistantResponse](./servicehelper.quickcompletioncrudassistantresponse.md) |  |
-|  [TriggerResult](./servicehelper.triggerresult.md) |  |
+|  [QuickCompletionCRUDAssistantConfig](./servicehelper.quickcompletioncrudassistantconfig.md) | 快速生成 <code>curd</code> 请求助手的配置 |
+|  [QuickCompletionCRUDAssistantResponse](./servicehelper.quickcompletioncrudassistantresponse.md) | 传入 <code>curd</code> 响应的类型 |
+|  [TriggerResult](./servicehelper.triggerresult.md) | 传入 <code>curd</code> 请求类型 和 响应类型 |
 
 ## Variables
 

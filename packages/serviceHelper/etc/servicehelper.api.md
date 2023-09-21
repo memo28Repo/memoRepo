@@ -87,7 +87,7 @@ export class QuickCompletionCRUDAssistant<Req extends object, T extends QuickCom
     trigger<Tr extends customTrigger<Req, T>>(config?: Tr): TriggerResult<Req, T> & ReturnType<Tr>;
 }
 
-// @public (undocumented)
+// @public
 export interface QuickCompletionCRUDAssistantConfig {
     // (undocumented)
     configureSuffix: ConfigureSuffix;
@@ -97,18 +97,16 @@ export interface QuickCompletionCRUDAssistantConfig {
     url: string;
 }
 
-// @public (undocumented)
+// @public
 export abstract class QuickCompletionCRUDAssistantImpl<Req extends object, Res extends QuickCompletionCRUDAssistantResponse = QuickCompletionCRUDAssistantResponse> {
     abstract setConfigureSuffix(config: Partial<ConfigureSuffix>): this;
     // (undocumented)
     abstract setTriggeredRequestFunction(fn: Function): this;
-    // (undocumented)
     abstract setURL(url: string): this;
-    // (undocumented)
     abstract trigger(config?: Partial<customTrigger<Req, Res>>): TriggerResult<Req, Res>;
 }
 
-// @public (undocumented)
+// @public
 export interface QuickCompletionCRUDAssistantResponse<Get = unknown, Delete = unknown, Create = unknown, Update = unknown, Excel = unknown> {
     // (undocumented)
     create: Promise<Create>;
@@ -125,7 +123,7 @@ export interface QuickCompletionCRUDAssistantResponse<Get = unknown, Delete = un
 // @public
 export const retryOptDecor: (conf: retryOpt) => (target: object, key: string, descriptor: any) => void;
 
-// @public (undocumented)
+// @public
 export interface TriggerResult<Req extends object, Res extends QuickCompletionCRUDAssistantResponse = QuickCompletionCRUDAssistantResponse> {
     // (undocumented)
     create(req: Req): Promise<Res["create"]>;

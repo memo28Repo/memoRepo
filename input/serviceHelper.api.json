@@ -1390,7 +1390,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantConfig:interface",
-          "docComment": "",
+          "docComment": "/**\n * 快速生成 `curd` 请求助手的配置\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1491,7 +1491,7 @@
         {
           "kind": "Class",
           "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl:class",
-          "docComment": "",
+          "docComment": "/**\n * 快速完成CRUD请求实现 抽象类\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1668,7 +1668,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl#setURL:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 配置路由前缀\n *\n * @param url - 路由前缀\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1716,7 +1716,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantImpl#trigger:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 返回响应路由前缀的 `get` `update` `del` `put` 请求方法\n *\n * @remarks\n *\n * 可传入`config` 来扩展更多请求\n *\n * @param config - 扩展请求配置\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1786,7 +1786,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@memo28/servicehelper!QuickCompletionCRUDAssistantResponse:interface",
-          "docComment": "",
+          "docComment": "/**\n * 传入 `curd` 响应的类型\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2093,7 +2093,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@memo28/servicehelper!TriggerResult:interface",
-          "docComment": "",
+          "docComment": "/**\n * 传入 `curd` 请求类型 和 响应类型\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",

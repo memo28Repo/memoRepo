@@ -24,7 +24,7 @@
 |  --- | --- |
 |  [enableLogAttribute()](./utils.enablelogattribute.md) |  |
 |  [panicProcessing(opt)](./utils.panicprocessing.md) | 方法装饰器, 该装饰器会检查 AnomalousChain 中的错误对象是否为空， 如果不为空 则停止执行被装饰的函数 |
-|  [readingWritingSeparationDecor(target, key)](./utils.readingwritingseparationdecor.md) | 读写分离 属性装饰器 装饰在属性上 |
+|  [readingWritingSeparationDetor(target, key)](./utils.readingwritingseparationdetor.md) | 读写分离属性装饰器 |
 |  [SNI(n, value)](./utils.sni.md) | String Number includes的简称 |
 
 ## Interfaces

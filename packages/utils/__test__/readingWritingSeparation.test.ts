@@ -1,17 +1,24 @@
-import { readingWritingSeparationUtilsType, readingWritingSeparationDecor } from "../src/index";
-import { it, describe, expect } from "vitest";
+/*
+ * @Author: 邱狮杰&qwm
+ * @Date: 2023-09-01 13:59:46
+ * @LastEditTime: 2023-09-21 14:48:31
+ * @Description: 
+ * @FilePath: /memo/packages/utils/__test__/readingWritingSeparation.test.ts
+ */
+import { describe, expect, it } from "vitest";
+import { readingWritingSeparationDetor, readingWritingSeparationUtilsType } from "../src/index";
 
 class Nber {
   // @ts-ignore
-  @readingWritingSeparationDecor
+  @readingWritingSeparationDetor
   age?: number;
 
   // @ts-ignore
-  @readingWritingSeparationDecor
+  @readingWritingSeparationDetor
   height?: number;
 
   // @ts-ignore
-  @readingWritingSeparationDecor
+  @readingWritingSeparationDetor
   width?: number;
 }
 

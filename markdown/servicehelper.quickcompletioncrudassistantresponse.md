@@ -4,6 +4,8 @@
 
 ## QuickCompletionCRUDAssistantResponse interface
 
+传入 `curd` 响应的类型
+
 **Signature:**
 
 ```typescript

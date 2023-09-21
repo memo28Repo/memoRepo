@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c649f0c5-fdfa-4e84-93ad-23c0416d8e4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/serviceHelper/vitest.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/utils/__test__/readingWritingSeparation.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/utils/__test__/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/utils/src/readingWritingSeparation/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/serviceHelper.api.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/serviceHelper.api.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/servicehelper.extractrequestinstance.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/servicehelper.extractrequestinstance.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markdown/servicehelper.md" beforeDir="false" afterPath="$PROJECT_DIR$/markdown/servicehelper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/logs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/logs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/service/src/interceptor/dispatchInterceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/service/src/interceptor/dispatchInterceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/__test__/sliceRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/__test__/sliceRequest.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/etc/servicehelper.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/etc/servicehelper.api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/impl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/src/quickCompletionCRUDAssistant/impl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/extractRequestInstance.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/src/sliceRequest/extractRequestInstance.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/serviceHelper/temp/servicehelper.api.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/serviceHelper/temp/servicehelper.api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/valuePolyfill/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/valuePolyfill/src/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +30,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/devops/Desktop/monorepo/memo/packages/serviceHelper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/devops/Desktop/monorepo/memo/node_modules/prettier",
-    "ts.external.directory.path": "/Users/devops/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/232.9559.58/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/devops/Desktop/monorepo/memo/packages/serviceHelper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/devops/Desktop/monorepo/memo/node_modules/prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/devops/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/232.9559.58/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/serviceHelper" />
@@ -138,6 +119,9 @@
       <workItem from="1693211398081" duration="1989000" />
       <workItem from="1693546497738" duration="3452000" />
       <workItem from="1693617493551" duration="4348000" />
+      <workItem from="1694823508103" duration="1381000" />
+      <workItem from="1695000615466" duration="9000" />
+      <workItem from="1695000751176" duration="8000" />
     </task>
     <servers />
   </component>

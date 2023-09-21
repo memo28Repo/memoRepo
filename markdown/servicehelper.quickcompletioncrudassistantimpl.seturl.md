@@ -4,6 +4,8 @@
 
 ## QuickCompletionCRUDAssistantImpl.setURL() method
 
+配置路由前缀
+
 **Signature:**
 
 ```typescript
@@ -14,7 +16,7 @@ abstract setURL(url: string): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  url | string |  |
+|  url | string | 路由前缀 |
 
 **Returns:**
 
