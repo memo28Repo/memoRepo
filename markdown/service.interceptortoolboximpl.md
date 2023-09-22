@@ -4,6 +4,8 @@
 
 ## interceptorToolboxImpl class
 
+抽象类 拦截模块工具类
+
 **Signature:**
 
 ```typescript
@@ -14,5 +16,5 @@ export declare abstract class interceptorToolboxImpl
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [loopInstancedInterceptor(list)](./service.interceptortoolboximpl.loopinstancedinterceptor.md) | <code>abstract</code> |  |
+|  [loopInstancedInterceptor(list)](./service.interceptortoolboximpl.loopinstancedinterceptor.md) | <code>abstract</code> | 抽象方法 循环解析拦截器列表 |
 

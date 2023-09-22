@@ -4,12 +4,18 @@
 
 ## Logs class
 
+请求 `log` 拦截器
+
 **Signature:**
 
 ```typescript
 export declare class Logs implements interceptorImpl 
 ```
 **Implements:** [interceptorImpl](./service.interceptorimpl.md)
+
+## Remarks
+
+- 根据配置中的 `debugger` 字段判断开启
 
 ## Methods
 

@@ -4,6 +4,8 @@
 
 ## ServiceUtils.modules() method
 
+- 配置拦截器 - 配置前后置拦截器
+
 **Signature:**
 
 ```typescript
@@ -14,7 +16,7 @@ modules(opt: Partial<modulesImpl>): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  opt | Partial&lt;[modulesImpl](./service.modulesimpl.md)<!-- -->&gt; |  |
+|  opt | Partial&lt;[modulesImpl](./service.modulesimpl.md)<!-- -->&gt; | 模块配置 |
 
 **Returns:**
 

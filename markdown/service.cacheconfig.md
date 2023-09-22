@@ -4,6 +4,8 @@
 
 ## CacheConfig interface
 
+缓存请求配置类型
+
 **Signature:**
 
 ```typescript

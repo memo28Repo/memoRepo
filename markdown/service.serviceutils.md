@@ -4,18 +4,24 @@
 
 ## ServiceUtils class
 
+请求工具
+
 **Signature:**
 
 ```typescript
 export declare class ServiceUtils<T extends object> 
 ```
 
+## Remarks
+
+如项目不支持装饰器 则降级为该方案
+
 ## Methods
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [getAxios()](./service.serviceutils.getaxios.md) |  |  |
-|  [initializeConfiguration(opt)](./service.serviceutils.initializeconfiguration.md) |  |  |
-|  [instantiation()](./service.serviceutils.instantiation.md) |  |  |
-|  [modules(opt)](./service.serviceutils.modules.md) |  |  |
+|  [getAxios()](./service.serviceutils.getaxios.md) |  | 获取实例化后的 <code>axios</code> |
+|  [initializeConfiguration(opt)](./service.serviceutils.initializeconfiguration.md) |  | 初始化 <code>axios</code> 参数 |
+|  [instantiation()](./service.serviceutils.instantiation.md) |  | 配置初始化 <code>axios</code> 参数 并且创建 <code>axios</code> &amp; 绑定拦截器 |
+|  [modules(opt)](./service.serviceutils.modules.md) |  | - 配置拦截器 - 配置前后置拦截器 |
 

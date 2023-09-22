@@ -4,6 +4,8 @@
 
 ## LoadingOpt.loadingDelay property
 
+开始`loading`<!-- -->回调 触发延迟
+
 **Signature:**
 
 ```typescript

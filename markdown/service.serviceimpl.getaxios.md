@@ -4,6 +4,8 @@
 
 ## serviceImpl.getAxios() method
 
+默认返回 `axios` 实例
+
 **Signature:**
 
 ```typescript

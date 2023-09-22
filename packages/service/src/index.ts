@@ -24,7 +24,7 @@ export { RetData } from "./plugin/RetData";
 
 export { MultiVersionSwitching, multiVersionSwitchingRequest } from "./plugin/multiVersionSwitching";
 
-export { Cache, CachePrerequisites, CacheTrigger, ExpirationTime, requestConfig, CacheConfig } from "./plugin/cache";
+export { Cache, CacheConfig, CachePrerequisites, CacheTrigger, ExpirationTime, requestConfig } from "./plugin/cache";
 
 export { Logs } from "./plugin/logs/index";
 
@@ -40,3 +40,4 @@ export * from "./core/serviceUtils";
 export * from "./core/terminationResult";
 export * from "./types/engine";
 export * from "./types/interceptor";
+

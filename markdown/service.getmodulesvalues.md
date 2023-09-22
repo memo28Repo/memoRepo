@@ -4,6 +4,8 @@
 
 ## getModulesValues type
 
+获取 [modules()](./service.modules.md) 配置的 `key`
+
 **Signature:**
 
 ```typescript

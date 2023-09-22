@@ -4,6 +4,10 @@
 
 ## beforeTriggerResultTypes.data property
 
+前置拦截器携带的参数
+
+ T - 携带参数类型
+
 **Signature:**
 
 ```typescript

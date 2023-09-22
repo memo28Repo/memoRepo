@@ -4,6 +4,8 @@
 
 ## CachePrerequisites class
 
+缓存先决条件判断类
+
 **Signature:**
 
 ```typescript

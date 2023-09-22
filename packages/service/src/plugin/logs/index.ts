@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-23 06:23:19
- * @LastEditTime: 2023-05-13 09:44:19
+ * @LastEditTime: 2023-09-21 15:46:37
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/logs/index.ts
  */
@@ -13,6 +13,18 @@ import { ErrorWithAxios } from './error'
 import { HttpLog, colors } from './utils'
 const requestTimestamp = Symbol.for('requestTimestamp')
 
+
+
+
+/**
+ * 
+ * 请求 `log` 拦截器
+ * 
+ * @remarks
+ * - 根据配置中的 `debugger` 字段判断开启
+ * 
+ * @public
+ */
 export class Logs implements interceptorImpl {
   requestSuc(config: initializeConfigurationTypes): initializeConfigurationTypes | Promise<initializeConfigurationTypes> {
     if (!config.debugger) return config

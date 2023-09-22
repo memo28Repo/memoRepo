@@ -4,6 +4,10 @@
 
 ## beforeTriggerResultTypes interface
 
+前置拦截器返回类型
+
+ T - 携带参数类型
+
 **Signature:**
 
 ```typescript
@@ -14,6 +18,6 @@ export interface beforeTriggerResultTypes<T>
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [data](./service.beforetriggerresulttypes.data.md) |  | T |  |
-|  [directReturnValue?](./service.beforetriggerresulttypes.directreturnvalue.md) |  | boolean | _(Optional)_ |
+|  [data](./service.beforetriggerresulttypes.data.md) |  | T | <p>前置拦截器携带的参数</p><p> T - 携带参数类型</p> |
+|  [directReturnValue?](./service.beforetriggerresulttypes.directreturnvalue.md) |  | boolean | _(Optional)_ 是否直接返回值 |
 

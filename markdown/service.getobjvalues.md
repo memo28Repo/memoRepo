@@ -4,6 +4,8 @@
 
 ## getObjValues type
 
+传入一个 对象类型 返回对象类型的所有 `value` 类型
+
 **Signature:**
 
 ```typescript

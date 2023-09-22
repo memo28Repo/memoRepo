@@ -1,15 +1,23 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-13 10:11:14
- * @LastEditTime: 2023-03-27 09:08:44
+ * @LastEditTime: 2023-09-22 10:39:07
  * @Description:
  * @FilePath: /memo/packages/service/src/core/terminationResult.ts
  */
 import axios from 'axios'
+import { HttpLog } from '../plugin/logs/utils'
 import { initializeConfigurationTypes } from '../types/engine'
 import { debug } from './serviceUtils'
-import { HttpLog } from '../plugin/logs/utils'
 
+/**
+ * 
+ * 取消请求类
+ * 
+ * @remarks
+ * 
+ * @public
+ */
 export class TerminationResult<T> {
   ConfigurationParameters(config: initializeConfigurationTypes & T) {
     const cancel = axios.CancelToken.source()

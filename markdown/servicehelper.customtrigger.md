@@ -4,6 +4,8 @@
 
 ## customTrigger type
 
+自定义触发器 - 通过拓展请求
+
 **Signature:**
 
 ```typescript

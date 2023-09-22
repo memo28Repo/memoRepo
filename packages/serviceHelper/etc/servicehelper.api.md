@@ -40,7 +40,7 @@ export interface ConfigureSuffix {
 // @public
 export function controller(url: string): (target: any) => void;
 
-// @public (undocumented)
+// @public
 export type customTrigger<Req extends object, Res extends QuickCompletionCRUDAssistantResponse = QuickCompletionCRUDAssistantResponse> = (fn: Function, url: string, TriggerResult: TriggerResult<Req, Res>) => object;
 
 // Warning: (ae-forgotten-export) The symbol "methodsDescriptorOpt" needs to be exported by the entry point index.d.ts

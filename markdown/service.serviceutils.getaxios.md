@@ -4,6 +4,8 @@
 
 ## ServiceUtils.getAxios() method
 
+获取实例化后的 `axios`
+
 **Signature:**
 
 ```typescript

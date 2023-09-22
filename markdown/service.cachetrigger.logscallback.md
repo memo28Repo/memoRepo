@@ -4,6 +4,8 @@
 
 ## CacheTrigger.logsCallback() method
 
+触发缓存前后置回调后的 `log` 回调
+
 **Signature:**
 
 ```typescript
@@ -14,8 +16,8 @@ logsCallback(type: "afterTrigger" | "beforeTrigger", data: void | initializeConf
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | "afterTrigger" \| "beforeTrigger" |  |
-|  data | void \| [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) \| [beforeTriggerResultTypes](./service.beforetriggerresulttypes.md)<!-- -->&lt;unknown&gt; |  |
+|  type | "afterTrigger" \| "beforeTrigger" | 前后置触发拦截器类型 |
+|  data | void \| [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) \| [beforeTriggerResultTypes](./service.beforetriggerresulttypes.md)<!-- -->&lt;unknown&gt; | 传递的参数 |
 
 **Returns:**
 

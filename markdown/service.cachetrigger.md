@@ -4,12 +4,18 @@
 
 ## CacheTrigger class
 
+触发请求前后置 缓存 模块
+
 **Signature:**
 
 ```typescript
 export declare class CacheTrigger implements triggerInterceptorImpl 
 ```
 **Implements:** [triggerInterceptorImpl](./service.triggerinterceptorimpl.md)
+
+## Remarks
+
+- 触发请求前 会判断 当前路由缓存存在 存在并且未过期则 不触发请求 直接返回缓存结果
 
 ## Properties
 
@@ -21,6 +27,6 @@ export declare class CacheTrigger implements triggerInterceptorImpl
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [beforeTrigger(config)](./service.cachetrigger.beforetrigger.md) |  |  |
-|  [logsCallback(type, data)](./service.cachetrigger.logscallback.md) |  |  |
+|  [beforeTrigger(config)](./service.cachetrigger.beforetrigger.md) |  | 发送请求前回调判断缓存是否存在 且可用 |
+|  [logsCallback(type, data)](./service.cachetrigger.logscallback.md) |  | 触发缓存前后置回调后的 <code>log</code> 回调 |
 

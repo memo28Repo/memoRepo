@@ -4,6 +4,8 @@
 
 ## ServiceUtils.initializeConfiguration() method
 
+初始化 `axios` 参数
+
 **Signature:**
 
 ```typescript

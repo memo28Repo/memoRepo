@@ -4,6 +4,8 @@
 
 ## retryOpt type
 
+重试拦截器参数类型
+
 **Signature:**
 
 ```typescript

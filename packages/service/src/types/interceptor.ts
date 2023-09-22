@@ -1,14 +1,14 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-06 15:09:42
- * @LastEditTime: 2023-05-13 09:02:07
+ * @LastEditTime: 2023-09-22 10:31:22
  * @Description:
  * @FilePath: /memo/packages/service/src/types/interceptor.ts
  */
 
-import { AxiosInstance, AxiosResponse } from 'axios'
-import { modulesImpl, initializeConfigurationTypes } from './engine'
 import { interceptorImpl as serviceimplWithInterceptorImpl, triggerInterceptorImpl as serviceimplWithTriggerInterceptorImpl } from '@memo28/serviceimpl'
+import { AxiosInstance, AxiosResponse } from 'axios'
+import { initializeConfigurationTypes, modulesImpl } from './engine'
 
 /**
  * 拦截器需要实现的字段
@@ -17,8 +17,36 @@ import { interceptorImpl as serviceimplWithInterceptorImpl, triggerInterceptorIm
  */
 export type interceptorImpl<R = unknown, RS = unknown> = serviceimplWithInterceptorImpl<initializeConfigurationTypes & R, AxiosResponse & RS, AxiosInstance>
 
+
+/**
+ * 
+ * 前置拦截器返回类型
+ * 
+ * 
+ * @paramType  T - 携带参数类型
+ * 
+ * @public
+ * 
+ */
 export interface beforeTriggerResultTypes<T> {
+  /**
+   * 
+   * 前置拦截器携带的参数
+   * 
+   * @paramType  T - 携带参数类型
+   * 
+   * @public
+   */
   data: T
+
+  /**
+   * 是否直接返回值
+   * 
+   * @remarks
+   * - 如果返回 `true` 则该请求的响应直接返回携带参数
+   * 
+   * @public
+   */
   directReturnValue?: boolean // 是否直接返回值
 }
 
@@ -29,6 +57,24 @@ export interface beforeTriggerResultTypes<T> {
  */
 export type triggerInterceptorImpl<Req extends initializeConfigurationTypes = initializeConfigurationTypes, Res = unknown> = serviceimplWithTriggerInterceptorImpl<Req, Res>
 
+
+/**
+ * 
+ * 
+ * 抽象类
+ * 拦截模块工具类
+ * 
+ * @public
+ */
 export abstract class interceptorToolboxImpl {
+  /**
+   * 
+   * 抽象方法
+   * 循环解析拦截器列表
+   * 
+   * @param { modulesImpl['interceptorModule'] } list - 拦截模块列表
+   * 
+   * @public
+   */
   abstract loopInstancedInterceptor(list?: modulesImpl['interceptorModule']): interceptorImpl[]
 }

@@ -4,6 +4,8 @@
 
 ## initializeConfigurationTypes interface
 
+请求参数类型
+
 **Signature:**
 
 ```typescript

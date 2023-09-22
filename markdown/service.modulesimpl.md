@@ -4,6 +4,8 @@
 
 ## modulesImpl interface
 
+模块 实现接口
+
 **Signature:**
 
 ```typescript

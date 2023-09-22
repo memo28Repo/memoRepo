@@ -1,7 +1,7 @@
 <!--
  * @Author: 邱狮杰
  * @Date: 2023-01-06 13:48:02
- * @LastEditTime: 2023-04-14 23:08:57
+ * @LastEditTime: 2023-09-22 10:54:46
  * @Description:
  * @FilePath: /memo/README.md
 -->
@@ -18,7 +18,7 @@
 
 # link 流程
 
-- 在需要 `link` 的包的`package.json` -> `script` 字段内添加 `links : yarn link`
+- 在需要 `link` 的包的`package.json` -> `script` 字段内添加 `links : pnpm link --global`
 
 - 在`/`目录下 执行 `pnpm links`
 

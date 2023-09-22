@@ -1,17 +1,41 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-05-13 07:45:18
- * @LastEditTime: 2023-05-13 11:05:39
+ * @LastEditTime: 2023-09-21 15:37:46
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/retry/index.ts
  */
 
-import { RetryImpl, retryOpt as retryOptImpl, onRetrySuc } from "@memo28/serviceimpl";
+import { RetryImpl, onRetrySuc, retryOpt as retryOptImpl } from "@memo28/serviceimpl";
 import { AxiosInstance } from "axios";
 import { initializeConfigurationTypes } from "../../index";
 
+
+
+/**
+ * 
+ * 重试拦截器参数类型
+ * 
+ * @public
+ * 
+ */
 type retryOpt = {
+  /**
+   * 
+   * 
+   */
   retry: Partial<retryOptImpl>
+
+  /**
+   * 
+   * 重试回调函数
+   * 
+   * @remarks
+   * 重试回调成功时会触发
+   * 
+   * @public
+   * 
+   */
   onRetrySuc: onRetrySuc
 }
 

@@ -4,6 +4,8 @@
 
 ## LoadingOpt interface
 
+`loading` 参数配置
+
 **Signature:**
 
 ```typescript
@@ -14,12 +16,12 @@ export interface LoadingOpt
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [loadingDelay](./service.loadingopt.loadingdelay.md) |  | number |  |
+|  [loadingDelay](./service.loadingopt.loadingdelay.md) |  | number | 开始<code>loading</code>回调 触发延迟 |
 
 ## Methods
 
 |  Method | Description |
 |  --- | --- |
-|  [onHideLoading()](./service.loadingopt.onhideloading.md) |  |
-|  [onStartLoading()](./service.loadingopt.onstartloading.md) |  |
+|  [onHideLoading()](./service.loadingopt.onhideloading.md) | 隐藏 <code>loading</code> 回调 |
+|  [onStartLoading()](./service.loadingopt.onstartloading.md) | 开始 <code>loaindg</code> 回调 |
 

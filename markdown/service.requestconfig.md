@@ -4,6 +4,8 @@
 
 ## requestConfig type
 
+缓存请求类型 与 `axios` 请求类型合并
+
 **Signature:**
 
 ```typescript

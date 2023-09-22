@@ -4,6 +4,8 @@
 
 ## LoadingOpt.onStartLoading() method
 
+开始 `loaindg` 回调
+
 **Signature:**
 
 ```typescript

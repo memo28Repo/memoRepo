@@ -4,6 +4,8 @@
 
 ## modules() function
 
+配置模块
+
 **Signature:**
 
 ```typescript
@@ -14,7 +16,7 @@ export declare function modules(conf?: modulesImpl): (target: any) => void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  conf | [modulesImpl](./service.modulesimpl.md) | _(Optional)_ |
+|  conf | [modulesImpl](./service.modulesimpl.md) | _(Optional)_ 配置拦截器，前后置拦截器 |
 
 **Returns:**
 

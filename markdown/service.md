@@ -14,25 +14,25 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [Cache\_2](./service.cache_2.md) |  缓存拦截器 |
-|  [CachePrerequisites](./service.cacheprerequisites.md) |  |
-|  [CacheTrigger](./service.cachetrigger.md) |  |
+|  [Cache\_2](./service.cache_2.md) | 缓存拦截器 |
+|  [CachePrerequisites](./service.cacheprerequisites.md) | 缓存先决条件判断类 |
+|  [CacheTrigger](./service.cachetrigger.md) | 触发请求前后置 缓存 模块 |
 |  [ExpirationTime](./service.expirationtime.md) |  过期时间 |
 |  [GenerateSchedulingAxios](./service.generateschedulingaxios.md) |  |
-|  [Loading](./service.loading.md) |  |
-|  [Logs](./service.logs.md) |  |
+|  [Loading](./service.loading.md) | <code>loading</code> 模块拦截器 |
+|  [Logs](./service.logs.md) | 请求 <code>log</code> 拦截器 |
 |  [MultiVersionSwitching](./service.multiversionswitching.md) | 多版本拦截器 |
 |  [RetData](./service.retdata.md) | 响应直接返回 <code>response.data</code> |
 |  [Retry](./service.retry.md) | 请求重试 拦截器 |
 |  [ServiceCore](./service.servicecore.md) |  |
-|  [ServiceUtils](./service.serviceutils.md) |  |
-|  [TerminationResult](./service.terminationresult.md) |  |
+|  [ServiceUtils](./service.serviceutils.md) | 请求工具 |
+|  [TerminationResult](./service.terminationresult.md) | 取消请求类 |
 
 ## Abstract Classes
 
 |  Abstract Class | Description |
 |  --- | --- |
-|  [interceptorToolboxImpl](./service.interceptortoolboximpl.md) |  |
+|  [interceptorToolboxImpl](./service.interceptortoolboximpl.md) | 抽象类 拦截模块工具类 |
 
 ## Functions
 
@@ -40,19 +40,19 @@
 |  --- | --- |
 |  [initializeConfiguration(conf)](./service.initializeconfiguration.md) |  |
 |  [instantiation()](./service.instantiation.md) |  |
-|  [modules(conf)](./service.modules.md) |  |
+|  [modules(conf)](./service.modules.md) | 配置模块 |
 
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
-|  [beforeTriggerResultTypes](./service.beforetriggerresulttypes.md) |  |
-|  [CacheConfig](./service.cacheconfig.md) |  |
-|  [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) |  |
-|  [LoadingOpt](./service.loadingopt.md) |  |
-|  [modulesImpl](./service.modulesimpl.md) |  |
+|  [beforeTriggerResultTypes](./service.beforetriggerresulttypes.md) | <p>前置拦截器返回类型</p><p> T - 携带参数类型</p> |
+|  [CacheConfig](./service.cacheconfig.md) | 缓存请求配置类型 |
+|  [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) | 请求参数类型 |
+|  [LoadingOpt](./service.loadingopt.md) | <code>loading</code> 参数配置 |
+|  [modulesImpl](./service.modulesimpl.md) | 模块 实现接口 |
 |  [multiVersionSwitchingRequest](./service.multiversionswitchingrequest.md) | 多版本切换拦截器 参数类型 [MultiVersionSwitching](./service.multiversionswitching.md) |
-|  [serviceImpl](./service.serviceimpl.md) |  |
+|  [serviceImpl](./service.serviceimpl.md) | 请求实现类 |
 
 ## Variables
 
@@ -66,10 +66,10 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [getInitializeConfigurationValues](./service.getinitializeconfigurationvalues.md) |  |
-|  [getModulesValues](./service.getmodulesvalues.md) |  |
-|  [getObjValues](./service.getobjvalues.md) |  |
+|  [getModulesValues](./service.getmodulesvalues.md) | 获取 [modules()](./service.modules.md) 配置的 <code>key</code> |
+|  [getObjValues](./service.getobjvalues.md) | 传入一个 对象类型 返回对象类型的所有 <code>value</code> 类型 |
 |  [interceptorImpl](./service.interceptorimpl.md) | 拦截器需要实现的字段 |
-|  [requestConfig](./service.requestconfig.md) |  |
-|  [retryOpt](./service.retryopt.md) |  |
+|  [requestConfig](./service.requestconfig.md) | 缓存请求类型 与 <code>axios</code> 请求类型合并 |
+|  [retryOpt](./service.retryopt.md) | 重试拦截器参数类型 |
 |  [triggerInterceptorImpl](./service.triggerinterceptorimpl.md) | 触发拦截器需要实现的字段 |
 

@@ -4,6 +4,8 @@
 
 ## LoadingOpt.onHideLoading() method
 
+隐藏 `loading` 回调
+
 **Signature:**
 
 ```typescript

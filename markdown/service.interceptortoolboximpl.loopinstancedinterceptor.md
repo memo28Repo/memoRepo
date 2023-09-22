@@ -4,6 +4,8 @@
 
 ## interceptorToolboxImpl.loopInstancedInterceptor() method
 
+抽象方法 循环解析拦截器列表
+
 **Signature:**
 
 ```typescript
@@ -14,7 +16,7 @@ abstract loopInstancedInterceptor(list?: modulesImpl['interceptorModule']): inte
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  list | [modulesImpl](./service.modulesimpl.md)<!-- -->\['interceptorModule'\] | _(Optional)_ |
+|  list | [modulesImpl](./service.modulesimpl.md)<!-- -->\['interceptorModule'\] | _(Optional)_ 拦截模块列表 |
 
 **Returns:**
 

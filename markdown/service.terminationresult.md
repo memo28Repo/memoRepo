@@ -4,11 +4,16 @@
 
 ## TerminationResult class
 
+取消请求类
+
 **Signature:**
 
 ```typescript
 export declare class TerminationResult<T> 
 ```
+
+## Remarks
+
 
 ## Methods
 

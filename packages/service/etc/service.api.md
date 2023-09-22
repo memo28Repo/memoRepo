@@ -14,11 +14,9 @@ import { RetryImpl } from '@memo28/serviceimpl';
 import { retryOpt as retryOpt_2 } from '@memo28/serviceimpl';
 import { triggerInterceptorImpl as triggerInterceptorImpl_2 } from '@memo28/serviceimpl';
 
-// @public (undocumented)
+// @public
 export interface beforeTriggerResultTypes<T> {
-    // (undocumented)
     data: T;
-    // (undocumented)
     directReturnValue?: boolean;
 }
 
@@ -31,7 +29,7 @@ class Cache_2 implements interceptorImpl {
 }
 export { Cache_2 as Cache }
 
-// @public (undocumented)
+// @public
 export interface CacheConfig {
     // (undocumented)
     cacheExpirationTime?: number;
@@ -41,7 +39,7 @@ export interface CacheConfig {
     useCache?: boolean;
 }
 
-// @public (undocumented)
+// @public
 export class CachePrerequisites {
     constructor(config: requestConfig);
     // (undocumented)
@@ -50,13 +48,11 @@ export class CachePrerequisites {
     useCache(): unknown[];
 }
 
-// @public (undocumented)
+// @public
 export class CacheTrigger implements triggerInterceptorImpl {
-    // (undocumented)
     beforeTrigger(config: initializeConfigurationTypes): any | beforeTriggerResultTypes<any>;
     // (undocumented)
     displayName: string;
-    // (undocumented)
     logsCallback(type: "afterTrigger" | "beforeTrigger", data: void | initializeConfigurationTypes | beforeTriggerResultTypes<unknown>): void;
 }
 
@@ -89,10 +85,10 @@ export type getInitializeConfigurationValues = getObjValues<typeof initializeCon
 
 // Warning: (ae-forgotten-export) The symbol "modulesKeys" needs to be exported by the entry point index.d.ts
 //
-// @public (undocumented)
+// @public
 export type getModulesValues = getObjValues<typeof modulesKeys>;
 
-// @public (undocumented)
+// @public
 export type getObjValues<V = object> = V[keyof V];
 
 // @public (undocumented)
@@ -103,7 +99,7 @@ export const initializeConfigurationKeys: {
     readonly initializeConfiguration: "initializeConfiguration";
 };
 
-// @public (undocumented)
+// @public
 export interface initializeConfigurationTypes extends AxiosRequestConfig, Partial<multiVersionSwitchingRequest>, Partial<requestConfig>, Partial<retryOpt> {
     // (undocumented)
     debugger?: boolean;
@@ -117,13 +113,12 @@ export function instantiation(): (target: any) => void;
 // @public
 export type interceptorImpl<R = unknown, RS = unknown> = interceptorImpl_2<initializeConfigurationTypes & R, AxiosResponse & RS, AxiosInstance>;
 
-// @public (undocumented)
+// @public
 export abstract class interceptorToolboxImpl {
-    // (undocumented)
     abstract loopInstancedInterceptor(list?: modulesImpl['interceptorModule']): interceptorImpl[];
 }
 
-// @public (undocumented)
+// @public
 export class Loading implements interceptorImpl {
     // (undocumented)
     requestFail(error: any): any;
@@ -135,17 +130,14 @@ export class Loading implements interceptorImpl {
     responseSuc(response: AxiosResponse<unknown, any>): unknown;
 }
 
-// @public (undocumented)
+// @public
 export interface LoadingOpt {
-    // (undocumented)
     loadingDelay: number;
-    // (undocumented)
     onHideLoading(): void;
-    // (undocumented)
     onStartLoading(): void;
 }
 
-// @public (undocumented)
+// @public
 export class Logs implements interceptorImpl {
     // (undocumented)
     requestFail(error: any): void;
@@ -157,10 +149,10 @@ export class Logs implements interceptorImpl {
     responseSuc(response: AxiosResponse<unknown, any>): unknown;
 }
 
-// @public (undocumented)
+// @public
 export function modules(conf?: modulesImpl): (target: any) => void;
 
-// @public (undocumented)
+// @public
 export interface modulesImpl {
     interceptorModule?: (new (...args: unknown[]) => interceptorImpl)[];
     triggerInterceptor?: (new (...args: unknown[]) => triggerInterceptorImpl<initializeConfigurationTypes, any>)[];
@@ -179,7 +171,7 @@ export interface multiVersionSwitchingRequest {
     versionPlaceholder: string;
 }
 
-// @public (undocumented)
+// @public
 export type requestConfig = Partial<CacheConfig>;
 
 // @public
@@ -196,7 +188,7 @@ export class Retry extends RetryImpl {
     responseFail(error: any, instance: AxiosInstance): Promise<void>;
 }
 
-// @public (undocumented)
+// @public
 export type retryOpt = {
     retry: Partial<retryOpt_2>;
     onRetrySuc: onRetrySuc;
@@ -211,25 +203,20 @@ export class ServiceCore<R = unknown> {
     getAxios(): <T = Res>(req?: Req<R>) => T | Promise<T>;
 }
 
-// @public (undocumented)
+// @public
 export interface serviceImpl<T = unknown> {
-    // (undocumented)
     getAxios?(): T;
 }
 
-// @public (undocumented)
+// @public
 export class ServiceUtils<T extends object> {
-    // (undocumented)
     getAxios(): <R>(req: initializeConfigurationTypes & T) => Promise<R>;
-    // (undocumented)
     initializeConfiguration(opt: initializeConfigurationTypes & T): this;
-    // (undocumented)
     instantiation(): this;
-    // (undocumented)
     modules(opt: Partial<modulesImpl>): this;
 }
 
-// @public (undocumented)
+// @public
 export class TerminationResult<T> {
     // (undocumented)
     ConfigurationParameters(config: initializeConfigurationTypes & T): {

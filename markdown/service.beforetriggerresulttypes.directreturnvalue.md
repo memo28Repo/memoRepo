@@ -4,8 +4,15 @@
 
 ## beforeTriggerResultTypes.directReturnValue property
 
+是否直接返回值
+
 **Signature:**
 
 ```typescript
 directReturnValue?: boolean;
 ```
+
+## Remarks
+
+- 如果返回 `true` 则该请求的响应直接返回携带参数
+

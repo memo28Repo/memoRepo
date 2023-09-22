@@ -4,6 +4,8 @@
 
 ## CacheTrigger.beforeTrigger() method
 
+发送请求前回调判断缓存是否存在 且可用
+
 **Signature:**
 
 ```typescript
@@ -14,7 +16,7 @@ beforeTrigger(config: initializeConfigurationTypes): any | beforeTriggerResultTy
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) |  |
+|  config | [initializeConfigurationTypes](./service.initializeconfigurationtypes.md) | 请求配置 |
 
 **Returns:**
 

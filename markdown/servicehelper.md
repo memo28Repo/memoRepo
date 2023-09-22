@@ -55,5 +55,5 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [customTrigger](./servicehelper.customtrigger.md) |  |
+|  [customTrigger](./servicehelper.customtrigger.md) | 自定义触发器 - 通过拓展请求 |
 

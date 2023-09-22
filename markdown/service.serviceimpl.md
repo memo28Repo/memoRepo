@@ -4,15 +4,21 @@
 
 ## serviceImpl interface
 
+请求实现类
+
 **Signature:**
 
 ```typescript
 export interface serviceImpl<T = unknown> 
 ```
 
+## Remarks
+
+不实现 由 [instantiation()](./service.instantiation.md) 装饰器 重写 `getAxios` 逻辑
+
 ## Methods
 
 |  Method | Description |
 |  --- | --- |
-|  [getAxios()?](./service.serviceimpl.getaxios.md) | _(Optional)_ |
+|  [getAxios()?](./service.serviceimpl.getaxios.md) | _(Optional)_ 默认返回 <code>axios</code> 实例 |
 

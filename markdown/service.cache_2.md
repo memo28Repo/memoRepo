@@ -4,7 +4,7 @@
 
 ## Cache\_2 class
 
- 缓存拦截器
+缓存拦截器
 
 **Signature:**
 

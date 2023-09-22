@@ -4,12 +4,18 @@
 
 ## Loading class
 
+`loading` 模块拦截器
+
 **Signature:**
 
 ```typescript
 export declare class Loading implements interceptorImpl 
 ```
 **Implements:** [interceptorImpl](./service.interceptorimpl.md)
+
+## Remarks
+
+当你的请求频繁触发 则不建议 配置该模块 因为视图会频繁 `loading`
 
 ## Methods
 

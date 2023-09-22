@@ -1,44 +1,85 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-22 09:13:31
- * @LastEditTime: 2023-03-27 08:56:16
+ * @LastEditTime: 2023-09-22 10:45:29
  * @Description:
  * @FilePath: /memo/packages/service/src/core/serviceUtils.ts
  */
-import { modulesImpl, initializeConfigurationTypes } from '../types/engine'
-import { getModulesValues } from './modules'
-import { getInitializeConfigurationValues } from './config'
 import { Injection } from '@memo28/utils'
 import axios, { AxiosInstance } from 'axios'
-import { GenerateSchedulingAxios } from './instantiation'
 import { Interceptor } from '../interceptor/core'
-import { PocketValue } from '../plugin/pocketBottom'
 import { Logs } from '../plugin/logs'
+import { PocketValue } from '../plugin/pocketBottom'
+import { initializeConfigurationTypes, modulesImpl } from '../types/engine'
+import { getInitializeConfigurationValues } from './config'
+import { GenerateSchedulingAxios } from './instantiation'
+import { getModulesValues } from './modules'
 
 export let debug = false
 
+
+/**
+ * 
+ * 请求工具
+ * 
+ * @remarks
+ * 如项目不支持装饰器 则降级为该方案
+ * 
+ * @public
+ */
 export class ServiceUtils<T extends object> {
   private injection = new Injection<getModulesValues | getInitializeConfigurationValues>(this)
   private axios: null | AxiosInstance = null
 
+
+  /**
+   * 
+   * - 配置拦截器
+   * - 配置前后置拦截器
+   * 
+   * @param { Partial<modulesImpl> } opt  - 模块配置
+   * 
+   * @public
+   */
   modules(opt: Partial<modulesImpl>) {
     this.injection.setValue('interceptorModule', [Logs, ...(opt.interceptorModule || [])])
     this.injection.setValue('triggerInterceptor', [...(opt.triggerInterceptor || []), PocketValue])
     return this
   }
 
+
+  /**
+   * 
+   * 初始化 `axios` 参数
+   * 
+   * @public
+   */
   initializeConfiguration(opt: initializeConfigurationTypes & T) {
     this.injection.setValue('initializeConfiguration', opt)
     debug = opt.debugger || false
     return this
   }
 
+
+  /**
+   * 
+   * 配置初始化 `axios` 参数 并且创建 `axios` & 绑定拦截器
+   * 
+   * @public
+   */
   instantiation() {
     this.axios = axios.create(this.injection.getValue('initializeConfiguration'))
     new Interceptor(this.injection, this.axios)
     return this
   }
 
+
+  /**
+   * 
+   * 获取实例化后的  `axios`
+   * 
+   * @public
+   */
   getAxios() {
     return async <R>(req: initializeConfigurationTypes & T): Promise<R> => {
       const generateSchedulingAxios = new GenerateSchedulingAxios(

@@ -544,7 +544,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@memo28/servicehelper!customTrigger:type",
-          "docComment": "",
+          "docComment": "/**\n * 自定义触发器 - 通过拓展请求\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
