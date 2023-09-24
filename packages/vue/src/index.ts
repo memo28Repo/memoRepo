@@ -5,9 +5,9 @@
  * @Description:
  * @FilePath: /memo/packages/vue/src/index.ts
  */
-import {versionLog} from '@memo28/logs'
+import { versionLog } from '@memo28/logs';
 // @ts-ignore
-import pack from '../package.json'
+import pack from '../package.json';
 
 versionLog({
   name: '@memo28/vue',
