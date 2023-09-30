@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-08-03 18:46:48
- * @LastEditTime: 2023-08-12 17:31:04
+ * @LastEditTime: 2023-09-30 17:40:24
  * @Description:
  * @FilePath: /memo/packages/serviceHelper/src/sliceRequest/method.ts
  */
@@ -9,11 +9,11 @@ import { obj } from "@memo28/types";
 import { CONSTANT, injection } from "./constant";
 import { httpInstance } from "./extractRequestInstance";
 import {
-  parameterParse,
-  setParameterDecoratorValueKey,
-  parameterDecoratorParams,
   configTypes,
-  setConfigDecoratorValueKey
+  parameterDecoratorParams,
+  parameterParse,
+  setConfigDecoratorValueKey,
+  setParameterDecoratorValueKey
 } from "./parameter";
 import { ConfigurationThrownToUser } from "./type";
 
@@ -68,7 +68,7 @@ class AssemblyParameters {
 
   setMethods() {
     const methods = injection.getValue(CONSTANT.METHOD);
-    if (methods) Reflect.set(this.config, "methods", methods);
+    if (methods) Reflect.set(this.config, "method", methods);
     return this;
   }
 

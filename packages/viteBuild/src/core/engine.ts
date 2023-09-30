@@ -5,16 +5,16 @@
  * @Description:
  * @FilePath: /memo/packages/viteBuild/src/core/engine.ts
  */
+import { PluginOption, UserConfigExport } from "vite";
 import {
-  ConfigureTechnologyStack,
-  technologyStackTypes,
   ConfigureReactTechnologyStack,
+  ConfigureTechnologyStack,
   ConfigureVueTechnologyStack,
-  injectDefaultTechnologyStackConfiguration
+  injectDefaultTechnologyStackConfiguration,
+  technologyStackTypes
 } from "./configureTechnologyStack";
-import { UserConfigExport, PluginOption } from "vite";
-import { PlugInContainer } from "./plugInContainer";
 import injection from "./injection";
+import { PlugInContainer } from "./plugInContainer";
 
 /**
  *
