@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-30 10:39:22
- * @LastEditTime: 2023-02-15 10:10:44
+ * @LastEditTime: 2023-10-05 00:08:19
  * @Description:
  * @FilePath: /memo/packages/utils/src/Injection.ts
  */
@@ -26,5 +26,9 @@ export class Injection<K = string> {
 
   getValue<V = unknown>(key: K): V {
     return Reflect.getMetadata(key, this.target as object) as V
+  }
+
+  getKeys() {
+    return Reflect.getMetadataKeys(this.target as object)
   }
 }

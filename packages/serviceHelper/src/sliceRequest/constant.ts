@@ -1,12 +1,11 @@
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-08-04 08:45:12
- * @LastEditTime: 2023-08-05 10:26:09
+ * @LastEditTime: 2023-10-03 14:40:18
  * @Description:
  * @FilePath: /memo/packages/serviceHelper/src/sliceRequest/constant.ts
  */
 import { Injection } from "@memo28/utils";
-import { controller } from "./controller";
 
 export const CONSTANT = {
   /**

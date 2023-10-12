@@ -1,5 +1,17 @@
 # @memo28/servicehelper
 
+## 1.1.2
+
+### Patch Changes
+
+- fix: no build
+
+## 1.1.1
+
+### Patch Changes
+
+- fix methods -> method
+
 ## 1.1.0
 
 ### Minor Changes

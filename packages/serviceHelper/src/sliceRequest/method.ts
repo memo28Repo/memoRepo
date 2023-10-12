@@ -1,12 +1,13 @@
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-08-03 18:46:48
- * @LastEditTime: 2023-09-30 17:40:24
+ * @LastEditTime: 2023-10-12 16:13:29
  * @Description:
  * @FilePath: /memo/packages/serviceHelper/src/sliceRequest/method.ts
  */
 import { obj } from "@memo28/types";
-import { CONSTANT, injection } from "./constant";
+import { Injection } from "@memo28/utils";
+import { CONSTANT, injection, injectionType } from "./constant";
 import { httpInstance } from "./extractRequestInstance";
 import {
   configTypes,
@@ -16,6 +17,7 @@ import {
   setParameterDecoratorValueKey
 } from "./parameter";
 import { ConfigurationThrownToUser } from "./type";
+
 
 
 /**
@@ -28,7 +30,7 @@ import { ConfigurationThrownToUser } from "./type";
  * @public
  */
 export type config = {
-  methods?: string;
+  method?: string;
   header?: object;
   url?: string;
   params?: {};
@@ -51,13 +53,20 @@ class AssemblyParameters {
 
   private requestConfig?: methodsDescriptorOpt = {};
 
+  private injection = new Injection<injectionType>();
+
+  getInjection() {
+    return this.injection
+  }
+
+
   setRequestConfig(opt?: methodsDescriptorOpt) {
     this.requestConfig = opt;
     return this;
   }
 
   setTarget(target: object) {
-    injection.setTarget(target);
+    this.injection.setTarget(target);
     return this;
   }
 
@@ -67,7 +76,7 @@ class AssemblyParameters {
   }
 
   setMethods() {
-    const methods = injection.getValue(CONSTANT.METHOD);
+    const methods = this.injection.getValue(CONSTANT.METHOD);
     if (methods) Reflect.set(this.config, "method", methods);
     return this;
   }
@@ -79,20 +88,20 @@ class AssemblyParameters {
 
 
   setHeader() {
-    const header = injection.getValue(CONSTANT.HEADERS);
+    const header = this.injection.getValue(CONSTANT.HEADERS);
     if (header) Reflect.set(this.config, "header", header);
     return this;
   }
 
   setURL() {
-    const URL = injection.getValue(CONSTANT.URL);
+    const URL = this.injection.getValue(CONSTANT.URL);
     if (URL) this.url = URL as string;
     return this;
   }
 
   setParameters(args: any[]) {
 
-    const isQuery = (this.config["methods"] && this.config["methods"] === "GET") || this.requestConfig?.inQuery;
+    const isQuery = (this.config["method"] && this.config["method"] === "GET") || this.requestConfig?.inQuery;
     if (isQuery) {
       Reflect.set(this.config, "params", {
         ...this.paramsWithDecorator,
@@ -108,8 +117,8 @@ class AssemblyParameters {
   }
 
 
-  setControllerURL() {
-    const CURL = injection.getValue(CONSTANT.CONTROLLER_URL);
+  setControllerURL(controller_url: string) {
+    const CURL = controller_url;
     if (CURL && this.url)
       Reflect.set(this.config, "url", `${CURL}${this.url}`);
     else if (CURL)
@@ -135,18 +144,25 @@ class AssemblyParameters {
  * @public
  */
 export function assemblyRequest(target: object, key: string, descriptor: PropertyDescriptor, opt?: methodsDescriptorOpt) {
+  const fn = descriptor.value
   const assemblyParameters = new AssemblyParameters().setRequestConfig(opt);
-  assemblyParameters.setTarget(target).setMethods().setHeader().setURL();
-  const fn = descriptor.value;
-  const params = injection.getValue(setParameterDecoratorValueKey(key));
-  const requestConfig = injection.getValue(setConfigDecoratorValueKey(key)) as configTypes | undefined;
   // @ts-ignore
-  if (params) assemblyParameters.setParamsWithDecorator(parameterParse(params));
-  if (requestConfig) assemblyParameters.setConfig(requestConfig);
-  descriptor.value = async function() {
-    const args = Array.from(arguments);
+  assemblyParameters.setTarget(target).setMethods().setHeader().setURL();
+
+
+  descriptor.value = async function () {
+
+    const params = assemblyParameters.getInjection().getValue(setParameterDecoratorValueKey(key));
+
+    const requestConfig = assemblyParameters.getInjection().getValue(setConfigDecoratorValueKey(key)) as configTypes | undefined;
     // @ts-ignore
-    const config = assemblyParameters.setControllerURL().setParameters(...args).getConfig();
+    if (params) assemblyParameters.setParamsWithDecorator(parameterParse(params));
+    if (requestConfig) assemblyParameters.setConfig(requestConfig);
+    const args = Array.from(arguments);
+
+    // @ts-ignore
+    const config = assemblyParameters.setControllerURL(injection.setTarget(descriptor.value).getValue(CONSTANT.CONTROLLER_URL)).setParameters(...args).getConfig();
+
     const result = await httpInstance.getInstance()()(config);
 
     const returnUserProfile: ConfigurationThrownToUser<any> = {
