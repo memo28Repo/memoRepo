@@ -20,6 +20,5 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@memo28/logs": "^0.1.0"
   }
 }

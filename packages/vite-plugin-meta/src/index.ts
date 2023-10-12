@@ -1,14 +1,15 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-02-03 15:36:24
- * @LastEditTime: 2023-04-14 23:10:08
+ * @LastEditTime: 2023-10-12 17:48:33
  * @Description:
  * @FilePath: /memo/packages/vite-plugin-meta/src/index.ts
  */
 
 // @ts-ignore
-import pack from "../package.json";
 import { versionLog } from "@memo28/logs";
+// @ts-ignore
+import pack from "../package.json";
 
 versionLog({
   name: "@memo28/vite-plugin-meta",
@@ -21,9 +22,9 @@ versionLog({
  * @packageDocumentation
  */
 import { IndexHtmlTransformContext, PluginOption } from "vite";
-import { tencentQqOpt } from "./tencentQqMeta";
 import { appleMetaOpt } from "./appleMeta";
 import { Core } from "./core";
+import { tencentQqOpt } from "./tencentQqMeta";
 
 /**
  *
@@ -100,6 +101,7 @@ export interface vitePluginMetaOpt {
 export default function vitePluginMete(opt?: Partial<vitePluginMetaOpt>): PluginOption {
   const parase = new Core(opt);
   return {
+    // @ts-ignore
     name: "@memo28/vite-plugin-mete",
     transformIndexHtml(html: string, ctx: IndexHtmlTransformContext) {
       const [parseSuc, _] = parase.parseMetaInHead(html);
