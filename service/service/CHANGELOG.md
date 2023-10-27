@@ -1,5 +1,15 @@
 # @memo28/service
 
+## 4.1.1
+
+### Patch Changes
+
+- Up to date
+- Updated dependencies
+  - @memo28/logs@0.1.1
+  - @memo28/utils@1.2.2
+  - @memo28/serviceimpl@1.0.5
+
 ## 4.1.0
 
 ### Minor Changes

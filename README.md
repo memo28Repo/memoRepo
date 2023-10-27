@@ -1,41 +1,36 @@
-<!--
- * @Author: 邱狮杰
- * @Date: 2023-01-06 13:48:02
- * @LastEditTime: 2023-09-22 10:54:46
- * @Description:
- * @FilePath: /memo/README.md
--->
+# @memo28 ⚙️
 
-# `@memo28(备忘录📕)`
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fpackages%2Ftypes%2Fpackage.json&query=%24.version&label=%40memo28%2Ftypes&color=%23CC3574)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fpackages%2Futils%2Fpackage.json&query=%24.version&label=%40memo28%2Futils&color=%23CC3574)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fpackages%2FviteBuild%2Fpackage.json&query=%24.version&label=%40memo28%2Fvitebuild&color=%23CC3574)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fpackages%2Fvite-plugin-meta%2Fpackage.json&query=%24.version&label=%40memo28%2Fvite-plugin-meta&color=%23CC3574)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fpackages%2Frollup%2Fpackage.json&query=%24.version&label=%40memo28%2Frollup&color=%23CC3574)
 
-![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fservice%2Fservice%2Fpackage.json&query=%24.version&label=%40memo28%2Fservice&color=%23CC3574)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fservice%2FserviceImpl%2Fpackage.json&query=%24.version&label=%40memo28%2FserviceImpl&color=%23CC3574)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fservice%2FserviceHelper%2Fpackage.json&query=%24.version&label=%40memo28%2Fservicehelper&color=%23CC3574)
 
-![vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 
-![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+> memo28 系列的底层基础,包括 用于HTTP请求、基本判断、类型安全的实际应用
 
-![rollup](https://img.shields.io/badge/rollup%20js-EC4A3F?style=for-the-badge&logo=rollup.js&logoColor=white)
+- 🦾 强大的类型安全
 
-# link 流程
+- 🛠️ 丰富的功能
 
-- 在需要 `link` 的包的`package.json` -> `script` 字段内添加 `links : pnpm link --global`
+- 🔑 完全类型化 API
 
-- 在`/`目录下 执行 `pnpm links`
+## Packages
 
-# publish 流程
+| Package (click for changelogs)                        | describe              |
+|-------------------------------------------------------|:----------------------|
+| [@memo28/service](packages/service)                   | 🔥 强大的热插拔，插件式，装饰器式请求库 |
+| [@memo28/serviceImpl](packages/serviceImpl)           | 🤯 关键请求逻辑的封装抽象接口      |
+| [@memo28/serviceHelper](packages/serviceHelper)       | 💨 装饰你的请求，快速生成CRUD请求  |
+| [@memo28/types](packages/types)                       |                       |
+| [@memo28/utils](packages/utils)                       |                       |
+| [@memo28/viteBuild](packages/viteBuild)               |                       |
+| [@memo28/vite-plugin-meta](packages/vite-plugin-meta) |                       |
 
-- [给自己的 github 仓库配置 npm token](https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages)
+## License
 
-- 打包测试
-
-- 更新包版本 `changset add` 和 `changset version`
-
-- 将代码切换到 `main` 分支上
-
-- `push` 支 `git` 仓库让 `action` 帮你完整最后的发包流程
-
-# [分支管理](/docs/branchManagement.md)
-
-# [包管理规范](/docs/packagingSpecification.md)
-
-# [文档](/markdown/index.md)
+[MIT](LICENSE)

@@ -1,5 +1,11 @@
 # @memo28/serviceimpl
 
+## 1.0.5
+
+### Patch Changes
+
+- Up to date
+
 ## 1.0.4
 
 ### Patch Changes

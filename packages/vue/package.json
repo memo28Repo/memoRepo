@@ -1,6 +1,6 @@
 {
   "name": "@memo28/vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "./lib/index",
   "module": "./dist/index",
@@ -28,7 +28,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@memo28/logs": "^0.1.0",
+    "@memo28/logs": "^0.1.1",
     "@memo28/types": "workspace:^",
     "vitest": "^0.26.3",
     "vue": "^3.3.4"

@@ -1,5 +1,5 @@
 {
-  "name": "@memo28/valuepolyfill",
+  "name": "@memo28/servicehelper",
   "version": "1.1.2",
   "description": "",
   "main": "./lib/index.js",
@@ -11,7 +11,7 @@
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true",
     "test": "vitest",
-    "updateDep": "pnpm update @memo28/types@latest && pnpm update @memo28/utils@latest &&  pnpm update reflect-metadata@latest"
+    "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh"
   },
   "keywords": [
     "typescript",
@@ -30,9 +30,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@memo28/logs": "^0.1.1",
+    "@memo28/logs": "^0.1.0",
     "@memo28/types": "workspace:^",
-    "@memo28/utils": "workspace:^",
-    "reflect-metadata": "^0.1.13"
+    "vitest": "^0.26.3"
   }
 }

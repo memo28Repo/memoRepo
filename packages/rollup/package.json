@@ -1,6 +1,6 @@
 {
   "name": "@memo28/rollup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "rollup build helper",
   "main": "./lib/index",
@@ -32,7 +32,7 @@
   "author": "hooks_28",
   "license": "MIT",
   "dependencies": {
-    "@memo28/types": "^1.1.0",
+    "@memo28/types": "^1.1.5",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-typescript": "^11.1.2",
     "@rollup/plugin-url": "^8.0.1",

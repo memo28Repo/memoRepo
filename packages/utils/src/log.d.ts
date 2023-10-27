@@ -7,13 +7,20 @@
  */
 
 interface String {
-  log(mark?: string): string
+  log(mark?: string): string;
+
+  Equal(val: string | number): boolean;
 }
 
 interface Number {
-  log(mark?: string): number
+  log(mark?: string): number;
+
+  Equal(val: string | number): boolean;
+
 }
 
 interface Object {
-  log(mark?: string): object
+  log(mark?: string): object;
+
+  Equal(val: string | number): boolean;
 }

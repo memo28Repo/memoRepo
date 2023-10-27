@@ -26,6 +26,8 @@ versionLog({
 export { Injection } from "./Injection";
 export { AnomalousChain, panicProcessing, panicProcessingOpt } from "./errors/anomalousChain";
 export { Errors } from "./errors/core";
+export { StringDerived } from "./derived/string";
+export { NumberDerived } from "./derived/number";
 export { enableLogAttribute } from "./log";
 export { readingWritingSeparationDetor } from "./readingWritingSeparation/index";
 export type { readingWritingSeparationUtilsType } from "./readingWritingSeparation/index";
