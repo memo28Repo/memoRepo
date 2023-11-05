@@ -5,7 +5,9 @@
   "workspaces": [
     "apps/*",
     "packages/*",
-    "service/*"
+    "service/*",
+    "redux/*",
+    "openSourceToolLibrary/*"
   ],
   "scripts": {
     "updateDep": "turbo run updateDep --color",

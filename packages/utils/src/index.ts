@@ -33,6 +33,7 @@ export { readingWritingSeparationDetor } from "./readingWritingSeparation/index"
 export type { readingWritingSeparationUtilsType } from "./readingWritingSeparation/index";
 export { ValidationErrorCollection, VerificationFlow } from "./verify/errorCollection";
 export { Mail, Phone, SNI } from "./verify/verify";
+export {} from "./config/enableConfiguration";
 
 export type { ErrorsNewResult, ErrorsNewResultInfo, NewOpt, Panic } from "./errors/types";
 

@@ -3,7 +3,7 @@
  * @Author: 邱狮杰&qwm
  * @Date: 2023-08-23 18:49:30
  * @LastEditTime: 2023-09-21 14:46:33
- * @Description: 
+ * @Description:
  * @FilePath: /memo/packages/utils/src/readingWritingSeparation/index.ts
  */
 
@@ -34,19 +34,19 @@ export type readingWritingSeparationUtilsType<T extends object> = {
 
 /**
  * 首字母大写
- * 
+ *
  * @public
  */
 function capitalizeFirstLetter(name: string) {
-  return name.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
+  return name.substring(0, 1).toUpperCase() + name.substring(1)
 }
 
 /**
- * 
+ *
  * 读写分离属性装饰器
- * 
+ *
  * @public
- * 
+ *
  */
 export function readingWritingSeparationDetor(target: object, key: string) {
   const fmtName = capitalizeFirstLetter(key)
