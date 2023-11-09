@@ -45,7 +45,7 @@ importers:
   packages/rollup:
     dependencies:
       '@memo28/types':
-        specifier: ^1.1.0
+        specifier: ^1.1.5
         version: link:../types
       '@rollup/plugin-node-resolve':
         specifier: ^15.1.0
@@ -119,13 +119,13 @@ importers:
   packages/types:
     dependencies:
       '@memo28/logs':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: link:../logs
 
   packages/utils:
     dependencies:
       '@memo28/logs':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: link:../logs
       '@memo28/types':
         specifier: workspace:^
@@ -140,7 +140,7 @@ importers:
   packages/valuePolyfill:
     dependencies:
       '@memo28/logs':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: link:../logs
       '@memo28/types':
         specifier: workspace:^
@@ -155,7 +155,7 @@ importers:
   packages/vite-plugin-meta:
     dependencies:
       '@memo28/logs':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: link:../logs
       parse5:
         specifier: ^7.1.2
@@ -168,10 +168,10 @@ importers:
   packages/viteBuild:
     dependencies:
       '@memo28/logs':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: link:../logs
       '@memo28/types':
-        specifier: ^1.1.4
+        specifier: ^1.1.5
         version: link:../types
       '@memo28/utils':
         specifier: workspace:^
@@ -244,7 +244,7 @@ importers:
   packages/vue:
     dependencies:
       '@memo28/logs':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: link:../logs
       '@memo28/types':
         specifier: workspace:^
@@ -256,16 +256,31 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4
 
+  redux/helper:
+    dependencies:
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7
+      '@types/redux-logger':
+        specifier: ^3.0.11
+        version: 3.0.11
+      redux-logger:
+        specifier: ^3.0.6
+        version: 3.0.6
+      redux-thunk:
+        specifier: ^2.4.2
+        version: 2.4.2(redux@4.2.1)
+
   service/service:
     dependencies:
       '@memo28/logs':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: link:../../packages/logs
       '@memo28/serviceimpl':
-        specifier: ^1.0.4
+        specifier: ^1.0.5
         version: link:../serviceImpl
       '@memo28/utils':
-        specifier: ^1.2.0
+        specifier: ^1.2.2
         version: link:../../packages/utils
       '@types/node':
         specifier: ^18.15.6
@@ -284,7 +299,7 @@ importers:
   service/serviceHelper:
     dependencies:
       '@memo28/logs':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: link:../../packages/logs
       '@memo28/types':
         specifier: workspace:^
@@ -3332,6 +3347,23 @@ packages:
   /@polka/url@1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
 
+  /@reduxjs/toolkit@1.9.7:
+    resolution: {integrity: sha512-t7v8ZPxhhKgOKtU+uyJT13lu4vL7az5aFi4IdoDs/eS548edn2M8Ik9h8fxgvMjGoAUVFSt6ZC1P5cWmQ014QQ==}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18
+      react-redux: ^7.2.1 || ^8.0.2
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
+    dependencies:
+      immer: 9.0.21
+      redux: 4.2.1
+      redux-thunk: 2.4.2(redux@4.2.1)
+      reselect: 4.1.8
+    dev: false
+
   /@rollup/plugin-babel@5.3.1(@babel/core@7.23.2)(rollup@2.79.1):
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
     engines: {node: '>= 10.0.0'}
@@ -3770,12 +3802,6 @@ packages:
   /@types/node@18.15.6:
     resolution: {integrity: sha512-YErOafCZpK4g+Rp3Q/PBgZNAsWKGunQTm9FA3/Pbcm0VCriTEzcrutQ/SxSc0rytAp0NoFWue669jmKhEtd0sA==}
 
-  /@types/node@20.8.4:
-    resolution: {integrity: sha512-ZVPnqU58giiCjSxjVUESDtdPk4QR5WQhhINbc9UBrKLU68MX5BF6kbQzTrkwbolyr0X8ChBpXfavr5mZFKZQ5A==}
-    dependencies:
-      undici-types: 5.25.3
-    dev: false
-
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: false
@@ -3784,10 +3810,16 @@ packages:
     resolution: {integrity: sha512-OFwMPH5eJOhtwR92GMjTNWukaKTdWQC12cBgRvrTQl5CwhruSq6734wi1CTSh5Qjm/pMJWaKOOPKZOp6FpIkXQ==}
     dev: false
 
+  /@types/redux-logger@3.0.11:
+    resolution: {integrity: sha512-lRys/mnrut+BynEsYX0KAWy/WJ4/xAKrEQCdtOGbGJE0iu4yHaUBqCsv7+AZVsIRr7AtsIzgLnpBH2zrw7WNFA==}
+    dependencies:
+      redux: 4.2.1
+    dev: false
+
   /@types/resolve@1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 20.8.4
+      '@types/node': 18.15.6
     dev: false
 
   /@types/resolve@1.20.2:
@@ -5131,6 +5163,10 @@ packages:
   /decimal.js@10.4.3:
     resolution: {integrity: sha512-VBBaLc1MgL5XpzgIP7ny5Z6Nx3UrRkIViUkPUdtl9aya5amy3De1gsUUSB1g3+3sExYNjCAsAznmukyxCb1GRA==}
 
+  /deep-diff@0.3.8:
+    resolution: {integrity: sha512-yVn6RZmHiGnxRKR9sJb3iVV2XTF1Ghh2DiWRZ3dMnGc43yUdWWF/kX6lQyk3+P84iprfWKU/8zFTrlkvtFm1ug==}
+    dev: false
+
   /deep-eql@4.1.3:
     resolution: {integrity: sha512-WaEtAOpRA1MQ0eohqZjpGD8zdI0Ovsm8mmFhaDN8dvDZzyoUMcYDnf5Y6iu7HTXxf8JDS23qWa4a+hKCDyOPzw==}
     engines: {node: '>=6'}
@@ -6105,6 +6141,10 @@ packages:
     engines: {node: '>= 4'}
     dev: false
 
+  /immer@9.0.21:
+    resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
+    dev: false
+
   /immutable@3.8.2:
     resolution: {integrity: sha512-15gZoQ38eYjEjxkorfbcgBKBL6R7T459OuK+CpcWt7O3KF4uPCx2tD0uFETlUDIyo+1789crbMhTvQBSR5yBMg==}
     engines: {node: '>=0.10.0'}
@@ -6446,7 +6486,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.8.4
+      '@types/node': 18.15.6
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: false
@@ -7332,6 +7372,26 @@ packages:
       strip-indent: 3.0.0
     dev: false
 
+  /redux-logger@3.0.6:
+    resolution: {integrity: sha512-JoCIok7bg/XpqA1JqCqXFypuqBbQzGQySrhFzewB7ThcnysTO30l4VCst86AuB9T9tuT03MAA56Jw2PNhRSNCg==}
+    dependencies:
+      deep-diff: 0.3.8
+    dev: false
+
+  /redux-thunk@2.4.2(redux@4.2.1):
+    resolution: {integrity: sha512-+P3TjtnP0k/FEjcBL5FZpoovtvrTNT/UXd4/sluaSyrURlSlhLSzEdfsTBW7WsKB6yPvgd7q/iZPICFjW4o57Q==}
+    peerDependencies:
+      redux: ^4
+    dependencies:
+      redux: 4.2.1
+    dev: false
+
+  /redux@4.2.1:
+    resolution: {integrity: sha512-LAUYz4lc+Do8/g7aeRa8JkyDErK6ekstQaqWQrNRW//MY1TvCEpMtpTWvlQ+FPbWCx+Xixu/6SHt5N0HR+SB4w==}
+    dependencies:
+      '@babel/runtime': 7.23.2
+    dev: false
+
   /reflect-metadata@0.1.13:
     resolution: {integrity: sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==}
     dev: false
@@ -7420,6 +7480,10 @@ packages:
 
   /requires-port@1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
+
+  /reselect@4.1.8:
+    resolution: {integrity: sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ==}
+    dev: false
 
   /resolve-from@5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
@@ -8399,10 +8463,6 @@ packages:
       has-bigints: 1.0.2
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
-    dev: false
-
-  /undici-types@5.25.3:
-    resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}
     dev: false
 
   /unicode-canonical-property-names-ecmascript@2.0.0:
