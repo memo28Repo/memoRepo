@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c649f0c5-fdfa-4e84-93ad-23c0416d8e4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/redux/helper/src/core/createAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/helper/src/core/createActionImpl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/helper/src/core/createCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/helper/src/core/createCaseImpl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/helper/src/core/createSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/helper/src/core/createSliceImpl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/hooks/src/core/useSelectStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openSourceToolLibrary/openSourceTool/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/openSourceToolLibrary/openSourceTool/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openSourceToolLibrary/openSourceTool/src/config/enableConfiguration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/openSourceToolLibrary/openSourceTool/src/config/enableConfiguration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openSourceToolLibrary/openSourceTool/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/openSourceToolLibrary/openSourceTool/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openSourceToolLibrary/openSourceTool/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/openSourceToolLibrary/openSourceTool/tsconfig.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/src/readingWritingSeparation/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/readingWritingSeparation/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/helper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/helper/src/core/enhanceRedux.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/core/enhanceRedux.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/helper/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/helper/src/middleware/defaultMiddleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/middleware/defaultMiddleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/helper/src/middleware/defaultMiddlewareImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/middleware/defaultMiddlewareImpl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/helper/src/types/enhanceReduxImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/types/enhanceReduxImpl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/helper/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/tsconfig.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/service/service/tsconfig.tsbuildinfo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +137,7 @@
       <workItem from="1699449621557" duration="45000" />
       <workItem from="1699450063993" duration="3204000" />
       <workItem from="1699497903888" duration="877000" />
-      <workItem from="1699498875336" duration="6966000" />
+      <workItem from="1699498875336" duration="8019000" />
     </task>
     <servers />
   </component>
