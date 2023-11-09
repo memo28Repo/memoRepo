@@ -1,4 +1,3 @@
-
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-08-23 18:49:30
@@ -29,8 +28,8 @@
 export type readingWritingSeparationUtilsType<T extends object> = {
   [K in keyof Required<T> as `get${Capitalize<string & K>}`]: () => Required<T>[K];
 } & {
-    [K in keyof Required<T> as `set${Capitalize<string & K>}`]: (value: Required<T>[K]) => void;
-  };
+  [K in keyof Required<T> as `set${Capitalize<string & K>}`]: (value: Required<T>[K]) => void;
+};
 
 /**
  * 首字母大写
@@ -38,7 +37,7 @@ export type readingWritingSeparationUtilsType<T extends object> = {
  * @public
  */
 function capitalizeFirstLetter(name: string) {
-  return name.substring(0, 1).toUpperCase() + name.substring(1)
+  return name.substring(0, 1).toUpperCase() + name.substring(1);
 }
 
 /**
@@ -49,19 +48,22 @@ function capitalizeFirstLetter(name: string) {
  *
  */
 export function readingWritingSeparationDetor(target: object, key: string) {
-  const fmtName = capitalizeFirstLetter(key)
+  const fmtName = capitalizeFirstLetter(key);
 
 
   Reflect.defineProperty(target, `get${fmtName}`, {
-    value() {
-      return Reflect.get(this, key)
+    get() {
+      const t = this;
+      // @ts-ignore
+      return Reflect.get(t, key);
     }
-  })
+  });
 
   Reflect.defineProperty(target, `set${fmtName}`, {
     value(val: unknown) {
-      Reflect.set(this, key, val)
+      const t = this;
+      Reflect.set(t, key, val);
     }
-  })
+  });
 
 }

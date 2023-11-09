@@ -65,6 +65,37 @@ export class BindingConfiguration<T = any, R = any | undefined> {
 
   }
 
+  /**
+   *
+   * 当传参 为 `true` 时
+   *
+   * 返回  {@link EnableConfiguration.bindConfiguredFunc} 参数 本身
+   *
+   * @public
+   *
+   */
+  returnItSelf(): Panic<fn | undefined> {
+    if (this.params === undefined) {
+      return [false, this.config.getBindConfiguredFunc];
+    }
+    if (this.params === true) {
+      return [false, this.config.getBindConfiguredFunc];
+    }
+    if (this.params === false) {
+      return [Errors.New("配置流程终止"), undefined];
+    }
+    return [Errors.New("配置流程终止"), undefined];
+  }
+
+
+  /**
+   *
+   *
+   * 核心逻辑流程见 {@link EnableConfiguration}
+   *
+   * @public
+   *
+   */
   trigger(): Panic<R | undefined> {
     if (this.params === undefined) {
       return [false, this.config.getBindConfiguredFunc()(this.config.getDefaultConfig())];

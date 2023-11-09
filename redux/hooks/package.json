@@ -1,6 +1,6 @@
 {
-  "name": "@memo28/enhance-redux",
-  "version": "1.0.1",
+  "name": "@memo28/enhance-redux-hooks",
+  "version": "1.0.0",
   "description": "",
   "main": "./lib/index",
   "module": "./dist/index",
@@ -15,20 +15,14 @@
     "test:ui": "vitest --ui",
     "links": "pnpm link --global"
   },
-  "keywords": [],
-  "author": "hooks28",
-  "license": "ISC",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "keywords": [],
+  "author": "hooks28",
+  "license": "ISC",
   "devDependencies": {
-    "@reduxjs/toolkit": "^1.9.7",
-    "@types/node": "^18.15.6"
-  },
-  "dependencies": {
-    "@types/redux-logger": "^3.0.11",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.4.2"
+    "react-redux": "^8.1.3"
   }
 }

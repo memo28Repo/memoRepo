@@ -1,3 +1,10 @@
+<!--
+ * @Author: 邱狮杰&qwm
+ * @Date: 2023-10-28 00:57:03
+ * @LastEditTime: 2023-11-07 11:52:29
+ * @Description: 
+ * @FilePath: /memo/README.md
+-->
 # @memo28 ⚙️
 
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fpackages%2Ftypes%2Fpackage.json&query=%24.version&label=%40memo28%2Ftypes&color=%23CC3574)
@@ -10,6 +17,7 @@
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fservice%2FserviceImpl%2Fpackage.json&query=%24.version&label=%40memo28%2FserviceImpl&color=%23CC3574)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmemo28Repo%2FmemoRepo%2Fmain%2Fservice%2FserviceHelper%2Fpackage.json&query=%24.version&label=%40memo28%2Fservicehelper&color=%23CC3574)
 
+![example branch parameter](https://github.com/memo28Repo/memoRepo/actions/workflows/publish.yaml/badge.svg?branch=main)
 
 > memo28 系列的底层基础,包括 用于HTTP请求、基本判断、类型安全的实际应用
 

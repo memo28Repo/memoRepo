@@ -6,7 +6,7 @@
  * - 根据参数 bool ｜ T 判断是否启用配置 {@link EnableConfiguration} {@link BindingConfiguration}
  *
  *
- * @inheritDoc
+ * @packageDocumentation
  *
  */
 

@@ -6,7 +6,24 @@
  * @FilePath: /memo/redux/helper/src/index.ts
  */
 
+
+/**
+ *
+ *
+ * 增强redux 皆指减少 redux 的样板式代码
+ * 让更新更加简单
+ *
+ * @packageDocumentation
+ *
+ */
+
 export { EnhanceRedux } from "./core/enhanceRedux";
-export { enhanceReduxImpl } from "./types/enhanceReduxImpl";
+export type { enhanceReduxImpl } from "./types/enhanceReduxImpl";
 export { DefaultMiddleware } from "./middleware/defaultMiddleware";
-export { defaultMiddlewareImplConfig, defaultMiddlewareImpl } from "./middleware/defaultMiddlewareImpl";
+export { CreateSlice } from "./core/createSlice";
+export type { createSliceImpl } from "./core/createSliceImpl";
+export type { createActionImpl } from "./core/createActionImpl";
+export { CreateAction } from "./core/createAction";
+export type { createCaseImpl } from "./core/createCaseImpl";
+export { CreateCase } from "./core/createCase";
+export type { defaultMiddlewareImplConfig, defaultMiddlewareImpl } from "./middleware/defaultMiddlewareImpl";

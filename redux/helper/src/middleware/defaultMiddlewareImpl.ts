@@ -5,6 +5,7 @@ import { enableConfigurationTypes } from "@memo28/open-source-tool";
 
 export interface defaultMiddlewareImplConfig {
   reduxLogger?: enableConfigurationTypes<ReduxLoggerOptions>;
+  thunk?: enableConfigurationTypes<boolean>;
 }
 
 export abstract class defaultMiddlewareImpl<S = any, M extends Middlewares<S> = [ThunkMiddlewareFor<S>]> {
@@ -16,5 +17,5 @@ export abstract class defaultMiddlewareImpl<S = any, M extends Middlewares<S> = 
    *
    * @public
    */
-  abstract getDefaultMiddleware(): M;
+  abstract getDefaultMiddleware(): M[];
 }
