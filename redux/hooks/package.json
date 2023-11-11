@@ -9,7 +9,10 @@
     "test": "vitest run",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true",
+    "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --watch",
+    "build:es:watch": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --watch",
     "build": "pnpm build:cjs && pnpm build:es",
+    "build:watch": "pnpm build:cjs:watch & pnpm build:es:watch",
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
@@ -23,6 +26,11 @@
   "author": "hooks28",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^18.15.6",
     "react-redux": "^8.1.3"
+  },
+  "dependencies": {
+    "@types/lodash.get": "^4.4.9",
+    "lodash.get": "^4.4.2"
   }
 }

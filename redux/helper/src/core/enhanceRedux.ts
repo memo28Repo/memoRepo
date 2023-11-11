@@ -81,7 +81,7 @@ export class EnhanceRedux<S = any, A extends Action = AnyAction, M extends Middl
    * @public
    *
    */
-  addSlice<State extends object>(slice: createSliceImpl<State>): EnhancedStore<S & State, A, M, E> {
+  addSlice<State extends object, N extends string>(slice: createSliceImpl<State, N>): EnhancedStore<S & State, A, M, E> {
     Reflect.set(this.sliceReducers, slice.getSliceName(), slice.done().reducer);
     return this as EnhancedStore<S & State, A, M, E>;
   }

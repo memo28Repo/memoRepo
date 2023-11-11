@@ -67,7 +67,7 @@ export interface enhanceReduxImpl<S = any, A extends Action = AnyAction, M exten
    *
    * @public
    */
-  addSlice<State extends object>(slice: createSliceImpl<State>): this;
+  addSlice<State extends object, N extends string>(slice: createSliceImpl<State, N>): EnhancedStore<S, A, M, E>;
 
   /**
    * 注入配置

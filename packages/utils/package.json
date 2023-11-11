@@ -9,8 +9,11 @@
   "scripts": {
     "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
+    "build:watch": "pnpm build:cjs:watch && pnpm build:es:watch",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true",
+    "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true --watch",
+    "build:es:watch": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true --watch",
     "test": "vitest",
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
     "updateDep": "pnpm update mitt@latest && pnpm update reflect-metadata@latest && pnpm update @memo28/types@latest"

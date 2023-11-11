@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c649f0c5-fdfa-4e84-93ad-23c0416d8e4e" name="Changes" comment="">
+    <list default="true" id="c649f0c5-fdfa-4e84-93ad-23c0416d8e4e" name="Changes" comment="A">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/types/src/object/key.value.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/types/src/object/key.value.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/src/verify/verify.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/verify/verify.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/helper/src/core/createAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/core/createAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/helper/src/core/createActionImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/core/createActionImpl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/helper/src/core/createSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/core/createSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/helper/src/core/createSliceImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/core/createSliceImpl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/helper/src/core/enhanceRedux.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/core/enhanceRedux.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/helper/src/types/enhanceReduxImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/src/types/enhanceReduxImpl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/helper/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/redux/helper/tsconfig.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/hooks/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/redux/hooks/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/hooks/src/core/useSelectStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/hooks/src/core/useSelectStore.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,24 +44,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/devops/Desktop/monorepo/memo/packages/serviceHelper&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/devops/Desktop/monorepo/memo/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/devops/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/232.10203.14/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/Users/devops/Desktop/monorepo/memo/packages/serviceHelper",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/devops/Desktop/monorepo/memo/node_modules/prettier",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "/Users/devops/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/232.10203.14/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/serviceHelper" />
@@ -137,7 +151,10 @@
       <workItem from="1699449621557" duration="45000" />
       <workItem from="1699450063993" duration="3204000" />
       <workItem from="1699497903888" duration="877000" />
-      <workItem from="1699498875336" duration="8799000" />
+      <workItem from="1699498875336" duration="10243000" />
+      <workItem from="1699530085985" duration="600000" />
+      <workItem from="1699664784963" duration="4931000" />
+      <workItem from="1699670295484" duration="7901000" />
     </task>
     <servers />
   </component>
@@ -147,6 +164,17 @@
       <list>
         <option value="$PROJECT_DIR$/packages/utils/src/log.d.ts" />
       </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
 </project>

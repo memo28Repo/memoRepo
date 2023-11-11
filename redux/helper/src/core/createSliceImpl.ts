@@ -9,7 +9,7 @@ import { createActionImpl, createActionMapperType } from "./createActionImpl";
  *
  * @public
  */
-export abstract class createSliceImpl<S extends object> {
+export abstract class createSliceImpl<S extends object = any, N extends string = any, A extends createActionImpl<createActionMapperType> = createActionImpl<createActionMapperType>> {
 
   /**
    *
@@ -18,7 +18,27 @@ export abstract class createSliceImpl<S extends object> {
    * @public
    *
    */
-  abstract getSliceName(): string
+  abstract getSliceName(): N
+
+
+  /**
+   *
+   * 获取 actions 的所有信息
+   *
+   * @public
+   *
+   */
+  abstract getActions(): A
+
+
+  /**
+   *
+   * 获取 state
+   *
+   * @public
+   *
+   */
+  abstract getState(): S
 
   /**
    *
@@ -28,5 +48,5 @@ export abstract class createSliceImpl<S extends object> {
    *
    */
   // @ts-ignore
-  abstract done(): Slice<S, Reducer<S>, string>
+  abstract done(): Slice<S, Reducer<S>, N>
 }

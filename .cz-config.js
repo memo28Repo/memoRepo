@@ -2,7 +2,7 @@
  * @Author: 邱狮杰
  * @Date: 2023-01-19 20:08:07
  * @LastEditTime: 2023-03-22 11:14:30
- * @Description: 
+ * @Description:
  * @FilePath: /memo/.cz-config.js
  */
 module.exports = {
@@ -69,7 +69,7 @@ module.exports = {
     skipQuestions: ['body'],
 
     // limit subject length
-    subjectLimit: 100,
+    subjectLimit: 200,
     // breaklineChar: '|', // It is supported for fields body and footer.
     // footerPrefix : 'ISSUES CLOSED:'
     // askForBreakingChangeFirst : true, // default is false

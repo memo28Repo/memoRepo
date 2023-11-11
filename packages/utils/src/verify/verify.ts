@@ -5,10 +5,10 @@
  * @Description: verify
  * @FilePath: /memo/packages/utils/src/verify/verify.ts
  */
-import { VerificationFlow } from './errorCollection'
-import { str } from '@memo28/types'
-import { Panic } from '../errors/types'
-import { Errors } from '../errors/core'
+import { VerificationFlow } from "./errorCollection";
+import { str } from "@memo28/types";
+import { Panic } from "../errors/types";
+import { Errors } from "../errors/core";
 
 /**
  * String Number includes的简称
@@ -22,15 +22,16 @@ import { Errors } from '../errors/core'
  */
 export function SNI(n: number | string | (number | string)[], value: any) {
   function reverseTypeFn(s: string | number) {
-    return typeof s === 'string' ? parseFloat(s) : `${s}`
+    return typeof s === "string" ? parseFloat(s) : `${s}`;
   }
+
   if (Array.isArray(n)) {
     const catchList = n.map(i => {
-      return [i, reverseTypeFn(i)]
-    }).flat(1)
-    return catchList.includes(value)
+      return [i, reverseTypeFn(i)];
+    }).flat(1);
+    return catchList.includes(value);
   }
-  return [n, reverseTypeFn(n)].includes(value)
+  return [n, reverseTypeFn(n)].includes(value);
 }
 
 /**
@@ -41,20 +42,20 @@ export function SNI(n: number | string | (number | string)[], value: any) {
  */
 export class Phone extends VerificationFlow<str> {
   constructor(phone?: str, private msg?: string) {
-    super(phone || '')
+    super(phone || "");
   }
 
   verification(args?: string): Panic<string> {
-    const value = args || this.value
+    const value = args || this.value;
     if (!/^(?:(?:\+|00)86)?1[3-9]\d{9}$/.test(value)) {
-      this.setErrors(Errors.New(this.msg || '验证失败'))
-      this.continuousReporting('phone', {
-        msg: this.msg || '验证失败',
-        val: value,
-      })
-      return [Errors.New(this.msg || '验证失败'), value]
+      this.setErrors(Errors.New(this.msg || "验证失败"));
+      this.continuousReporting("phone", {
+        msg: this.msg || "验证失败",
+        val: value
+      });
+      return [Errors.New(this.msg || "验证失败"), value];
     }
-    return [null, args || this.value]
+    return [null, args || this.value];
   }
 }
 
@@ -67,19 +68,55 @@ export class Phone extends VerificationFlow<str> {
  */
 export class Mail extends VerificationFlow<str> {
   constructor(phone?: str, private msg?: string) {
-    super(phone || '')
+    super(phone || "");
   }
 
   verification(args?: string): Panic<string> {
-    const value = args || this.value
+    const value = args || this.value;
     if (!/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(value)) {
-      this.setErrors(Errors.New(this.msg || '验证失败'))
-      this.continuousReporting('mail', {
-        msg: this.msg || '验证失败',
-        val: value,
-      })
-      return [Errors.New(this.msg || '验证失败'), value]
+      this.setErrors(Errors.New(this.msg || "验证失败"));
+      this.continuousReporting("mail", {
+        msg: this.msg || "验证失败",
+        val: value
+      });
+      return [Errors.New(this.msg || "验证失败"), value];
     }
-    return [null, args || this.value]
+    return [null, args || this.value];
   }
+}
+
+
+/**
+ *
+ * 数组是否为空
+ *
+ * @param val - 数组
+ */
+export function isArrayEmpty(val: unknown[]) {
+  if (!Array.isArray(val)) throw new Error(`isArrayEmpty An array is required, but what is passed is a ${typeof val}`);
+  return SNI(0, val.length);
+}
+
+
+/**
+ *
+ * 对象是否为空
+ *
+ * @public
+ */
+export function isObjectEmpty(val: object) {
+  if (Array.isArray(val)) return isArrayEmpty(val);
+  return SNI(0, Object.keys(val || {}).length);
+}
+
+
+/**
+ *
+ * 判断传入的参数是否为空
+ *
+ * @public
+ *
+ */
+export function isEmpty(val: any) {
+  return null === val || undefined === val || isObjectEmpty(val) || val === "";
 }

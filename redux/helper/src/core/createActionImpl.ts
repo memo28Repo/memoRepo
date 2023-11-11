@@ -1,6 +1,6 @@
 import { fn } from "@memo28/types";
 
-import { CaseReducer } from '@reduxjs/toolkit';
+import { CaseReducer } from "@reduxjs/toolkit";
 import { PayloadActionCreator } from "@reduxjs/toolkit/src/createAction";
 
 
@@ -15,7 +15,7 @@ export type enhanceCreateActionPayload = {
  * @public
  *
  */
-export type enhanceCreateAction<T extends string, O extends object> = PayloadActionCreator<ReturnType<(params: O) => {
+export type enhanceCreateAction<T extends string = string, O extends object = object> = PayloadActionCreator<ReturnType<(params: O) => {
   payload: enhanceCreateActionPayload & O
 }>["payload"], T, (params: O) => {
   payload: enhanceCreateActionPayload & O
@@ -31,8 +31,8 @@ export type enhanceCreateAction<T extends string, O extends object> = PayloadAct
  *
  */
 
-export type createActionMapperType<T extends string = '', O extends object = {}> = {
-  [key in T]?: enhanceCreateAction<T, O>
+export type createActionMapperType<T extends string = "", O extends object = {}> = {
+  [key in T]-?: enhanceCreateAction<T, O>
 }
 
 /**
@@ -70,7 +70,7 @@ export abstract class createActionImpl<O extends createActionMapperType<"", {}>>
    *
    * @param type
    */
-  abstract getAction<K extends keyof O>(type: K): Partial<O>[K]
+  abstract getAction<K extends keyof O>(type: K): O[K]
 
 
   /**

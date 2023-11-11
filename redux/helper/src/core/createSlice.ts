@@ -7,10 +7,10 @@
  */
 
 import { createSlice, Slice } from "@reduxjs/toolkit";
+import { SliceCaseReducers } from "@reduxjs/toolkit/src/createSlice";
 import { createActionImpl, createActionMapperType } from "./createActionImpl";
 import { createCaseImpl } from "./createCaseImpl";
 import { createSliceImpl } from "./createSliceImpl";
-import { SliceCaseReducers } from "@reduxjs/toolkit/src/createSlice";
 
 
 /**
@@ -21,12 +21,22 @@ import { SliceCaseReducers } from "@reduxjs/toolkit/src/createSlice";
  * @public
  *
  */
-export class CreateSlice<S extends object, A extends createActionMapperType = createActionMapperType> implements createSliceImpl<S> {
-  constructor(private name: string, private state: S, private actions: createActionImpl<A>, private cases?: createCaseImpl<S, createActionImpl<A>>) {
+export class CreateSlice<S extends object, N extends string, A extends createActionImpl<createActionMapperType> = createActionImpl<createActionMapperType>> implements createSliceImpl<S, N, A> {
+  constructor(private name: N, private state: S, private actions: A, private cases?: createCaseImpl<S, A>) {
   }
 
 
-  getSliceName(): string {
+  getActions(): A {
+    return this.actions;
+  }
+
+
+  getState(): S {
+    return this.state;
+
+  }
+
+  getSliceName(): N {
     return this.name;
   }
 
@@ -37,8 +47,8 @@ export class CreateSlice<S extends object, A extends createActionMapperType = cr
    * @public
    *
    */
-  done(): Slice<S, SliceCaseReducers<S>, string> {
-    return createSlice<S, SliceCaseReducers<S>, string>({
+  done(): Slice<S, SliceCaseReducers<S>, N> {
+    return createSlice<S, SliceCaseReducers<S>, N>({
       name: this.name,
       // @ts-ignore
       reducers: {},
@@ -54,5 +64,4 @@ export class CreateSlice<S extends object, A extends createActionMapperType = cr
     });
   }
 }
-
 

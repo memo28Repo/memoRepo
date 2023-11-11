@@ -70,8 +70,8 @@ export class CreateAction<O extends createActionMapperType> implements createAct
    *
    * @param type
    */
-  getAction<K extends keyof O>(type: K): Partial<O>[K] {
-    return this.createActionMapper[type];
+  getAction<K extends keyof O>(type: K): O[K] {
+    return this.createActionMapper[type] as O[K];
   }
 
 
