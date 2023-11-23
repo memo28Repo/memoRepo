@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-11-04 16:06:55
- * @LastEditTime: 2023-11-04 16:49:25
+ * @LastEditTime: 2023-11-19 10:27:58
  * @Description:
  * @FilePath: /memo/redux/helper/src/types/enhanceReduxImpl.ts
  */
@@ -15,8 +15,8 @@ import {
   configureStore
 } from "@reduxjs/toolkit";
 import { ThunkMiddlewareFor } from "@reduxjs/toolkit/dist/getDefaultMiddleware";
-import { defaultMiddlewareImpl } from "../middleware/defaultMiddlewareImpl";
 import { createSliceImpl } from "../core/createSliceImpl";
+import { defaultMiddlewareImpl } from "../middleware/defaultMiddlewareImpl";
 
 export declare type Enhancers = ReadonlyArray<StoreEnhancer>;
 export declare type Middlewares<S> = ReadonlyArray<Middleware<{}, S>>;
@@ -67,7 +67,7 @@ export interface enhanceReduxImpl<S = any, A extends Action = AnyAction, M exten
    *
    * @public
    */
-  addSlice<State extends object, N extends string>(slice: createSliceImpl<State, N>): EnhancedStore<S, A, M, E>;
+  addSlice<State extends object, N extends string>(slice: createSliceImpl<State, N>): enhanceReduxImpl<S, A, M, E>;
 
   /**
    * 注入配置

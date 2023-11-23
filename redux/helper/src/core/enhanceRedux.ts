@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-11-04 16:06:49
- * @LastEditTime: 2023-11-04 16:49:32
+ * @LastEditTime: 2023-11-19 10:27:47
  * @Description:
  * @FilePath: /memo/redux/helper/src/core/enhanceRedux.ts
  */
@@ -10,9 +10,12 @@ import {
   AnyAction,
   ConfigureStoreOptions,
   EnhancedStore,
+  Reducer,
+  Slice,
   StoreEnhancer,
-  configureStore, Slice, Reducer
+  configureStore
 } from "@reduxjs/toolkit";
+import { SliceCaseReducers } from "@reduxjs/toolkit/src/createSlice";
 import {
   Enhancers,
   Middlewares,
@@ -21,7 +24,6 @@ import {
   injectionAllocationConfig
 } from "../types/enhanceReduxImpl";
 import { createSliceImpl } from "./createSliceImpl";
-import { SliceCaseReducers } from "@reduxjs/toolkit/src/createSlice";
 
 
 /**
@@ -81,9 +83,10 @@ export class EnhanceRedux<S = any, A extends Action = AnyAction, M extends Middl
    * @public
    *
    */
-  addSlice<State extends object, N extends string>(slice: createSliceImpl<State, N>): EnhancedStore<S & State, A, M, E> {
+  // @ts-ignore
+  addSlice<State extends object, N extends string>(slice: createSliceImpl<State, N>): EnhanceRedux<S & State, A, M, E> {
     Reflect.set(this.sliceReducers, slice.getSliceName(), slice.done().reducer);
-    return this as EnhancedStore<S & State, A, M, E>;
+    return this as unknown as EnhanceRedux<S & State, A, M, E>;
   }
 
 

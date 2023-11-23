@@ -1,15 +1,44 @@
-import { useDispatch, useSelector, TypedUseSelectorHook, useStore } from "react-redux";
+/*
+ * @Author: 邱狮杰&qwm
+ * @Date: 2023-11-09 13:49:05
+ * @LastEditTime: 2023-11-13 11:08:16
+ * @Description: 
+ * @FilePath: /memo/redux/hooks/src/core/useSelectStore.ts
+ */
 import { createSliceImpl } from "@memo28/enhance-redux";
+import { enhanceCreateAction, enhanceCreateActionPayload } from "@memo28/enhance-redux/src/core/createActionImpl";
 import { ObjectKeyPaths } from "@memo28/types";
 import { isEmpty } from "@memo28/utils";
 import get from "lodash.get";
-import { enhanceCreateAction, enhanceCreateActionPayload } from "@memo28/enhance-redux/src/core/createActionImpl";
+import { TypedUseSelectorHook, useDispatch, useSelector, useStore } from "react-redux";
 
+/**
+ * 使用useSelectStore hook来操作store
+ * 
+ * 
+ * @remarks
+ *  返回一个对象，包含`empty`, `store`, `storeWithRoot`和`dispatch`四个方法
+ * 
+ * @param slice - {@link createSliceImpl} 的实例
+ * 
+ * 
+ * @public
+ * 
+ */
 export function useSelectStore<Slice extends createSliceImpl>(slice: Slice) {
   const storeRoot = useStore<state>();
 
   const dis = useDispatch();
 
+
+  
+  /**
+   * 调用dispatch方法来dispatch action
+   * 
+   * @param dispatchContext - 包含payload和type的对象，可选
+   * 
+   * @public
+   */
   function dispatch(dispatchContext?: {
     payload: enhanceCreateActionPayload,
     type: string

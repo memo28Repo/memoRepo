@@ -3,4 +3,7 @@ packages:
   - 'packages/*'
   - 'service/*'
   - 'redux/*'
-  - "openSourceToolLibrary/*"
+  - 'openSourceToolLibrary/*'
+  - 'vite/*'
+  - 'uniapp/*'
+  - 'business/*'
