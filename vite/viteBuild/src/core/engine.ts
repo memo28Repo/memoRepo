@@ -8,7 +8,7 @@
 import { PluginOption, UserConfigExport } from "vite";
 import {
   ConfigureReactTechnologyStack,
-  ConfigureTechnologyStack,
+  ConfigureTechnologyStack, ConfigureTechnologyStackUniApp,
   ConfigureVueTechnologyStack,
   injectDefaultTechnologyStackConfiguration,
   technologyStackTypes
@@ -50,7 +50,7 @@ import { PlugInContainer } from "./plugInContainer";
  *
  */
 @injectDefaultTechnologyStackConfiguration({
-  defaultModule: [new ConfigureVueTechnologyStack(), new ConfigureReactTechnologyStack()]
+  defaultModule: [new ConfigureVueTechnologyStack(), new ConfigureReactTechnologyStack(), new ConfigureTechnologyStackUniApp()]
 })
 export class Engine {
   private technology: ConfigureTechnologyStack = "";

@@ -17,13 +17,15 @@ import vueMacros from "unplugin-vue-macros/vite";
 import { PluginOption } from "vite";
 import printURL from "vite-plugin-print-urls";
 import injection from "./injection";
+// @ts-ignore
+import uni from "@dcloudio/vite-plugin-uni";
 
 export interface configureTechnologyStackTypes<T extends string = string> {
   configureTechnologyStack: string | T; //  配置技术栈
   defaultPlugIn: PluginOption; // 默认插件
 }
 
-export type ConfigureTechnologyStack = "vue" | "react" | ""
+export type ConfigureTechnologyStack = "vue" | "react" | "uniapp" | ""
 
 /**
  * @description 配置vue
@@ -60,7 +62,7 @@ export class ConfigureReactTechnologyStack implements configureTechnologyStackTy
   configureTechnologyStack = "react";
   defaultPlugIn: PluginOption = [
     legacy(),
-    reactSwcPlugin({tsDecorators: true}),
+    reactSwcPlugin({ tsDecorators: true }),
     printURL() as PluginOption
   ];
 }
@@ -92,4 +94,12 @@ export function injectDefaultTechnologyStackConfiguration(ops: injectDefaultTech
     // @ts-ignore
     injection.setValue(target, "defaultModule", technologyStack);
   };
+}
+
+
+export class ConfigureTechnologyStackUniApp implements configureTechnologyStackTypes<"uniapp"> {
+  configureTechnologyStack: ConfigureTechnologyStack = "uniapp";
+  defaultPlugIn: PluginOption = [
+    uni()
+  ];
 }
