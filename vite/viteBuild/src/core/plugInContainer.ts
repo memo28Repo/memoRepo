@@ -13,7 +13,6 @@ import { vitePluginMetaOpt, vitePluginMete } from '../plugin/meta'
 import { Pwa, PwaOpt } from '../plugin/pwa'
 import { SassDts, sassDtsOpt } from '../plugin/sassDts'
 import { PluginVisualizerOptions, Visualizer } from '../plugin/visualizer'
-import { Inspect, inspectOptions } from '../plugin/inspect'
 
 export interface PluginTypes<T = object> {
   config: T | undefined
@@ -29,14 +28,14 @@ export class PlugInContainer {
     return this
   }
 
-  /**
-   * @description inspect the intermediate state of Vite plugins. Useful for debugging and authoring plugins.
-   * @see https://www.npmjs.com/package/vite-plugin-inspect
-   */
-  addInspect(opt?: Partial<inspectOptions>) {
-    this.injectPlugin(new Inspect(), opt)
-    return this
-  }
+  // /**
+  //  * @description inspect the intermediate state of Vite plugins. Useful for debugging and authoring plugins.
+  //  * @see https://www.npmjs.com/package/vite-plugin-inspect
+  //  */
+  // addInspect(opt?: Partial<inspectOptions>) {
+  //   this.injectPlugin(new Inspect(), opt)
+  //   return this
+  // }
   /**
    * @description auto import APIs on-demand for Vite, Webpack, Rollup and esbuild. With TypeScript support. Powered by unplugin.
    * @see https://www.npmjs.com/package/unplugin-auto-import

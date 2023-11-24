@@ -15,6 +15,7 @@ import {
 } from "./configureTechnologyStack";
 import injection from "./injection";
 import { PlugInContainer } from "./plugInContainer";
+import { Inspect, inspectOptions } from "../plugin/inspect";
 
 /**
  *
@@ -57,7 +58,9 @@ export class Engine {
   private pluginList: PluginOption[] = [];
 
   /**
-   *  @description 选择技术栈 注入默认插件
+   *  选择技术栈 注入默认插件
+   *
+   *  @public
    */
   setTechnologyStack<T extends ConfigureTechnologyStack = ConfigureTechnologyStack>(technology: T): this {
     this.technology = technology as ConfigureTechnologyStack;
@@ -68,7 +71,9 @@ export class Engine {
   }
 
   /**
-   * @description 添加插件
+   * 添加插件
+   *
+   * @public
    */
   addPlugins(cb?: (container: Omit<PlugInContainer, "getPlugInContainerList">) => void) {
     const plugInContainer = new PlugInContainer();
@@ -77,8 +82,23 @@ export class Engine {
     return this;
   }
 
+
   /**
-   * @description 获取配置
+   *
+   * 打开调试模式
+   *
+   * @public
+   */
+  debugger(opt?: Partial<inspectOptions>) {
+    this.pluginList.push(new Inspect().readConfiguration(opt).getPlugin());
+    return this;
+  }
+
+
+  /**
+   * 获取配置
+   *
+   * @public
    */
   getBuildConfig(config?: UserConfigExport): UserConfigExport {
     const userConfigPlugin = Reflect.get(config || {}, "plugins") || [];
