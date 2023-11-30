@@ -19,8 +19,20 @@ npm pkg set scripts.build:cjs='tsc --module commonjs --rootDir ./src --outDir ./
 #  打包 es 规范代码
 npm pkg set scripts.build:es='tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true'
 
+
+# watch 打包 comonjs 规范代码
+#npm pkg set scripts.build:cjs:watch='tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --watch'
+
+# watch 打包 es 规范代码
+#npm pkg set scripts.build:es:watch='tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --watch'
+
+
 # 打包 commonjs 和 es 规范的代码
 npm pkg set scripts.build="pnpm build:cjs && pnpm build:es"
+
+# watch 打包 commonjs 和 es 规范的代码
+#npm pkg set scripts.build:watch="pnpm build:cjs:watch && pnpm build:es:watch"
+
 
 # 打包 并 根据 API 生成文档
 npm pkg set scripts.build:md="pnpm build && api-extractor run --local --verbose && sh mv.sh"

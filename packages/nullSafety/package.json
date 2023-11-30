@@ -1,5 +1,5 @@
 {
-  "name": "@memo28/uni-wifi",
+  "name": "@memo28/null-safety",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,6 @@
     "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --watch",
     "build:es:watch": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --watch",
     "build:watch": "pnpm build:cjs && pnpm build:es",
-
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
