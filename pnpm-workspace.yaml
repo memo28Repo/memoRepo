@@ -5,5 +5,3 @@ packages:
   - 'redux/*'
   - 'openSourceToolLibrary/*'
   - 'vite/*'
-  - 'uniapp/*'
-  - 'business/*'

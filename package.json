@@ -8,9 +8,7 @@
     "service/*",
     "redux/*",
     "openSourceToolLibrary/*",
-    "uniapp/*",
-    "vite/*",
-    "business/*"
+    "vite/*"
   ],
   "scripts": {
     "updateDep": "turbo run updateDep --color",
