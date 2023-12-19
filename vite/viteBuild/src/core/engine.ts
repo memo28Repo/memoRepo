@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:49:34
- * @LastEditTime: 2023-04-14 23:09:44
+ * @LastEditTime: 2023-12-19 16:56:08
  * @Description:
- * @FilePath: /memo/packages/viteBuild/src/core/engine.ts
+ * @FilePath: /memo/vite/viteBuild/src/core/engine.ts
  */
 import { PluginOption, UserConfigExport } from "vite";
 import { Inspect, inspectOptions } from "../plugin/inspect";
@@ -16,6 +16,12 @@ import {
 } from "./configureTechnologyStack";
 import injection from "./injection";
 import { PlugInContainer } from "./plugInContainer";
+
+class TechnologyStackDoesNotExist extends Error {
+  constructor(private msg: string) {
+    super(msg)
+  }
+}
 
 /**
  *
@@ -51,7 +57,7 @@ import { PlugInContainer } from "./plugInContainer";
  *
  */
 @injectDefaultTechnologyStackConfiguration({
-  defaultModule: [new ConfigureVueTechnologyStack(), new ConfigureReactTechnologyStack(), new ConfigureTechnologyStackUniApp()]
+  defaultModule: [ConfigureVueTechnologyStack, ConfigureReactTechnologyStack, ConfigureTechnologyStackUniApp]
 })
 export class Engine {
   private technology: ConfigureTechnologyStack = "";
@@ -66,7 +72,10 @@ export class Engine {
     this.technology = technology as ConfigureTechnologyStack;
     // @ts-ignore
     const defaultModule = injection.getValue<technologyStackTypes>(Engine, "defaultModule").get(this.technology);
-    this.pluginList.push(defaultModule);
+    if (!defaultModule) {
+      throw new TechnologyStackDoesNotExist(`未配置该技术栈 -> (${this.technology})`)
+    }
+    this.pluginList.push(Reflect.construct(defaultModule, []).initDefaultPlugin());
     return this;
   }
 
@@ -102,10 +111,15 @@ export class Engine {
    */
   getBuildConfig(config?: UserConfigExport): UserConfigExport {
     const userConfigPlugin = Reflect.get(config || {}, "plugins") || [];
+    const plugins = [this.pluginList, ...userConfigPlugin]
+
+    if (!this.technology.trim().length) {
+      throw new TechnologyStackDoesNotExist("请调用 setTechnologyStack 函数 指定技术栈")
+    }
 
     return {
       ...config,
-      plugins: [this.pluginList, ...userConfigPlugin]
+      plugins
     };
   }
 }

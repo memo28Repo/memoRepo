@@ -39,8 +39,6 @@
     "./lib"
   ],
   "dependencies": {
-    "@dcloudio/uni-cli-i18n": "2.0.2-3090820231124001",
-    "@dcloudio/uni-cli-shared": "2.0.2-3090820231124001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3000020210521001",
     "@memo28/logs": "^0.1.1",
     "@memo28/types": "^1.1.5",

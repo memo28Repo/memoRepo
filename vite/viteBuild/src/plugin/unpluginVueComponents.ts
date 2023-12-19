@@ -1,7 +1,7 @@
 /*
  * @Author: @memo28.repo
  * @Date: 2023-12-19 15:24:07
- * @LastEditTime: 2023-12-19 16:12:58
+ * @LastEditTime: 2023-12-19 16:48:28
  * @Description: 
  * @FilePath: /memo/vite/viteBuild/src/plugin/unpluginVueComponents.ts
  */
@@ -34,7 +34,6 @@ type ComponentsOptions = Parameters<typeof Components>[0]
 export type UnPluginVueComponentsOptions = {
   elementPlusResolverOptions?: ElementPlusResolverOptions;
 } & ComponentsOptions
-
 
 export class UnPluginVueComponents implements PluginTypes<UnPluginVueComponentsOptions> {
   config: UnPluginVueComponentsOptions | undefined = undefined;
