@@ -6,6 +6,7 @@
  * @FilePath: /memo/packages/viteBuild/src/core/engine.ts
  */
 import { PluginOption, UserConfigExport } from "vite";
+import { Inspect, inspectOptions } from "../plugin/inspect";
 import {
   ConfigureReactTechnologyStack,
   ConfigureTechnologyStack, ConfigureTechnologyStackUniApp,
@@ -15,7 +16,6 @@ import {
 } from "./configureTechnologyStack";
 import injection from "./injection";
 import { PlugInContainer } from "./plugInContainer";
-import { Inspect, inspectOptions } from "../plugin/inspect";
 
 /**
  *

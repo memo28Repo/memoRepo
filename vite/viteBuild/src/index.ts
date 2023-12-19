@@ -6,7 +6,7 @@
  * @FilePath: /memo/packages/viteBuild/src/index.ts
  */
 
-import {versionLog} from '@memo28/logs'
+import { versionLog } from '@memo28/logs'
 // @ts-ignore
 import pack from '../package.json'
 

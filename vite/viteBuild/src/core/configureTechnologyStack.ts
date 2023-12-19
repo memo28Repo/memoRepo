@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:17:08
- * @LastEditTime: 2023-07-02 10:26:04
+ * @LastEditTime: 2023-12-19 16:16:16
  * @Description: 配置场景
- * @FilePath: /memo/packages/vitebuild/src/core/configureTechnologyStack.ts
+ * @FilePath: /memo/vite/viteBuild/src/core/configureTechnologyStack.ts
  */
 
 import { getValues } from "@memo28/types";
@@ -31,6 +31,9 @@ export type ConfigureTechnologyStack = "vue" | "react" | "uniapp" | ""
  * @description 配置vue
  */
 export class ConfigureVueTechnologyStack implements configureTechnologyStackTypes<"vue"> {
+  initDefault() {
+    throw new Error("Method not implemented.");
+  }
   configureTechnologyStack = "vue";
   defaultPlugIn: PluginOption = [
     legacy(),
@@ -59,6 +62,9 @@ export class ConfigureVueTechnologyStack implements configureTechnologyStackType
  * 配置react场景
  */
 export class ConfigureReactTechnologyStack implements configureTechnologyStackTypes<"react"> {
+  initDefault() {
+    throw new Error("Method not implemented.");
+  }
   configureTechnologyStack = "react";
   defaultPlugIn: PluginOption = [
     legacy(),
@@ -98,6 +104,9 @@ export function injectDefaultTechnologyStackConfiguration(ops: injectDefaultTech
 
 
 export class ConfigureTechnologyStackUniApp implements configureTechnologyStackTypes<"uniapp"> {
+  initDefault() {
+    throw new Error("Method not implemented.");
+  }
   configureTechnologyStack: ConfigureTechnologyStack = "uniapp";
   defaultPlugIn: PluginOption = [
     uni()
