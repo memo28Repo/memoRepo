@@ -1,10 +1,11 @@
 /*
- * @Author: 邱狮杰
- * @Date: 2023-01-08 12:08:25
- * @LastEditTime: 2023-12-19 17:10:24
- * @Description:
- * @FilePath: /memo/service/service/vitest.config.ts
+ * @Author: @memo28.repo
+ * @Date: 2023-12-19 17:10:55
+ * @LastEditTime: 2023-12-19 17:11:59
+ * @Description: 
+ * @FilePath: /memo/packages/utils/vitest.config.ts
  */
+
 
 import { defineConfig } from 'vitest/config'
 

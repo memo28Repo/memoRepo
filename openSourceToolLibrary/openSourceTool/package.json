@@ -6,7 +6,6 @@
   "module": "./dist/index.js",
   "types": "./dts/index.d.ts",
   "scripts": {
-    "test": "vitest run",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true",
     "build": "pnpm build:cjs && pnpm build:es",

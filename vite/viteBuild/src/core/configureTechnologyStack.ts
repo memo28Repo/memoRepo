@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:17:08
- * @LastEditTime: 2023-12-19 16:43:28
+ * @LastEditTime: 2023-12-19 17:17:48
  * @Description: 配置场景
  * @FilePath: /memo/vite/viteBuild/src/core/configureTechnologyStack.ts
  */
@@ -116,5 +116,5 @@ export class ConfigureTechnologyStackUniApp implements configureTechnologyStackT
     ]
   }
   configureTechnologyStack: ConfigureTechnologyStack = "uniapp";
-  static getName: string = 'uni';
+  static getName: string = 'uniapp';
 }

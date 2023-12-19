@@ -15,6 +15,7 @@
     "build": "turbo run build --color",
     "links": "turbo run links --color",
     "test": "turbo run test --color",
+    "test:vite": "turbo run test --filter='./vite/*' --color",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint --color",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -27,7 +28,7 @@
     "jsdom": "^21.0.0",
     "prettier": "latest",
     "turbo": "^1.10.12",
-    "vitest": "^0.26.3"
+    "vitest": "^1.0.4"
   },
   "engines": {
     "node": ">=14.0.0"
