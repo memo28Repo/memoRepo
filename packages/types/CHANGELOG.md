@@ -1,5 +1,11 @@
 # @memo28/types
 
+## 1.1.6
+
+### Patch Changes
+
+- f4ce0aa: 新增Get<object,key>深度获取对象的value属性，ObjectKeyPaths<object> 获取对象的所有key路径
+
 ## 1.1.5
 
 ### Patch Changes

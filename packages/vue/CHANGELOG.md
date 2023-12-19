@@ -1,5 +1,12 @@
 # @memo28/vue
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies [f4ce0aa]
+  - @memo28/types@1.1.6
+
 ## 0.1.1
 
 ### Patch Changes

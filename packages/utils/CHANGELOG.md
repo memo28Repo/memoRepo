@@ -1,5 +1,14 @@
 # @memo28/utils
 
+## 1.2.4
+
+### Patch Changes
+
+- d16e089: 修改 readingWritingSeparationDetor 的 getDetor 新增get属性 删除 value属性
+- f4ce0aa: 新增判空函数（isArrayEmpty，isObjectEmpty，isEmpty）
+- Updated dependencies [f4ce0aa]
+  - @memo28/types@1.1.6
+
 ## 1.2.3
 
 ### Patch Changes

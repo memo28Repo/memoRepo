@@ -1,5 +1,12 @@
 # @memo28/servicehelper
 
+## 1.1.4
+
+### Patch Changes
+
+- Updated dependencies [f4ce0aa]
+  - @memo28/types@1.1.6
+
 ## 1.1.3
 
 ### Patch Changes

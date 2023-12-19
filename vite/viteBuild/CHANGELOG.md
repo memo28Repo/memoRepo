@@ -1,5 +1,16 @@
 # @memo28/vitebuild
 
+## 3.0.5
+
+### Patch Changes
+
+- 优化技术栈初始化逻辑，新增uniapp 技术栈开箱即用，新增unplugin component 插件
+- Updated dependencies [f4ce0aa]
+- Updated dependencies [d16e089]
+- Updated dependencies [f4ce0aa]
+  - @memo28/types@1.1.6
+  - @memo28/utils@1.2.4
+
 ## 3.0.4
 
 ### Patch Changes
