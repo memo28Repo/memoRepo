@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 3.0.6
+
+### Patch Changes
+
+- 新增默认配置增强console选项，对vscode用户友好。详情： https://github.com/yuyinws/vite-plugin-turbo-console
+
 ## 3.0.5
 
 ### Patch Changes

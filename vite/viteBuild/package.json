@@ -1,6 +1,6 @@
 {
   "name": "@memo28/vitebuild",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "private": false,
   "description": "vite config helper",
   "main": "./lib/index",
@@ -24,9 +24,9 @@
   "author": "hooks_28",
   "license": "MIT",
   "devDependencies": {
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3000020210521001",
     "vite": "^5.0.10",
-    "vue": "^3.3.4",
-    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3000020210521001"
+    "vue": "^3.3.4"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -54,6 +54,7 @@
     "sass": "^1.64.2",
     "terser": "^5.19.2",
     "unplugin-auto-import": "^0.16.6",
+    "unplugin-turbo-console": "^1.0.9",
     "unplugin-vue-components": "^0.25.1",
     "unplugin-vue-macros": "^2.4.2",
     "vite-plugin-browser-sync": "^1.0.3",

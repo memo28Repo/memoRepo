@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-28 11:45:50
- * @LastEditTime: 2023-12-19 16:14:56
+ * @LastEditTime: 2023-12-19 19:49:45
  * @Description: 插件容器
  * @FilePath: /memo/vite/viteBuild/src/core/plugInContainer.ts
  */
@@ -30,7 +30,6 @@ export class PlugInContainer {
     this.injectPlugin(new vitePluginMete(), opt);
     return this;
   }
-
 
   /**
    *

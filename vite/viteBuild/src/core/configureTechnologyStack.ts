@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:17:08
- * @LastEditTime: 2023-12-19 17:17:48
+ * @LastEditTime: 2023-12-19 19:57:41
  * @Description: 配置场景
  * @FilePath: /memo/vite/viteBuild/src/core/configureTechnologyStack.ts
  */
@@ -15,6 +15,7 @@ import { transformShortVmodel } from "@vue-macros/short-vmodel";
 import vueMacros from "unplugin-vue-macros/vite";
 import { PluginOption } from "vite";
 import printURL from "vite-plugin-print-urls";
+import { TurboConsole } from "../plugin/turboConsole";
 import injection from "./injection";
 
 export abstract class configureTechnologyStackTypes<T extends string = string> {
@@ -36,7 +37,12 @@ export type ConfigureTechnologyStack = "vue" | "react" | "uniapp" | ""
  */
 export class ConfigureVueTechnologyStack implements configureTechnologyStackTypes<"vue"> {
   initDefaultPlugin(): PluginOption {
+    const turboConsole = new TurboConsole().readConfiguration({
+      port: 8902,
+      prefix: 'memo.repo'
+    })
     return [
+      turboConsole.getPlugin(),
       legacy(),
       vueMacros({
         plugins: {
@@ -59,7 +65,7 @@ export class ConfigureVueTechnologyStack implements configureTechnologyStackType
     ]
   }
   configureTechnologyStack = "vue";
-   static getName: string = 'vue';
+  static getName: string = 'vue';
 }
 
 /**
@@ -67,7 +73,12 @@ export class ConfigureVueTechnologyStack implements configureTechnologyStackType
  */
 export class ConfigureReactTechnologyStack implements configureTechnologyStackTypes<"react"> {
   initDefaultPlugin(): PluginOption {
+    const turboConsole = new TurboConsole().readConfiguration({
+      port: 8902,
+      prefix: 'memo.repo'
+    })
     return [
+      turboConsole.getPlugin(),
       legacy(),
       reactSwcPlugin({ tsDecorators: true }),
       printURL() as PluginOption
@@ -111,7 +122,12 @@ export class ConfigureTechnologyStackUniApp implements configureTechnologyStackT
   async initDefaultPlugin(): Promise<PluginOption> {
     // @ts-ignore
     const uniPlugin = await import('@dcloudio/vite-plugin-uni')
+    const turboConsole = new TurboConsole().readConfiguration({
+      port: 8902,
+      prefix: 'memo.repo'
+    })
     return [
+      turboConsole.getPlugin(),
       uniPlugin()
     ]
   }
