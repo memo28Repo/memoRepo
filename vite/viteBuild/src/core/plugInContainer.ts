@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-28 11:45:50
- * @LastEditTime: 2023-12-19 19:49:45
+ * @LastEditTime: 2023-12-19 20:18:45
  * @Description: 插件容器
  * @FilePath: /memo/vite/viteBuild/src/core/plugInContainer.ts
  */
@@ -14,6 +14,7 @@ import { Pwa, PwaOpt } from "../plugin/pwa";
 import { SassDts, sassDtsOpt } from "../plugin/sassDts";
 import { UnPluginVueComponents, UnPluginVueComponentsOptions } from "../plugin/unpluginVueComponents";
 import { PluginVisualizerOptions, Visualizer } from "../plugin/visualizer";
+import { LogEnvPlugin, logEnvPluginOptions } from "../plugin/viteMsg";
 
 export interface PluginTypes<T = object> {
   config: T | undefined;
@@ -29,6 +30,18 @@ export class PlugInContainer {
   addHTMLMeta(opt?: Partial<vitePluginMetaOpt>): this {
     this.injectPlugin(new vitePluginMete(), opt);
     return this;
+  }
+
+  /**
+   * 
+   * 在终端将 {@link logEnvPluginOptions['strGetter']} 参数的返回值打印出来 可用于一些提示类功能 (env)
+   * 
+   * @returns 
+   * 
+   */
+  addLogEnvPlugin(opt?: logEnvPluginOptions) {
+    this.injectPlugin(new LogEnvPlugin(), opt)
+    return this
   }
 
   /**

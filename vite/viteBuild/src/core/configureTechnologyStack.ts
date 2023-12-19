@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-27 11:17:08
- * @LastEditTime: 2023-12-19 19:57:41
+ * @LastEditTime: 2023-12-19 20:14:15
  * @Description: 配置场景
  * @FilePath: /memo/vite/viteBuild/src/core/configureTechnologyStack.ts
  */

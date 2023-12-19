@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 3.0.7
+
+### Patch Changes
+
+- 新增viteLogEnvMsg插件 ，将信息展示在vite终端上时时刻刻。详情：https://github.com/PengBoUESTC/vite-plugin-msg-log
+
 ## 3.0.6
 
 ### Patch Changes
