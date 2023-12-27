@@ -16,6 +16,7 @@ import { UnPluginVueComponents, UnPluginVueComponentsOptions } from "../plugin/u
 import { PluginVisualizerOptions, Visualizer } from "../plugin/visualizer";
 import { LogEnvPlugin, logEnvPluginOptions } from "../plugin/viteMsg";
 import { RequireContext, requireContextOptions } from "../plugin/requireContext";
+import { EnvSwitch, envSwitchPluginPluginConfig } from "../plugin/envSwitch";
 
 export interface PluginTypes<T = object> {
   config: T | undefined;
@@ -28,7 +29,6 @@ export interface PluginTypes<T = object> {
 export class PlugInContainer {
   private plugInContainerList: PluginOption[] = [];
 
-
   /**
    *
    * 配置 require.context 插件
@@ -39,6 +39,19 @@ export class PlugInContainer {
    */
   addRequireContext(opt: requireContextOptions) {
     this.injectPlugin(new RequireContext(), opt);
+    return this;
+  }
+
+  /**
+   *
+   * 不用停止服务也可切换环境
+   *
+   * @see  https://github.com/PengBoUESTC/vite-plugin-env-switch
+   *
+   * @public
+   */
+  addEnvSwitch(opt: Partial<envSwitchPluginPluginConfig>) {
+    this.injectPlugin(new EnvSwitch(), opt);
     return this;
   }
 

@@ -59,6 +59,7 @@
     "unplugin-vue-components": "^0.25.1",
     "unplugin-vue-macros": "^2.4.2",
     "vite-plugin-browser-sync": "^1.0.3",
+    "vite-plugin-env-switch": "^1.2.2",
     "vite-plugin-inspect": "^0.7.35",
     "vite-plugin-msg-log": "^1.1.0",
     "vite-plugin-print-urls": "^0.1.2",
