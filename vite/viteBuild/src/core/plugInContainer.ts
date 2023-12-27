@@ -15,6 +15,7 @@ import { SassDts, sassDtsOpt } from "../plugin/sassDts";
 import { UnPluginVueComponents, UnPluginVueComponentsOptions } from "../plugin/unpluginVueComponents";
 import { PluginVisualizerOptions, Visualizer } from "../plugin/visualizer";
 import { LogEnvPlugin, logEnvPluginOptions } from "../plugin/viteMsg";
+import { RequireContext, requireContextOptions } from "../plugin/requireContext";
 
 export interface PluginTypes<T = object> {
   config: T | undefined;
@@ -27,21 +28,35 @@ export interface PluginTypes<T = object> {
 export class PlugInContainer {
   private plugInContainerList: PluginOption[] = [];
 
+
+  /**
+   *
+   * 配置 require.context 插件
+   *
+   * @see https://github.com/originjs/vite-plugins/tree/main/packages/vite-plugin-require-context
+   *
+   * @public
+   */
+  addRequireContext(opt: requireContextOptions) {
+    this.injectPlugin(new RequireContext(), opt);
+    return this;
+  }
+
   addHTMLMeta(opt?: Partial<vitePluginMetaOpt>): this {
     this.injectPlugin(new vitePluginMete(), opt);
     return this;
   }
 
   /**
-   * 
+   *
    * 在终端将 {@link logEnvPluginOptions['strGetter']} 参数的返回值打印出来 可用于一些提示类功能 (env)
-   * 
-   * @returns 
-   * 
+   *
+   * @returns
+   *
    */
   addLogEnvPlugin(opt?: logEnvPluginOptions) {
-    this.injectPlugin(new LogEnvPlugin(), opt)
-    return this
+    this.injectPlugin(new LogEnvPlugin(), opt);
+    return this;
   }
 
   /**
@@ -72,11 +87,11 @@ export class PlugInContainer {
 
   /**
    * auto import APIs on-demand for Vite, Webpack, Rollup and esbuild. With TypeScript support. Powered by unplugin.
-   * 
-   * 
+   *
+   *
    * @param { AutoHooksFinalConfiguration } opt {@link AutoHooksFinalConfiguration}
    * @remarks
-   * 
+   *
    * @see https://www.npmjs.com/package/unplugin-auto-import
    */
   addAutoHooks(opt?: AutoHooksFinalConfiguration): this {

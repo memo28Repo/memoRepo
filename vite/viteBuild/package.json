@@ -43,6 +43,7 @@
     "@memo28/types": "^1.1.6",
     "@memo28/utils": "workspace:^",
     "@memo28/vite-plugin-meta": "workspace:^",
+    "@originjs/vite-plugin-require-context": "^1.0.9",
     "@vitejs/plugin-legacy": "^4.1.1",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "@vitejs/plugin-vue": "^4.2.3",
