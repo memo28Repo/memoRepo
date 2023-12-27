@@ -20,5 +20,9 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "dependencies": {
+    "@memo28/types": "^1.1.6",
+    "@memo28/utils": "^1.2.4"
   }
 }
