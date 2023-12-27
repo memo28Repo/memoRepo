@@ -19,5 +19,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "@memo28/logs": "^0.1.1"
+  }
 }
