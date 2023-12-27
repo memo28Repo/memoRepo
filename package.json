@@ -12,7 +12,9 @@
   ],
   "scripts": {
     "updateDep": "turbo run updateDep --color",
+    "installAll": "pnpm install",
     "build": "turbo run build --color",
+    "build:watch": "turbo run build:watch --color",
     "links": "turbo run links --color",
     "test": "turbo run test --color",
     "test:vite": "turbo run test --filter='./vite/*' --color",

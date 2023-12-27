@@ -23,6 +23,9 @@
     },
     "build:md": {
       "cache": false
+    },
+    "build:watch": {
+      "cache": false
     }
   }
 }
