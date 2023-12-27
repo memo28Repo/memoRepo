@@ -4,6 +4,9 @@
 
 ```ts
 
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolverOptions } from 'unplugin-vue-components/resolvers';
+import { logEnvPlugin } from 'vite-plugin-msg-log';
 import { Options } from 'vite-plugin-inspect';
 import { PluginOption } from 'vite';
 import Plugins from 'vite-plugin-browser-sync';
@@ -18,6 +21,8 @@ import vitePlugins from 'unplugin-auto-import/vite';
 export class Engine {
     // Warning: (ae-forgotten-export) The symbol "PlugInContainer" needs to be exported by the entry point index.d.ts
     addPlugins(cb?: (container: Omit<PlugInContainer, "getPlugInContainerList">) => void): this;
+    // Warning: (ae-forgotten-export) The symbol "inspectOptions" needs to be exported by the entry point index.d.ts
+    debugger(opt?: Partial<inspectOptions>): this;
     getBuildConfig(config?: UserConfigExport): UserConfigExport;
     // Warning: (ae-forgotten-export) The symbol "ConfigureTechnologyStack" needs to be exported by the entry point index.d.ts
     setTechnologyStack<T extends ConfigureTechnologyStack = ConfigureTechnologyStack>(technology: T): this;

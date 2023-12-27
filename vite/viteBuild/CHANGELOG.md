@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 3.0.8
+
+### Patch Changes
+
+- 新增unplugin component 插件
+
 ## 3.0.7
 
 ### Patch Changes

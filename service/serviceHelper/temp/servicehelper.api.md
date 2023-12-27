@@ -37,8 +37,12 @@ export interface ConfigureSuffix {
     update: string;
 }
 
+// Warning: (ae-forgotten-export) The symbol "controllerOptTypes" needs to be exported by the entry point index.d.ts
+//
 // @public
-export function controller(url: string): (target: any) => void;
+export function controller(url: string, controllerOpt?: controllerOptTypes): <T extends new (...args: any[]) => {}>(constructor: T) => {
+    new (): {};
+} & T;
 
 // @public
 export type customTrigger<Req extends object, Res extends QuickCompletionCRUDAssistantResponse = QuickCompletionCRUDAssistantResponse> = (fn: Function, url: string, TriggerResult: TriggerResult<Req, Res>) => object;

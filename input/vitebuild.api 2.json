@@ -191,7 +191,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/vitebuild!Engine#addPlugins:member(1)",
-              "docComment": "/**\n * 添加插件\n *\n * @public\n */\n",
+              "docComment": "/**\n * @description 添加插件\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -256,70 +256,8 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@memo28/vitebuild!Engine#debugger:member(1)",
-              "docComment": "/**\n * 打开调试模式\n *\n * @public\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "debugger(opt?: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Partial",
-                  "canonicalReference": "!Partial:type"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<"
-                },
-                {
-                  "kind": "Reference",
-                  "text": "inspectOptions",
-                  "canonicalReference": "@memo28/vitebuild!~inspectOptions:type"
-                },
-                {
-                  "kind": "Content",
-                  "text": ">"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "this"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 6,
-                "endIndex": 7
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "opt",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 5
-                  },
-                  "isOptional": true
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "debugger"
-            },
-            {
-              "kind": "Method",
               "canonicalReference": "@memo28/vitebuild!Engine#getBuildConfig:member(1)",
-              "docComment": "/**\n * 获取配置\n *\n * @public\n */\n",
+              "docComment": "/**\n * @description 获取配置\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -369,7 +307,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/vitebuild!Engine#setTechnologyStack:member(1)",
-              "docComment": "/**\n * 选择技术栈 注入默认插件\n *\n * @public\n */\n",
+              "docComment": "/**\n * @description 选择技术栈 注入默认插件\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",

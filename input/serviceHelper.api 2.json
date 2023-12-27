@@ -511,20 +511,11 @@
             },
             {
               "kind": "Content",
-              "text": ", controllerOpt?: "
-            },
-            {
-              "kind": "Reference",
-              "text": "controllerOptTypes",
-              "canonicalReference": "@memo28/servicehelper!~controllerOptTypes:interface"
-            },
-            {
-              "kind": "Content",
               "text": "): "
             },
             {
               "kind": "Content",
-              "text": "<T extends new (...args: any[]) => {}>(constructor: T) => {\n    new (): {};\n} & T"
+              "text": "(target: any) => void"
             },
             {
               "kind": "Content",
@@ -533,8 +524,8 @@
           ],
           "fileUrlPath": "src/sliceRequest/controller.ts",
           "returnTypeTokenRange": {
-            "startIndex": 5,
-            "endIndex": 6
+            "startIndex": 3,
+            "endIndex": 4
           },
           "releaseTag": "Public",
           "overloadIndex": 1,
@@ -546,14 +537,6 @@
                 "endIndex": 2
               },
               "isOptional": false
-            },
-            {
-              "parameterName": "controllerOpt",
-              "parameterTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "isOptional": true
             }
           ],
           "name": "controller"

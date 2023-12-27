@@ -42,12 +42,23 @@ export interface ErrorsNewResultInfo extends Pick<NewOpt, 'classify'> {
 export class Injection<K = string> {
     constructor(target?: object);
     // (undocumented)
+    getKeys(): any[];
+    // (undocumented)
     getValue<V = unknown>(key: K): V;
     // (undocumented)
     setTarget(target: object): this;
     // (undocumented)
     setValue<V = unknown>(key: K, value: V): this;
 }
+
+// @public
+export function isArrayEmpty(val: unknown[]): boolean;
+
+// @public
+export function isEmpty(val: any): boolean;
+
+// @public
+export function isObjectEmpty(val: object): boolean;
 
 // @public
 export class Mail extends VerificationFlow<str> {
@@ -60,6 +71,9 @@ export class Mail extends VerificationFlow<str> {
 export interface NewOpt {
     classify?: number | string;
 }
+
+// @public (undocumented)
+export function NumberDerived(): void;
 
 // @public
 export type Panic<T = unknown> = [ErrorsNewResult | undefined | false | null | true, T];
@@ -94,6 +108,9 @@ export type readingWritingSeparationUtilsType<T extends object> = {
 
 // @public
 export function SNI(n: number | string | (number | string)[], value: any): boolean;
+
+// @public (undocumented)
+export function StringDerived(): void;
 
 // @public
 export class ValidationErrorCollection<T extends object> {
