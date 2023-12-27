@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 3.0.9
+
+### Patch Changes
+
+- 新增不用重启服务也可切换环境插件 envSwitch 和 增强在vite中使用 require.context 插件
+
 ## 3.0.8
 
 ### Patch Changes
