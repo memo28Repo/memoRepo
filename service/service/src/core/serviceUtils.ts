@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-22 09:13:31
- * @LastEditTime: 2023-09-22 10:45:29
+ * @LastEditTime: 2023-12-29 10:11:58
  * @Description:
- * @FilePath: /memo/packages/service/src/core/serviceUtils.ts
+ * @FilePath: /memo/service/service/src/core/serviceUtils.ts
  */
 import { Injection } from '@memo28/utils'
 import axios, { AxiosInstance } from 'axios'

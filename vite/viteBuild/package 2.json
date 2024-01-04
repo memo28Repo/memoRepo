@@ -1,0 +1,68 @@
+{
+  "name": "@memo28/vitebuild",
+  "version": "3.0.8",
+  "private": false,
+  "description": "vite config helper",
+  "main": "./lib/index",
+  "module": "./dist/index",
+  "types": "./dts/index.d.ts",
+  "scripts": {
+    "links": "pnpm link --global",
+    "build": "pnpm build:cjs && pnpm build:es",
+    "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
+    "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true",
+    "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --watch",
+    "build:es:watch": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true --watch",
+    "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
+    "updateDep": "sh ./update.sh"
+  },
+  "keywords": [
+    "vite",
+    "typescript",
+    "build"
+  ],
+  "author": "hooks_28",
+  "license": "MIT",
+  "devDependencies": {
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3000020210521001",
+    "vite": "^5.0.10",
+    "vue": "^3.3.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "./src",
+    "./dts",
+    "./dist",
+    "./lib"
+  ],
+  "dependencies": {
+    "@memo28/logs": "^0.1.1",
+    "@memo28/types": "^1.1.6",
+    "@memo28/utils": "workspace:^",
+    "@memo28/vite-plugin-meta": "workspace:^",
+    "@vitejs/plugin-legacy": "^4.1.1",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vue-macros/short-vmodel": "^1.2.14",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.1",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "sass": "^1.64.2",
+    "terser": "^5.19.2",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-turbo-console": "^1.0.9",
+    "unplugin-vue-components": "^0.25.1",
+    "unplugin-vue-macros": "^2.4.2",
+    "vite-plugin-browser-sync": "^1.0.3",
+    "vite-plugin-inspect": "^0.7.35",
+    "vite-plugin-msg-log": "^1.1.0",
+    "vite-plugin-print-urls": "^0.1.2",
+    "vite-plugin-pwa": "^0.16.4",
+    "vite-plugin-sass-dts": "^1.3.9",
+    "vite-plugin-uni": "link:@types/@dcloudio/vite-plugin-uni"
+  }
+}

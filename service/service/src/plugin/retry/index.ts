@@ -13,28 +13,28 @@ import { initializeConfigurationTypes } from "../../index";
 
 
 /**
- * 
+ *
  * 重试拦截器参数类型
- * 
+ *
  * @public
- * 
+ *
  */
 type retryOpt = {
   /**
-   * 
-   * 
+   *
+   *
    */
   retry: Partial<retryOptImpl>
 
   /**
-   * 
+   *
    * 重试回调函数
-   * 
+   *
    * @remarks
    * 重试回调成功时会触发
-   * 
+   *
    * @public
-   * 
+   *
    */
   onRetrySuc: onRetrySuc
 }
@@ -68,7 +68,6 @@ export class Retry extends RetryImpl {
     return config;
   }
 
-
   /**
    *
    * 响应错误回调
@@ -79,6 +78,6 @@ export class Retry extends RetryImpl {
    * @public
    */
   async responseFail(error: any, instance: AxiosInstance) {
-    super.responseFail(error, instance);
+    await super.responseFail(error, instance);
   }
 }

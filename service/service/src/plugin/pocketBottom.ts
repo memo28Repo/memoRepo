@@ -5,7 +5,7 @@
  * @Description:
  * @FilePath: /memo/packages/service/src/plugin/pocketBottom.ts
  */
-import { AxiosResponse } from "axios";
+import { AxiosResponse, AxiosError } from "axios";
 import { initializeConfigurationTypes } from "../types/engine";
 import { beforeTriggerResultTypes, triggerInterceptorImpl } from "../types/interceptor";
 
@@ -45,7 +45,8 @@ export class PocketValue implements triggerInterceptorImpl<pocketValueTypes, Axi
    *
    * @public
    */
-  isUnexpectedSituation(result: AxiosResponse, req: pocketValueTypes) {
+  isUnexpectedSituation(result: AxiosResponse | Error, req: pocketValueTypes) {
+    if (result instanceof Error || result instanceof AxiosError) return true;
     return typeof result === "object" && (Reflect.has(result, "syscall") || Reflect.has(result, "code")) && req?.pocketValue;
   }
 

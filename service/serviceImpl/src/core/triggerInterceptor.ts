@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-04-22 10:49:27
- * @LastEditTime: 2023-04-28 22:39:43
+ * @LastEditTime: 2024-01-04 17:55:02
  * @Description:
- * @FilePath: /memo/packages/serviceImpl/src/core/triggerInterceptor.ts
+ * @FilePath: /memo/service/serviceImpl/src/core/triggerInterceptor.ts
  */
 
 /**
@@ -14,9 +14,9 @@
  * @public
  *
  */
-export type triggerInterceptorImpl<Req = unknown, Res = unknown> = {
+export type triggerInterceptorImpl<Req = unknown, Res = unknown, B = unknown> = {
   displayName?: string
-  beforeTrigger?(config: Req): Promise<Res | void>
+  beforeTrigger?(config: Req): Promise<Res | void | beforeTriggerResultTypes<B>>
   afterTrigger?<T = unknown>(res: Res, req: Req): Promise<T | void>
   logsCallback?(type: 'afterTrigger' | 'beforeTrigger', data: void | Res | Req, res?: unknown): void
 }

@@ -5,10 +5,10 @@
  * @Description:
  * @FilePath: /memo/packages/service/src/core/triggerDispatch.ts
  */
+import { TriggerInterceptor } from '@memo28/serviceimpl'
 import { HttpLog, colors } from '../plugin/logs/utils'
 import { initializeConfigurationTypes, modulesImpl } from '../types/engine'
 import { beforeTriggerResultTypes, triggerInterceptorImpl } from '../types/interceptor'
-import { TriggerInterceptor } from '@memo28/serviceimpl'
 
 export class TriggerDispatch extends TriggerInterceptor<initializeConfigurationTypes, any> {
   constructor(list: modulesImpl['triggerInterceptor']) {

@@ -10,6 +10,9 @@
     "build": "pnpm build:cjs && pnpm build:es",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true ",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true ",
+    "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --watch",
+    "build:es:watch": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --watch",
+    "build:watch": "pnpm build:es:watch && pnpm build:cjs:watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
@@ -37,9 +40,6 @@
   "license": "MIT",
   "devDependencies": {
     "axios": "^1.4.0"
-  },
-  "peerDependencies": {
-    "axios": "^1.2.2"
   },
   "dependencies": {
     "@memo28/logs": "^0.1.1",
