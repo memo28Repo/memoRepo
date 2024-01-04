@@ -17,6 +17,8 @@ import { PluginVisualizerOptions, Visualizer } from "../plugin/visualizer";
 import { LogEnvPlugin, logEnvPluginOptions } from "../plugin/viteMsg";
 import { RequireContext, requireContextOptions } from "../plugin/requireContext";
 import { EnvSwitch, envSwitchPluginPluginConfig } from "../plugin/envSwitch";
+import { ImageOptimizer, viteImageOptimizerOption } from "../plugin/imageOptimizer";
+
 
 export interface PluginTypes<T = object> {
   config: T | undefined;
@@ -28,6 +30,22 @@ export interface PluginTypes<T = object> {
 
 export class PlugInContainer {
   private plugInContainerList: PluginOption[] = [];
+
+  /**
+   *
+   * 优化图片资源配置
+   *
+   * 手动安装 sharp 或者 svgo
+   *
+   * @see https://github.com/FatehAK/vite-plugin-image-optimizer
+   *
+   * @public
+   *
+   */
+  addImageOptimizer(opt: viteImageOptimizerOption) {
+    this.injectPlugin(new ImageOptimizer(), opt);
+    return this
+  }
 
   /**
    *

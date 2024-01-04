@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 3.0.10
+
+### Patch Changes
+
+- 新增图片优化器插件。see：https://github.com/FatehAK/vite-plugin-image-optimizer
+
 ## 3.0.9
 
 ### Patch Changes
