@@ -105,7 +105,6 @@ export class RetryImpl<R extends object = object, RS = unknown, Ins extends obje
       currentState.startRetry = true;
       const delay = retryDelay;
       this.checkRetry.fixConfig(instance, config);
-
       if (!shouldResetTimeout && config.timeout && currentState.lastRequestTime) {
         const lastRequestDuration = Date.now() - currentState.lastRequestTime;
         const timeout = config.timeout - lastRequestDuration - delay;

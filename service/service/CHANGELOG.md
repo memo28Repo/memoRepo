@@ -1,5 +1,11 @@
 # @memo28/service
 
+## 4.1.2
+
+### Patch Changes
+
+- cache新增cacheImpl参数用于更多数据结构持久缓存
+
 ## 4.1.1
 
 ### Patch Changes

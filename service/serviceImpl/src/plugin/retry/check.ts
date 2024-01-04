@@ -153,6 +153,8 @@ export class CheckRetry<Err extends ErrInstance = ErrInstance, Instance extends 
   async shouldRetry(retries: number, retryCondition: Function, currentState: getCurrentStateResponse, error: Err) {
     const shouldRetryOrPromise = currentState.retryCount < retries && retryCondition(error);
 
+    console.log(shouldRetryOrPromise,'shouldRetryOrPromise')
+
     if (typeof shouldRetryOrPromise === "object") {
       try {
         const shouldRetryPromiseResult = await shouldRetryOrPromise;
