@@ -25,6 +25,7 @@ export { RetData } from "./plugin/RetData";
 export { MultiVersionSwitching, multiVersionSwitchingRequest } from "./plugin/multiVersionSwitching";
 
 export { Cache, CacheConfig, CachePrerequisites, CacheTrigger, ExpirationTime, requestConfig } from "./plugin/cache";
+export {LocalCache} from './plugin/cache/impl/local'
 
 export { Logs } from "./plugin/logs/index";
 

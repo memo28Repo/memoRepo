@@ -23,11 +23,11 @@ export { CacheConfig, ExpirationTime, requestConfig };
 
 
 /**
- * 
+ *
  * 缓存先决条件判断类
- * 
+ *
  * @public
- * 
+ *
  */
 export class CachePrerequisites {
   private config: initializeConfigurationTypes = {};
@@ -43,6 +43,8 @@ export class CachePrerequisites {
 
   useCache() {
     const rule = this.config.cacheRules?.(this.config) || defaultCacheRule(this.config);
+
+    cacheHandler.setCacheConfig(this.config)
     if (this.config.useCache && cacheHandler.cachedAndAvailable(rule)) {
       return [true, cacheHandler.getCache(rule)?.cacheDate];
     }
@@ -51,9 +53,9 @@ export class CachePrerequisites {
 }
 
 /**
- * 
+ *
  * 缓存拦截器
- * 
+ *
  * @public
  */
 export class Cache implements interceptorImpl {
@@ -78,7 +80,7 @@ export class Cache implements interceptorImpl {
 
     if ((req.useCache || !cacheHandler.hasCache(rule)) && req.cacheExpirationTime) {
       // ((启用缓存 || 没有缓存 if=== true) if=== true) && 缓存时间戳
-      cacheHandler.preAddACache(rule, { cacheExpirationTime: req.cacheExpirationTime || 0 });
+      cacheHandler.preAddACache(rule, { cacheImpl: req.cacheImpl, cacheExpirationTime: req.cacheExpirationTime || 0 });
     }
 
     return req;
@@ -86,23 +88,23 @@ export class Cache implements interceptorImpl {
 }
 
 /**
- * 
+ *
  * 触发请求前后置 缓存 模块
- * 
+ *
  * @remarks
  * - 触发请求前 会判断 当前路由缓存存在  存在并且未过期则 不触发请求 直接返回缓存结果
- * 
+ *
  * @public
  */
 export class CacheTrigger implements triggerInterceptorImpl {
   displayName: string = "CacheTrigger";
 
   /**
-   * 
+   *
    * 发送请求前回调判断缓存是否存在 且可用
-   * 
+   *
    * @param { initializeConfigurationTypes } config  - 请求配置
-   * 
+   *
    * @public
    */
   beforeTrigger(config: initializeConfigurationTypes): any | beforeTriggerResultTypes<any> {
@@ -123,12 +125,12 @@ export class CacheTrigger implements triggerInterceptorImpl {
 
 
   /**
-   * 
+   *
    * 触发缓存前后置回调后的 `log` 回调
-   * 
+   *
    * @param { "afterTrigger" | "beforeTrigger" } type - 前后置触发拦截器类型
    * @param { void | initializeConfigurationTypes | beforeTriggerResultTypes<unknown>} data 传递的参数
-   * 
+   *
    * @public
    */
   logsCallback(type: "afterTrigger" | "beforeTrigger", data: void | initializeConfigurationTypes | beforeTriggerResultTypes<unknown>): void {
