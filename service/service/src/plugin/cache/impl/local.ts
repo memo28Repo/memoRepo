@@ -37,12 +37,14 @@ export class LocalCache implements CacheImpl {
     const getList = localStorage.getItem(cacheTable.cacheTable);
 
     if (!getList) {
-      const insert =  JSON.stringify([meta])
+      const insert = JSON.stringify([meta]);
       localStorage.setItem(cacheTable.cacheTable, insert);
       return;
     }
 
-    const insertAll =  JSON.stringify([meta, ...this.getMetaCache()])
+    const insertAll = JSON.stringify([meta, ...this.getMetaCache().filter(i => i.rule !== meta.rule)]);
+
+
     localStorage.setItem(cacheTable.cacheTable, insertAll);
 
   }

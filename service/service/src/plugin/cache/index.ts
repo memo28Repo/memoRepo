@@ -45,6 +45,7 @@ export class CachePrerequisites {
     const rule = this.config.cacheRules?.(this.config) || defaultCacheRule(this.config);
 
     cacheHandler.setCacheConfig(this.config)
+
     if (this.config.useCache && cacheHandler.cachedAndAvailable(rule)) {
       return [true, cacheHandler.getCache(rule)?.cacheDate];
     }
@@ -113,11 +114,12 @@ export class CacheTrigger implements triggerInterceptorImpl {
       // 满足缓存先决条件
       // 尝试使用缓存
       const [cacheExists, cache] = cachePrerequisites.useCache();
+      console.log(cacheExists,'cacheExists')
       if (cacheExists) {
-        const logs = new HttpLog(config);
-        // console.groupCollapsed(`%c triggerInterceptorImpl:CacheTrigger:beforeTrigger`, `color: ${colors.triggerFrontAndRearTnterceptors}`)
-        // console.log('use cache!', config)
-        // console.groupEnd()
+        // const logs = new HttpLog(config);
+        console.groupCollapsed(`%c triggerInterceptorImpl:CacheTrigger:beforeTrigger`, `color: ${colors.triggerFrontAndRearTnterceptors}`)
+        console.log('use cache!', config)
+        console.groupEnd()
         return { directReturnValue: true, data: cache };
       }
     }

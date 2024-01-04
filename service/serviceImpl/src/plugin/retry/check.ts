@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-05-13 09:15:44
- * @LastEditTime: 2023-05-13 21:12:09
+ * @LastEditTime: 2024-01-04 21:43:49
  * @Description:
- * @FilePath: /memo/packages/serviceImpl/src/plugin/retry/check.ts
+ * @FilePath: /playground/Users/devops/Desktop/monorepo/memo/service/serviceImpl/src/plugin/retry/check.ts
  */
 
 import isRetryAllowed from "./isRetryAllowed";
@@ -31,7 +31,7 @@ export interface getRequestOptionsResponse<Err = ErrInstance, Config = object> {
   retries: number
   retryCondition: (error: Err) => boolean,
   retryDelay: number,
-  shouldResetTimeout: false
+  shouldResetTimeout: boolean
   onRetry: (count: number, error: Err, config: Config) => void
 }
 
