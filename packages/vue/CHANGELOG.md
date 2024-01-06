@@ -1,5 +1,11 @@
 # @memo28/vue
 
+## 0.1.3
+
+### Patch Changes
+
+- 新增 callComponentGlobally 函数提供使用api创建组件的方式 只在浏览器环境下可用。不支持uniapp
+
 ## 0.1.2
 
 ### Patch Changes
