@@ -17,13 +17,14 @@ import { PluginOption } from "vite";
 import printURL from "vite-plugin-print-urls";
 import { TurboConsole } from "../plugin/turboConsole";
 import injection from "./injection";
+import { dynamicallyAllocatedPort } from "./dynamicallyAllocatedPort";
 
 export abstract class configureTechnologyStackTypes<T extends string = string> {
   abstract configureTechnologyStack: string | T; //  配置技术栈
   /**
-   * 
+   *
    * 初始化默认插件
-   * 
+   *
    * @public
    */
   abstract initDefaultPlugin(): PluginOption | Promise<PluginOption>
@@ -36,9 +37,9 @@ export type ConfigureTechnologyStack = "vue" | "react" | "uniapp" | ""
  * @description 配置vue
  */
 export class ConfigureVueTechnologyStack implements configureTechnologyStackTypes<"vue"> {
-  initDefaultPlugin(): PluginOption {
+  async initDefaultPlugin(): Promise<PluginOption> {
     const turboConsole = new TurboConsole().readConfiguration({
-      port: 8902,
+      port: await dynamicallyAllocatedPort(),
       prefix: 'memo.repo'
     })
     return [
@@ -72,9 +73,9 @@ export class ConfigureVueTechnologyStack implements configureTechnologyStackType
  * 配置react场景
  */
 export class ConfigureReactTechnologyStack implements configureTechnologyStackTypes<"react"> {
-  initDefaultPlugin(): PluginOption {
+  async initDefaultPlugin(): Promise<PluginOption> {
     const turboConsole = new TurboConsole().readConfiguration({
-      port: 8902,
+      port: await dynamicallyAllocatedPort(),
       prefix: 'memo.repo'
     })
     return [
@@ -123,7 +124,7 @@ export class ConfigureTechnologyStackUniApp implements configureTechnologyStackT
     // @ts-ignore
     const uniPlugin = await import('@dcloudio/vite-plugin-uni')
     const turboConsole = new TurboConsole().readConfiguration({
-      port: 8902,
+      port: await dynamicallyAllocatedPort(),
       prefix: 'memo.repo'
     })
     return [

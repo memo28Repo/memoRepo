@@ -1,6 +1,6 @@
 {
   "name": "@memo28/vitebuild",
-  "version": "3.0.10",
+  "version": "3.0.11",
   "private": false,
   "description": "vite config helper",
   "main": "./lib/index",
@@ -9,6 +9,7 @@
   "scripts": {
     "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
+    "build:watch": "pnpm build:es:watch & pnpm build:cjs:watch",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
     "build:es": "tsc --module commonjs --rootDir ./src --outDir ./dist --experimentalDecorators true",
     "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --watch",
