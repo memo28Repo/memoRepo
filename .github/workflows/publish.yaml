@@ -34,3 +34,6 @@ jobs:
 
       - name: publish
         run: pnpm changeset publish
+
+      - name: tags
+        run: git push --tag
