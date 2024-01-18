@@ -46,6 +46,7 @@ export class PocketValue implements triggerInterceptorImpl<pocketValueTypes, Axi
    * @public
    */
   isUnexpectedSituation(result: AxiosResponse | Error, req: pocketValueTypes) {
+    // @ts-ignore
     if (result instanceof Error || result instanceof AxiosError || result instanceof CanceledError || result?.name === "AxiosError") return true;
     if (typeof result === "object" && Reflect.has(result, "syscall")) return req?.pocketValue;
     return false;
