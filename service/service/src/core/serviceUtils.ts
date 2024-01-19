@@ -5,17 +5,17 @@
  * @Description:
  * @FilePath: /memo/service/service/src/core/serviceUtils.ts
  */
-import { Injection } from '@memo28/utils'
-import axios, { AxiosInstance } from 'axios'
-import { Interceptor } from '../interceptor/core'
-import { Logs } from '../plugin/logs'
-import { PocketValue } from '../plugin/pocketBottom'
-import { initializeConfigurationTypes, modulesImpl } from '../types/engine'
-import { getInitializeConfigurationValues } from './config'
-import { GenerateSchedulingAxios } from './instantiation'
-import { getModulesValues } from './modules'
+import { Injection } from "@memo28/utils";
+import axios, { AxiosDefaults, AxiosHeaderValue, AxiosInstance, HeadersDefaults } from "axios";
+import { Interceptor } from "../interceptor/core";
+import { Logs } from "../plugin/logs";
+import { PocketValue } from "../plugin/pocketBottom";
+import { initializeConfigurationTypes, modulesImpl } from "../types/engine";
+import { getInitializeConfigurationValues } from "./config";
+import { GenerateSchedulingAxios } from "./instantiation";
+import { getModulesValues } from "./modules";
 
-export let debug = false
+export let debug = false;
 
 
 /**
@@ -28,8 +28,8 @@ export let debug = false
  * @public
  */
 export class ServiceUtils<T extends object> {
-  private injection = new Injection<getModulesValues | getInitializeConfigurationValues>(this)
-  private axios: null | AxiosInstance = null
+  private injection = new Injection<getModulesValues | getInitializeConfigurationValues>(this);
+  private axios: null | AxiosInstance = null;
 
 
   /**
@@ -42,9 +42,9 @@ export class ServiceUtils<T extends object> {
    * @public
    */
   modules(opt: Partial<modulesImpl>) {
-    this.injection.setValue('interceptorModule', [Logs, ...(opt.interceptorModule || [])])
-    this.injection.setValue('triggerInterceptor', [...(opt.triggerInterceptor || []), PocketValue])
-    return this
+    this.injection.setValue("interceptorModule", [Logs, ...(opt.interceptorModule || [])]);
+    this.injection.setValue("triggerInterceptor", [...(opt.triggerInterceptor || []), PocketValue]);
+    return this;
   }
 
 
@@ -55,9 +55,9 @@ export class ServiceUtils<T extends object> {
    * @public
    */
   initializeConfiguration(opt: initializeConfigurationTypes & T) {
-    this.injection.setValue('initializeConfiguration', opt)
-    debug = opt.debugger || false
-    return this
+    this.injection.setValue("initializeConfiguration", opt);
+    debug = opt.debugger || false;
+    return this;
   }
 
 
@@ -68,9 +68,24 @@ export class ServiceUtils<T extends object> {
    * @public
    */
   instantiation() {
-    this.axios = axios.create(this.injection.getValue('initializeConfiguration'))
-    new Interceptor(this.injection, this.axios)
-    return this
+    this.axios = axios.create(this.injection.getValue("initializeConfiguration"));
+    new Interceptor(this.injection, this.axios);
+    return this;
+  }
+
+
+  setDefaultConfig(config: Partial<Omit<AxiosDefaults, "headers"> & {
+    headers: HeadersDefaults & {
+      [key: string]: AxiosHeaderValue
+    }
+  }>) {
+    this.injection.setValue("initializeConfiguration", {
+      ...this.injection.getValue("initializeConfiguration") || {},
+      ...config
+    });
+
+    this.instantiation();
+    return this;
   }
 
 
@@ -86,16 +101,16 @@ export class ServiceUtils<T extends object> {
         this.injection,
         {
           ...req,
-          ...this.injection.getValue('initializeConfiguration'),
+          ...this.injection.getValue("initializeConfiguration")
         },
         this.axios as AxiosInstance
-      )
-      const beforeTriggeringInterceptionResponse = await generateSchedulingAxios.beforeTriggeringInterception()
+      );
+      const beforeTriggeringInterceptionResponse = await generateSchedulingAxios.beforeTriggeringInterception();
       // 如果 value 不是 GenerateSchedulingAxios的实例 表示存在中途推出的情况, 直接返回
       if (!(beforeTriggeringInterceptionResponse instanceof GenerateSchedulingAxios)) {
-        return beforeTriggeringInterceptionResponse
+        return beforeTriggeringInterceptionResponse;
       }
-      return (await beforeTriggeringInterceptionResponse.triggerRequest()).afterTriggeringInterception()
-    }
+      return (await beforeTriggeringInterceptionResponse.triggerRequest()).afterTriggeringInterception();
+    };
   }
 }
