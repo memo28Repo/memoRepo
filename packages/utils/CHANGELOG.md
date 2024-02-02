@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.2.6
+
+### Patch Changes
+
+- 新增String，Number扩展方法和新增Emoji和Chinese验证方法
+
 ## 1.2.5
 
 ### Patch Changes

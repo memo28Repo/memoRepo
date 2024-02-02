@@ -43,7 +43,7 @@ abstract class Verify<T = unknown> {
   abstract verification(args?: T): Panic<T>
 }
 
-type storeEmit = Record<'phone', reportType<str>> & Record<'mail', reportType<str>>
+type storeEmit = Record<'phone', reportType<str>> & Record<'mail', reportType<str>> & Record<'emoji', reportType<str>>
 
 type keysForStoreEmit = keyof storeEmit
 
