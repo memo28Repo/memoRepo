@@ -30,6 +30,9 @@ export type Extends<E, V> = E extends V ? true : false;
 export type fn<P extends any[] = any, R = unknown> = (...args: P) => R;
 
 // @public
+export type Get<T extends Record<string, any>, K extends string, P = keyof T> = K extends P ? T[K] : K extends `${infer L}.${infer R}` ? L extends P ? Get<T[L], R> : never : never;
+
+// @public
 export type getKeys<T extends obj> = Equal<T, any[]> extends true ? never : keyof T;
 
 // @public
@@ -49,6 +52,9 @@ export type mergeFnWithPromiseFn<T = unknown, P extends any[] = any, isP extends
 
 // @public
 export type obj = object;
+
+// @public
+export type ObjectKeyPaths<T, K extends keyof T = keyof T & (string | number)> = K | (K extends string | number ? T[K] extends object ? `${K}${ObjectKeyPaths<T[K]> extends infer L extends string | number ? `.${L}` | (L extends number ? `${"." | ""}[${L}]` : never) : never}` : never : never);
 
 // @public
 export type objWithValue<T> = {

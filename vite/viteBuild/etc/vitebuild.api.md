@@ -8,12 +8,15 @@ import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolverOptions } from 'unplugin-vue-components/resolvers';
 import { logEnvPlugin } from 'vite-plugin-msg-log';
 import { Options } from 'vite-plugin-inspect';
+import { PluginConfig } from 'vite-plugin-env-switch';
 import { PluginOption } from 'vite';
 import Plugins from 'vite-plugin-browser-sync';
 import { default as Plugins_2 } from 'vite-plugin-pwa';
 import { default as Plugins_3 } from 'vite-plugin-sass-dts';
 import { PluginVisualizerOptions } from 'rollup-plugin-visualizer';
+import requireContext from '@originjs/vite-plugin-require-context';
 import { UserConfigExport } from 'vite';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { vitePluginMetaOpt } from '@memo28/vite-plugin-meta';
 import vitePlugins from 'unplugin-auto-import/vite';
 
