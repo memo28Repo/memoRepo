@@ -1,6 +1,6 @@
 {
   "name": "@memo28/vitebuild",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "private": false,
   "description": "vite config helper",
   "main": "./lib/index",
@@ -41,7 +41,7 @@
   ],
   "dependencies": {
     "@memo28/logs": "^0.1.1",
-    "@memo28/types": "^1.1.6",
+    "@memo28/types": "^1.1.7",
     "@memo28/utils": "workspace:^",
     "@memo28/vite-plugin-meta": "workspace:^",
     "@originjs/vite-plugin-require-context": "^1.0.9",

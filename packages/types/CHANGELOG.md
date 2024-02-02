@@ -1,5 +1,11 @@
 # @memo28/types
 
+## 1.1.7
+
+### Patch Changes
+
+- 新增备注和utils.readingWritingSeparationDecor变量重命名
+
 ## 1.1.6
 
 ### Patch Changes

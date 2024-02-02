@@ -79,6 +79,8 @@ export type objWithValue<T> = { [key: string]: T }
 
 /**
  *
+ * 获取对象某个值的类型
+ *
  * ```ts
  * type S = {
  *     name: string;

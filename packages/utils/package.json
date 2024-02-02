@@ -1,6 +1,6 @@
 {
   "name": "@memo28/utils",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "private": false,
   "description": "",
   "main": "./lib/index.js",

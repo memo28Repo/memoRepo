@@ -26,7 +26,7 @@ export declare type fn<P extends any[] = any, R = unknown> = (...args: P) => R
  *
  * @example
  * ```ts
- * type f = fn<[number,string],void> // (number,string) => Promise<void>
+ * type f = promiseFn<[number,string],void> // (number,string) => Promise<void>
  * ```
  * @typeParam P - 参数类型 示例`[number, string]`
  *

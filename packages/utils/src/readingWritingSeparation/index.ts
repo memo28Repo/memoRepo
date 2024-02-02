@@ -47,7 +47,7 @@ function capitalizeFirstLetter(name: string) {
  * @public
  *
  */
-export function readingWritingSeparationDetor(target: object, key: string) {
+export function readingWritingSeparationDecor(target: object, key: string) {
   const fmtName = capitalizeFirstLetter(key);
 
 
