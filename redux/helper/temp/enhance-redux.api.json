@@ -1,0 +1,3199 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.34.4",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@memo28/enhance-redux!",
+  "docComment": "/**\n * 增强redux 皆指减少 redux 的样板式代码 让更新更加简单\n *\n * @packageDocumentation\n */\n",
+  "name": "@memo28/enhance-redux",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@memo28/enhance-redux!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!CreateAction:class",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class CreateAction<O extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionMapperType",
+              "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "> implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionImpl",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<O>"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/core/createAction.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "O",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "isAbstract": false,
+          "name": "CreateAction",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateAction#actionIterator:member(1)",
+              "docComment": "/**\n * `actions` 迭代器\n *\n * @param callback - 遍历集合 传入 `action.type`\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "actionIterator(callback?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "fn",
+                  "canonicalReference": "@memo28/types!fn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<[string], void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "callback",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "actionIterator"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateAction#addAction:member(1)",
+              "docComment": "/**\n * 新增 action 链式调用\n *\n * @paramType Obj - `payload` 对象\n *\n * @paramType Type - `action.type`\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addAction<Obj extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", Type extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CreateAction",
+                  "canonicalReference": "@memo28/enhance-redux!CreateAction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<O & "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createActionMapperType",
+                  "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Type, Obj>>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "Obj",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                },
+                {
+                  "typeParameterName": "Type",
+                  "constraintTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 11
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "type",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addAction"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateAction#getAction:member(1)",
+              "docComment": "/**\n * 获取某一个 `action` 函数\n * ```ts\n *  const action = new CreateAction().add<{ age: string }>(\"type\").getAction(\"type\");\n *  action?.({ age: \"12\" })\n * ```\n *\n * @param type - \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getAction<K extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "keyof O"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "K"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "O[K]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "K",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "type",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getAction"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateAction#getAllActions:member(1)",
+              "docComment": "/**\n * 获取所有 `actions` 集合\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getAllActions(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "O"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getAllActions"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 3,
+              "endIndex": 5
+            }
+          ]
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!createActionImpl:class",
+          "docComment": "/**\n * @paramType O - `actions` 集合类型\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare abstract class createActionImpl<O extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionMapperType",
+              "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<\"\", {}>"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/core/createActionImpl.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "O",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "isAbstract": true,
+          "name": "createActionImpl",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl#actionIterator:member(1)",
+              "docComment": "/**\n * `actions` 迭代器\n *\n * @param callback - 遍历集合 传入 `action.type`\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract actionIterator(callback?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "fn",
+                  "canonicalReference": "@memo28/types!fn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<[string], void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "callback",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "actionIterator"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl#addAction:member(1)",
+              "docComment": "/**\n * 新增 action 链式调用\n *\n * @paramType Obj - `payload` 对象\n *\n * @paramType Type - `action.type`\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract addAction<Obj extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", Type extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createActionImpl",
+                  "canonicalReference": "@memo28/enhance-redux!createActionImpl:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<O & "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createActionMapperType",
+                  "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<Type, Obj>>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "Obj",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                },
+                {
+                  "typeParameterName": "Type",
+                  "constraintTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 11
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "type",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "addAction"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl#getAction:member(1)",
+              "docComment": "/**\n * 获取某一个 `action` 函数\n *\n * @param type - \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract getAction<K extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "keyof O"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "K"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "O[K]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "K",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "type",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "getAction"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl#getAllActions:member(1)",
+              "docComment": "/**\n * 获取所有 `actions` 集合\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract getAllActions(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "O"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "getAllActions"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!CreateCase:class",
+          "docComment": "/**\n * 详情见 {@link createCaseImpl}\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class CreateCase<A extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionImpl",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionMapperType",
+              "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<\"\", {}>>"
+            },
+            {
+              "kind": "Content",
+              "text": ", S extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": "> implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "createCaseImpl",
+              "canonicalReference": "@memo28/enhance-redux!createCaseImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<S, A>"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/core/createCase.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "A",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "S",
+              "constraintTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 8,
+                "endIndex": 9
+              }
+            }
+          ],
+          "isAbstract": false,
+          "name": "CreateCase",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateCase#addCase:member(1)",
+              "docComment": "/**\n * 详情见 {@link createCaseImpl.addCase}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addCase<Type extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "keyof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReturnType",
+                  "canonicalReference": "!ReturnType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<A[\"getAllActions\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", handler: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "fn",
+                  "canonicalReference": "@memo28/types!fn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<[state: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Draft",
+                  "canonicalReference": "immer!Draft:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S>, action: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createCaseImplAction",
+                  "canonicalReference": "@memo28/enhance-redux!~createCaseImplAction:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<A, Type>], void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "Type",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 14,
+                "endIndex": 15
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "type",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "handler",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 13
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addCase"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateCase#getCaseCollection:member(1)",
+              "docComment": "/**\n * 详情见 {@link createCaseImpl.getCaseCollection}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getCaseCollection(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Partial",
+                  "canonicalReference": "!Partial:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "caseCollection",
+                  "canonicalReference": "@memo28/enhance-redux!~caseCollection:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, A>>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getCaseCollection"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateCase#getCaseItem:member(1)",
+              "docComment": "/**\n * 详情见 {@link createCaseImpl.getCaseItem}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getCaseItem<Type extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "keyof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReturnType",
+                  "canonicalReference": "!ReturnType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<A[\"getAllActions\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "fn",
+                  "canonicalReference": "@memo28/types!fn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<["
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Draft",
+                  "canonicalReference": "immer!Draft:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S>, "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createCaseImplAction",
+                  "canonicalReference": "@memo28/enhance-redux!~createCaseImplAction:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<A, Type>], void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "Type",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 13
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "type",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getCaseItem"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 10,
+              "endIndex": 12
+            }
+          ]
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!createCaseImpl:class",
+          "docComment": "/**\n * 通过链式调用 创建 `reducer` 不同 `action` 的 抽象类\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare abstract class createCaseImpl<S extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ", A extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionImpl",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionMapperType",
+              "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<\"\", {}>>"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/core/createCaseImpl.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "S",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "A",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "isAbstract": true,
+          "name": "createCaseImpl",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createCaseImpl#addCase:member(1)",
+              "docComment": "/**\n * 新增 一个 `reducer action handler`\n *\n * @remarks\n * ```\n * addCase(\"actionType\",function(state, action) { })\n * ```\n *\n * @param type - 根据传入的 {@link createActionImpl} 验证 `type` 传入 参数\n *\n * @param handler - 将传入 `builder.addCase` 的第二个参数 用于对应 `action` 的 `reducer`\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract addCase<Type extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "keyof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReturnType",
+                  "canonicalReference": "!ReturnType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<A[\"getAllActions\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", handler: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "fn",
+                  "canonicalReference": "@memo28/types!fn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<["
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Draft",
+                  "canonicalReference": "immer!Draft:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S>, "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createCaseImplAction",
+                  "canonicalReference": "@memo28/enhance-redux!~createCaseImplAction:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<A, Type>], void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "Type",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 14,
+                "endIndex": 15
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "type",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "handler",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 13
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "addCase"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createCaseImpl#getCaseCollection:member(1)",
+              "docComment": "/**\n * 获取所有 `case` 相关 `reducer` 的集合\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract getCaseCollection(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Partial",
+                  "canonicalReference": "!Partial:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "caseCollection",
+                  "canonicalReference": "@memo28/enhance-redux!~caseCollection:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, A>>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "getCaseCollection"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createCaseImpl#getCaseItem:member(1)",
+              "docComment": "/**\n * 获取某个 `action` 具体的 `handler`\n *\n * @param type - `action.type`\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract getCaseItem<Type extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "keyof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReturnType",
+                  "canonicalReference": "!ReturnType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<A[\"getAllActions\"]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "fn",
+                  "canonicalReference": "@memo28/types!fn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<["
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Draft",
+                  "canonicalReference": "immer!Draft:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S>, "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createCaseImplAction",
+                  "canonicalReference": "@memo28/enhance-redux!~createCaseImplAction:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<A, Type>], void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "Type",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 13
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "type",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "getCaseItem"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!CreateSlice:class",
+          "docComment": "/**\n * 详情见 {@link createSliceImpl}\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class CreateSlice<S extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ", N extends "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ", A extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionImpl",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionMapperType",
+              "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionImpl",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionMapperType",
+              "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": "> implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "createSliceImpl",
+              "canonicalReference": "@memo28/enhance-redux!createSliceImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<S, N, A>"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/core/createSlice.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "S",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "N",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "A",
+              "constraintTokenRange": {
+                "startIndex": 5,
+                "endIndex": 9
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 14
+              }
+            }
+          ],
+          "isAbstract": false,
+          "name": "CreateSlice",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@memo28/enhance-redux!CreateSlice:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `CreateSlice` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "N"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", state: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "S"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", actions: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "A"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", cases?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createCaseImpl",
+                  "canonicalReference": "@memo28/enhance-redux!createCaseImpl:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, A> | undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "name",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "state",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "actions",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "cases",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 9
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateSlice#done:member(1)",
+              "docComment": "/**\n * 详情见 {@link createSliceImpl.done}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "done(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Slice",
+                  "canonicalReference": "@reduxjs/toolkit!Slice:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SliceCaseReducers",
+                  "canonicalReference": "@reduxjs/toolkit!SliceCaseReducers:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S>, N>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "done"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateSlice#getActions:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getActions(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "A"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getActions"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateSlice#getSliceName:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getSliceName(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "N"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getSliceName"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!CreateSlice#getState:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getState(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "S"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getState"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 15,
+              "endIndex": 17
+            }
+          ]
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!createSliceImpl:class",
+          "docComment": "/**\n * 创建 `slice` 抽象类\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare abstract class createSliceImpl<S extends "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", N extends "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", A extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionImpl",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionMapperType",
+              "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionImpl",
+              "canonicalReference": "@memo28/enhance-redux!createActionImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "createActionMapperType",
+              "canonicalReference": "@memo28/enhance-redux!~createActionMapperType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/core/createSliceImpl.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "S",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            },
+            {
+              "typeParameterName": "N",
+              "constraintTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              }
+            },
+            {
+              "typeParameterName": "A",
+              "constraintTokenRange": {
+                "startIndex": 9,
+                "endIndex": 13
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 14,
+                "endIndex": 18
+              }
+            }
+          ],
+          "isAbstract": true,
+          "name": "createSliceImpl",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createSliceImpl#done:member(1)",
+              "docComment": "/**\n * 根据传入的 {@link createActionImpl} {@link createCaseImpl} `name` `state` 处理返回 {@link Slice}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract done(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Slice",
+                  "canonicalReference": "@reduxjs/toolkit!Slice:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Reducer",
+                  "canonicalReference": "redux!Reducer:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S>, N>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "done"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createSliceImpl#getActions:member(1)",
+              "docComment": "/**\n * 获取 actions 的所有信息\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract getActions(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "A"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "getActions"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createSliceImpl#getSliceName:member(1)",
+              "docComment": "/**\n * 获取 slice name\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract getSliceName(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "N"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "getSliceName"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!createSliceImpl#getState:member(1)",
+              "docComment": "/**\n * 获取 state\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract getState(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "S"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "getState"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!DefaultMiddleware:class",
+          "docComment": "/**\n * 默认中间件\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class DefaultMiddleware<S = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", M extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Middlewares",
+              "canonicalReference": "@memo28/enhance-redux!~Middlewares:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<S>"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "["
+            },
+            {
+              "kind": "Reference",
+              "text": "ThunkMiddlewareFor",
+              "canonicalReference": "@reduxjs/toolkit!ThunkMiddlewareFor:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<S>]"
+            },
+            {
+              "kind": "Content",
+              "text": "> implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "defaultMiddlewareImpl",
+              "canonicalReference": "@memo28/enhance-redux!defaultMiddlewareImpl:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<S, M>"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/middleware/defaultMiddleware.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "S",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "M",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 9
+              }
+            }
+          ],
+          "isAbstract": false,
+          "name": "DefaultMiddleware",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@memo28/enhance-redux!DefaultMiddleware:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `DefaultMiddleware` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(config?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "defaultMiddlewareImplConfig",
+                  "canonicalReference": "@memo28/enhance-redux!defaultMiddlewareImplConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!DefaultMiddleware#getDefaultMiddleware:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getDefaultMiddleware(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "M[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getDefaultMiddleware"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 10,
+              "endIndex": 12
+            }
+          ]
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!defaultMiddlewareImpl:class",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare abstract class defaultMiddlewareImpl<S = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", M extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Middlewares",
+              "canonicalReference": "@memo28/enhance-redux!~Middlewares:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<S>"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "["
+            },
+            {
+              "kind": "Reference",
+              "text": "ThunkMiddlewareFor",
+              "canonicalReference": "@reduxjs/toolkit!ThunkMiddlewareFor:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<S>]"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/middleware/defaultMiddlewareImpl.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "S",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "M",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 9
+              }
+            }
+          ],
+          "isAbstract": true,
+          "name": "defaultMiddlewareImpl",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!defaultMiddlewareImpl#getDefaultMiddleware:member(1)",
+              "docComment": "/**\n * 获取配置好的默认中间件\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abstract getDefaultMiddleware(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "M[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": true,
+              "name": "getDefaultMiddleware"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@memo28/enhance-redux!defaultMiddlewareImplConfig:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface defaultMiddlewareImplConfig "
+            }
+          ],
+          "fileUrlPath": "src/middleware/defaultMiddlewareImpl.ts",
+          "releaseTag": "Public",
+          "name": "defaultMiddlewareImplConfig",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/enhance-redux!defaultMiddlewareImplConfig#reduxLogger:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "reduxLogger?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "enableConfigurationTypes",
+                  "canonicalReference": "@memo28/open-source-tool!enableConfigurationTypes:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReduxLoggerOptions",
+                  "canonicalReference": "@types/redux-logger!ReduxLoggerOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "reduxLogger",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@memo28/enhance-redux!defaultMiddlewareImplConfig#thunk:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "thunk?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "enableConfigurationTypes",
+                  "canonicalReference": "@memo28/open-source-tool!enableConfigurationTypes:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<boolean>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "thunk",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/enhance-redux!EnhanceRedux:class",
+          "docComment": "/**\n * 帮助配置 `store Class`\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class EnhanceRedux<S = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", A extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Action",
+              "canonicalReference": "redux!Action:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Reference",
+              "text": "AnyAction",
+              "canonicalReference": "redux!AnyAction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", M extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Middlewares",
+              "canonicalReference": "@memo28/enhance-redux!~Middlewares:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<S>"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "["
+            },
+            {
+              "kind": "Reference",
+              "text": "ThunkMiddlewareFor",
+              "canonicalReference": "@reduxjs/toolkit!ThunkMiddlewareFor:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<S>]"
+            },
+            {
+              "kind": "Content",
+              "text": ", E extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Enhancers",
+              "canonicalReference": "@memo28/enhance-redux!~Enhancers:type"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "["
+            },
+            {
+              "kind": "Reference",
+              "text": "StoreEnhancer",
+              "canonicalReference": "redux!StoreEnhancer:type"
+            },
+            {
+              "kind": "Content",
+              "text": "]"
+            },
+            {
+              "kind": "Content",
+              "text": "> implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "enhanceReduxImpl",
+              "canonicalReference": "@memo28/enhance-redux!enhanceReduxImpl:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<S, A, M, E>"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/core/enhanceRedux.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "S",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "A",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            },
+            {
+              "typeParameterName": "M",
+              "constraintTokenRange": {
+                "startIndex": 7,
+                "endIndex": 9
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 13
+              }
+            },
+            {
+              "typeParameterName": "E",
+              "constraintTokenRange": {
+                "startIndex": 14,
+                "endIndex": 15
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 16,
+                "endIndex": 19
+              }
+            }
+          ],
+          "isAbstract": false,
+          "name": "EnhanceRedux",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!EnhanceRedux#addSlice:member(1)",
+              "docComment": "/**\n * 新增 `slice` 自动组装 `reducer`\n *\n * @param slice - 参数需要实现自 {@link createSliceImpl}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addSlice<State extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", N extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(slice: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createSliceImpl",
+                  "canonicalReference": "@memo28/enhance-redux!createSliceImpl:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<State, N>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "EnhanceRedux",
+                  "canonicalReference": "@memo28/enhance-redux!EnhanceRedux:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S & State, A, M, E>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "State",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                },
+                {
+                  "typeParameterName": "N",
+                  "constraintTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 8,
+                "endIndex": 10
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "slice",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 7
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addSlice"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!EnhanceRedux#getStore:member(1)",
+              "docComment": "/**\n * 获取 `store` 实例\n *\n * @param config - 配置为 `@reduxjs/toolkit.configureStore` 入参\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getStore(config?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ConfigureStoreOptions",
+                  "canonicalReference": "@reduxjs/toolkit!ConfigureStoreOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, A, M, E>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "EnhancedStore",
+                  "canonicalReference": "@reduxjs/toolkit!EnhancedStore:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, A, M, E>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getStore"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/enhance-redux!EnhanceRedux#injectionAllocation:member(1)",
+              "docComment": "/**\n * 注入配置\n *\n * @param config - 参数详见 {@link injectionAllocationConfig}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "injectionAllocation(config?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "injectionAllocationConfig",
+                  "canonicalReference": "@memo28/enhance-redux!~injectionAllocationConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, M>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "injectionAllocation"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 20,
+              "endIndex": 22
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@memo28/enhance-redux!enhanceReduxImpl:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface enhanceReduxImpl<S = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", A extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Action",
+              "canonicalReference": "redux!Action:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Reference",
+              "text": "AnyAction",
+              "canonicalReference": "redux!AnyAction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", M extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Middlewares",
+              "canonicalReference": "@memo28/enhance-redux!~Middlewares:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<S>"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "["
+            },
+            {
+              "kind": "Reference",
+              "text": "ThunkMiddlewareFor",
+              "canonicalReference": "@reduxjs/toolkit!ThunkMiddlewareFor:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<S>]"
+            },
+            {
+              "kind": "Content",
+              "text": ", E extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Enhancers",
+              "canonicalReference": "@memo28/enhance-redux!~Enhancers:type"
+            },
+            {
+              "kind": "Content",
+              "text": " = "
+            },
+            {
+              "kind": "Content",
+              "text": "["
+            },
+            {
+              "kind": "Reference",
+              "text": "StoreEnhancer",
+              "canonicalReference": "redux!StoreEnhancer:type"
+            },
+            {
+              "kind": "Content",
+              "text": "]"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/types/enhanceReduxImpl.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "S",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "A",
+              "constraintTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            },
+            {
+              "typeParameterName": "M",
+              "constraintTokenRange": {
+                "startIndex": 7,
+                "endIndex": 9
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 13
+              }
+            },
+            {
+              "typeParameterName": "E",
+              "constraintTokenRange": {
+                "startIndex": 14,
+                "endIndex": 15
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 16,
+                "endIndex": 19
+              }
+            }
+          ],
+          "name": "enhanceReduxImpl",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/enhance-redux!enhanceReduxImpl#addSlice:member(1)",
+              "docComment": "/**\n * add Slice\n *\n * @param slice - 参数需要实现自 {@link createSliceImpl}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addSlice<State extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", N extends "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">(slice: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "createSliceImpl",
+                  "canonicalReference": "@memo28/enhance-redux!createSliceImpl:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<State, N>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "enhanceReduxImpl",
+                  "canonicalReference": "@memo28/enhance-redux!enhanceReduxImpl:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, A, M, E>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 8,
+                "endIndex": 10
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "slice",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 7
+                  },
+                  "isOptional": false
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "State",
+                  "constraintTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                },
+                {
+                  "typeParameterName": "N",
+                  "constraintTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "name": "addSlice"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/enhance-redux!enhanceReduxImpl#getStore:member(1)",
+              "docComment": "/**\n * 返回 `store` 实例\n *\n * @param config - 参数为 `@reduxjs/toolkit.configureStore` 入参\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getStore(config?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ConfigureStoreOptions",
+                  "canonicalReference": "@reduxjs/toolkit!ConfigureStoreOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, A, M, E>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "EnhancedStore",
+                  "canonicalReference": "@reduxjs/toolkit!EnhancedStore:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, A, M, E>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "getStore"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@memo28/enhance-redux!enhanceReduxImpl#injectionAllocation:member(1)",
+              "docComment": "/**\n * 注入配置\n *\n * @param config - 参数详见 {@link injectionAllocationConfig}\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "injectionAllocation(config?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "injectionAllocationConfig",
+                  "canonicalReference": "@memo28/enhance-redux!~injectionAllocationConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<S, M>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "injectionAllocation"
+            }
+          ],
+          "extendsTokenRanges": []
+        }
+      ]
+    }
+  ]
+}

@@ -42,6 +42,11 @@ export declare type IsFalse<T extends false> = T
  * 但是当`T` 是 `any` 时 , 由于 `any` 是故意不健全的类型(顶级类型), 并且充当了几乎所有其他类型的超类型和子类型, 因此比较`any`时其他类型会被忽略 就变成了 `0 extends any`, 自然返回 `true`.
  * 需要注意的时这仅仅适用 `strictNullChecks` 启用 (默认启用)
  *
+ * @example
+ *
+ * IsAny<true> => false
+ * IsAny<any> => true
+ *
  * @see https://stackoverflow.com/questions/49927523/disallow-call-with-any/49928360#49928360
  *
  * @public
@@ -51,11 +56,16 @@ export declare type IsAny<T> = 0 extends 1 & T ? true : false
 /**
  * 这是一个创造性的使用条件类型的可分配行规则的解决方案. 它依赖于在未知时被延迟推导的条件类型`T` ，延迟类型条件的可分配依赖于内部 `isTypeIdenticalTo` 检查,这仅是用于 1. 两种条件类型具有相同的约束 2. 两个条件的真假分支是同一类型
  *
+ * @example
+ * Equal<number,object> => false
+ * Equal<number,number> => true
+ *
  * @see https://github.com/Microsoft/TypeScript/issues/27024
  *
  * @public
  */
 export declare type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2 ? true : false
+
 
 /**
  *
@@ -63,7 +73,7 @@ export declare type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() =
  *
  * @example
  * ```ts
- * type S = Extends<{ name: string }, object>
+ * type S = Extends<{ name: string }, object> => true
  * ```
  *
  * @typeParam E - 被比较类型

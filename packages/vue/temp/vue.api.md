@@ -4,9 +4,17 @@
 
 ```ts
 
+import { createVNode } from 'vue';
 import { mergeFnWithPromiseFn } from '@memo28/types';
 import { Ref } from 'vue';
 import { UnwrapRef } from 'vue';
+
+// Warning: (ae-forgotten-export) The symbol "Component" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "Props" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "callComponentGloballyReturns" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+export function callComponentGlobally<T = unknown>(com: Component, props: Props, el?: HTMLElement): callComponentGloballyReturns<T>;
 
 // @public
 export function useEnhancedRef<T extends object>(val: Partial<T>): {
@@ -14,5 +22,7 @@ export function useEnhancedRef<T extends object>(val: Partial<T>): {
     updateState: mergeFnWithPromiseFn<void, [Partial<UnwrapRef<T>>]>;
     resetState: mergeFnWithPromiseFn<void, []>;
 };
+
+// (No @packageDocumentation comment for this package)
 
 ```

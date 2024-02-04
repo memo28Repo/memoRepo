@@ -43,7 +43,7 @@ abstract class Verify<T = unknown> {
   abstract verification(args?: T): Panic<T>
 }
 
-type storeEmit = Record<'phone', reportType<str>> & Record<'mail', reportType<str>>
+type storeEmit = Record<'phone', reportType<str>> & Record<'mail', reportType<str>> & Record<'emoji', reportType<str>>
 
 type keysForStoreEmit = keyof storeEmit
 
@@ -73,6 +73,15 @@ export class VerificationFlow<T = unknown> extends AnomalousChain implements Ver
     this.value = args
   }
 
+
+  /**
+   *
+   * 通常继承 {@link VerificationFlow} 后该方法都必须重写为您的验证逻辑 用于判断验证值是否正确
+   *
+   * @param args - 验证值
+   *
+   * @public
+   */
   @panicProcessing()
   verification(args?: T): Panic<T> {
     return [null, args || this.value]
@@ -83,6 +92,22 @@ export class VerificationFlow<T = unknown> extends AnomalousChain implements Ver
     return this
   }
 
+  /**
+   *
+   * 检查和验证值
+   *
+   * 调用 `verification` 判断是否返回一个带有错误的 {@link Panic} 类型的值
+   *
+   * 如果存在错误则返回 `false` 反之
+   *
+   * @param args - 验证的值
+   *
+   * @return boolean
+   *
+   * @private
+   *
+   *
+   */
   private inspectionAndVerification(args?: T): bool {
     const [setError, _] = this.verification(args)
     if (Errors.Is(setError)) {
@@ -92,6 +117,15 @@ export class VerificationFlow<T = unknown> extends AnomalousChain implements Ver
     return true
   }
 
+
+  /**
+   *
+   * 重新赋值时需校验 无误后赋值
+   *
+   * @param args - 新值
+   *
+   * @public
+   */
   @panicProcessing()
   set(args: T): this {
     if (this.inspectionAndVerification(args)) {
@@ -100,6 +134,16 @@ export class VerificationFlow<T = unknown> extends AnomalousChain implements Ver
     return this
   }
 
+  /**
+   *
+   * 获取值
+   *
+   * 获取值前会先验证 取决于您的验证逻辑
+   *
+   * 通常在一些验证不通过的情况下 建议直接 throw 抛出 强制停止程序继续执行
+   *
+   * @public
+   */
   @panicProcessing()
   get(): T {
     this.verification()

@@ -88,6 +88,60 @@ export class Mail extends VerificationFlow<str> {
 
 /**
  *
+ * 验证emoji，不通过时 get 不会返回错值
+ *
+ * @public
+ */
+export class Emoji extends VerificationFlow<str> {
+  constructor(phone?: str, private msg?: string) {
+    super(phone || "");
+  }
+
+  verification(args?: string): Panic<string> {
+    const value = args || this.value;
+    const rxg = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+    if (!rxg.test(value)) {
+      this.setErrors(Errors.New(this.msg || "验证失败"));
+      this.continuousReporting("emoji", {
+        msg: this.msg || "验证失败",
+        val: value
+      });
+      return [Errors.New(this.msg || "验证失败"), value];
+    }
+    return [null, value];
+  }
+}
+
+
+/**
+ *
+ * 验证输入是否为中文
+ *
+ * @public
+ *
+ */
+export class Chinese extends VerificationFlow<str> {
+  constructor(s: str, private msg?: string) {
+    super(s);
+  }
+
+  verification(args?: str): Panic<str> {
+    const value = args || this.value.trim();
+    const chineseRxg = /[\u4E00-\u9FA5\uF900-\uFA2D]/g;
+    if (!chineseRxg.test(value)) {
+      this.setErrors(Errors.New(this.msg || "验证失败"));
+      this.continuousReporting("emoji", {
+        msg: this.msg || "验证失败",
+        val: value
+      });
+      return [Errors.New(this.msg || "验证失败"), value];
+    }
+    return [null, value];
+  }
+}
+
+/**
+ *
  * 数组是否为空
  *
  * @param val - 数组

@@ -104,6 +104,13 @@ importers:
       reflect-metadata:
         specifier: ^0.1.13
         version: 0.1.13
+    devDependencies:
+      '@types/lodash.escaperegexp':
+        specifier: ^4.1.9
+        version: 4.1.9
+      lodash.escaperegexp:
+        specifier: ^4.1.2
+        version: 4.1.2
 
   packages/valuePolyfill:
     dependencies:
@@ -147,6 +154,15 @@ importers:
         specifier: ^2.4.2
         version: 2.4.2(redux@4.2.1)
     devDependencies:
+      '@memo28/open-source-tool':
+        specifier: ^1.0.1
+        version: link:../../openSourceToolLibrary/openSourceTool
+      '@memo28/types':
+        specifier: ^1.1.6
+        version: link:../../packages/types
+      '@memo28/utils':
+        specifier: ^1.2.4
+        version: link:../../packages/utils
       '@reduxjs/toolkit':
         specifier: ^1.9.7
         version: 1.9.7
@@ -156,6 +172,9 @@ importers:
 
   redux/hooks:
     dependencies:
+      '@memo28/enhance-redux':
+        specifier: ^1.0.2
+        version: link:../helper
       '@types/lodash.get':
         specifier: ^4.4.9
         version: 4.4.9
@@ -163,6 +182,12 @@ importers:
         specifier: ^4.4.2
         version: 4.4.2
     devDependencies:
+      '@memo28/types':
+        specifier: ^1.1.6
+        version: link:../../packages/types
+      '@memo28/utils':
+        specifier: ^1.2.4
+        version: link:../../packages/utils
       '@types/node':
         specifier: ^18.15.6
         version: 18.15.6
@@ -200,9 +225,15 @@ importers:
       '@memo28/logs':
         specifier: ^0.1.1
         version: link:../../packages/logs
+      '@memo28/service':
+        specifier: ^4.1.2
+        version: link:../service
       '@memo28/types':
         specifier: workspace:^
         version: link:../../packages/types
+      '@memo28/utils':
+        specifier: ^1.2.5
+        version: link:../../packages/utils
       vitest:
         specifier: ^0.26.3
         version: 0.26.3(@vitest/ui@0.27.2)(jsdom@21.0.0)
@@ -232,7 +263,7 @@ importers:
         specifier: ^0.1.1
         version: link:../../packages/logs
       '@memo28/types':
-        specifier: ^1.1.6
+        specifier: ^1.1.7
         version: link:../../packages/types
       '@memo28/utils':
         specifier: workspace:^
@@ -4136,6 +4167,12 @@ packages:
       pretty-format: 26.6.2
     dev: false
 
+  /@types/lodash.escaperegexp@4.1.9:
+    resolution: {integrity: sha512-CMQc8v16YzhnPZnMhYQuJUksI8BmL1jy/lHJkiXi4/t24Lx7Qvy7qxew1abrDJGa1T2i0NzLLaR27NK1/qp5Ow==}
+    dependencies:
+      '@types/lodash': 4.14.201
+    dev: true
+
   /@types/lodash.get@4.4.9:
     resolution: {integrity: sha512-J5dvW98sxmGnamqf+/aLP87PYXyrha9xIgc2ZlHl6OHMFR2Ejdxep50QfU0abO1+CH6+ugx+8wEUN1toImAinA==}
     dependencies:
@@ -4144,7 +4181,6 @@ packages:
 
   /@types/lodash@4.14.201:
     resolution: {integrity: sha512-y9euML0cim1JrykNxADLfaG0FgD1g/yTHwUs/Jg9ZIU7WKj2/4IW9Lbb1WZbvck78W/lfGXFfe+u2EGfIJXdLQ==}
-    dev: false
 
   /@types/micromatch@2.3.31:
     resolution: {integrity: sha512-17WSoNz/GKLSfcomM8cMoJJQG2cDKvsoDFTtbwjEMxcizGb0HT6EBRi8qR7NW+XSaVdxHzq/WV/TUOm5f/ksag==}
@@ -4380,7 +4416,7 @@ packages:
     dependencies:
       '@vue-macros/api': 0.8.2(rollup@2.79.1)(vue@3.3.4)
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4391,7 +4427,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4446,7 +4482,7 @@ packages:
       '@vue-macros/api': 0.8.2(rollup@3.29.4)(vue@3.3.4)
       '@vue-macros/common': 1.6.2(rollup@3.29.4)(vue@3.3.4)
       rollup: 3.29.4
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     dev: false
 
@@ -4461,7 +4497,7 @@ packages:
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
       ast-walker-scope: 0.4.2
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4476,7 +4512,7 @@ packages:
       '@vue-macros/api': 0.8.2(rollup@3.29.4)(vue@3.3.4)
       '@vue-macros/common': 1.6.2(rollup@3.29.4)(vue@3.3.4)
       rollup: 3.29.4
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     dev: false
 
@@ -4487,7 +4523,7 @@ packages:
       vue: ^2.7.0 || ^3.2.25
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     transitivePeerDependencies:
       - rollup
@@ -4502,7 +4538,7 @@ packages:
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
       '@vue-macros/reactivity-transform': 0.3.18(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     transitivePeerDependencies:
       - rollup
@@ -4515,7 +4551,7 @@ packages:
       vue: ^2.7.0 || ^3.0.0
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     transitivePeerDependencies:
       - rollup
@@ -4528,7 +4564,7 @@ packages:
       vue: ^2.7.0 || ^3.0.0
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     transitivePeerDependencies:
       - rollup
@@ -4556,7 +4592,7 @@ packages:
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
       '@vue/compiler-sfc': 3.3.4
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     transitivePeerDependencies:
       - rollup
@@ -4569,7 +4605,7 @@ packages:
       vue: ^2.7.0 || ^3.2.25
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     transitivePeerDependencies:
       - rollup
@@ -4580,7 +4616,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4591,7 +4627,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4603,7 +4639,7 @@ packages:
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
       '@vue/compiler-dom': 3.3.4
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4620,7 +4656,7 @@ packages:
       '@vue/compiler-core': 3.3.4
       '@vue/shared': 3.3.4
       magic-string: 0.30.2
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vue: 3.3.4
     transitivePeerDependencies:
       - rollup
@@ -4632,7 +4668,7 @@ packages:
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
       '@vue/compiler-dom': 3.3.4
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4643,7 +4679,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4654,7 +4690,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4665,7 +4701,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue
@@ -4874,6 +4910,12 @@ packages:
     resolution: {integrity: sha512-nc0Axzp/0FILLEVsm4fNwLCwMttvhEI263QtVPQcbpfZZ3ts0hLsZGOpE6czNlid7CJ9MlyH8reXkpsf3YUY4w==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  /acorn@8.11.3:
+    resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: false
 
   /acorn@8.8.1:
     resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
@@ -6473,6 +6515,17 @@ packages:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.5
+    dev: false
+
+  /fast-glob@3.3.2:
+    resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
 
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
@@ -6786,7 +6839,7 @@ packages:
       '@types/glob': 7.2.0
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       glob: 7.2.3
       ignore: 5.2.4
       merge2: 1.4.1
@@ -6799,7 +6852,7 @@ packages:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       ignore: 5.2.4
       merge2: 1.4.1
       slash: 3.0.0
@@ -7589,6 +7642,10 @@ packages:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
     dev: false
 
+  /lodash.escaperegexp@4.1.2:
+    resolution: {integrity: sha512-TM9YBvyC84ZxE3rgfefxUWiQKLilstD6k7PTGt6wfbtXF8ixIJLOL3VYyV/z+ZiPLsVxAsKAFVwWlWeb2Y8Yyw==}
+    dev: true
+
   /lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
     dev: false
@@ -7853,7 +7910,8 @@ packages:
       acorn: 8.11.2
       pathe: 1.1.1
       pkg-types: 1.0.3
-      ufo: 1.2.0
+      ufo: 1.3.2
+    dev: false
 
   /mlly@1.4.2:
     resolution: {integrity: sha512-i/Ykufi2t1EZ6NaPLdfnZk2AX8cs0d+mTzVKuPfqPKPatxLApaBoxJQ9x1/uckXtrS/U5oisPMDkNs0yQTaBRg==}
@@ -7862,7 +7920,6 @@ packages:
       pathe: 1.1.1
       pkg-types: 1.0.3
       ufo: 1.3.2
-    dev: true
 
   /module-alias@2.2.3:
     resolution: {integrity: sha512-23g5BFj4zdQL/b6tor7Ji+QY4pEfNH784BMslY9Qb0UnJWRAt+lQGLYmRaM0KDBwIG23ffEBELhZDP2rhi9f/Q==}
@@ -8234,7 +8291,7 @@ packages:
     resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
     dependencies:
       jsonc-parser: 3.2.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
 
   /portscanner@2.2.0:
@@ -9507,7 +9564,7 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.5
-      acorn: 8.11.2
+      acorn: 8.11.3
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: false
@@ -9771,9 +9828,6 @@ packages:
     resolution: {integrity: sha512-fKnGuqmTBnIE+/KXSzCn4db8RTigUzw1AN0DmdU6hJovUTbYJKyqj+8Mt1c4VfRDnOVJnENmfYkIPZ946UrSAA==}
     dev: false
 
-  /ufo@1.2.0:
-    resolution: {integrity: sha512-RsPyTbqORDNDxqAdQPQBpgqhWle1VcTSou/FraClYlHf6TZnQcGslpLcAphNR+sQW4q5lLWLbOsRlh9j24baQg==}
-
   /ufo@1.3.2:
     resolution: {integrity: sha512-o+ORpgGwaYQXgqGDwd+hkS4PuZ3QnmqMMxRuajK/a38L6fTpcE5GPIfrf+L/KemFzfUpeUQc1rRS1iDBozvnFA==}
 
@@ -9828,7 +9882,7 @@ packages:
     dependencies:
       '@rollup/pluginutils': 5.0.2(rollup@2.79.1)
       escape-string-regexp: 5.0.0
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       local-pkg: 0.4.3
       magic-string: 0.30.2
       mlly: 1.4.0
@@ -9836,7 +9890,7 @@ packages:
       pkg-types: 1.0.3
       scule: 1.0.0
       strip-literal: 1.2.0
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
     dev: false
@@ -9908,7 +9962,7 @@ packages:
     dependencies:
       '@antfu/utils': 0.7.5
       rollup: 2.79.1
-      unplugin: 1.4.0
+      unplugin: 1.5.1
       vite: 5.0.10(sass@1.64.2)(terser@5.21.0)
     dev: false
 
@@ -9992,7 +10046,7 @@ packages:
     dependencies:
       '@vue-macros/common': 1.6.2(rollup@2.79.1)(vue@3.3.4)
       ast-walker-scope: 0.4.2
-      unplugin: 1.4.0
+      unplugin: 1.5.1
     transitivePeerDependencies:
       - rollup
       - vue

@@ -1,6 +1,6 @@
 {
   "name": "@memo28/utils",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "private": false,
   "description": "",
   "main": "./lib/index.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "links": "pnpm link --global",
     "build": "pnpm build:cjs && pnpm build:es",
-    "build:watch": "pnpm build:cjs:watch && pnpm build:es:watch",
+    "build:watch": "pnpm build:es:watch & pnpm build:cjs:watch",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true",
     "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true --watch",
@@ -32,7 +32,8 @@
     "./src",
     "./dist",
     "./lib",
-    "./dts"
+    "./dts",
+    "./index.d.ts"
   ],
   "license": "MIT",
   "dependencies": {
@@ -40,5 +41,9 @@
     "@memo28/types": "workspace:^",
     "mitt": "^3.0.1",
     "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/lodash.escaperegexp": "^4.1.9",
+    "lodash.escaperegexp": "^4.1.2"
   }
 }

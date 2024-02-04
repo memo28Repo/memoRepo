@@ -16,8 +16,19 @@ export class AnomalousChain {
     protected skip(errors: ErrorsNewResult | null): this;
 }
 
-// @public (undocumented)
-export function enableLogAttribute(): void;
+// @public
+export class Chinese extends VerificationFlow<str> {
+    constructor(s: str, msg?: string | undefined);
+    // (undocumented)
+    verification(args?: str): Panic<str>;
+}
+
+// @public
+export class Emoji extends VerificationFlow<str> {
+    constructor(phone?: str, msg?: string | undefined);
+    // (undocumented)
+    verification(args?: string): Panic<string>;
+}
 
 // @public
 export class Errors {
@@ -26,10 +37,10 @@ export class Errors {
     static New(msg: string, opt?: NewOpt): ErrorsNewResult;
 }
 
-// @public (undocumented)
+// @public
 export interface ErrorsNewResult {
     info(): ErrorsNewResultInfo;
-    trace(): this;
+    trace(): string;
     unWrap(): string;
 }
 
@@ -38,16 +49,12 @@ export interface ErrorsNewResultInfo extends Pick<NewOpt, 'classify'> {
     msg: string;
 }
 
-// @public (undocumented)
+// @public
 export class Injection<K = string> {
     constructor(target?: object);
-    // (undocumented)
-    getKeys(): any[];
-    // (undocumented)
+    getKeys(): K[];
     getValue<V = unknown>(key: K): V;
-    // (undocumented)
     setTarget(target: object): this;
-    // (undocumented)
     setValue<V = unknown>(key: K, value: V): this;
 }
 
@@ -97,7 +104,7 @@ export class Phone extends VerificationFlow<str> {
 }
 
 // @public
-export function readingWritingSeparationDetor(target: object, key: string): void;
+export function readingWritingSeparationDecor(target: object, key: string): void;
 
 // @public
 export type readingWritingSeparationUtilsType<T extends object> = {
@@ -129,15 +136,12 @@ export class VerificationFlow<T = unknown> extends AnomalousChain implements Ver
     constructor(args: T);
     // (undocumented)
     continuousReporting(type: keysForStoreEmit, value: storeEmit[keysForStoreEmit]): this;
-    // (undocumented)
     get(): T;
-    // (undocumented)
     set(args: T): this;
     // (undocumented)
     protected skip(errors: ErrorsNewResult | null): this;
     // (undocumented)
     value: T;
-    // (undocumented)
     verification(args?: T): Panic<T>;
 }
 

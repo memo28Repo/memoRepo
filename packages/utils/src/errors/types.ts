@@ -20,22 +20,37 @@ export interface NewOpt {
   classify?: number | string
 }
 
+
+/**
+ *
+ * 一个错误对象应该包含
+ *
+ * @public
+ *
+ */
 export interface ErrorsNewResult {
   /**
-   * @description 获取报错信息
+   *  获取报错信息
+   *
+   *  @public
    */
   unWrap(): string
   /**
-   * @description 打印调用栈
+   *  返回调用栈
+   *
+   *  @public
    */
-  trace(): this
+  trace(): string
   /**
-   * @description 报错详细信息
+   *  报错详细信息
+   *  @public
    */
   info(): ErrorsNewResultInfo
 }
 
 /**
- * @description 错误处理返回类型
+ *  错误处理返回类型
+ *
+ *  @public
  */
 export type Panic<T = unknown> = [ErrorsNewResult | undefined | false | null | true, T]

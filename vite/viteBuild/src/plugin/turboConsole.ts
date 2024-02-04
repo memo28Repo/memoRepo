@@ -26,6 +26,5 @@ export class TurboConsole implements PluginTypes<TurboConsoleOptions> {
     }
 
 
-
 }
 

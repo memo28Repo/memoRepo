@@ -28,11 +28,10 @@ export { AnomalousChain, panicProcessing, panicProcessingOpt } from "./errors/an
 export { Errors } from "./errors/core";
 export { StringDerived } from "./derived/string";
 export { NumberDerived } from "./derived/number";
-export { enableLogAttribute } from "./log";
-export { readingWritingSeparationDetor } from "./readingWritingSeparation/index";
+export { readingWritingSeparationDecor } from "./readingWritingSeparation/index";
 export type { readingWritingSeparationUtilsType } from "./readingWritingSeparation/index";
 export { ValidationErrorCollection, VerificationFlow } from "./verify/errorCollection";
-export { Mail, Phone, SNI, isArrayEmpty, isEmpty, isObjectEmpty } from "./verify/verify";
+export { Mail, Phone, Emoji, Chinese, SNI, isArrayEmpty, isEmpty, isObjectEmpty } from "./verify/verify";
 export {} from "./config/enableConfiguration";
 
 export type { ErrorsNewResult, ErrorsNewResultInfo, NewOpt, Panic } from "./errors/types";

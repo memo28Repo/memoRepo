@@ -4,9 +4,12 @@
 
 ```ts
 
+import { AxiosDefaults } from 'axios';
+import { AxiosHeaderValue } from 'axios';
 import { AxiosInstance } from 'axios';
 import { AxiosRequestConfig } from 'axios';
 import { AxiosResponse } from 'axios';
+import { HeadersDefaults } from 'axios';
 import { Injection } from '@memo28/utils';
 import { interceptorImpl as interceptorImpl_2 } from '@memo28/serviceimpl';
 import { onRetrySuc } from '@memo28/serviceimpl';
@@ -33,6 +36,10 @@ export { Cache_2 as Cache }
 export interface CacheConfig {
     // (undocumented)
     cacheExpirationTime?: number;
+    // Warning: (ae-forgotten-export) The symbol "CacheImpl" needs to be exported by the entry point index.d.ts
+    //
+    // (undocumented)
+    cacheImpl?: CacheImpl;
     // (undocumented)
     cacheRules?: (config?: AxiosRequestConfig) => string;
     // (undocumented)
@@ -137,6 +144,26 @@ export interface LoadingOpt {
     onStartLoading(): void;
 }
 
+// @public (undocumented)
+export class LocalCache implements CacheImpl {
+    // (undocumented)
+    deleteCache(key: string): void;
+    // (undocumented)
+    getCache<V = unknown>(key: string): V;
+    // Warning: (ae-forgotten-export) The symbol "expirationMapType" needs to be exported by the entry point index.d.ts
+    //
+    // (undocumented)
+    getMetaCache(): Partial<expirationMapType>[];
+    // (undocumented)
+    getMetaCacheItem(key: string): Partial<expirationMapType>;
+    // (undocumented)
+    hasCache(key: string): boolean;
+    // (undocumented)
+    setCache<V = string>(key: string, value: V): void;
+    // (undocumented)
+    setMetaCache(meta: Partial<expirationMapType>): void;
+}
+
 // @public
 export class Logs implements interceptorImpl {
     // (undocumented)
@@ -214,6 +241,12 @@ export class ServiceUtils<T extends object> {
     initializeConfiguration(opt: initializeConfigurationTypes & T): this;
     instantiation(): this;
     modules(opt: Partial<modulesImpl>): this;
+    // (undocumented)
+    setDefaultConfig(config: Partial<Omit<AxiosDefaults, "headers"> & {
+        headers: HeadersDefaults & {
+            [key: string]: AxiosHeaderValue;
+        };
+    }>): this;
 }
 
 // @public

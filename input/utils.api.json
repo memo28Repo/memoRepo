@@ -361,32 +361,308 @@
           "implementsTokenRanges": []
         },
         {
-          "kind": "Function",
-          "canonicalReference": "@memo28/utils!enableLogAttribute:function(1)",
-          "docComment": "",
+          "kind": "Class",
+          "canonicalReference": "@memo28/utils!Chinese:class",
+          "docComment": "/**\n * 验证输入是否为中文\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare function enableLogAttribute(): "
+              "text": "export declare class Chinese extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "VerificationFlow",
+              "canonicalReference": "@memo28/utils!VerificationFlow:class"
             },
             {
               "kind": "Content",
-              "text": "void"
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "str",
+              "canonicalReference": "@memo28/types!str:type"
             },
             {
               "kind": "Content",
-              "text": ";"
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": " "
             }
           ],
-          "fileUrlPath": "src/log.ts",
-          "returnTypeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 2
-          },
+          "fileUrlPath": "src/verify/verify.ts",
           "releaseTag": "Public",
-          "overloadIndex": 1,
-          "parameters": [],
-          "name": "enableLogAttribute"
+          "isAbstract": false,
+          "name": "Chinese",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@memo28/utils!Chinese:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `Chinese` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(s: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "str",
+                  "canonicalReference": "@memo28/types!str:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", msg?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "s",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "msg",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/utils!Chinese#verification:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "verification(args?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "str",
+                  "canonicalReference": "@memo28/types!str:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Panic",
+                  "canonicalReference": "@memo28/utils!Panic:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "str",
+                  "canonicalReference": "@memo28/types!str:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "args",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "verification"
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@memo28/utils!Emoji:class",
+          "docComment": "/**\n * 验证emoji，不通过时 get 不会返回错值\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class Emoji extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "VerificationFlow",
+              "canonicalReference": "@memo28/utils!VerificationFlow:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "str",
+              "canonicalReference": "@memo28/types!str:type"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/verify/verify.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "Emoji",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@memo28/utils!Emoji:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `Emoji` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(phone?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "str",
+                  "canonicalReference": "@memo28/types!str:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", msg?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "phone",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                },
+                {
+                  "parameterName": "msg",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@memo28/utils!Emoji#verification:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "verification(args?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Panic",
+                  "canonicalReference": "@memo28/utils!Panic:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "args",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "verification"
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
         },
         {
           "kind": "Class",
@@ -407,7 +683,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!Errors.As:member(1)",
-              "docComment": "/**\n * 对比多个错误是否为同一种类型\n *\n * @public\n */\n",
+              "docComment": "/**\n * 对比多个错误是否为同一种类型\n *\n * @remarks\n *\n * Errors.As(Errors.News('err', { classify: 1 }), Errors.News('err2', { classify: 1 })) // true\n *\n * Errors.As(Errors.News('err', { classify: 1 }), Errors.News('err2', { classify: 2 })) // false\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -508,7 +784,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!Errors.New:member(1)",
-              "docComment": "/**\n * @description 生成一个错误\n */\n",
+              "docComment": "/**\n * 生成一个错误\n *\n * @remarks\n *\n * Errors.News('err')\n *\n * Errors.News('err', { classify: 1 }) // 给错误分类\n *\n * @param msg - 错误信息\n *\n * @param opt - 错误参数\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -577,7 +853,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@memo28/utils!ErrorsNewResult:interface",
-          "docComment": "",
+          "docComment": "/**\n * 一个错误对象应该包含\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -592,7 +868,7 @@
             {
               "kind": "MethodSignature",
               "canonicalReference": "@memo28/utils!ErrorsNewResult#info:member(1)",
-              "docComment": "/**\n * @description 报错详细信息\n */\n",
+              "docComment": "/**\n * 报错详细信息\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -621,7 +897,7 @@
             {
               "kind": "MethodSignature",
               "canonicalReference": "@memo28/utils!ErrorsNewResult#trace:member(1)",
-              "docComment": "/**\n * @description 打印调用栈\n */\n",
+              "docComment": "/**\n * 返回调用栈\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -629,7 +905,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "this"
+                  "text": "string"
                 },
                 {
                   "kind": "Content",
@@ -649,7 +925,7 @@
             {
               "kind": "MethodSignature",
               "canonicalReference": "@memo28/utils!ErrorsNewResult#unWrap:member(1)",
-              "docComment": "/**\n * @description 获取报错信息\n */\n",
+              "docComment": "/**\n * 获取报错信息\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -752,7 +1028,7 @@
         {
           "kind": "Class",
           "canonicalReference": "@memo28/utils!Injection:class",
-          "docComment": "",
+          "docComment": "/**\n * 链式调用 注入元数据属性\n *\n * `Injection` 类允许你通过链式调用的方式注入和检索对象的元数据属性。\n *\n * @typeParams K - 属性key的类型\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -789,7 +1065,7 @@
             {
               "kind": "Constructor",
               "canonicalReference": "@memo28/utils!Injection:constructor(1)",
-              "docComment": "/**\n * Constructs a new instance of the `Injection` class\n */\n",
+              "docComment": "/**\n * 构造函数，可选参数 `target` 用于初始化目标对象。\n *\n * @param target - 目标对象，可选\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -821,7 +1097,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!Injection#getKeys:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 获取目标对象所有元数据键的数组。\n *\n * @returns 元数据键的数组\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -829,7 +1105,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "any[]"
+                  "text": "K[]"
                 },
                 {
                   "kind": "Content",
@@ -852,7 +1128,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!Injection#getValue:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 获取目标对象指定键的值。\n *\n * @param key - 属性键\n *\n * @returns 指定键的值\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -921,7 +1197,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!Injection#setTarget:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 设置目标对象。\n *\n * @param target - 目标对象\n *\n * @returns 当前 `Injection` 实例，支持链式调用\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -969,7 +1245,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!Injection#setValue:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 为目标对象设置指定键的值。\n *\n * @param key - 属性键\n *\n * @param value - 要注入的值\n *\n * @returns 当前 `Injection` 实例，支持链式调用\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1412,7 +1688,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "@memo28/utils!Panic:type",
-          "docComment": "/**\n * @description 错误处理返回类型\n */\n",
+          "docComment": "/**\n * 错误处理返回类型\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1772,12 +2048,12 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@memo28/utils!readingWritingSeparationDetor:function(1)",
+          "canonicalReference": "@memo28/utils!readingWritingSeparationDecor:function(1)",
           "docComment": "/**\n * 读写分离属性装饰器\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare function readingWritingSeparationDetor(target: "
+              "text": "export declare function readingWritingSeparationDecor(target: "
             },
             {
               "kind": "Content",
@@ -1829,7 +2105,7 @@
               "isOptional": false
             }
           ],
-          "name": "readingWritingSeparationDetor"
+          "name": "readingWritingSeparationDecor"
         },
         {
           "kind": "TypeAlias",
@@ -2356,7 +2632,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!VerificationFlow#get:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 获取值\n *\n * 获取值前会先验证 取决于您的验证逻辑\n *\n * 通常在一些验证不通过的情况下 建议直接 throw 抛出 强制停止程序继续执行\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -2387,7 +2663,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!VerificationFlow#set:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 重新赋值时需校验 无误后赋值\n *\n * @param args - 新值\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -2518,7 +2794,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@memo28/utils!VerificationFlow#verification:member(1)",
-              "docComment": "",
+              "docComment": "/**\n * 通常继承 {@link VerificationFlow} 后该方法都必须重写为您的验证逻辑 用于判断验证值是否正确\n *\n * @param args - 验证值\n *\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",

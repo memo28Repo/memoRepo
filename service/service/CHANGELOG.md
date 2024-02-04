@@ -1,5 +1,17 @@
 # @memo28/service
 
+## 4.1.4
+
+### Patch Changes
+
+- serviceUtils新增方法setDefaulktConfig用于修改axios的默认配置
+
+## 4.1.3
+
+### Patch Changes
+
+- 修复接口成功返回也使用兜底值的情况
+
 ## 4.1.2
 
 ### Patch Changes

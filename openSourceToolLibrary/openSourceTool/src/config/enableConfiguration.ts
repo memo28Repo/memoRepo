@@ -1,4 +1,4 @@
-import { Errors, Panic, readingWritingSeparationUtilsType, readingWritingSeparationDetor } from "@memo28/utils";
+import { Errors, Panic, readingWritingSeparationUtilsType, readingWritingSeparationDecor } from "@memo28/utils";
 import { fn } from "@memo28/types";
 
 export type enableConfigurationTypes<T extends any> = boolean | T | undefined
@@ -34,7 +34,7 @@ export class EnableConfiguration<T = any, R = any> {
    * @public
    *
    */
-  @readingWritingSeparationDetor
+  @readingWritingSeparationDecor
   bindConfiguredFunc?: fn<[enableConfigurationTypes<T>], R>;
 
 
@@ -46,7 +46,7 @@ export class EnableConfiguration<T = any, R = any> {
    * @public
    *
    */
-  @readingWritingSeparationDetor
+  @readingWritingSeparationDecor
   defaultConfig?: enableConfigurationTypes<T>;
 }
 

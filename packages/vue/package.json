@@ -1,20 +1,23 @@
 {
   "name": "@memo28/vue",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "",
   "main": "./lib/index",
   "module": "./dist/index",
   "types": "./dts/index.d.ts",
   "scripts": {
-    "build": "pnpm build:cjs && pnpm build:es",
+    "build": "pnpm build:cjs & pnpm build:es",
+    "build:watch": "pnpm build:es:watch & pnpm build:cjs:watch ",
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true",
     "build:es": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true",
+    "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true --watch",
+    "build:es:watch": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true --watch",
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
     "links": "pnpm link --global",
     "updateDep": "pnpm update vue@latest"
   },
   "keywords": [],
-  "author": "",
+  "author": "memo.repo",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"

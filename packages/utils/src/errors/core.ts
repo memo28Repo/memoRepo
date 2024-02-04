@@ -6,8 +6,8 @@
  * @FilePath: /memo/packages/utils/src/errors/core.ts
  */
 
-import { SNI } from '../verify/verify'
-import { ErrorsNewResult, NewOpt } from './types'
+import { SNI } from "../verify/verify";
+import { ErrorsNewResult, NewOpt } from "./types";
 
 /**
  * 错误对象
@@ -19,45 +19,72 @@ import { ErrorsNewResult, NewOpt } from './types'
  */
 export class Errors {
   /**
-   * @description 生成一个错误
+   *  生成一个错误
+   *
+   *   @remarks
+   *  Errors.News('err')
+   *
+   *  Errors.News('err', { classify: 1 }) //  给错误分类
+   *
+   *  @param {string} msg - 错误信息
+   *  @param {NewOpt} opt - 错误参数
+   *
+   *  @public
    */
   static New(msg: string, opt?: NewOpt): ErrorsNewResult {
+    const error = new Error(msg);
     return {
       /**
-       * @description 返回错误字符串信息
+       * 返回错误字符串信息
+       *
+       * @public
        */
       unWrap() {
-        return msg
+        return error.message;
       },
       /**
-       * @description console.trace()
+       *
+       * 返回调用堆栈
+       *
+       * @public
        */
       trace() {
-        console.trace()
-        return this
+        return error.stack || '';
       },
       /**
-       * @description 返回错误信息和错误分类
+       *  返回错误信息和错误分类
+       *
+       *  @public
        */
       info() {
         return {
-          msg,
-          classify: opt?.classify,
-        }
-      },
-    }
+          msg: error.message,
+          classify: opt?.classify
+        };
+      }
+    };
   }
+
   /**
    * 对比多个错误是否为同一种类型
+   *
+   *
+   * @remarks
+   * Errors.As(Errors.News('err', { classify: 1 }),
+   * Errors.News('err2', { classify: 1 })) // true
+   *
+   * Errors.As(Errors.News('err', { classify: 1 }),
+   * Errors.News('err2', { classify: 2 })) // false
    *
    * @public
    */
   static As(...errors: ErrorsNewResult[]) {
-    const classify = errors[0].info().classify
+    const classify = errors[0].info().classify;
     // @ts-ignore
-    if ([null, undefined].includes(classify)) return false
-    return errors.every(errorItem => errorItem.info().classify === classify)
+    if ([null, undefined].includes(classify)) return false;
+    return errors.every(errorItem => errorItem.info().classify === classify);
   }
+
   /**
    * @description 是否是一个 由Errors.New生成的错误对象
    * @param value
@@ -66,8 +93,8 @@ export class Errors {
    * @public
    */
   static Is(value: any) {
-    if (typeof value !== 'object') return false
-    if (([null, undefined].includes(value))) return false
-    return Reflect.has(value, 'trace') && Reflect.has(value, 'unWrap') && Reflect.has(value, 'info')
+    if (typeof value !== "object") return false;
+    if (([null, undefined].includes(value))) return false;
+    return Reflect.has(value, "trace") && Reflect.has(value, "unWrap") && Reflect.has(value, "info");
   }
 }
