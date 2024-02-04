@@ -19,4 +19,10 @@ export function StringDerived() {
     console.log(content);
     return content;
   };
+
+  String.prototype.container = function(this: string, containerValue?: string) {
+    if (!containerValue) return false;
+    return this.indexOf(containerValue) !== -1;
+  };
+
 }

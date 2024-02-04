@@ -1,4 +1,5 @@
 import { SNI } from "../index";
+import random from "lodash.random";
 
 
 export function NumberDerived() {
@@ -9,6 +10,10 @@ export function NumberDerived() {
   Number.prototype.log = function(this: number, mark?: string) {
     const content = mark ? `${mark}: ${this}` : this;
     console.log(content);
-    return content
+    return content;
+  };
+
+  Number.prototype.random = function(this: number, min: number, max: number) {
+    return random(min, max);
   };
 }

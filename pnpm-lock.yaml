@@ -108,9 +108,15 @@ importers:
       '@types/lodash.escaperegexp':
         specifier: ^4.1.9
         version: 4.1.9
+      '@types/lodash.random':
+        specifier: ^3.2.9
+        version: 3.2.9
       lodash.escaperegexp:
         specifier: ^4.1.2
         version: 4.1.2
+      lodash.random:
+        specifier: ^3.2.0
+        version: 3.2.0
 
   packages/valuePolyfill:
     dependencies:
@@ -4179,6 +4185,12 @@ packages:
       '@types/lodash': 4.14.201
     dev: false
 
+  /@types/lodash.random@3.2.9:
+    resolution: {integrity: sha512-tIkVWoiBVVguQG5lpTErD9tOADYA5A1V6Ie0WgG/cVNN9jIJIlXCTS0FCcurV+OBnu7uJBpNKgA9gx3eYUj19Q==}
+    dependencies:
+      '@types/lodash': 4.14.201
+    dev: true
+
   /@types/lodash@4.14.201:
     resolution: {integrity: sha512-y9euML0cim1JrykNxADLfaG0FgD1g/yTHwUs/Jg9ZIU7WKj2/4IW9Lbb1WZbvck78W/lfGXFfe+u2EGfIJXdLQ==}
 
@@ -7653,6 +7665,10 @@ packages:
   /lodash.isfinite@3.3.2:
     resolution: {integrity: sha512-7FGG40uhC8Mm633uKW1r58aElFlBlxCrg9JfSi3P6aYiWmfiWF0PgMd86ZUsxE5GwWPdHoS2+48bwTh2VPkIQA==}
     dev: false
+
+  /lodash.random@3.2.0:
+    resolution: {integrity: sha512-A6Vn7teN0+qSnhOsE8yx2bGowCS1G7D9e5abq8VhwOP98YHS/KrGMf43yYxA05lvcvloT+W9Z2ffkSajFTcPUA==}
+    dev: true
 
   /lodash.sortby@4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}

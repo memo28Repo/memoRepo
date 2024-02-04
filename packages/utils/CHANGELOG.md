@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.2.7
+
+### Patch Changes
+
+- string extends container function，number extends random function
+
 ## 1.2.6
 
 ### Patch Changes
