@@ -1,6 +1,6 @@
 {
   "name": "@memo28/null-safety",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "旨在实现 js 中的空安全行为",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
