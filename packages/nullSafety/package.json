@@ -1,7 +1,7 @@
 {
   "name": "@memo28/null-safety",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "旨在实现 js 中的空安全行为",
   "main": "index.js",
   "scripts": {
     "build:cjs": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true",
@@ -21,5 +21,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+  }
 }

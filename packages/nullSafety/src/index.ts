@@ -1,8 +1,8 @@
 /*
  * @Author: @memo28.repo
  * @Date: 2023-11-30 13:18:34
- * @LastEditTime: 2023-11-30 13:29:04
- * @Description: 
+ * @LastEditTime: 2024-02-06 19:40:15
+ * @Description:
  * @FilePath: /memo/packages/nullSafety/src/index.ts
  */
 
@@ -12,4 +12,6 @@
  * @packageDocumentation
  */
 
-// 使用proxy 实现 value 就一定是 object 吗？
+export { nullSafety } from './core'
+export type { nullSafetyMeta, nullSafetyOptions } from './core'
+

@@ -49,7 +49,11 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(@vitest/ui@0.27.2)(jsdom@21.0.0)
 
-  packages/nullSafety: {}
+  packages/nullSafety:
+    dependencies:
+      '@memo28/types':
+        specifier: workspace:^
+        version: link:../types
 
   packages/puppeteer: {}
 
