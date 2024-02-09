@@ -1,5 +1,15 @@
 # @memo28/valuepolyfill
 
+## 1.1.8
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @memo28/types@1.1.8
+  - @memo28/utils@1.2.8
+
 ## 1.1.7
 
 ### Patch Changes

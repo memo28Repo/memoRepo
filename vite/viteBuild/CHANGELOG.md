@@ -1,5 +1,15 @@
 # @memo28/vitebuild
 
+## 3.0.15
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @memo28/types@1.1.8
+  - @memo28/utils@1.2.8
+
 ## 3.0.14
 
 ### Patch Changes

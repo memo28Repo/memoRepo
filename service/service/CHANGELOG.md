@@ -1,5 +1,15 @@
 # @memo28/service
 
+## 4.1.5
+
+### Patch Changes
+
+- serviceUtils新增方法setDefaulktConfig用于修改axios的默认配置
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @memo28/utils@1.2.8
+
 ## 4.1.4
 
 ### Patch Changes

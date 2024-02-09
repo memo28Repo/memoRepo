@@ -1,5 +1,15 @@
 # @memo28/utils
 
+## 1.2.8
+
+### Patch Changes
+
+- 新增备注和utils.readingWritingSeparationDecor变量重命名
+- 新增String，Number扩展方法和新增Emoji和Chinese验证方法
+- 新增assets断言
+- Updated dependencies
+  - @memo28/types@1.1.8
+
 ## 1.2.7
 
 ### Patch Changes
