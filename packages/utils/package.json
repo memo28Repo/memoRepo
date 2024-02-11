@@ -15,6 +15,7 @@
     "build:cjs:watch": "tsc --module commonjs --rootDir ./src --outDir ./lib --experimentalDecorators true --declarationDir ./dts --declaration true --watch",
     "build:es:watch": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --declarationDir ./dts --declaration true --watch",
     "test": "vitest",
+    "test:once": "vitest run",
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
     "updateDep": "pnpm update mitt@latest && pnpm update reflect-metadata@latest && pnpm update @memo28/types@latest"
   },

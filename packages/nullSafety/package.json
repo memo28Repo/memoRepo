@@ -11,7 +11,8 @@
     "build:es:watch": "tsc --module es6 --rootDir ./src --outDir ./dist --experimentalDecorators true --watch",
     "build:watch": "pnpm build:cjs && pnpm build:es",
     "build:md": "pnpm build && api-extractor run --local --verbose && sh mv.sh",
-    "test:watch": "vitest",
+    "test": "vitest",
+    "test:once": "vitest run",
     "test:ui": "vitest --ui",
     "links": "pnpm link --global"
   },

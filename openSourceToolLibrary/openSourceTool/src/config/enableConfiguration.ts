@@ -1,6 +1,6 @@
-import { Errors, Panic, readingWritingSeparationUtilsType, readingWritingSeparationDecor } from "@memo28/utils";
 import { fn } from "@memo28/types";
-
+import { Errors, Panic, readingWritingSeparationDecor, readingWritingSeparationUtilsType } from "@memo28/utils";
+export { readingWritingSeparationUtilsType };
 export type enableConfigurationTypes<T extends any> = boolean | T | undefined
 
 
