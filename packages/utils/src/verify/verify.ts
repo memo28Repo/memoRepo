@@ -1,14 +1,14 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 23:08:13
- * @LastEditTime: 2023-06-04 09:53:27
+ * @LastEditTime: 2024-02-11 14:04:55
  * @Description: verify
  * @FilePath: /memo/packages/utils/src/verify/verify.ts
  */
-import { VerificationFlow } from "./errorCollection";
 import { str } from "@memo28/types";
-import { Panic } from "../errors/types";
 import { Errors } from "../errors/core";
+import { Panic } from "../errors/types";
+import { VerificationFlow } from "./errorCollection";
 
 /**
  * String Number includes的简称
@@ -42,7 +42,7 @@ export function SNI(n: number | string | (number | string)[], value: any) {
  */
 export class Phone extends VerificationFlow<str> {
   constructor(phone?: str, private msg?: string) {
-    super(phone || "");
+    super(phone?.trim() || "");
   }
 
   verification(args?: string): Panic<string> {
@@ -67,8 +67,8 @@ export class Phone extends VerificationFlow<str> {
  * @public
  */
 export class Mail extends VerificationFlow<str> {
-  constructor(phone?: str, private msg?: string) {
-    super(phone || "");
+  constructor(mail?: str, private msg?: string) {
+    super(mail?.trim() || "");
   }
 
   verification(args?: string): Panic<string> {
@@ -93,8 +93,8 @@ export class Mail extends VerificationFlow<str> {
  * @public
  */
 export class Emoji extends VerificationFlow<str> {
-  constructor(phone?: str, private msg?: string) {
-    super(phone || "");
+  constructor(emoji?: str, private msg?: string) {
+    super(emoji?.trim() || "");
   }
 
   verification(args?: string): Panic<string> {
@@ -122,7 +122,7 @@ export class Emoji extends VerificationFlow<str> {
  */
 export class Chinese extends VerificationFlow<str> {
   constructor(s: str, private msg?: string) {
-    super(s);
+    super(s?.trim());
   }
 
   verification(args?: str): Panic<str> {

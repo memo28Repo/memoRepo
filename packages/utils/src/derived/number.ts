@@ -1,5 +1,5 @@
-import { SNI } from "../index";
 import random from "lodash.random";
+import { SNI } from "../index";
 
 
 export function NumberDerived() {

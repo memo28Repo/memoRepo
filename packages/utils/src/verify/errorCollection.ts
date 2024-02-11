@@ -1,12 +1,12 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-04-05 12:18:06
- * @LastEditTime: 2023-04-09 09:10:12
+ * @LastEditTime: 2024-02-11 13:57:37
  * @Description: 验证接口
  * @FilePath: /memo/packages/utils/src/verify/errorCollection.ts
  */
 
-import { bool, str, Equal } from '@memo28/types'
+import { Equal, bool, str } from '@memo28/types'
 
 import Mitt, { Handler } from 'mitt'
 
@@ -146,8 +146,8 @@ export class VerificationFlow<T = unknown> extends AnomalousChain implements Ver
    */
   @panicProcessing()
   get(): T {
-    this.verification()
-    return this.value
+    const [_,value] = this.verification()
+    return value
   }
 }
 

@@ -1,3 +1,10 @@
+/*
+ * @Author: @memo28.repo
+ * @Date: 2024-02-02 13:35:31
+ * @LastEditTime: 2024-02-11 14:12:27
+ * @Description: 
+ * @FilePath: /memo/packages/utils/src/index.d.ts
+ */
 interface String {
   /**
    *
@@ -88,4 +95,13 @@ interface Number {
    * @public
    */
   random(min: number, max: number): number;
+}
+
+
+interface Array {
+  isEmpty(): boolean
+}
+
+interface Object {
+  isEmpty(): boolean
 }

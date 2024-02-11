@@ -1,26 +1,28 @@
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-09-01 13:59:46
- * @LastEditTime: 2023-09-21 14:48:31
+ * @LastEditTime: 2024-02-11 11:05:29
  * @Description: 
  * @FilePath: /memo/packages/utils/__test__/readingWritingSeparation.test.ts
  */
 import { describe, expect, it } from "vitest";
-import { readingWritingSeparationDetor, readingWritingSeparationUtilsType } from "../src/index";
+import { readingWritingSeparationDecor, readingWritingSeparationUtilsType } from "../src/index";
 
 class Nber {
   // @ts-ignore
-  @readingWritingSeparationDetor
+  @readingWritingSeparationDecor
   age?: number;
 
   // @ts-ignore
-  @readingWritingSeparationDetor
+  @readingWritingSeparationDecor
   height?: number;
 
   // @ts-ignore
-  @readingWritingSeparationDetor
+  @readingWritingSeparationDecor
   width?: number;
 }
+
+
 
 describe("computational problems", () => {
 
@@ -32,6 +34,17 @@ describe("computational problems", () => {
     n.setHeight(10)
     n.setAge(21)
 
-    expect(n.getAge() + n.getAge() + n.getWidth()).toBe(31)
+    expect(n.getHeight() + n.getAge() + n.getWidth()).toBe(41)
+  });
+
+  it("unknown this", () => {
+    const n = new Nber() as readingWritingSeparationUtilsType<Nber>
+
+    n.setWidth.call(undefined, 10)
+    n.setHeight.call(undefined, 10)
+    n.setAge.call(undefined, 21)
+
+    expect(n.getHeight() + n.getAge() + n.getWidth()).toBe(41)
   });
 });
+

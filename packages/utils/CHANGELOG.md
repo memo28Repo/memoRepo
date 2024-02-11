@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.2.9
+
+### Patch Changes
+
+- 修复已知bug，并且新增ArrayDerived,ObjectDerived拓展方法
+
 ## 1.2.8
 
 ### Patch Changes

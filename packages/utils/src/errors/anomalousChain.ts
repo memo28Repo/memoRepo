@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-06 22:35:05
- * @LastEditTime: 2023-04-09 09:06:02
+ * @LastEditTime: 2024-02-11 13:49:59
  * @Description: 异常链
  * @FilePath: /memo/packages/utils/src/errors/anomalousChain.ts
  */
@@ -37,6 +37,7 @@ export class AnomalousChain {
    * @returns { this }
    */
   protected skip(errors: ErrorsNewResult | null): this {
+    this.errors = errors
     return this
   }
 
@@ -93,12 +94,13 @@ export function panicProcessing(opt?: Partial<panicProcessingOpt>) {
       if (err && opt?.onRecover?.(err)) {
         target.recover()
       }
+      res = fn.call(this, ...args)
+
       if (err) {
         opt?.onError?.(err)
-        res = target.skip(err)
+        target.skip.call(this, err)
         return res
       }
-      res = fn.call(this, ...args)
       return res
     }
   }

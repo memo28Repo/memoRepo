@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-01-30 10:39:18
- * @LastEditTime: 2023-09-21 14:47:25
+ * @LastEditTime: 2024-02-11 14:12:42
  * @Description:
  * @FilePath: /memo/packages/utils/src/index.ts
  */
@@ -24,16 +24,19 @@ versionLog({
  */
 
 export { Injection } from "./Injection";
-export { AnomalousChain, panicProcessing, panicProcessingOpt } from "./errors/anomalousChain";
-export { Errors } from "./errors/core";
-export { assets } from "./errors/assets";
-export { StringDerived } from "./derived/string";
+export { } from "./config/enableConfiguration";
+export { ArrayDerived } from './derived/array';
 export { NumberDerived } from "./derived/number";
+export { ObjectDerived } from './derived/object';
+export { StringDerived } from "./derived/string";
+export { AnomalousChain, panicProcessing, panicProcessingOpt } from "./errors/anomalousChain";
+export { assets } from "./errors/assets";
+export { Errors } from "./errors/core";
 export { readingWritingSeparationDecor } from "./readingWritingSeparation/index";
 export type { readingWritingSeparationUtilsType } from "./readingWritingSeparation/index";
 export { ValidationErrorCollection, VerificationFlow } from "./verify/errorCollection";
-export { Mail, Phone, Emoji, Chinese, SNI, isArrayEmpty, isEmpty, isObjectEmpty } from "./verify/verify";
-export {} from "./config/enableConfiguration";
+export { Chinese, Emoji, Mail, Phone, SNI, isArrayEmpty, isEmpty, isObjectEmpty } from "./verify/verify";
+
 
 export type { ErrorsNewResult, ErrorsNewResultInfo, NewOpt, Panic } from "./errors/types";
 

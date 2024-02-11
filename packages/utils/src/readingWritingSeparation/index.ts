@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰&qwm
  * @Date: 2023-08-23 18:49:30
- * @LastEditTime: 2023-11-30 13:34:51
+ * @LastEditTime: 2024-02-11 11:04:29
  * @Description:
  * @FilePath: /memo/packages/utils/src/readingWritingSeparation/index.ts
  */
@@ -28,8 +28,8 @@
 export type readingWritingSeparationUtilsType<T extends object> = {
   [K in keyof Required<T> as `get${Capitalize<string & K>}`]: () => Required<T>[K];
 } & {
-  [K in keyof Required<T> as `set${Capitalize<string & K>}`]: (value: Required<T>[K]) => void;
-};
+    [K in keyof Required<T> as `set${Capitalize<string & K>}`]: (value: Required<T>[K]) => void;
+  };
 
 /**
  * 首字母大写
@@ -52,8 +52,13 @@ export function readingWritingSeparationDecor(target: object, key: string) {
 
 
   Reflect.defineProperty(target, `get${fmtName}`, {
-    get() {
-      const t = this;
+    // get() {
+    //   const t = this;
+    //   // @ts-ignore
+    //   return Reflect.get(t, key);
+    // },
+    value() {
+      const t = this || target;
       // @ts-ignore
       return Reflect.get(t, key);
     }
@@ -61,9 +66,8 @@ export function readingWritingSeparationDecor(target: object, key: string) {
 
   Reflect.defineProperty(target, `set${fmtName}`, {
     value(val: unknown) {
-      const t = this;
+      const t = this || target;
       Reflect.set(t, key, val);
     }
   });
-
 }
