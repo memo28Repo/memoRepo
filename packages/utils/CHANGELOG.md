@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.2.10
+
+### Patch Changes
+
+- 新增linkList链表结构
+
 ## 1.2.9
 
 ### Patch Changes
