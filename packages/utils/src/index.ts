@@ -24,10 +24,12 @@ versionLog({
  */
 
 export { Injection } from "./Injection";
-export { } from "./config/enableConfiguration";
-export { ArrayDerived } from './derived/array';
+export {} from "./config/enableConfiguration";
+export { LinkList } from "./linkList/linkList";
+export { ListNode, ListNodeEscapePod } from "./linkList/listNode";
+export { ArrayDerived } from "./derived/array";
 export { NumberDerived } from "./derived/number";
-export { ObjectDerived } from './derived/object';
+export { ObjectDerived } from "./derived/object";
 export { StringDerived } from "./derived/string";
 export { AnomalousChain, panicProcessing, panicProcessingOpt } from "./errors/anomalousChain";
 export { assets } from "./errors/assets";
