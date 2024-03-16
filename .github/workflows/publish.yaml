@@ -19,11 +19,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
 
-
-      - name: clear pnpm cache and update pnpm
-        run: |
-         pnpm store prune
-         npm install -g pnpm
+      - name: pnpm install
+        run: npm i pnpm@latest -g
 
       - name: Setup npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
