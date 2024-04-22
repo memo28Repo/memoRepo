@@ -1,6 +1,6 @@
 {
   "name": "@memo28/vitebuild",
-  "version": "3.0.17",
+  "version": "3.0.18",
   "private": false,
   "description": "vite config helper",
   "main": "./lib/index",

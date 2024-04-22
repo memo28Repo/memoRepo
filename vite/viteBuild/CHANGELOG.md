@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 3.0.18
+
+### Patch Changes
+
+- 更新依赖版本为最新
+
 ## 3.0.17
 
 ### Patch Changes
