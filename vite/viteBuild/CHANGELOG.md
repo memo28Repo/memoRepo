@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 3.0.19
+
+### Patch Changes
+
+- 修复依赖版本问题
+
 ## 3.0.18
 
 ### Patch Changes
