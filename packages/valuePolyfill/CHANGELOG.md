@@ -1,5 +1,19 @@
 # @memo28/valuepolyfill
 
+## 1.1.12
+
+### Patch Changes
+
+- Updated dependencies
+  - @memo28/utils@1.2.12
+
+## 1.1.11
+
+### Patch Changes
+
+- Updated dependencies
+  - @memo28/utils@1.2.11
+
 ## 1.1.10
 
 ### Patch Changes
