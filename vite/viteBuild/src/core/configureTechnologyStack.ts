@@ -52,6 +52,7 @@ export class ConfigureVueTechnologyStack implements configureTechnologyStackType
             template: {
               compilerOptions: {
                 nodeTransforms: [
+                  // @ts-ignore
                   transformShortVmodel({
                     prefix: "$"
                   })

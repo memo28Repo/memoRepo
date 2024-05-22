@@ -1,5 +1,11 @@
 # @memo28/vitebuild
 
+## 3.0.20
+
+### Patch Changes
+
+- 修复vitebuild打包问题
+
 ## 3.0.19
 
 ### Patch Changes

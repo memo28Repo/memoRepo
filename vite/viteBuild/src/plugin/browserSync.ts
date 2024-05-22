@@ -8,9 +8,12 @@
 
 import { PluginOption } from 'vite'
 
-import Plugins, { Options } from 'vite-plugin-browser-sync'
+import Plugins from 'vite-plugin-browser-sync'
 
 import { PluginTypes } from '../core/plugInContainer'
+
+type Options = Parameters<typeof Plugins>[0]
+
 export type BrowserSyncOpt = Parameters<typeof Plugins>[0]
 
 export class BrowserSync implements PluginTypes<BrowserSyncOpt> {
