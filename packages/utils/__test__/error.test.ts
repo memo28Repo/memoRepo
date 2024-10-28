@@ -1,9 +1,9 @@
 /*
  * @Author: @memo28.repo
  * @Date: 2024-02-11 11:06:08
- * @LastEditTime: 2024-02-11 13:51:08
+ * @LastEditTime: 2024-06-09 09:07:52
  * @Description: 
- * @FilePath: /memo/packages/utils/__test__/error.test.ts
+ * @FilePath: /memoRepo/packages/utils/__test__/error.test.ts
  */
 
 import { describe, expect, it } from "vitest";
@@ -13,11 +13,17 @@ import { AnomalousChain, Errors, ErrorsNewResult, assets, panicProcessing } from
 
 describe('assets', () => {
     it("assets return Error", () => {
-        expect(() => assets(false, new Error("不符合预期"))).toThrowError("不符合预期")
+        expect(() => assets(true, () => new Error("不符合预期"))).toThrowError("不符合预期")
+        expect(() => assets(true, Error.bind(null, "不符合预期"))).toThrowError("不符合预期")
     })
 
+    it("assets return Error", () => {
+        expect(() => assets(true, () => new Error("不符合预期"))).toThrowError("不符合预期")
+    })
+
+
     it("none", () => {
-        expect(assets(true, new Error("不符合预期"))).toBeUndefined()
+        expect(assets(false, () => new Error("不符合预期"))).toBeUndefined()
     })
 })
 

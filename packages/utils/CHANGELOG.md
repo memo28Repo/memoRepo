@@ -1,5 +1,35 @@
 # @memo28/utils
 
+## 1.2.17
+
+### Patch Changes
+
+- 新增spm编辑能力
+
+## 1.2.16
+
+### Patch Changes
+
+- 新增SPM解析规则
+
+## 1.2.15
+
+### Patch Changes
+
+- update deps
+
+## 1.2.14
+
+### Patch Changes
+
+- 更新代码重新打包
+
+## 1.2.13
+
+### Patch Changes
+
+- 优化isEmpty函数和assets验证范围
+
 ## 1.2.12
 
 ### Patch Changes

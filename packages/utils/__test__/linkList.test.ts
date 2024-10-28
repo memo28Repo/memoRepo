@@ -1,7 +1,7 @@
 // 引入要测试的类
 import { LinkList, ListNode } from "../src"; // 假设你的链表和节点类在这个文件中
 
-import { describe, it, expect, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 describe("链表测试", () => {
   it("应正确追加项目", () => {

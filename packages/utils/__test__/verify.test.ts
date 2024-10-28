@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 23:13:39
- * @LastEditTime: 2024-02-11 14:09:32
+ * @LastEditTime: 2024-06-09 09:03:31
  * @Description:
- * @FilePath: /memo/packages/utils/__test__/verify.test.ts
+ * @FilePath: /memoRepo/packages/utils/__test__/verify.test.ts
  */
 import { describe, expect, it } from 'vitest'
 import { Errors, Mail, Phone, SNI, isEmpty } from '../src'
@@ -66,6 +66,16 @@ describe('empty', () => {
   it('array is empty', () => {
     expect(isEmpty([])).toBeTruthy()
   })
+
+  it('map is empty', () => {
+    expect(isEmpty(new Map())).toBeTruthy()
+  })
+
+  it('set is empty', () => {
+    expect(isEmpty(new Set())).toBeTruthy()
+  })
+
+
   it('object is empty', () => {
     expect(isEmpty({})).toBeTruthy()
   })

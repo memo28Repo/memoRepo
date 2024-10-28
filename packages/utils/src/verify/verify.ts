@@ -1,9 +1,9 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 23:08:13
- * @LastEditTime: 2024-02-11 14:04:55
+ * @LastEditTime: 2024-06-09 09:02:19
  * @Description: verify
- * @FilePath: /memo/packages/utils/src/verify/verify.ts
+ * @FilePath: /memoRepo/packages/utils/src/verify/verify.ts
  */
 import { str } from "@memo28/types";
 import { Errors } from "../errors/core";
@@ -172,5 +172,8 @@ export function isObjectEmpty(val: object) {
  *
  */
 export function isEmpty(val: any) {
-  return null === val || undefined === val || isObjectEmpty(val) || val === "";
+  if (val instanceof Map) return val.size === 0
+  if (val instanceof Set) return val.size === 0
+  if (typeof val === 'object') return null === val || undefined === val || isObjectEmpty(val) || val === "";
+  return null === val || undefined === val || val === "";
 }

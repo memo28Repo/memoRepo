@@ -1,10 +1,17 @@
-import { Middlewares } from "../types/enhanceReduxImpl";
+/*
+ * @Author: @memo28.repo
+ * @Date: 2024-04-22 10:34:27
+ * @LastEditTime: 2024-06-09 09:12:54
+ * @Description: 
+ * @FilePath: /memoRepo/redux/helper/src/middleware/defaultMiddleware.ts
+ */
+import { BindingConfiguration, EnableConfiguration } from "@memo28/open-source-tool";
+import { Errors, readingWritingSeparationUtilsType } from "@memo28/utils";
 import { ThunkMiddlewareFor } from "@reduxjs/toolkit/dist/getDefaultMiddleware";
-import { defaultMiddlewareImpl, defaultMiddlewareImplConfig } from "./defaultMiddlewareImpl";
 import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
-import { EnableConfiguration, BindingConfiguration } from "@memo28/open-source-tool";
-import { readingWritingSeparationUtilsType, Errors } from "@memo28/utils";
+import { Middlewares } from "../types/enhanceReduxImpl";
+import { defaultMiddlewareImpl, defaultMiddlewareImplConfig } from "./defaultMiddlewareImpl";
 
 /**
  *
@@ -40,7 +47,8 @@ export class DefaultMiddleware<S = any, M extends Middlewares<S> = [ThunkMiddlew
 
   private thunkMid(config?: defaultMiddlewareImplConfig) {
     this.thunkEnableConfiguration.setBindConfiguredFunc(thunk);
-    const [err, result] = new BindingConfiguration(this.thunkEnableConfiguration, config?.thunk).returnItSelf();
+    // @ts-ignore
+    const [err, result] = new BindingConfiguration(this.thunkEnableConfiguration, config?.thunk)?.returnItSelf?.();
     // @ts-ignore
     if (!Errors.Is(err) && result) this.middlewareList = this.middlewareList.concat(result);
     return this;
