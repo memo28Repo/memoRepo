@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.2.19
+
+### Patch Changes
+
+- 新增网络检查提示文字
+
 ## 1.2.17
 
 ### Patch Changes

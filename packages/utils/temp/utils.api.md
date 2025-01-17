@@ -4,7 +4,9 @@
 
 ```ts
 
+import { bool } from '@memo28/types';
 import { Equal } from '@memo28/types';
+import { fn } from '@memo28/types';
 import { Handler } from 'mitt';
 import { str } from '@memo28/types';
 
@@ -16,6 +18,12 @@ export class AnomalousChain {
     protected skip(errors: ErrorsNewResult | null): this;
 }
 
+// @public (undocumented)
+export function ArrayDerived(): void;
+
+// @public (undocumented)
+export function assets(result: boolean, error: unknown | fn): void;
+
 // @public
 export class Chinese extends VerificationFlow<str> {
     constructor(s: str, msg?: string | undefined);
@@ -23,9 +31,18 @@ export class Chinese extends VerificationFlow<str> {
     verification(args?: str): Panic<str>;
 }
 
+// @public (undocumented)
+export function detectNetworkSpeedPrompts(target: networkTarget, opt?: detectNetworkSpeedPromptsOptions): string;
+
+// @public (undocumented)
+export interface detectNetworkSpeedPromptsOptions {
+    onlyHint: bool;
+    onlyHintAll: boolean;
+}
+
 // @public
 export class Emoji extends VerificationFlow<str> {
-    constructor(phone?: str, msg?: string | undefined);
+    constructor(emoji?: str, msg?: string | undefined);
     // (undocumented)
     verification(args?: string): Panic<string>;
 }
@@ -68,10 +85,48 @@ export function isEmpty(val: any): boolean;
 export function isObjectEmpty(val: object): boolean;
 
 // @public
+export class LinkList<T> {
+    append(value: T): void;
+    findIndex(predicate: (value: T) => boolean): number;
+    forEach(callback: (node: ListNode<T>, index: number) => void): void;
+    insert(index: number, value: T): void;
+    print(parintItem?: (node: ListNode<T>) => string): string;
+    remove(value: T): void;
+    toArray<A>(transformItem?: (node: ListNode<T>) => A): A[];
+}
+
+// @public
+export class ListNode<T> {
+    constructor(value: T, list?: LinkList<T>);
+    escapePod: ListNodeEscapePod<T>;
+    listRef: LinkList<T> | null;
+    // (undocumented)
+    next: ListNode<T> | null;
+    updateEscapePod(prev: ListNode<T> | null | undefined, next: ListNode<T> | null | undefined): void;
+    // (undocumented)
+    value: T;
+}
+
+// @public (undocumented)
+export type ListNodeEscapePod<T> = {
+    prev: ListNode<T> | null | undefined;
+    next: ListNode<T> | null | undefined;
+} | null;
+
+// @public
 export class Mail extends VerificationFlow<str> {
-    constructor(phone?: str, msg?: string | undefined);
+    constructor(mail?: str, msg?: string | undefined);
     // (undocumented)
     verification(args?: string): Panic<string>;
+}
+
+// @public (undocumented)
+export interface networkTarget {
+    downlink: number;
+    effectiveType: string;
+    rtt: number;
+    // (undocumented)
+    saveData: boolean;
 }
 
 // @public (undocumented)
@@ -81,6 +136,9 @@ export interface NewOpt {
 
 // @public (undocumented)
 export function NumberDerived(): void;
+
+// @public (undocumented)
+export function ObjectDerived(): void;
 
 // @public
 export type Panic<T = unknown> = [ErrorsNewResult | undefined | false | null | true, T];
@@ -115,6 +173,34 @@ export type readingWritingSeparationUtilsType<T extends object> = {
 
 // @public
 export function SNI(n: number | string | (number | string)[], value: any): boolean;
+
+// @public (undocumented)
+export class Spm<T extends object> implements SpmImpl<T> {
+    // (undocumented)
+    addSpm(key: string, defaultValue: string): this;
+    // (undocumented)
+    getSpm(): string;
+    // (undocumented)
+    parseSpm(spm: string): T;
+    // (undocumented)
+    updateSpm(key: string, newValue: string): this;
+}
+
+// @public (undocumented)
+export abstract class SpmImpl<T extends object> {
+    abstract addSpm(key: string, defaultValue: string): this;
+    abstract getSpm(): string;
+    abstract parseSpm(spm: string): T;
+    abstract updateSpm(key: string, newValue: string): this;
+}
+
+// @public (undocumented)
+export interface SpmItem {
+    // (undocumented)
+    key: string;
+    // (undocumented)
+    value: string;
+}
 
 // @public (undocumented)
 export function StringDerived(): void;

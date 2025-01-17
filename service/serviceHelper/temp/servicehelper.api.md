@@ -40,7 +40,9 @@ export interface ConfigureSuffix {
 // Warning: (ae-forgotten-export) The symbol "controllerOptTypes" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function controller(url: string, controllerOpt?: controllerOptTypes): <T extends new (...args: any[]) => {}>(constructor: T) => {
+export function controller(url: string, controllerOpt?: controllerOptTypes): <T extends {
+    new (...args: any[]): {};
+}>(constructor: T) => {
     new (): {};
 } & T;
 
@@ -142,7 +144,7 @@ export interface TriggerResult<Req extends object, Res extends QuickCompletionCR
 }
 
 // @public
-export function unifyQuickCompletionCRUDAssistant<Req extends object>(configureSuffix: Partial<ConfigureSuffix>, triggerFn: Function): <Res extends QuickCompletionCRUDAssistantResponse<unknown, unknown, unknown, unknown, unknown> = QuickCompletionCRUDAssistantResponse<unknown, unknown, unknown, unknown, unknown>>() => QuickCompletionCRUDAssistant<Req, Res>;
+export function unifyQuickCompletionCRUDAssistant<Req extends object>(configureSuffix: Partial<ConfigureSuffix>, triggerFn: Function): <Res extends QuickCompletionCRUDAssistantResponse = QuickCompletionCRUDAssistantResponse<unknown, unknown, unknown, unknown, unknown>>() => QuickCompletionCRUDAssistant<Req, Res>;
 
 // @public
 export function validation(): (target: object, key: string, desc: any) => void;

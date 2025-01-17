@@ -1,7 +1,7 @@
 {
   "metadata": {
     "toolPackage": "@microsoft/api-extractor",
-    "toolVersion": "7.34.4",
+    "toolVersion": "7.48.1",
     "schemaVersion": 1011,
     "oldestForwardsCompatibleVersion": 1001,
     "tsdocConfig": {
@@ -173,17 +173,13 @@
       "preserveMemberOrder": false,
       "members": [
         {
-          "kind": "Variable",
-          "canonicalReference": "@memo28/servicehelper!cacheDecor:var",
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!cacheDecor:function(1)",
           "docComment": "/**\n * 缓存装饰器\n *\n * @param conf - 配置 缓存\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "cacheDecor: "
-            },
-            {
-              "kind": "Content",
-              "text": "(conf: "
+              "text": "cacheDecor: (conf: "
             },
             {
               "kind": "Reference",
@@ -192,17 +188,31 @@
             },
             {
               "kind": "Content",
-              "text": ") => (target: object, key: string, descriptor: any) => void"
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: any) => void"
             }
           ],
           "fileUrlPath": "src/sliceRequest/parameter.ts",
-          "isReadonly": true,
-          "releaseTag": "Public",
-          "name": "cacheDecor",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
+          "returnTypeTokenRange": {
+            "startIndex": 3,
             "endIndex": 4
-          }
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "conf",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "cacheDecor"
         },
         {
           "kind": "Function",
@@ -524,7 +534,7 @@
             },
             {
               "kind": "Content",
-              "text": "<T extends new (...args: any[]) => {}>(constructor: T) => {\n    new (): {};\n} & T"
+              "text": "<T extends {\n    new (...args: any[]): {};\n}>(constructor: T) => {\n    new (): {};\n} & T"
             },
             {
               "kind": "Content",
@@ -653,17 +663,21 @@
           }
         },
         {
-          "kind": "Variable",
-          "canonicalReference": "@memo28/servicehelper!Del:var",
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!Del:function(1)",
           "docComment": "/**\n * `Delete` 方法装饰器\n *\n * @param url - 路由 将凭借在 `control` 装饰器 后\n *\n * @param opt - 配置\n * ```\n * `opt.params` 参数将配置 请求的 `params` 或 `data` 参数\n *\n * `opt.inQuery` 参数将配置 请求的 `params` 或 `data` 参数 全部添加到 ·params· 上\n * ```\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "Del: "
+              "text": "Del: (url?: "
             },
             {
               "kind": "Content",
-              "text": "(url?: string, opt?: "
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ", opt?: "
             },
             {
               "kind": "Reference",
@@ -672,7 +686,11 @@
             },
             {
               "kind": "Content",
-              "text": ") => (target: object, key: string, descriptor: "
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: "
             },
             {
               "kind": "Reference",
@@ -685,13 +703,31 @@
             }
           ],
           "fileUrlPath": "src/sliceRequest/method.ts",
-          "isReadonly": true,
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 8
+          },
           "releaseTag": "Public",
-          "name": "Del",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 6
-          }
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "url",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            },
+            {
+              "parameterName": "opt",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "Del"
         },
         {
           "kind": "Function",
@@ -722,17 +758,21 @@
           "name": "extractRequestInstance"
         },
         {
-          "kind": "Variable",
-          "canonicalReference": "@memo28/servicehelper!Get:var",
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!Get:function(1)",
           "docComment": "/**\n * `Get` 方法装饰器\n *\n * @param url - 路由 将凭借在 `control` 装饰器 后\n *\n * @param opt - 配置\n * ```\n * `opt.params` 参数将配置 请求的 `params` 或 `data` 参数(自动匹配根据方法类型)\n *\n * `opt.inQuery` 参数将配置 请求的 `params` 或 `data` 参数 全部添加到 ·params· 上\n * ```\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "Get: "
+              "text": "Get: (url?: "
             },
             {
               "kind": "Content",
-              "text": "(url?: string, opt?: "
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ", opt?: "
             },
             {
               "kind": "Reference",
@@ -741,7 +781,11 @@
             },
             {
               "kind": "Content",
-              "text": ") => (target: object, key: string, descriptor: "
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: "
             },
             {
               "kind": "Reference",
@@ -754,13 +798,31 @@
             }
           ],
           "fileUrlPath": "src/sliceRequest/method.ts",
-          "isReadonly": true,
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 8
+          },
           "releaseTag": "Public",
-          "name": "Get",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 6
-          }
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "url",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            },
+            {
+              "parameterName": "opt",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "Get"
         },
         {
           "kind": "Function",
@@ -817,17 +879,13 @@
           "name": "Header"
         },
         {
-          "kind": "Variable",
-          "canonicalReference": "@memo28/servicehelper!multiVersionSwitchingRequestDecor:var",
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!multiVersionSwitchingRequestDecor:function(1)",
           "docComment": "/**\n * 多版本切换装饰器\n *\n * @param conf - `version` 配置切换至版本\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "multiVersionSwitchingRequestDecor: "
-            },
-            {
-              "kind": "Content",
-              "text": "(conf: "
+              "text": "multiVersionSwitchingRequestDecor: (conf: "
             },
             {
               "kind": "Reference",
@@ -845,17 +903,35 @@
             },
             {
               "kind": "Content",
-              "text": ", \"versionPlaceholder\">) => (target: object, key: string, descriptor: any) => void"
+              "text": ", \"versionPlaceholder\">"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: any) => void"
             }
           ],
           "fileUrlPath": "src/sliceRequest/parameter.ts",
-          "isReadonly": true,
+          "returnTypeTokenRange": {
+            "startIndex": 6,
+            "endIndex": 7
+          },
           "releaseTag": "Public",
-          "name": "multiVersionSwitchingRequestDecor",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 6
-          }
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "conf",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "multiVersionSwitchingRequestDecor"
         },
         {
           "kind": "Function",
@@ -904,40 +980,62 @@
           "name": "parameter"
         },
         {
-          "kind": "Variable",
-          "canonicalReference": "@memo28/servicehelper!pocketValueDecor:var",
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!pocketValueDecor:function(1)",
           "docComment": "/**\n * 响应兜底值\n *\n * @param pocketValue - 兜底值,可以是任意类型\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "pocketValueDecor: "
+              "text": "pocketValueDecor: (pocketValue: "
             },
             {
               "kind": "Content",
-              "text": "(pocketValue: unknown) => (target: object, key: string, descriptor: any) => void"
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: any) => void"
             }
           ],
           "fileUrlPath": "src/sliceRequest/parameter.ts",
-          "isReadonly": true,
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
           "releaseTag": "Public",
-          "name": "pocketValueDecor",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 2
-          }
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "pocketValue",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "pocketValueDecor"
         },
         {
-          "kind": "Variable",
-          "canonicalReference": "@memo28/servicehelper!Post:var",
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!Post:function(1)",
           "docComment": "/**\n * `Post` 方法装饰器\n *\n * @param url - 路由 将凭借在 `control` 装饰器 后\n *\n * @param opt - 配置\n * ```\n * `opt.params`  参数将配置 请求的 `params` 或 `data` 参数(自动匹配根据方法类型)\n *\n * `opt.inQuery` 参数将配置 请求的 `params` 或 `data` 参数 全部添加到 ·params· 上\n * ```\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "Post: "
+              "text": "Post: (url?: "
             },
             {
               "kind": "Content",
-              "text": "(url?: string, opt?: "
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ", opt?: "
             },
             {
               "kind": "Reference",
@@ -946,7 +1044,11 @@
             },
             {
               "kind": "Content",
-              "text": ") => (target: object, key: string, descriptor: "
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: "
             },
             {
               "kind": "Reference",
@@ -959,26 +1061,48 @@
             }
           ],
           "fileUrlPath": "src/sliceRequest/method.ts",
-          "isReadonly": true,
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 8
+          },
           "releaseTag": "Public",
-          "name": "Post",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 6
-          }
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "url",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            },
+            {
+              "parameterName": "opt",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "Post"
         },
         {
-          "kind": "Variable",
-          "canonicalReference": "@memo28/servicehelper!Put:var",
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!Put:function(1)",
           "docComment": "/**\n * `Put` 方法装饰器\n *\n * @param url - 路由 将凭借在 `control` 装饰器 后\n *\n * @param opt - 配置\n * ```\n * `opt.params` 参数将配置 请求的 `params` 或 `data` 参数(自动匹配根据方法类型)\n *\n * `opt.inQuery` 参数将配置 请求的 `params` 或 `data` 参数 全部添加到 ·params· 上\n * ```\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "Put: "
+              "text": "Put: (url?: "
             },
             {
               "kind": "Content",
-              "text": "(url?: string, opt?: "
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ", opt?: "
             },
             {
               "kind": "Reference",
@@ -987,7 +1111,11 @@
             },
             {
               "kind": "Content",
-              "text": ") => (target: object, key: string, descriptor: "
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: "
             },
             {
               "kind": "Reference",
@@ -1000,13 +1128,31 @@
             }
           ],
           "fileUrlPath": "src/sliceRequest/method.ts",
-          "isReadonly": true,
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 8
+          },
           "releaseTag": "Public",
-          "name": "Put",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 6
-          }
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "url",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            },
+            {
+              "parameterName": "opt",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "Put"
         },
         {
           "kind": "Class",
@@ -2076,17 +2222,13 @@
           "extendsTokenRanges": []
         },
         {
-          "kind": "Variable",
-          "canonicalReference": "@memo28/servicehelper!retryOptDecor:var",
+          "kind": "Function",
+          "canonicalReference": "@memo28/servicehelper!retryOptDecor:function(1)",
           "docComment": "/**\n * 请求重试装饰器\n *\n * @param conf - 重试参数\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "retryOptDecor: "
-            },
-            {
-              "kind": "Content",
-              "text": "(conf: "
+              "text": "retryOptDecor: (conf: "
             },
             {
               "kind": "Reference",
@@ -2095,17 +2237,31 @@
             },
             {
               "kind": "Content",
-              "text": ") => (target: object, key: string, descriptor: any) => void"
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "(target: object, key: string, descriptor: any) => void"
             }
           ],
           "fileUrlPath": "src/sliceRequest/parameter.ts",
-          "isReadonly": true,
-          "releaseTag": "Public",
-          "name": "retryOptDecor",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
+          "returnTypeTokenRange": {
+            "startIndex": 3,
             "endIndex": 4
-          }
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "conf",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "retryOptDecor"
         },
         {
           "kind": "Interface",
@@ -2484,7 +2640,7 @@
             },
             {
               "kind": "Content",
-              "text": "<unknown, unknown, unknown, unknown, unknown> = "
+              "text": " = "
             },
             {
               "kind": "Reference",

@@ -39,7 +39,7 @@
     "plugin-url": "link:@types/@rollup/plugin-url",
     "rollup": "^4.0.2",
     "rollup-plugin-notify": "^1.1.0",
-    "rollup-plugin-sizes": "^1.0.5"
+    "rollup-plugin-sizes": "^1.1.0"
   },
   "devDependencies": {
     "@types/rollup": "^0.54.0"
