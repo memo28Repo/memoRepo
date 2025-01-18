@@ -1,7 +1,7 @@
 /*
  * @Author: 邱狮杰
  * @Date: 2023-03-17 23:08:13
- * @LastEditTime: 2024-06-09 09:02:19
+ * @LastEditTime: 2025-01-17 22:05:04
  * @Description: verify
  * @FilePath: /memoRepo/packages/utils/src/verify/verify.ts
  */
@@ -12,6 +12,9 @@ import { VerificationFlow } from "./errorCollection";
 
 /**
  * String Number includes的简称
+ * 
+ * 不处理特殊字符串
+ * 
  * @example
  *  const a = 1;
  *
@@ -21,6 +24,14 @@ import { VerificationFlow } from "./errorCollection";
  * @public
  */
 export function SNI(n: number | string | (number | string)[], value: any) {
+  const smp = ['number', 'string'].includes(typeof n)
+
+  if (!smp && !Array.isArray(n)) return false;
+
+  if (Number.isNaN(n) || Number.isNaN(value)) {
+    console?.error?.('NaN 不可比较')
+    return false
+  }
   function reverseTypeFn(s: string | number) {
     return typeof s === "string" ? parseFloat(s) : `${s}`;
   }

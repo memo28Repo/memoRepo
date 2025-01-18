@@ -1,7 +1,7 @@
 /*
  * @Author: @memo28.repo
  * @Date: 2024-08-30 17:18:48
- * @LastEditTime: 2024-09-02 09:07:21
+ * @LastEditTime: 2025-01-17 22:18:29
  * @Description: 
  * @FilePath: /memoRepo/packages/utils/src/spm/impl.ts
  */
@@ -16,11 +16,17 @@ export class Spm<T extends object> implements SpmImpl<T> {
     }
 
     parseSpm(spm: string): T {
-        const ar = spm.split(".")
+        if (!spm.trim().length) return {} as T
+        const ar = spm?.trim().split(".")
         const h: {
             [key: string]: string
         } = {}
         ar.forEach((item: string, index: number) => {
+            const ele = this.itemList[index]
+            if (!ele?.key) {
+                console.log(`${item} 缺失对应的 key!`)
+                return
+            }
             h[this.itemList[index].key] = item
         })
         return h as T
@@ -35,6 +41,14 @@ export class Spm<T extends object> implements SpmImpl<T> {
 
 
     addSpm(key: string, defaultValue: string): this {
+        if (!key.trim().length) return this;
+        const has = this.itemList.filter(n => n.key === key)
+        if (has.length) {
+            console.log('检查到新增重复key,已自动调用 updateSpm 方法')
+            this.updateSpm(key, defaultValue);
+            return this
+        }
+
         this.itemList.push({
             key,
             value: defaultValue,
