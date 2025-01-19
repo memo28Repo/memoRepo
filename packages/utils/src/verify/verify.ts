@@ -9,12 +9,13 @@ import { str } from "@memo28/types";
 import { Errors } from "../errors/core";
 import { Panic } from "../errors/types";
 import { VerificationFlow } from "./errorCollection";
+import { expect } from "vitest";
 
 /**
  * String Number includes的简称
- * 
+ *
  * 不处理特殊字符串
- * 
+ *
  * @example
  *  const a = 1;
  *
@@ -23,19 +24,19 @@ import { VerificationFlow } from "./errorCollection";
  *
  * @public
  */
-export function SNI(n: number | string | (number | string)[], value: any) {
-  const smp = ['number', 'string'].includes(typeof n)
-
+export function SNI(n: symbol | number | string | (symbol | number | string)[], value: any) {
+  const smp = ["symbol", "number", "string"].includes(typeof n);
   if (!smp && !Array.isArray(n)) return false;
 
   if (Number.isNaN(n) || Number.isNaN(value)) {
-    console?.error?.('NaN 不可比较')
-    return false
-  }
-  function reverseTypeFn(s: string | number) {
-    return typeof s === "string" ? parseFloat(s) : `${s}`;
+    console?.error?.("NaN 不可比较");
+    return false;
   }
 
+  function reverseTypeFn(s: string | number | symbol) {
+    if (typeof s === "symbol") return s;
+    return typeof s === "string" ? parseFloat(s) : `${s}`;
+  }
   if (Array.isArray(n)) {
     const catchList = n.map(i => {
       return [i, reverseTypeFn(i)];
@@ -183,8 +184,8 @@ export function isObjectEmpty(val: object) {
  *
  */
 export function isEmpty(val: any) {
-  if (val instanceof Map) return val.size === 0
-  if (val instanceof Set) return val.size === 0
-  if (typeof val === 'object') return null === val || undefined === val || isObjectEmpty(val) || val === "";
+  if (val instanceof Map) return val.size === 0;
+  if (val instanceof Set) return val.size === 0;
+  if (typeof val === "object") return null === val || undefined === val || isObjectEmpty(val) || val === "";
   return null === val || undefined === val || val === "";
 }
