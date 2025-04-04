@@ -31,7 +31,6 @@
   "license": "MIT",
   "dependencies": {
     "@memo28/logs": "^0.1.1",
-    "@memo28/types": "^",
     "@memo28/utils": "workspace:^",
     "reflect-metadata": "^0.1.13"
   }

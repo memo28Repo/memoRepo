@@ -1,9 +1,9 @@
 /*
  * @Author: @memo28.repo
  * @Date: 2023-11-30 13:18:34
- * @LastEditTime: 2024-02-06 19:40:15
+ * @LastEditTime: 2025-01-19 22:51:33
  * @Description:
- * @FilePath: /memo/packages/nullSafety/src/index.ts
+ * @FilePath: /memoRepo/packages/nullSafety/src/index.ts
  */
 
 /**
@@ -15,3 +15,4 @@
 export { nullSafety } from './core'
 export type { nullSafetyMeta, nullSafetyOptions } from './core'
 
+export * from './vite/index'
