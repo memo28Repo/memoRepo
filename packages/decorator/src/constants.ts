@@ -1,7 +1,7 @@
 /*
  * @Author: @memo28.repo
  * @Date: 2025-04-04 10:54:38
- * @LastEditTime: 2025-04-05 12:41:30
+ * @LastEditTime: 2025-04-05 13:15:54
  * @Description: 
  * @FilePath: /memoRepo/packages/decorator/src/constants.ts
  */
@@ -26,7 +26,22 @@ export const targetType = {
    * 字段装饰漆
    * @public
    */
-  field: "field"
+  property: "property",
+  /**
+   * 
+   * 参数装饰
+   * @public
+   */
+  parameter: 'parameter',
+
+  /**
+   * 
+   * class装饰
+   * @public
+   */
+  class: 'class'
+
+
 } as const;
 
 export const metadata = {

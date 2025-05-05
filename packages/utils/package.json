@@ -1,6 +1,6 @@
 {
   "name": "@memo28/utils",
-  "version": "1.2.19",
+  "version": "1.2.20",
   "private": false,
   "description": "",
   "main": "./lib/index.js",
@@ -40,13 +40,12 @@
   "dependencies": {
     "@memo28/logs": "^0.1.1",
     "@memo28/types": "latest",
-    "mitt": "^3.0.1",
-    "reflect-metadata": "^0.1.13"
-  },
-  "devDependencies": {
     "@types/lodash.escaperegexp": "^4.1.9",
     "@types/lodash.random": "^3.2.9",
+    "decimal.js": "^10.5.0",
     "lodash.escaperegexp": "^4.1.2",
-    "lodash.random": "^3.2.0"
+    "lodash.random": "^3.2.0",
+    "mitt": "^3.0.1",
+    "reflect-metadata": "^0.1.13"
   }
 }

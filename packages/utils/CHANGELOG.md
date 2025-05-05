@@ -1,5 +1,11 @@
 # @memo28/utils
 
+## 1.2.20
+
+### Patch Changes
+
+- Number新增toDecimal，eq方法
+
 ## 1.2.19
 
 ### Patch Changes

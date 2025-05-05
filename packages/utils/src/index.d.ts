@@ -1,10 +1,12 @@
+
 /*
  * @Author: @memo28.repo
  * @Date: 2024-02-02 13:35:31
- * @LastEditTime: 2024-02-11 14:12:27
+ * @LastEditTime: 2025-05-04 22:47:57
  * @Description: 
- * @FilePath: /memo/packages/utils/src/index.d.ts
+ * @FilePath: /memoRepo/packages/utils/src/index.d.ts
  */
+
 interface String {
   /**
    *
@@ -70,6 +72,25 @@ interface Number {
    * @public
    */
   equal(val: string | number): boolean;
+
+  /**
+ *
+ * 对比字符串 或者 数字 是否相等
+ *
+ * @param val - 对比的值
+ *
+ * @public
+ */
+  eq(val: string | number): boolean;
+
+
+  /**
+   * 
+   * 转换成Decimal
+   * 
+   * @public
+   */
+  toDecimal(): import('decimal.js').Decimal;
 
 
   /**
